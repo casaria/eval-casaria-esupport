@@ -1,0 +1,24 @@
+[26-Apr-2005 17:59:09] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/lodige/public_html/support/common/common.php:2467) in /home/lodige/public_html/support/common/logout.php on line 38
+[26-Apr-2005 17:59:09] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/lodige/public_html/support/common/common.php:2467) in /home/lodige/public_html/support/common/logout.php on line 48
+[26-Apr-2005 17:59:50] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/lodige/public_html/support/common/common.php:2467) in /home/lodige/public_html/support/common/logout.php on line 38
+[26-Apr-2005 17:59:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/lodige/public_html/support/common/common.php:2467) in /home/lodige/public_html/support/common/logout.php on line 48
+[29-Apr-2009 21:19:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/casaria/public_html/support/common/logout.php:37) in /home/casaria/public_html/support/common/logout.php on line 38
+[29-Apr-2009 21:19:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:37) in /home/casaria/public_html/support/common/logout.php on line 49
+[29-Apr-2009 21:20:11] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/casaria/public_html/support/common/logout.php on line 39
+[29-Apr-2009 21:20:11] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 48
+[29-Apr-2009 21:20:30] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/casaria/public_html/support/common/logout.php on line 39
+[29-Apr-2009 21:20:30] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 48
+[29-Apr-2009 21:21:47] PHP Parse error:  syntax error, unexpected $end in /home/casaria/public_html/support/common/logout.php on line 52
+[29-Apr-2009 21:23:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 52
+[29-Apr-2009 21:24:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 41
+[29-Apr-2009 21:24:14] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/casaria/public_html/support/common/logout.php on line 43
+[29-Apr-2009 21:24:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 52
+[29-Apr-2009 21:26:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 52
+[29-Apr-2009 21:28:53] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 52
+[29-Apr-2009 21:29:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 41
+[29-Apr-2009 21:29:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/casaria/public_html/support/common/logout.php:39) in /home/casaria/public_html/support/common/logout.php on line 52
+[25-Jul-2013 22:22:41] PHP Warning:  PHP Startup: suhosin: Unable to initialize module
+Module compiled with module API=20090626, debug=0, thread-safety=0
+PHP    compiled with module API=20060613, debug=0, thread-safety=0
+These options need to match
+ in Unknown on line 0

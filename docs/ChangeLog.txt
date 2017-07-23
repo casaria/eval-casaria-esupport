@@ -1,0 +1,175 @@
+
+Changes since v1.4 RC4 April Surprise
+-------------------------------------------------------------------------------------------
+- security fixes for install.php and tupdate.php (SteveW, forum)
+- default template for account activation was not right in RC4 (forum)
+- footer was not being found on login page on IIS (bep)
+- reverse link in updatelog was not working in Safari browser (+J+)
+- change all the file operations from "r" to "rb" in an attempt to fix
+binary file upload failures that some people are getting (forum)
+- strip more slashes in updatelog and tinfo to fix parse errors (SteveW)
+- added jump to ticket field for supporters (jroefs, jan)
+- tinfo.php and supporter/tupdate.php will now print an error if the ticket
+id is not present, instead of getting a SQL error (SteveW)
+- eliminated endless loop in supporter/index.php and admin/control.php when
+not running on port 80 (forum)
+- fixed user login hangs on IIS (got2go)
+- the supporter creating a ticket is the default supporter now (Phred)
+- the email configuration descriptions are more descriptive now; instead
+of Linux and Windows, it says Sendmail and PHP Config (SteveW)
+- new users now use the default language instead of English (JD)
+- viewing knowledge base attachments should now work (mina)
+- attachments created by supporters are now properly attributed in the admin's
+view of all ticket attachments (mina)
+- there is now line break formatting for the knowledge base, printed
+tickets, and announcements (mina)
+- minor clean ups for admin group options (mina)
+- announce.php, admin/attachments.php, admin/usersearch.php, kbase/edit.php,
+and supporter/tcreate.php all use proper language variables now (mina)
+- admin/tstats.php uses proper language variables (kenguru)
+- install.php now uses the correct image location for the blue theme (forum)
+- if the update field started with a number, updatelog would show it as a
+date instead of the entered number (JD)
+- added Norwegian language file (kenguru)
+
+
+Changes since v1.4 RC3 Blue Crystal
+-------------------------------------------------------------------------------------------
+- security fix for addsupporter.php (JD)
+- group stats fixes (JD)
+- the supporters' ticket view shows the dates of attachments (forum)
+- nicer default templates for ticket creation and user registered emails (SteveW)
+- login page shows helpdesk name (SteveW)
+- regular users can no longer set a pager email address (SteveW)
+- when a supporter logs in, they automatically go to supporter section (SteveW)
+- adding new knowledge base categories now works on non-English config (forum)
+- added Danish, Dutch, and Italian language files (forum)
+- Last Successful Queries now shows correct text (forum)
+- minor fixes in French and Portuguese language files that were broken (SteveW)
+- Supporter column now capitalized for users open and closed tickets (forum)
+- removed unused supporter/editprofile.php (SteveW)
+- fixed up the column heading styles for supporter's ticket listings (SteveW)
+- fixed problems with ticket searches in December, and with 2003 (forum)
+- add backslashes in various places in an attempt to avoid SQL errors (SteveW)
+- quote text values so supporter doesn't wipe out info with spaces (SteveW)
+- ticket creation uses the correct global variables for public helpdesk now (forum)
+- sending group page for Linux config now uses proper ticket id variable (forum)
+- don't allow users to see each other's tickets on private helpdesk (SteveW)
+
+
+Changes since v1.4 RC2 Red Lava
+-------------------------------------------------------------------------------------------
+- style.php cosmetic fixes (SteveW)
+- cosmetic and language fixes throughout (SteveW)
+- global footer implemented
+- user attachment fix added in ticket info screen (SteveW)
+- templates_restore updated (SteveW)
+- "Dump To Knowledge Base" button shows only when KB is on (SteveW)
+- Emerald Green theme added
+- empty updates not added to update log (SteveW)
+- extra ticket details added to ticket update (SteveW)
+- licensing information updated
+- hourglass sticks when ticket is closed (ie. if yellow when closed, yellow when searched for)
+- user level listings fixed for most browsers (SteveW)
+- update log filtering fixed
+- added French and Portuguese language files to the package
+- minor fix in tupdate.php
+- if private is set, user cannot change their username fix
+- ticket creation language fix
+
+
+Changes since v1.4 RC1 Blue Crystal
+-------------------------------------------------------------------------------------------
+- templates are working properly
+- searching tickets date fixed
+- email_kbase_report template fixed
+- fixed blank email sending problem
+- added option for allowing user attachments
+- create inactive member fix
+- email inactive members upon activation added
+- deleting knowledge base entries fixed
+
+
+Changes since v1.3.3 beta
+-------------------------------------------------------------------------------------------
+- status field is now clickable and shows update log
+- public/private setting for helpdesk
+- knowledge base search fixes
+- knowledge base statistics for tracking purposes
+- file attachments added for knowledge base
+- file attachments added for tickets
+- login required for ticket submission option added
+- themes errors fixed
+- php 4.2.1+ register_globals fix
+- users edit profile option added
+- email on ticket close added
+- attachment purge levels added
+- update log viewable by users added
+- templates added for all email functions
+- language packs added
+- dump to knowledge base option added
+- adding users to groups checkboxes added
+- adding supporters to groups checkboxes added
+- added file maintenance for ticket attachments
+- added file maintenance for knowledge base attachments
+- added user registration option
+- added knowledge base statistics for admins
+- my recent tickets added
+- added default group selection
+
+Changes since v1.3.2 beta
+-------------------------------------------------------------------------------------------
+- fixed email overwrite on ticket update bug
+
+
+
+Changes since v1.3.1 beta
+-------------------------------------------------------------------------------------------
+- fixed the "My Groups Open Tickets" not displaying the tickets bug
+- fixed the "../" bug from tinfo, tcreate, myopen, and myclosed files
+- fixed the punctuation problem with creating and updating tickets
+- fixed the incorrect carriage return characters
+- fixed sgroups file to disallow the deletion of a supporter group if that group has tickets open
+- fixed the problem with not being able to add supporters to supporter groups (simon)
+- fixed the problem with not being able to add users to user groups (simon)
+- fixed the jumping back to default page when selecting blank option in group drop down menu
+- fixed the deleting of knowledge base categories problem
+
+Changes since v1.3 beta
+-------------------------------------------------------------------------------------------
+- fixed installation script
+- eliminated all errors in creating tickets
+- eliminated all errors in updating tickets
+
+
+Changes since v1.2 beta
+-------------------------------------------------------------------------------------------
+- changed uedit.php to fix changing user and supporter groups should a user/supporter/admin
+  change their login name.
+- changed answer.php to remove makeClickable() code (allows for html in question answers)
+- added printSuccess() to kbase.php for a question being submitted successfully
+- fixed mktime() in /supporter/tsearch.php so that time occurrs at 11:59pm rather than am
+- fixed multiple updates to update log on single submission
+- update log contains ticket creation date and ticket creator
+- changed editprofile.php so a supporter can change his/her email addres, office, and phone
+- supporters can now view other supporter information
+- fixed copyright information on all index.php pages
+- fixed image path and logo path problems
+- fixed email to admins about knowledge base problems (includes link to edit entry)
+- changed update log link to include selected theme
+- changed blue_bar.jpg to bar.jpg so other themes could be included
+- changed /supporter/index.php so top bar appears whether an admin or not
+- added style features to login.php for login page to agree with default style
+- changed ranking of All Supporters to -1 on addition of new group (for command line tools)
+- fixed bug in reporting of category statistics for groups
+- changed all "align=middle" to "align=center" for netscape browser compatibility
+- fixed many netscape compatibility bugs (not all unfortunately)
+- added lastupdate tag to all tickets
+- added last 30 tickets to be closed for user interface
+- added ticket escalations
+	- added graphic to show ticket idle times based on priority
+- added sorting of tickets as ascending or descending for search, myopen, and mygroupsopen
+- added copyright information for each file
+- fixed slashes bug in updatelog messages
+- added database abstraction for entire package (includes mysql only for now)
+
