@@ -2,13 +2,17 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - @ casaria.net" uuid="0fef9fff-b91c-41a0-98a6-099749727d3e">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="MySQL" version="5.5.55-cll" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
       <user-name>casaria_hdesk1</user-name>
+      <introspection-schemas>*:casaria_hdesk1</introspection-schemas>
       <ssh-properties>
         <enabled>true</enabled>
-        <proxy-host>casaria.net</proxy-host>
+        <proxy-host>www.casaria.net</proxy-host>
         <proxy-port>22</proxy-port>
         <secret-storage>master_key</secret-storage>
         <user>casaria</user>
