@@ -34,9 +34,9 @@
 
 echo "<br><center><font size=0 color=$theme[text] face=\"$theme[font]\">$helpdesk_name<br>";
 echo "$lang_powered Peter & <b><a href=\"https://odoo.casaria.net\">TheTeam</a></b> v$version<br>";
-echo "<a href=\"https://icons8.com/icon/44052/Shopping-Cart-Loaded\">Some icon credits</a><br>";
+echo "<a href=\"https://icons8.com/icon/44052/Shopping-Cart-Loaded\"> some icon credits</a><br>";
 if($enable_stats == 'On'){
-	$mtime2 = explode(" ", microtime());
+	$mtime2 = explode(" ", microtime())
 	$endtime = $mtime2[0] + $mtime2[1];
 	$totaltime = $endtime - $starttime;
 	$totaltime = number_format($totaltime, 7);
