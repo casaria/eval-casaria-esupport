@@ -1665,7 +1665,7 @@ function displayTicket($result)
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 					
 				echo $row[status]; echo "</a></td>";
-				echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]$bsIconRef\"></td>";
+				echo "<td class=back align=center><img height=30 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
 				$response = setResponse($last_update, $row[priority], $row[id]);
 
