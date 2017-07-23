@@ -1433,6 +1433,34 @@ function createPriorityMenu($flag=0, $all=true)
 	}
 }
 
+
+/***********************************************************************************************************
+ **	function createBillingStatusMenu():
+ **		Takes no arguments.  Creates the drop down menu for the billing status list.
+ ************************************************************************************************************/
+function createBillingStatusMenu($flag = 0, $new = 0)
+{
+    global $mysql_tstatus_table, $info, $db;
+
+    $sql = "select status, default_create from $mysql_tstatus_table order by rank asc";
+    $result = $db->query($sql, $mysql_tstatus_table);
+
+    if($flag == 1)
+        echo "<option></option>";
+
+    while($row = $db->fetch_array($result)){
+        echo "<option value=\"$row[status]\" ";
+        if ($new){
+            if($row['default_create']) echo "selected";
+        }
+        else{
+            if($info['status'] == $row['status']) echo "selected";
+        }
+        echo "> $row[status] </option><br>";
+
+    }
+
+}
 /***********************************************************************************************************
 **	function createStatusMenu():
 **		Takes no arguments.  Creates the drop down menu for the status list.
@@ -1573,8 +1601,8 @@ function displayTicket($result)
 
 	$second = getSecondPriority();	
 	$sql3 = "select * from $mysql_ugroups_table ";
-	
-	
+	$sqlBS = "select * from $mysql_BillingStatus_table";
+
 	$recordcount = 0;
 	while($row = $db->fetch_array($result)){
 
@@ -1627,29 +1655,35 @@ function displayTicket($result)
 				
 				//cookie_name='.$cookie_name.'
 				echo "<td class=back>";
+                $resultBStatus = $db->query($sqlBS);
+                while($row2 = $db->fetch_array($resultBStatus)){
+                    if ($row2['id'] == $row['BILLING_STATUS']) {
+                        $bsIconRef=$row2['icon_ref'];
+                    }
+                }
 				echo '<a href="updatelog.php?&id='.$row[id].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 					
-				echo $row[status] ."</a></td>";
-				echo "<td class=back> ". $row[BILLING_STATUS] ."	</td>";
+				echo $row[status]; echo "</a></td>";
+				echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].$bsIconRef\"></td>";
 
 				$response = setResponse($last_update, $row[priority], $row[id]);
 
 				switch($response){
 					case('1'):
-						echo "<td class=back align=center><img height=20 src=\"../".$theme[image_dir]."hourglass1.gif\"></td>";
+						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].hourglass1.gif\"></td>";
 						break;
 					case('2'):
-						echo "<td class=back align=center><img height=20 src=\"../".$theme[image_dir]."hourglass2.gif\"></td>";
+						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].hourglass2.gif\"></td>";
 						break;
 					case('3'):
-						echo "<td class=back align=center><img height=20 src=\"../".$theme[image_dir]."hourglass3.gif\"></td>";
+						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].hourglass3.gif\"></td>";
 						break;
 					case('4'):
-						echo "<td class=back align=center><img height=20 src=\"../".$theme[image_dir]."hourglass4.gif\"></td>";
+						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].hourglass4.gif\"></td>";
 						break;
 					default:
-						echo "<td class=back align=center><img height=20 src=\"../".$theme[image_dir]."hourglass1.gif\"></td>";
+						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir].hourglass1.gif\"></td>";
 						break;
 				}
 					

@@ -469,5 +469,5 @@ $lang_last_update = "UPDATE";
 $lang_noaccessgroup = "We are sorry, this item is managed/was created by a different company/or group";
 $lang_groupticketsclosedrecent ="RECENTLY Closed tickets";
 $lang_CloudControl = "Casaria Cloud Control";
-
+$lang_billingStatus = "Billing status";
 ?>
