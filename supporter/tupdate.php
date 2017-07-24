@@ -163,7 +163,7 @@ if(isset($update)) {
 		$log = updateLog($id, $msg);
 		$sql = "update $mysql_tickets_table set update_log='$log' where id=$id";
 		$db->query($sql);
-		if  ($status !=  ){
+		if  ($status !=  'CLOSED'  ){
             $sql = "update $mysql_tickets_table set closed_date= 0 where id=$id";
             $db->query($sql);
         }
