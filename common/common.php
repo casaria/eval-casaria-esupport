@@ -1604,6 +1604,7 @@ function displayTicket($result)
 	$sqlBS = "select * from $mysql_BillingStatus_table";
 
 	$recordcount = 0;
+	$csv_string ='';
 	while($row = $db->fetch_array($result)){
 
 		$last_update = $row['lastupdate'];  //last update timestamp.
@@ -1689,9 +1690,9 @@ function displayTicket($result)
 					
 			  echo "</tr>";
 			  $recordcount++;
-			  
+			  $csv_string = $row['id'].",";
 	}
-	$summary = array(	'recordcount' 	=> 	$recordcount, 'remarks'	=>	''); 
+	$summary = array(	'recordcount' 	=> 	$recordcount, 'remarks'	=>	',', 'csv_ticketList' => $csv_string);
   return $summary;
 }
 
@@ -2383,7 +2384,7 @@ function createKBMenu()
 	global $mysql_kcategories_table, $mysql_platforms_table, $lang_searchfor, $lang_incategory, $lang_under;
 
 	echo "<b>$lang_searchfor: </b>";
-	echo "<input type=text name=item> $lang_incatgory <select name=category>";
+	echo "<input type=text name=item> $lang_incategory <select name=category>";
 		createKCategoryMenu(1);
 	echo "</select> $lang_under ";
 	echo "<select name=platform>";
@@ -3051,24 +3052,24 @@ function getTicketTimeInfo($id)
 	global $mysql_users_table, $mysql_time_table;
   
    		$sql = "select $mysql_users_table.user_name, sum(minutes) as sum, tt.after_hours, supporter_id, opened_date, closed_date from $mysql_users_table, $mysql_time_table as tt where ticket_id=$id and supporter_id=$mysql_users_table.id group by supporter_id, opened_date, closed_date order by sum asc";
-
+        $resarray = NULL;
 	$result = $db->query($sql);
 	while($row = $db->fetch_array($result)){
 		//create the array based on the db data.
-		if(($row['closed_date'] > $array['closed_date']) && $row['closed_date'] != 0){
-			$array['closed_date'] = $row['closed_date'];
+		if(($row['closed_date'] > $resarray['closed_date']) && $row['closed_date'] != 0){
+			$resarray['closed_date'] = $row['closed_date'];
 		}
 		if(/*($row['sum'] > $array['sum']) && */$row['sum'] != 0){
-			$array['sum'] += $row['sum'];
+			$resarray['sum'] += $row['sum'];
 		}
-		if(($row['opened_date'] > $array['opened_date']) && $row['opened_date'] != 0){
-			$array['first_response'] = $row['opened_date'];
+		if(($row['opened_date'] > $resarray['opened_date']) && $row['opened_date'] != 0){
+			$resarray['first_response'] = $row['opened_date'];
 		}
 		
 	}
 
 	//return an array of that relevant data per ticket.
-	return $array;
+	return $resarray;
 
 }
 
