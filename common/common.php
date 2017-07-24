@@ -1690,7 +1690,7 @@ function displayTicket($result)
 					
 			  echo "</tr>";
 			  $recordcount++;
-			  $csv_string = $row['id'].",";
+			  $csv_string += (string)$row['id'] . ",";
 	}
 	$summary = array(	'recordcount' 	=> 	$recordcount, 'remarks'	=>	',', 'csv_ticketList' => $csv_string);
   return $summary;
