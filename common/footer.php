@@ -42,9 +42,6 @@ if($enable_stats == 'On'){
 	$totaltime = number_format($totaltime, 7);
 	
 	echo "$lang_processed: $totaltime $lang_seconds, $db->queries $lang_queries<br>";
-
 }
-
 echo "</font> </center>";
-
 ?>
