@@ -450,7 +450,7 @@ if(isset($search) || isset($s)) {
 
 		endTable();
 
-		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR> $summary[csv_string]<BR>";
+		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR> $summary[ticketlist]<BR>";
 
 
 		endTable();
