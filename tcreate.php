@@ -88,7 +88,7 @@ if(isset($create)){
 		$billing_status = "0";
 		//enter fixed values for support pool and group
 		$sql = "INSERT into $mysql_tickets_table values(NULL, $time, $sg, $group_id, 'support_pool', 1, '$priority', '$status',
-				'$billing_status','$username', '$email', '$office', '$phone', '$equipment', '$category', '$platform', '$short', '$description', NULL, 0, '$time', '$emailgroup', '$emailstatuschange', '$emailcc')";
+				'$billing_status','$username', '$email', '$office', '$phone', '$equipment', '$category', '$platform', '$short', '$description', NULL, 0, '$time', '$emailgroup', '$emailstatuschange', '$emailcc',0)";
 		
 		$db->query($sql);
 		$id = $db->insert_id();

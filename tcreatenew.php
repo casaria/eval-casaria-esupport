@@ -71,7 +71,7 @@ if(isset($create)){
 		$description = addslashes(stripScripts($description));
 		//enter fixed vaules support pool and group
 		$sql = "INSERT into $mysql_tickets_table values(NULL, '$time', $sg, 'support_pool', 1, '$priority', '$status',
-				'$username', '$email', '$office', '$phone', '$equipment', '$category', '$platform', '$short', '$description', NULL, 0, '$time')";
+				'$username', '$email', '$office', '$phone', '$equipment', '$category', '$platform', '$short', '$description', NULL, 0, '$time', 0)";
 		
 		$db->query($sql);
 		$id = $db->insert_id();
