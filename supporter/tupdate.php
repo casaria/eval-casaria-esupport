@@ -163,6 +163,10 @@ if(isset($update)) {
 		$log = updateLog($id, $msg);
 		$sql = "update $mysql_tickets_table set update_log='$log' where id=$id";
 		$db->query($sql);
+		if  ($status !=  ){
+            $sql = "update $mysql_tickets_table set closed_date= 0 where id=$id";
+            $db->query($sql);
+        }
 		$statuschange = 1;
 		$updated = 1;
 
@@ -264,7 +268,6 @@ if(isset($update)) {
 	}
 
 
-
 	if( ($status == $highest_status) && ($status != $old_status) ){
 		
 		//send a pager message to the support
@@ -305,6 +308,11 @@ if(isset($update)) {
 							 " values ('$id', '$supporter1', '$timestamp')";
 			
 			$db->query($sql);
+
+			//update the closed_date
+            $sql = "update $mysql_tickets_table set closed_date= $timestamp where id=$id";
+            $db->query($sql);
+
 		}
 
 		$location = "$supporter_site_url/index.php?t=tmop";
