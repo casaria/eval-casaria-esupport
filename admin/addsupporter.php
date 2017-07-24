@@ -70,17 +70,17 @@ if(isset($adduser)){
 		
 			switch($level){
                 case ("superuser"):
-                    $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,1,1,'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
+                    $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,1,1,'$default_theme',null,null,null,0,'$default_language', '$timeoffset','$CloudControl')";
                     break;
                 case ("accountant"):
-                    $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,1,1,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
+                    $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,1,1,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset','$CloudControl')";
                     break;
 
 				case ("admin"):
-                                        $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,0,0'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
+                                        $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,0,0'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
 					break;
 				case ("supporter"):
-										$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,0,0,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
+										$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,0,0,0,'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
 					break;
                 case (PriviledgedUser):
                     $sql = "insert into $mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,1,0,0,0,0'$default_theme',null,null,null,0, '$default_language', '$timeoffset', '$CloudControl')";
