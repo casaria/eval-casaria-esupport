@@ -1451,12 +1451,12 @@ function createBillingStatusMenu($flag = 0, $new = 0)
     while($row = $db->fetch_array($result)){
         echo "<option value=\"$row[status]\" ";
         if ($new){
-            if($row['default_create']) echo "selected";
+            if($row['default_create']) echo " selected";
         }
         else{
-            if($info['status'] == $row['status']) echo "selected";
+            if($info['status'] == $row['status']) echo " selected";
         }
-        echo "> $row[status] </option><br>";
+        echo "> $row['status'] </option><br>";
 
     }
 
