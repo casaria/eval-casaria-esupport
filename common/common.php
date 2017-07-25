@@ -1440,10 +1440,10 @@ function createPriorityMenu($flag=0, $all=true)
  ************************************************************************************************************/
 function createBillingStatusMenu($flag = 0, $new = 0)
 {
-    global $mysql_tstatus_table, $info, $db;
+    global $mysql_tBillingStatus_table, $info, $db;
 
-    $sql = "select status, default_create from $mysql_tstatus_table order by rank asc";
-    $result = $db->query($sql, $mysql_tstatus_table);
+    $sql = "select status, default_create, icon_ref from $mysql_tBillingStatus_table order by rank asc";
+    $result = $db->query($sql, $mysql_tBillingStatus_table);
 
     if($flag == 1)
         echo "<option></option>";
@@ -1795,6 +1795,7 @@ function createUGroupsMenu($flag)
 
 	$sql = "select id, group_name from $mysql_ugroups_table order by rank asc";
 	$result = $db->query($sql);
+	$num_rows = 0;
 	
 	if($flag == 1)
 		echo "<option></option>\n";
@@ -2662,7 +2663,7 @@ function sendGroupPage($template_name, $sg, $user_name, $short, $priority, $id, 
     			$sql = "select pager_email from $mysql_users_table, sgroup" . $sg . " where $mysql_users_table.user_name=sgroup" . $sg . ".user_name";
     
     		$result = $db->query($sql);
-    
+    		$list = 0;
     		while($row = $db->fetch_array($result)){
     			//create the header list for the to address in the email.
     			if($row[pager_email] != ''){
@@ -2681,7 +2682,7 @@ function sendGroupPage($template_name, $sg, $user_name, $short, $priority, $id, 
 		$result = $db->query($sql);
 		$template = $db->fetch_array($result);
 		$template=str_replace("\\'","'",$template[0]);
-		
+		$email_msg='empty';
 		if (empty($subject)) $subject = "TICKET $id $ticket[status]";
 		eval("\$email_msg = \"$template\";");
     
@@ -3110,7 +3111,9 @@ function DrawTableSupporterTotals($array, $id, $title)
 				$supporters_after_hours = $array['supporters_after_hours'];
 				$supporters_engineer_rate= $array['supporters_engineer_rate'];
 				$total_time = $array['total_time'];
-				
+				$supporter_total = 0;
+			    $supporter_after_hours_total = 0;
+    			$supporter_engineer_total = 0;
 				$ticket_data = getTicketTimeInfo($id);
 					
 				startTable($title, "left", 100, 2);
