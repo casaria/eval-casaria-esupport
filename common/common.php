@@ -1456,7 +1456,7 @@ function createBillingStatusMenu($flag = 0, $new = 0)
         else{
             if($info['status'] == $row['status']) echo " selected";
         }
-        echo "> $row[status] </option><br>";
+        echo "> $row[status]  </option><br>";
 
     }
 
