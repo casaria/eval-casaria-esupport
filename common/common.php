@@ -1596,8 +1596,7 @@ function createTimeOffsetMenu($selected)
 ************************************************************************************************************/
 function displayTicket($result)
 {
-	global $cookie_name, $mysql_tpriorities_table, $mysql_ugroups_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-	$current_time = time();
+	global $cookie_name, $mysql_ugroups_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
 
 	$second = getSecondPriority();	
 	$sql3 = "select * from $mysql_ugroups_table ";
@@ -1622,7 +1621,7 @@ function displayTicket($result)
 			
 
 				echo "<td class=\"back2\">";
-					echo "<a href=\"?t=tupd&id=" . $row[id] . "\">";
+					echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
 					echo stripslashes($row['short']) . "</a></td>
 			
 				<td class=back>". $row['user'] ."</td>";
