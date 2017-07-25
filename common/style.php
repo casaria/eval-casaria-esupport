@@ -42,8 +42,9 @@ $theme = getThemeVars(getThemeName($cookie_name));
 
 <script type="text/javascript">
 	WebFontConfig = {
-		google: { families: [ 'Lato::latin' ] }
+		google: { families: [ 'Lato::latin' , 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:latin' }
 	};
+
 	(function() {
 		var wf = document.createElement('script');
 		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
