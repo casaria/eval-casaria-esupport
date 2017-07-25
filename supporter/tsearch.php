@@ -302,6 +302,7 @@ if(isset($search) || isset($s)) {
 		case ("tim"):
 
 		default:
+        	$sql .= " order by create_date desc"
 			break;
 	}
 
