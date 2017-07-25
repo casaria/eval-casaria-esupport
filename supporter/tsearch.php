@@ -515,7 +515,7 @@ if(isset($search) || isset($s)) {
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
 						<td class=back><select name=billingstatus>';
-							createBillingStatusMenu(1);
+							createStatusMenu(1);
 	echo '				
 						</select>
 						</td>
