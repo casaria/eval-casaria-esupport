@@ -517,8 +517,8 @@ if(isset($search) || isset($s)) {
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
 						<td class=back><select name=billingstatus>';
    							 createBillingStatusMenu(1);
-	echo '				<option value=notclosed>'.$lang_notclosed.'</option>
-						
+	echo '				<option value=initial>'.$lang_bs_initial</option>
+
 						</select>
 						</td>
 						</tr>

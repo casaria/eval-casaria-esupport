@@ -470,4 +470,5 @@ $lang_noaccessgroup = "We are sorry, this item is managed/was created by a diffe
 $lang_groupticketsclosedrecent ="RECENTLY Closed tickets";
 $lang_CloudControl = "Casaria Cloud Control";
 $lang_billingStatus = "Billing status";
+$lang_bs_initial = "Initial";
 ?>
