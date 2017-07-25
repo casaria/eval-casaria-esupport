@@ -42,7 +42,7 @@ $theme = getThemeVars(getThemeName($cookie_name));
 
 <script type="text/javascript">
 	WebFontConfig = {
-		google: { families: [ 'Abel::latin', 'Bitter::latin', 'Robot::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:latin'] }
+		google: { families: [ 'Abel::latin', 'Bitter::latin', 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:latin'] }
 	};
 
 	(function() {
