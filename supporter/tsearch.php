@@ -509,16 +509,14 @@ if(isset($search) || isset($s)) {
 						<td class=back><select name=status>';
 							createStatusMenu(1);
     echo '				<option value=notclosed>'.$lang_notclosed.'</option>
-				
 						</select>
 						</td>
 						</tr>
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
 						<td class=back><select name=billingstatus>';
-							createStatusMenu(1);
-	echo '				<option value=initial>'.$lang_bs_initial.'</option>
-
+							createBillingStatusMenu(1);
+	echo '				
 						</select>
 						</td>
 						</tr>
