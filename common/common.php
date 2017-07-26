@@ -152,7 +152,7 @@ $EP = new SendPreferences();
 function ProcessAttachment()
 {
 	
-	global $mysql_attachments_table, $mysql_tickets_table, $enable_uattachments, $uploaddir, $time, $id, $db;
+	global $mysql_attachments_table, $mysql_tickets_table, $enable_uattachments, $uploaddir, $cookie_name, $time, $id, $db;
 	
 			//attachement file handling
   		$userfile = $_FILES['the_file']['name'];
@@ -1573,7 +1573,6 @@ function createTimeOffsetMenu($selected)
 			$lang_timezone19, $lang_timezone20, $lang_timezone21, $lang_timezone22, $lang_timezone23, $lang_timezone24,
 			$lang_timezone25, $lang_timezone26, $lang_timezone27, $lang_timezone28, $lang_timezone29, $lang_timezone30,
 			$lang_timezone31, $lang_timezone32, $lang_timezone33, $db, $mysql_users_table, $time_offset;
-
 	$j=1;
 	for($i=-12; $i<14; $i++){
 		$zone = "lang_timezone" . $j;
@@ -1596,7 +1595,7 @@ function createTimeOffsetMenu($selected)
 function displayTicket($result)
 {
     global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-	``$second = getSecondPriority();
+	$second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
     $recordcount = 0;
