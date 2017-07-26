@@ -312,153 +312,153 @@ if(isset($search) || isset($s)) {
 	$sql2 = preg_replace("/ order(.*)/i", "", $sql);
 	$sql2 = preg_replace("/ /i", "%20", $sql2);
 
-	if ($sql == "select * from $mysql_tickets_table where 'status' == 'CLOSED')") {
+	if ($sql == "select * from $mysql_tickets_table") {
 		printerror("$lang_searchcriteria");
 	} else {
         createHeader("$lang_searchresults SQL: " . $sql);
-    }
-		echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+
+        echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<TR>
 			<TD>
 				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
-		echo ' <tr> ';
+        echo ' <tr> ';
 
-		if ($s == 'id') {
-			echo '<td align=center>
+        if ($s == 'id') {
+            echo '<td align=center>
 						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=di&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=id&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'sup') {
-			echo '<td align=center>
+        if ($s == 'sup') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pus&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . ' </b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sup&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'equ') {
-			echo '<td align=center>
+        if ($s == 'equ') {
+            echo '<td align=center>
 						  <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=uqe&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 						  <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=equ&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
-		}
+        }
 
 
-		if ($s == 'sho') {
-			echo '<td align=center>
+        if ($s == 'sho') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ohs&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . ' </b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sho&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . '</b></a></td>';
-		}
+        }
 
 
-		if ($s == 'usr') {
-			echo '<td align=center>
+        if ($s == 'usr') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=rsu&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . ' </b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=usr&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'grp') {
-			echo '<td align=center>
+        if ($s == 'grp') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=prg&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . ' </b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=grp&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'pri' && $pset != 1) {
-			echo '<td align=center>
+        if ($s == 'pri' && $pset != 1) {
+            echo '<td align=center>
 						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=irp&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
-		} elseif ($pset != 1) {
-			echo '<td align=center>
+        } elseif ($pset != 1) {
+            echo '<td align=center>
 						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pri&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'cre') {
-			echo '<td align=center>
+        if ($s == 'cre') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=erc&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=cre&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
-		}
+        }
 
 
-		if ($s == 'sta' && $sset != 1) {
-			echo '<td align=center>
+        if ($s == 'sta' && $sset != 1) {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ats&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
-		} elseif ($sset != 1) {
-			echo '<td align=center>
+        } elseif ($sset != 1) {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sta&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
-		}
+        }
 
-		if ($s == 'tim') {
-			echo '<td align=center>
+        if ($s == 'tim') {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=mit&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
-		} else {
-			echo '<td align=center>
+        } else {
+            echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=tim&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
-		}
+        }
 
-		echo '</tr>';
+        echo '</tr>';
 
-		switch ($s) {
-			case ("pri"):
-				for ($i = 0; $i < $num_prios; $i++) {
-					$statement = $sql . " and priority='" . $prios[$i] . "'";
-					$result = $db->query($statement);
-					$summary = displayTicket($result);
-				}
-				break;
-			case ("irp"):
-				for ($i = 0; $i < $num_prios; $i++) {
-					$statement = $sql . " and priority='" . $prios[$i] . "'";
-					$result = $db->query($statement);
-					$summary = displayTicket($result);
-				}
-				break;
-			case ("sta"):
-				for ($i = 0; $i < $num_status; $i++) {
-					$statement = $sql . " and status='" . $status[$i] . "'";
-					$result = $db->query($statement);
-					$summary =  displayTicket($result);
-				}
-				break;
-			case ("ats"):
-				for ($i = 0; $i < $num_status; $i++) {
-					$statement = $sql . " and status='" . $status[$i] . "'";
-					$result = $db->query($statement);
-					$summary = displayTicket($result);
-				}
-				break;
-			default:
-				$result = $db->query($sql);
-				$summary = displayTicket($result);
-				break;
-		}
+        switch ($s) {
+            case ("pri"):
+                for ($i = 0; $i < $num_prios; $i++) {
+                    $statement = $sql . " and priority='" . $prios[$i] . "'";
+                    $result = $db->query($statement);
+                    $summary = displayTicket($result);
+                }
+                break;
+            case ("irp"):
+                for ($i = 0; $i < $num_prios; $i++) {
+                    $statement = $sql . " and priority='" . $prios[$i] . "'";
+                    $result = $db->query($statement);
+                    $summary = displayTicket($result);
+                }
+                break;
+            case ("sta"):
+                for ($i = 0; $i < $num_status; $i++) {
+                    $statement = $sql . " and status='" . $status[$i] . "'";
+                    $result = $db->query($statement);
+                    $summary = displayTicket($result);
+                }
+                break;
+            case ("ats"):
+                for ($i = 0; $i < $num_status; $i++) {
+                    $statement = $sql . " and status='" . $status[$i] . "'";
+                    $result = $db->query($statement);
+                    $summary = displayTicket($result);
+                }
+                break;
+            default:
+                $result = $db->query($sql);
+                $summary = displayTicket($result);
+                break;
+        }
 
-		endTable();
+        endTable();
         echo " <TABLE class=border cellSpacing=0 cellPadding=0 width=\"100%\" align=center border=0>";
-		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
+        echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
 							<input type=text size=52% name=csvlist value='$summary[tktlist]'>
 		</td></td></tr>";
-			endTable();
-			endTable();
-} else {
+        endTable();
+        endTable();
+    }
 
 	echo "<form method=post>";
 	createHeader("$lang_ticketsearch");
@@ -558,6 +558,7 @@ if(isset($search) || isset($s)) {
 								if(($today['mon']-2) == $i)
 									echo ' selected';
 							echo ">".$lang_month[$i]."</option>";
+						}
 
 echo '					</select>
 						<select name=sday>
@@ -567,7 +568,7 @@ echo '					</select>
 							if($i == $today['mday'])
 								echo ' selected';
 							echo ">".$i."</option>\n";
-
+						}
 echo'					</select>
 						<select name=syear>
 						<option></option>';
