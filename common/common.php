@@ -1601,7 +1601,7 @@ function displayTicket($result)
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
-
+/*
     while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
@@ -1693,11 +1693,11 @@ function displayTicket($result)
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
     }
-
- /*  while ($row = $db->fetch_array($result)) {
+*/
+  while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
-		$cs = getHighestRank($mysql_status_table);
+		//$cs = getHighestRank($mysql_status_table);
 		if ( $row['status'] == $cs ){
 			$closed_ts = $row['closed_date'];
 			$row_is_closed = 1;
@@ -1787,7 +1787,7 @@ function displayTicket($result)
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
     }
-    */
+
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
 	return $summary;
 }
