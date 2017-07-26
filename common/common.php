@@ -1688,7 +1688,7 @@ function displayTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = +$row[id] . ",";
+        $csv_string =+ $row[id] . ",";
     }
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
 	return $summary;
