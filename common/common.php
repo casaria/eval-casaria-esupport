@@ -1095,10 +1095,9 @@ function getHighestRank($table)
 	global $mysql_tstatus_table, $db;
 
 	if($table == $mysql_tstatus_table){
-		$sql = "select id from $table order by rank desc";
-	}
+		$sql = "select `id` from $table order by `rank` desc";
 	else{
-		$sql = "select id from $table order by rank asc";
+		$sql = "select id from $table order by `rank` asc";
 	}
 	
 	$result = $db->query($sql);
@@ -1608,7 +1607,7 @@ function displayTicket($result)
     while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
-		$cs = getHighestRank($mysql_tstatus_table);
+		$cs = getHighestRank($mysql_status_table);
 		if ( $row['status'] == $cs ){
 			$closed_ts = $row['closed_date'];
 			$row_is_closed = 1;
