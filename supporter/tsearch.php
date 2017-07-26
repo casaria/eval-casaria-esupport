@@ -450,7 +450,7 @@ if(isset($search) || isset($s)) {
 		}
 
 		endTable();
-        <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+        echho " <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>";
 		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
