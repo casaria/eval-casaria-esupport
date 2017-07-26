@@ -315,7 +315,6 @@ require "../common/footer.php";
 <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js">
 </script>
 
-<script type="text/javascript" src="particlepete.js"></script>
 
 
 
