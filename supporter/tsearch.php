@@ -451,10 +451,11 @@ if(isset($search) || isset($s)) {
 
 		endTable();
         echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
-		endTable();
-        echo "<td class=back>
+
+        echo "<tR class=back>
 							<input type=text size=52% name=csvlist value='$summary[tktlist]'>
-		</td>";
+		</tR>";
+        endTable();
 	}
 } else {
 
