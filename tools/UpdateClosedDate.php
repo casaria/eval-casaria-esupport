@@ -32,12 +32,11 @@ $today = getdate();
 
       echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
       echo '<tr><td>';
-      echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
+      echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
       echo "</td></tr>";
-      echo "<tr><<td class=back>
-							<input type=text size=52% name=csvlist value='$summary[tktlist]'>
-		</td></tr>
-      </TABLE>";
+      echo '<tr><<td class=back width="100%" >';
+					echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
+		</td></tr></TABLE>';
       endTable();
   }
 
