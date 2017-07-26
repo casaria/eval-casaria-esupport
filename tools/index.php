@@ -33,12 +33,19 @@
 //set the start time so we can calculate how long it takes to load the page.
 $mtime1 = explode(" ", microtime());
 $starttime = $mtime1[0] + $mtime1[1];
-$_SESSION['CCOOLKIO']
+
 
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
 
+$cookie_name = $_POST['phorrack'];
+//session_register("cookie_name");
+$_SESSION ["cookie_name"] = $cookie_name;
+$enc_pwd = md5($_POST['bl0QkJ57130']);
+//session_register("enc_pwd");
+$_SESSION ["enc_pwd"] = $enc_pwd;
+$referer = $HTTP_REFERER;
 
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);
