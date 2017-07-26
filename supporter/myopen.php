@@ -244,7 +244,7 @@ function listOpenTickets($id, $sort, $filter)
 			break;
 	}
 
-	return $summary;
+	//return $summary;
 }
 
 function listByPriority($id, $order)
@@ -266,6 +266,7 @@ function listByPriority($id, $order)
 
 	$sql = "select * from $mysql_tickets_table where ";
 	$prios = getPriorityList();
+	$flag=0;
 	for($i=0; $i<sizeof($prios); $i++){
 		if($flag != 1){
 			$sql .= "priority!='" . $prios[$i] . "'";
@@ -288,7 +289,7 @@ function listByStatus($id, $order)
 {
 	global $mysql_tstatus_table, $mysql_tickets_table, $db;
 
-	$sql = "select status from $mysql_tstatus_table where status".$status." order by rank $order";
+	$sql = "select status from $mysql_tstatus_table where status=".$status." order by rank $order";
 	$result = $db->query($sql);
 	while($row = $db->fetch_row($result)){
 		$sql2 = "select * from $mysql_tickets_table where status='$row[0]' and supporter_id=$id";
@@ -302,6 +303,7 @@ function listByStatus($id, $order)
 
 	$sql = "select * from $mysql_tickets_table where ";
 	$list = getStatusList();
+	$flag =0;
 	for($i=0; $i<sizeof($list); $i++){
 		if($flag != 1){
 			$sql .= "status!='" . $list[$i] . "'";
