@@ -32,8 +32,6 @@ if(isset($search)) {
 
     echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
     echo '<tr><td>';
-    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
-    echo "</td></tr>";
     echo '<tr><<td class=back width="100%" >';
     echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
 		</td></tr>';
@@ -41,28 +39,26 @@ if(isset($search)) {
 }  ELSE {
 
 echo "<form method=post>";
-createHeader("Update Ticket closed dates bssed on LOG entries");
+
 
 echo '
 				<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 						<TR>
-						<TD>
-							<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+						<TD>';
+						createHeader("Update Ticket closed dates bssed on LOG entries");
+					    echo '<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
 								<TR>
-								<TD class=back2 align=right width=27%>'.$lang_searchtype.': </td>
+								<TD class=back2 align=right width=27%>$lang_searchtype </td>
 								<td class=back>
-									<select name=andor><option value=and selected>'.$lang_and.'</option><option value=or>'.$lang_or.'</option></select>
+									<select name=andor><option value=and selected>$lang_and</option><option value=or>$lang_o</option></select>
 								</td>
-								</tr>
-								
-								<TR>';
+								</tr>';
 
 echo '
 					</table><br>
 					
-					<input type=submit value=\''.$lang_searchforticket.'\' name=search>
-					<input type=hidden value='.$query.' name=query>
-					
+					<input type=submit value=\'$lang_searchforticket\' name=search>
+					<input type=hidden value=$query name=query>					
 					</form>';
 
 }
