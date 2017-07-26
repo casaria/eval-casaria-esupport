@@ -1680,7 +1680,7 @@ function displayTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
+        $csv_string = $csv_string . $row['id'] . ",";
     }
 
     /*  while ($row = $db->fetch_array($result)) {
