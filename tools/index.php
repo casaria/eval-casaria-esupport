@@ -128,7 +128,7 @@ border=0>
 	  </TD>
         </TR>
         <TR>
-          <TD class=back> <IMG SRC="<?php echo $theme['image_dir'].$theme['logo_path']; ?>" ALT="logo">
+          <TD class=back> <IMG SRC="<?php echo "../$theme[image_dir].$theme[logo_path]"; ?>" ALT="logo">
             <TABLE width="100%">
               <TBODY>
               <TR>
