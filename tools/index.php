@@ -286,15 +286,7 @@ border=0>
           </TD>
 		
 		</TR>
-		<?php
-		if($enable_whosonline == 'On'){
-			echo "<TR>
-				<TD class=cat>";
-					require_once "common/whosonline.php";
-			echo "</td>
-				</tr>";
-		}
-		?>
+
         <TR>
           <TD class=hf align=center>
 		  <?php
