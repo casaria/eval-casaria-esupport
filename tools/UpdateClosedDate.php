@@ -16,8 +16,7 @@ $today = getdate();
 if(isset($search)) {
     //lets get the information ready to be passed to the displayTicket table.
 
-    $sql  = 'SELECT * FROM "$mysql_ticket" WHERE "status" = "CLOSED"';
-
+    $sql  = 'SELECT *  FROM `tickets` WHERE `status` = \'CLOSED\'';
     $result = $db->query($sql);
 
     echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
