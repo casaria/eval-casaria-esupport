@@ -1596,8 +1596,7 @@ function createTimeOffsetMenu($selected)
 function displayTicket($result)
 {
     global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-
-    $second = getSecondPriority();
+	$second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
     $recordcount = 0;
