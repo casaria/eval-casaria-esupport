@@ -42,8 +42,8 @@ if(eregi("supporter", $PHP_SELF) || eregi("admin", $PHP_SELF)) {
    $login_logo ="../images/casariadefault/small-header-brown.gif";
 }
 else {
-	require_once "../lang/$default_language.lang.php";
-	$login_logo = "../images/casariadefault/small-header-brown.gif";
+	require_once "lang/$default_language.lang.php";
+	$login_logo = "images/casariadefault/small-header-brown.gif";
 }
 
 
@@ -142,7 +142,7 @@ if(!isSet($_SESSION ['cookie_name'])){
 	if(eregi("supporter", $PHP_SELF) || eregi("admin", $PHP_SELF))
 		require_once "../common/style.php";
 	else
-		require_once "../common/style.php";
+		require_once "common/style.php";
 
 if (isset($_COOKIE['supporter_usercookie'])) 
    $cookieuser = $_COOKIE['supporter_usercookie'];
