@@ -320,7 +320,7 @@ border=0>
 
 <?php
 
-require "common/footer.php";
+require "../common/footer.php";
 
 ?>
 
