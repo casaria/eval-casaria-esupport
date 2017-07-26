@@ -549,7 +549,7 @@ if(isset($search) || isset($s)) {
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_betweendates.': </td>
+						<TD class=back2 align=right width=27%>'.$lang_betweenCreateDates.': </td>
 						<td class=back>
 						<select name=smonth>';
 						for($i=1; $i<13; $i++){
