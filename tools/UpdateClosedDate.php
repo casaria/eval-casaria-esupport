@@ -10,7 +10,7 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
-$highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
+//$highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
 if(isset($search)) {
