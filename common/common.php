@@ -1590,21 +1590,20 @@ function createTimeOffsetMenu($selected)
 }
 
 /***********************************************************************************************************
-**	function displayTicket():
-**		Takes one argument.  Takes the result of a sql query that searches the tickets table and displays
-**	all pertinent information about the ticket in a nice table format.
-************************************************************************************************************/
+ **	function displayTicket():
+ **		Takes one argument.  Takes the result of a sql query that searches the tickets table and displays
+ **	all pertinent information about the ticket in a nice table format.
+ ************************************************************************************************************/
 function displayTicket($result)
 {
-	global $cookie_name, $mysql_ugroups_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+    global $cookie_name, $mysql_ugroups_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
 
-	$second = getSecondPriority();	
-	$sql3 = "select * from $mysql_ugroups_table ";
-	$sqlBS = "select * from $mysql_BillingStatus_table";
-
-	$recordcount = 0;
+    $second = getSecondPriority();
+    $sql3 = "select * from $mysql_ugroups_table ";
+    $sqlBS = "select * from $mysql_BillingStatus_table";
+    $recordcount = 0;
     $csv_string = "";
-	while($row = $db->fetch_array($result)) {
+    while ($row = $db->fetch_array($result)) {
 
         $last_update = $row['lastupdate'];  //last update timestamp.
 
@@ -1689,11 +1688,10 @@ function displayTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = +$row[id] . ","
-
-		}
-        $summary = array("recornum"=>$recordcount,"remarks"	=> "list (CSV):", "tktlist" => $csv_string );
-  return $summary;
+        $csv_string = +$row[id] . ",";
+    }
+    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
+	return $summary;
 }
 
 /***********************************************************************************************************
