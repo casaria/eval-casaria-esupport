@@ -46,25 +46,25 @@ if($enable_helpdesk == 'Off'){
 }
 
 if($reg == 'yes'){
-	require_once "lang/$default_language.lang.php";
+	require_once "../lang/$default_language.lang.php";
 	require "register.php";
 	exit;
 }
 
 if($pubpriv == 'Private'){
-	require "common/login.php";
+	require "../common/login.php";
 }
 RewindSession();
 $language = getLanguage($_SESSION['cookie_name']);
 if($language == '')
-	require_once "lang/$default_language.lang.php";
+	require_once "../lang/$default_language.lang.php";
 else
-	require_once "lang/$language.lang.php";
+	require_once "../lang/$language.lang.php";
 
 //if(isSupporter($_SESSION['cookie_name']))
 	//nov14 header("Location: $supporter_site_url/index.php");
 
-require_once "common/style.php";
+require_once "../common/style.php";
 
 $time_offset = getTimeOffset($_SESSION['cookie_name']);
 
