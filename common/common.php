@@ -1778,9 +1778,10 @@ function displayTicket($result)
        }
        */
     endTable();
-    echo "<TD valign='top' width='80%' >";
+    echo "<tr></tr><TD valign='top' width='80%' >";
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
+    echo "</td></tr>";
     echo "</table>";
     return $summary;
 }
