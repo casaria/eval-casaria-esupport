@@ -1594,8 +1594,8 @@ function createTimeOffsetMenu($selected)
  ************************************************************************************************************/
 function displayTicket($result)
 {
-    global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-	$second = getSecondPriority();
+    global $cookie_name, $mysql_ugroups_table, $mysql_status_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+    $second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
     $recordcount = 0;
@@ -1606,7 +1606,7 @@ function displayTicket($result)
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
         //$cs = getHighestRank($mysql_status_table);
-        if ( $row['status'] == $cs ){
+        if ($row['status'] == $cs) {
             $closed_ts = $row['closed_date'];
             $row_is_closed = 1;
         } //closed timestamp
@@ -1693,6 +1693,7 @@ function displayTicket($result)
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
     }
+}
 /*while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
@@ -1780,12 +1781,13 @@ function displayTicket($result)
             default:
                 echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
                 break;
-        }
 
         echo "</tr>";
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
-    } */
+    } /*/
+
+
 
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
 	return $summary;

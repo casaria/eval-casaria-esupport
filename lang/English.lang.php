@@ -473,5 +473,4 @@ $lang_billingStatus = "Billing status";
 $lang_bs_initial = "Initial";
 $lang_betweenCreateDates ="Between dates (created)";
 $lang_GenerateClosedDate = "Generate closed date from log";
-
 ?>
