@@ -47,7 +47,7 @@ if($enable_helpdesk == 'Off'){
 
 if($reg == 'yes'){
 	require_once "../lang/$default_language.lang.php";
-	require "register.php";
+	require "../register.php";
 	exit;
 }
 
