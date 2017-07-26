@@ -1605,7 +1605,7 @@ function displayTicket($result)
     while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
-        $cs = getHighestRank($mysql_status_table);
+        //$cs = getHighestRank($mysql_status_table);
         if ( $row['status'] == $cs ){
             $closed_ts = $row['closed_date'];
             $row_is_closed = 1;
