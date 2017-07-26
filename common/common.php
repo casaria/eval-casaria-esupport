@@ -1095,9 +1095,9 @@ function getHighestRank($table)
 	global $mysql_tstatus_table, $db;
 
 	if($table == $mysql_tstatus_table) {
-        $sql = "select `id` from $table order by `rank` desc";
+        $sql = "select id from $table order by rank desc";
     }else{
-		$sql = "select id from $table order by `rank` asc";
+		$sql = "select id from $table order by rank asc";
 	}
 	
 	$result = $db->query($sql);
