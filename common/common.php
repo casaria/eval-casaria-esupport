@@ -1780,8 +1780,10 @@ function displayTicket($result)
     endTable();
     echo "<tr><TD class='back' width='90%'>";
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
+    echo "</td></tr><tr>";
+    echo "<TD class='back' width='90%'>";
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
-    echo "<TD class='back'></TD></td></tr>";
+    echo "</td><TD class='back'</TD></tr>";
    //< echo "</table>";
     return $summary;
 }
