@@ -183,20 +183,7 @@ border=0>
             													</TD>
             													</TR>';
             												}
-            
-            												if($enable_CloudControl == 'On'){
-            													echo '<TR>
-            													<TD class=cat><B>' . $lang_CloudControl . '</B></TD>
-            													</TR>
-            													<TR>
-            													<TD class=subcat>
-            													<LI><A
-            													href="index.php?t=cccheater">' . $lang_ccc_waterheater . '</A>
-            													</LI>
-            
-            													</TD>
-            													</TR>';
-            												}
+
             												
             												if(isCookieSet($_SESSION['cookie_name'], $_SESSION['enc_pwd'])){
             													echo '<TR>
