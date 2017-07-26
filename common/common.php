@@ -1778,8 +1778,13 @@ function displayTicket($result)
        }
        */
     endTable();
+    echo  "<table class=border cellSpacing=0 cellPadding=0 width=\"50%\" align=center border=0>	<tr> 
+			<td>";
+    echo "<tr>
+				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
+    echo "</table>";
     return $summary;
 }
 /***********************************************************************************************************
