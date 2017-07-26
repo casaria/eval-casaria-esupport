@@ -1777,8 +1777,8 @@ function displayTicket($result)
            $csv_string = $csv_string . $row[id] . ",";
        }
        */
-    //endTable();
-    echo "<tr></tr><TD valign='top' width='80%' >";
+    endTable();
+    echo "<tr><TD valign='top' width='30%'>";
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
     echo "</td></tr>";
