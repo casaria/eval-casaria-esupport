@@ -1601,6 +1601,7 @@ function displayTicket($result)
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
+    $CS null;
 
     while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
