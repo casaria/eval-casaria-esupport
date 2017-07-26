@@ -1603,9 +1603,17 @@ function displayTicket($result)
     $sqlBS = "select * from $mysql_BillingStatus_table";
     $recordcount = 0;
     $csv_string = "";
-    while ($row = $db->fetch_array($result)) {
+    $closed_ts = 0;
 
+    while ($row = $db->fetch_array($result)) {
+        $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
+		$cs = getHighestRank($mysql_tstatus_table);
+		if ( $row['status'] == $cs ){
+			$closed_ts = $row['closed_date'];
+			$row_is_closed = 1;
+        } //closed timestamp
+
 
         echo "<tr>
 				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
@@ -1662,7 +1670,7 @@ function displayTicket($result)
         echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 
-        echo $row[status];
+		echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
         echo "</a></td>";
         echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
@@ -2146,14 +2154,12 @@ function startTable($msg, $align, $width=100, $colspan=1, $class=info)
 ************************************************************************************************************/
 function endTable()
 {
-	echo '
+    echo '
 		</table>
 			</td>
-			</tr>
+			</tr>1`
 		</table><br>';
-
 }
-
 
 /***********************************************************************************************************
 **	function sendmail():
@@ -2857,6 +2863,7 @@ function displayUserTicket($result)
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
     return $summary;
 }
+
     /**	Takes the user id and returns an array containing the list of group tablenames(ugroupN) that the user is in.	**/
 function getUsersGroupList($id)
 {
