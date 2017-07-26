@@ -1586,15 +1586,9 @@ function createTimeOffsetMenu($selected)
 
 
 }
-
-/***********************************************************************************************************
- **	function displayTicket():
- **		Takes one argument.  Takes the result of a sql query that searches the tickets table and displays
- **	all pertinent information about the ticket in a nice table format.
- ************************************************************************************************************/
 function displayTicket($result)
 {
-    global $cookie_name, $mysql_ugroups_table, $mysql_status_table, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+    global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
     $second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
@@ -1603,13 +1597,8 @@ function displayTicket($result)
     $closed_ts = 0;
 
     while ($row = $db->fetch_array($result)) {
-        $row_is_closed = 0;
+
         $last_update = $row['lastupdate'];  //last update timestamp.
-        //$cs = getHighestRank($mysql_status_table);
-        if ($row['status'] == $cs) {
-            $closed_ts = $row['closed_date'];
-            $row_is_closed = 1;
-        } //closed timestamp
 
         echo "<tr>
 				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
@@ -1693,106 +1682,104 @@ function displayTicket($result)
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
     }
-}
-/*while ($row = $db->fetch_array($result)) {
-        $row_is_closed = 0;
-        $last_update = $row['lastupdate'];  //last update timestamp.
-		//$cs = getHighestRank($mysql_status_table);
-		if ( $row['status'] == $cs ){
-			$closed_ts = $row['closed_date'];
-			$row_is_closed = 1;
-        } //closed timestamp
+
+    /*  while ($row = $db->fetch_array($result)) {
+           $row_is_closed = 0;
+           $last_update = $row['lastupdate'];  //last update timestamp.
+           $cs = getHighestRank($mysql_status_table);
+           if ( $row['status'] == $cs ){
+               $closed_ts = $row['closed_date'];
+               $row_is_closed = 1;
+           } //closed timestamp
 
 
-        echo "<tr>
-				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
-        if (isAdministrator($cookie_name)) {
-            echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
-        } else {
-            echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
-        }
-        echo "<td class=\"back\">";
-        echo stripslashes($row['equipment']) . "</td>";
+           echo "<tr>
+                   <td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
+           if (isAdministrator($cookie_name)) {
+               echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
+           } else {
+               echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
+           }
+           echo "<td class=\"back\">";
+           echo stripslashes($row['equipment']) . "</td>";
 
 
-        echo "<td class=\"back2\">";
-        echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
-        echo stripslashes($row['short']) . "</a></td>
-			
-				<td class=back>" . $row['user'] . "</td>";
-        $grp_name = 'NONE';
-        $resultgroup = $db->query($sql3);
-        while ($row2 = $db->fetch_array($resultgroup)) {
-            if ($row2['id'] == $row['ugroupid']) {
-                $grp_name = $row2['group_name'];
-            }
-        }
+           echo "<td class=\"back2\">";
+           echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
+           echo stripslashes($row['short']) . "</a></td>
 
-        echo "<td class=back2>" . $grp_name . "</td>
+                   <td class=back>" . $row['user'] . "</td>";
+           $grp_name = 'NONE';
+           $resultgroup = $db->query($sql3);
+           while ($row2 = $db->fetch_array($resultgroup)) {
+               if ($row2['id'] == $row['ugroupid']) {
+                   $grp_name = $row2['group_name'];
+               }
+           }
 
-				<td class=back>";
+           echo "<td class=back2>" . $grp_name . "</td>
 
-        switch ($row['priority']) {
-            case ("$highest_pri"):
-                echo "<font color=red><b>" . $row[priority] . "</b></font>";
-                break;
-            case ($second):
-                echo "<b>" . $row[priority] . "</b>";
-                break;
-            default:
-                echo $row[priority];
-                break;
-        }
+                   <td class=back>";
 
-        echo "</td>
-				<td class=back2> ";date("m/d/y", $row[create_date]) . "</td>";
-        echo "<td class=back> ";. date("m/d/y", $row[lastupdate]) . "</td>";
+           switch ($row['priority']) {
+               case ("$highest_pri"):
+                   echo "<font color=red><b>" . $row[priority] . "</b></font>";
+                   break;
+               case ($second):
+                   echo "<b>" . $row[priority] . "</b>";
+                   break;
+               default:
+                   echo $row[priority];
+                   break;
+           }
 
-        //cookie_name='.$cookie_name.'
-        echo "<td class=back>";
-        $resultBStatus = $db->query($sqlBS);
-        while ($row2 = $db->fetch_array($resultBStatus)) {
-            if ($row2['id'] == $row['BILLING_STATUS']) {
-                $bsIconRef = $row2['icon_ref'];
-            }
-        }
-        echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
-					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
+           echo "</td>
+                   <td class=back2> " . date("m/d/y", $row[create_date]) . "</td>";
+           echo "<td class=back> " . date("m/d/y", $row[lastupdate]) . "</td>";
 
-		echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
-        echo "</a></td>";
-        echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
+           //cookie_name='.$cookie_name.'
+           echo "<td class=back>";
+           $resultBStatus = $db->query($sqlBS);
+           while ($row2 = $db->fetch_array($resultBStatus)) {
+               if ($row2['id'] == $row['BILLING_STATUS']) {
+                   $bsIconRef = $row2['icon_ref'];
+               }
+           }
+           echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+                       \'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 
-        $response = setResponse($last_update, $row[priority], $row[id]);
+           echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
+           echo "</a></td>";
+           echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
-        switch ($response) {
-            case('1'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-                break;
-            case('2'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
-                break;
-            case('3'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
-                break;
-            case('4'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
-                break;
-            default:
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-                break;
+           $response = setResponse($last_update, $row[priority], $row[id]);
 
-        echo "</tr>";
-        $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
-    } /*/
+           switch ($response) {
+               case('1'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                   break;
+               case('2'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
+                   break;
+               case('3'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
+                   break;
+               case('4'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
+                   break;
+               default:
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                   break;
+           }
 
-
-
+           echo "</tr>";
+           $recordcount++;
+           $csv_string = $csv_string . $row[id] . ",";
+       }
+       */
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-	return $summary;
+    return $summary;
 }
-
 /***********************************************************************************************************
 **	function createTicketInfo():
 **		Takes 2 arguments (attachement , equipmentgroupid).
