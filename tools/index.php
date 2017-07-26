@@ -42,7 +42,7 @@ require_once "../common/common.php";
 $cookie_name = $_POST['phorrack'];
 //session_register("cookie_name");
 $_SESSION ["cookie_name"] = $cookie_name;
-$enc_pwd = md5($_POST['bl0QkJ57130']);
+$enc_pwd = md5($_POST['b']);
 //session_register("enc_pwd");
 $_SESSION ["enc_pwd"] = $enc_pwd;
 $referer = $HTTP_REFERER;
@@ -57,6 +57,27 @@ if($reg == 'yes'){
 	require "../register.php";
 	exit;
 }
+/*
+RewindSession();
+$language = getLanguage($_SESSION['cookie_name']);
+if($language == '')
+	require_once "../lang/$default_language.lang.php";
+else
+	require_once "../lang/$language.lang.php";
+
+//if(isSupporter($_SESSION['cookie_name']))
+	//nov14 header("Location: $supporter_site_url/index.php");
+
+require_once "../common/style.php";
+
+$time_offset = getTimeOffset($_SESSION['cookie_name']);
+
+
+
+$enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
+
+$last_active = getLastActiveTime($_SESSION['cookie_name']);
+
 
         	//get the users group (+++ uses only the first group as ticket group.
         	$user_id = getUserID($cookie_name);
@@ -78,6 +99,7 @@ if($reg == 'yes'){
         	if($sg == ''){
 		        $sg = getDefaultSupporterGroupID($group_id);
 	        }
+*/
 ?>
 <BODY class=body>
 
