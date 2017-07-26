@@ -1603,95 +1603,96 @@ function displayTicket($result)
 	$sqlBS = "select * from $mysql_BillingStatus_table";
 
 	$recordcount = 0;
-	$csv_string ='';
-	while($row = $db->fetch_array($result)){
+    $csv_string = "";
+	while($row = $db->fetch_array($result)) {
 
-		$last_update = $row['lastupdate'];  //last update timestamp.
-	
-		echo "<tr>
-				<td class=back>". str_pad($row['id'], 5, "0", STR_PAD_LEFT) ."</td>";
-				if(isAdministrator($cookie_name)){
-					echo "<td class=back2><a href=\"".$admin_site_url."/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">".$row['supporter']."</td>";
-				}
-				else{
-					echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">".$row['supporter']."</td>";
-				}
-				echo "<td class=\"back\">";
-					echo stripslashes($row['equipment']) . "</td>";
-			
+        $last_update = $row['lastupdate'];  //last update timestamp.
 
-				echo "<td class=\"back2\">";
-					echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
-					echo stripslashes($row['short']) . "</a></td>
+        echo "<tr>
+				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
+        if (isAdministrator($cookie_name)) {
+            echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
+        } else {
+            echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
+        }
+        echo "<td class=\"back\">";
+        echo stripslashes($row['equipment']) . "</td>";
+
+
+        echo "<td class=\"back2\">";
+        echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
+        echo stripslashes($row['short']) . "</a></td>
 			
-				<td class=back>". $row['user'] ."</td>";
-				$grp_name='NONE';
-				$resultgroup = $db->query($sql3);
-				while($row2 = $db->fetch_array($resultgroup)){
-				     if ($row2['id'] == $row['ugroupid']) {
-				        $grp_name=$row2['group_name'];	
-				     }	
-				}
-				
-				echo "<td class=back2>". $grp_name ."</td>
+				<td class=back>" . $row['user'] . "</td>";
+        $grp_name = 'NONE';
+        $resultgroup = $db->query($sql3);
+        while ($row2 = $db->fetch_array($resultgroup)) {
+            if ($row2['id'] == $row['ugroupid']) {
+                $grp_name = $row2['group_name'];
+            }
+        }
+
+        echo "<td class=back2>" . $grp_name . "</td>
 
 				<td class=back>";
 
-					switch($row['priority']){					
-						case ("$highest_pri"):
-							echo "<font color=red><b>".$row[priority] ."</b></font>";
-							break;
-						case ($second):
-							echo "<b>".$row[priority]."</b>";
-							break;
-						default:
-							echo $row[priority];
-							break;
-					}
+        switch ($row['priority']) {
+            case ("$highest_pri"):
+                echo "<font color=red><b>" . $row[priority] . "</b></font>";
+                break;
+            case ($second):
+                echo "<b>" . $row[priority] . "</b>";
+                break;
+            default:
+                echo $row[priority];
+                break;
+        }
 
-				echo "</td>
-				<td class=back2> ".date("m/d/y", $row[create_date])."</td>";
-				echo "<td class=back> ".date("m/d/y", $row[lastupdate])."</td>";
-				
-				//cookie_name='.$cookie_name.'
-				echo "<td class=back>";
-                $resultBStatus = $db->query($sqlBS);
-                while($row2 = $db->fetch_array($resultBStatus)){
-                    if ($row2['id'] == $row['BILLING_STATUS']) {
-                        $bsIconRef=$row2['icon_ref'];
-                    }
-                }
-				echo '<a href="updatelog.php?&id='.$row[id].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+        echo "</td>
+				<td class=back2> " . date("m/d/y", $row[create_date]) . "</td>";
+        echo "<td class=back> " . date("m/d/y", $row[lastupdate]) . "</td>";
+
+        //cookie_name='.$cookie_name.'
+        echo "<td class=back>";
+        $resultBStatus = $db->query($sqlBS);
+        while ($row2 = $db->fetch_array($resultBStatus)) {
+            if ($row2['id'] == $row['BILLING_STATUS']) {
+                $bsIconRef = $row2['icon_ref'];
+            }
+        }
+        echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
-					
-				echo $row[status]; echo "</a></td>";
-				echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
-				$response = setResponse($last_update, $row[priority], $row[id]);
+        echo $row[status];
+        echo "</a></td>";
+        echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
-				switch($response){
-					case('1'):
-						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-						break;
-					case('2'):
-						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
-						break;
-					case('3'):
-						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
-						break;
-					case('4'):
-						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
-						break;
-					default:
-						echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-						break;
-				}
-					
-			  echo "</tr>";
-			  $recordcount++;
-			  $csv_string  =+ (string)$row[id] . ",";
-	}
-	$summary = array(	'recordcount' 	=> 	$recordcount, 'remarks'	=>	'TICKET LIST', 'ticketList' => $csv_string);
+        $response = setResponse($last_update, $row[priority], $row[id]);
+
+        switch ($response) {
+            case('1'):
+                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                break;
+            case('2'):
+                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
+                break;
+            case('3'):
+                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
+                break;
+            case('4'):
+                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
+                break;
+            default:
+                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                break;
+        }
+
+        echo "</tr>";
+        $recordcount++;
+        $csv_string = +$row[id] . ","
+
+		}
+        $summary = array("recornum"=>$recordcount,"remarks"	=> "list (CSV):", "tktlist" => $csv_string );
   return $summary;
 }
 
@@ -2782,83 +2783,81 @@ function ProcessExtendedNotifications($cc_template_name, $mms_template_name, $st
 ************************************************************************************************************/
 function displayUserTicket($result)
 {
-	global $cookie_name, $mysql_tpriorities_table, $highest_pri, $theme, $db, $admin_site_url;
-	$current_time = time();
+    global $cookie_name, $highest_pri, $theme, $db, $admin_site_url;
 
-	$second = getSecondPriority();	
-	
-	$recordcount =0;
-	while($row = $db->fetch_array($result)){
+    $second = getSecondPriority();
 
-		$last_update = $row['lastupdate'];  //last update timestamp.
-	
-		echo "<tr>
-				<td class=back>". str_pad($row['id'], 5, "0", STR_PAD_LEFT) ."</td>";
-				if(isAdministrator($cookie_name)){
-					echo "<td class=back2><a href=\"".$admin_site_url."/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">".$row['supporter']."</td>";
-				}
-				else{
-					echo "<td class=back2>".$row['supporter']."</td>";
-				}
-				echo "<td class=\"back\">";
-				       
-					echo $row['equipment'] . "</td>";
+    $recordcount = 0;
+    $csv_string = "";
+    while ($row = $db->fetch_array($result)) {
+
+        $last_update = $row['lastupdate'];  //last update timestamp.
+
+        echo "<tr>
+				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
+        if (isAdministrator($cookie_name)) {
+            echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
+        } else {
+            echo "<td class=back2>" . $row['supporter'] . "</td>";
+        }
+        echo "<td class=\"back\">";
+
+        echo $row['equipment'] . "</td>";
+
+
+        echo "<td class=\"back2\">";
+        echo "<a href=\"?t=tinf&id=" . $row[id] . "\">";
+        echo stripslashes($row['short']) . "</a></td>
 			
-
-				echo "<td class=\"back2\">";
-					echo "<a href=\"?t=tinf&id=" . $row[id] . "\">";
-					echo stripslashes($row['short']) . "</a></td>
-			
-				<td class=back>". $row['user'] ."</td>
+				<td class=back>" . $row['user'] . "</td>
 				<td class=back2>";
 
-					switch($row['priority']){					
-						case ("$highest_pri"):
-							echo "<font color=red><b>".$row[priority] ."</b></font>";
-							break;
-						case ($second):
-							echo "<b>".$row[priority]."</b>";
-							break;
-						default:
-							echo $row[priority];
-							break;
-					}
+        switch ($row['priority']) {
+            case ("$highest_pri"):
+                echo "<font color=red><b>" . $row[priority] . "</b></font>";
+                break;
+            case ($second):
+                echo "<b>" . $row[priority] . "</b>";
+                break;
+            default:
+                echo $row[priority];
+                break;
+        }
 
-				echo "</td>
-				<td class=back> ".date("m/d/y", $row[create_date])."</td>
+        echo "</td>
+				<td class=back> " . date("m/d/y", $row[create_date]) . "</td>
 				<td class=back2>";
-				//cookie_name='.$cookie_name.'
-				echo '<a href="supporter/updatelog.php?&id='.$row[id].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+        //cookie_name='.$cookie_name.'
+        echo '<a href="supporter/updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
-					
-				echo $row[status] ."</a></td>";
 
-						
-				// Calculates total time spent on the ticket in minutes
-				$sql3 = "select sum(minutes) from tickets,time_track where (tickets.id=time_track.ticket_id AND tickets.id=".$row[id].")";
-				echo '<td class=back2 align=right>';
-				$result3 = $db->query($sql3);
-				$row3 = $db->fetch_array($result3);
-						
-					if ($row3[0]) {
-					$minutes = $row3[0];
-						} else {
-						$minutes = "0";
-						}
-						
-				showFormattedTime($minutes * 60, 1);
-					echo '</td>';
+        echo $row[status] . "</a></td>";
 
-					
-			  echo "</tr>";
-			  $recordcount++;
-	}
-	$summary = array(	'recordcount' 	=> 	$recordcount, 
-		       		'remarks'	=>	''); 
-        return $summary;	
 
+        // Calculates total time spent on the ticket in minutes
+        $sql3 = "SELECT sum(minutes) FROM tickets,time_track WHERE (tickets.id=time_track.ticket_id AND tickets.id=" . $row[id] . ")";
+        echo '<td class=back2 align=right>';
+        $result3 = $db->query($sql3);
+        $row3 = $db->fetch_array($result3);
+
+        if ($row3[0]) {
+            $minutes = $row3[0];
+        } else {
+            $minutes = "0";
+        }
+
+        showFormattedTime($minutes * 60, 1);
+        echo '</td>';
+
+
+        echo "</tr>";
+        $recordcount++;
+        $csv_string = +$row[id] . ",";
+        $summary = array("recornum" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
+        return $summary;
+
+    }
 }
-
 /**	Takes the user id and returns an array containing the list of group tablenames(ugroupN) that the user is in.	**/
 function getUsersGroupList($id)
 {
