@@ -33,7 +33,7 @@
 //set the start time so we can calculate how long it takes to load the page.
 $mtime1 = explode(" ", microtime());
 $starttime = $mtime1[0] + $mtime1[1];
-
+$_SESSION['CCOOLKIO']
 
 require_once "../common/config.php";
 require_once "../common/$database.class.php";

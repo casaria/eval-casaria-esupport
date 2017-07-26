@@ -39,6 +39,17 @@ require_once "common/config.php";
 require_once "common/$database.class.php";
 require_once "common/common.php";
 
+
+
+$cookie_name = $_POST['phorrack'];
+//session_register ("cookie_name");
+$_SESSION ["cookie_name"] = $cookie_name;
+$enc_pwd = md5($_POST['bl0QkJ57130']);
+//session_register ("enc_pwd");
+$_SESSION ["enc_pwd"] = $enc_pwd;
+$referer = $HTTP_REFERER;
+
+
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);
 	exit;
@@ -160,7 +171,7 @@ border=0>
             														<br><form name=formTicketSearch action="index.php" method=get>
             															<input type=hidden name=t value=tinf>
             															<?php echo $lang_ticket; ?> # : <input type=text name=id size=5>
-            															<a href="#" onClick="javascript:document.formTicketSearch.submit();"> <?php echo $lang_go; ?>!</a>
+            															<a href="#" onClick="document.formTicketSearch.submit();"> <?php echo $lang_go; ?>!</a>
             
             														</form>
             													</TD>
