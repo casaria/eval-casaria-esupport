@@ -16,7 +16,7 @@ $today = getdate();
   if(isset($search)) {
       //lets get the information ready to be passed to the displayTicket table.
 
-      $sql = "select * from $mysql_tickets_table where \"status\"  NOT LIKE \"%CLOSED%\"";
+      $sql  = 'SELECT *  FROM `tickets` WHERE `status` = \'CLOSED\'';
 
       $result = $db->query($sql);
 
@@ -36,7 +36,7 @@ $today = getdate();
       echo "</td></tr>";
       echo '<tr><<td class=back width="100%" >';
 					echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
-		</td></tr></TABLE>';
+		</td></tr></TABLE>'     ;
       endTable();
   }
 
