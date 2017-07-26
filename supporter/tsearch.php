@@ -451,7 +451,7 @@ if(isset($search) || isset($s)) {
 
 		endTable();
 
-		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR> $summary[recordcount]<BR>";
+		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR> $summary[tktlist]<BR>";
 
 
 		endTable();
