@@ -57,6 +57,8 @@ if($reg == 'yes'){
 	require "../register.php";
 	exit;
 }
+
+require_once "../common/style.php";
 /*
 RewindSession();
 $language = getLanguage($_SESSION['cookie_name']);
