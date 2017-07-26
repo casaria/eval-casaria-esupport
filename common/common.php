@@ -2850,13 +2850,14 @@ function displayUserTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = +$row[id] . ",";
-        $summary = array("recornum" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-        return $summary;
+        $csv_string = $csv_string . $row[id] . ",";
 
     }
+
+    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
+    return $summary;
 }
-/**	Takes the user id and returns an array containing the list of group tablenames(ugroupN) that the user is in.	**/
+    /**	Takes the user id and returns an array containing the list of group tablenames(ugroupN) that the user is in.	**/
 function getUsersGroupList($id)
 {
 	global $mysql_ugroups_table, $num_groups, $db;
