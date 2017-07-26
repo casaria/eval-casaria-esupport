@@ -472,6 +472,6 @@ $lang_CloudControl = "Casaria Cloud Control";
 $lang_billingStatus = "Billing status";
 $lang_bs_initial = "Initial";
 $lang_betweenCreateDates ="Between dates (created)";
-$lang_betweenClosedDates ="Between dates (date last closed)";
+$lang_GenerateClosedDate = "Generatde closed date from log";
 
 ?>
