@@ -312,7 +312,7 @@ if(isset($search) || isset($s)) {
 	$sql2 = preg_replace("/ order(.*)/i", "", $sql);
 	$sql2 = preg_replace("/ /i", "%20", $sql2);
 
-	if ($sql == "select * from $mysql_tickets_table where ()") {
+	if ($sql == "select * from $mysql_tickets_table where 'status' == 'CLOSED')") {
 		printerror("$lang_searchcriteria");
 	} else {
         createHeader("$lang_searchresults SQL: " . $sql);
