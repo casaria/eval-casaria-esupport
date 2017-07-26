@@ -123,8 +123,7 @@ border=0>
 		else{
 			echo $lang_loggedinas." <b>".$_SESSION['cookie_name']."</b> ( <a class=hf href=\"common/logout.php\"> ".$lang_logout."</a> )";
 		}
-	  ?> 
-	 
+	  ?>
 	  </TD>
         </TR>
         <TR>
