@@ -275,7 +275,7 @@ border=0>
 							require "CCC/jheater.php";
 							break;														
 						default:
-							require "announce.php";
+							require "../announce.php";
 							break;
 					}
 					?>
