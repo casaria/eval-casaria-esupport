@@ -16,7 +16,7 @@ $today = getdate();
   if(isset($search)) {
       //lets get the information ready to be passed to the displayTicket table.
 
-      $sql = "select * from $mysql_tickets_table where \"status\"  NOT LIKE \"%CLOSED%\"";
+      $sql  = 'SELECT *  FROM `tickets` WHERE `status` = \'CLOSED\'';
 
       $result = $db->query($sql);
 
