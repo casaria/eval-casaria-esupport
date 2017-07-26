@@ -51,9 +51,6 @@ if($reg == 'yes'){
 	exit;
 }
 
-if($pubpriv == 'Private'){
-	require "../common/login.php";
-}
 RewindSession();
 $language = getLanguage($_SESSION['cookie_name']);
 if($language == '')
