@@ -156,7 +156,7 @@ border=0>
             										</TR>
             										<TR>
             											<TD class=subcat>
-            												<LI><A href="index.php?t=tgenc"><?php echo $lang_GenerateClosedDate; ?></A></LI>
+            												<LI><A href="index.php?t=t1">    <?php echo $lang_GenerateClosedDate; ?></A></LI>
             													<LI><A href="index.php?t=tmop"><?php echo $lang_myopen; ?></A></LI>
             														<LI><A href="index.php?t=tmgo"><?php echo $lang_mygroups; ?></A></LI>
             														<LI><A href="index.php?t=tmgc"><?php echo $lang_mygroupsclose; ?></A></LI>
@@ -215,25 +215,25 @@ border=0>
 					<?php
 
 					switch($t){
-						case ("tcre"):
-							require "tcreate.php";
+						case ("ti"):
+							require "UpdateClosedDate.php";
 							break;
-						case ("tmop"):
-							require "myopen.php";
+						case ("t2"):
+							require "dummy.php";
 							break;
-						case ("tmgo"):
+						case ("t3"):
 							$opentickets = TRUE;
-							require "mygroupshow.php";
+							require "dummy.php";
 							break;
-						case ("tmgc"):
+						case ("t4"):
 							$opentickets = FALSE;
-							require "mygroupshow.php";
+							require "dummy.php";
 							break;
-						case ("tclo"):
-							require "myclosed.php";
+						case ("t5"):
+							require "dummy.php";
 							break;
-						case ("tinf"):
-							require "tinfo.php";
+						case ("t6"):
+							require "dummy.php";
 							break;
 						case("terr"):
 							printError($lang_missing_info);
