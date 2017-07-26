@@ -315,8 +315,8 @@ if(isset($search) || isset($s)) {
 	if ($sql == "select * from $mysql_tickets_table where ()") {
 		printerror("$lang_searchcriteria");
 	} else {
-		createHeader("$lang_searchresults SQL: "  . $sql);
-
+        createHeader("$lang_searchresults SQL: " . $sql);
+    }
 		echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<TR>
 			<TD>
