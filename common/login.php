@@ -42,8 +42,8 @@ if(eregi("supporter", $PHP_SELF) || eregi("admin", $PHP_SELF)) {
    $login_logo ="../images/casariadefault/small-header-brown.gif";
 }
 else {
-	require_once "lang/$default_language.lang.php";
-	$login_logo = "images/casariadefault/small-header-brown.gif";
+	require_once "../lang/$default_language.lang.php";
+	$login_logo = "../images/casariadefault/small-header-brown.gif";
 }
 
 
