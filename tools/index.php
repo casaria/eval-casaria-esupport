@@ -35,9 +35,9 @@ $mtime1 = explode(" ", microtime());
 $starttime = $mtime1[0] + $mtime1[1];
 
 
-require_once "./common/config.php";
-require_once "./common/$database.class.php";
-require_once "./common/common.php";
+require_once "../common/config.php";
+require_once "../common/$database.class.php";
+require_once "../common/common.php";
 
 
 if($enable_helpdesk == 'Off'){
