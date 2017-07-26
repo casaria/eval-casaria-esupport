@@ -156,8 +156,8 @@ border=0>
             										</TR>
             										<TR>
             											<TD class=subcat>
-            												<LI><A href="index.php?t=tgencl<?php echo $lang_GenerateClosedDate; ?></A>
-            													<LI><A href="index.php?t=tmop"><?php echo $lang_myopen; ?></A>
+            												<LI><A href="index.php?t=tgenc"<?php echo $lang_GenerateClosedDate; ?></A></LI>
+            													<LI><A href="index.php?t=tmop"><?php echo $lang_myopen; ?></A></LI>
             														<LI><A href="index.php?t=tmgo"><?php echo $lang_mygroups; ?></A></LI>
             														<LI><A href="index.php?t=tmgc"><?php echo $lang_mygroupsclose; ?></A></LI>
             														<LI><A href="index.php?t=tclo"><?php echo $lang_myclosed; ?></A></LI>
