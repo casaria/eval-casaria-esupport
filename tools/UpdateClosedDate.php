@@ -36,7 +36,7 @@ if(isset($search)) {
     echo "</td></tr>";
     echo '<tr><<td class=back width="100%" >';
     echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
-		</td></tr></TABLE>'     ;
+		</td></tr>';
     endTable();
 }  ELSE {
 
