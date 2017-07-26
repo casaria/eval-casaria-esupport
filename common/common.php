@@ -1601,7 +1601,7 @@ function displayTicket($result)
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
-/*
+
     while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
@@ -1693,8 +1693,7 @@ function displayTicket($result)
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
     }
-*/
-  while ($row = $db->fetch_array($result)) {
+/*while ($row = $db->fetch_array($result)) {
         $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
 		//$cs = getHighestRank($mysql_status_table);
@@ -1745,8 +1744,8 @@ function displayTicket($result)
         }
 
         echo "</td>
-				<td class=back2> " . date("m/d/y", $row[create_date]) . "</td>";
-        echo "<td class=back> " . date("m/d/y", $row[lastupdate]) . "</td>";
+				<td class=back2> ";date("m/d/y", $row[create_date]) . "</td>";
+        echo "<td class=back> ";. date("m/d/y", $row[lastupdate]) . "</td>";
 
         //cookie_name='.$cookie_name.'
         echo "<td class=back>";
@@ -1786,7 +1785,7 @@ function displayTicket($result)
         echo "</tr>";
         $recordcount++;
         $csv_string = $csv_string . $row[id] . ",";
-    }
+    } */
 
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
 	return $summary;
