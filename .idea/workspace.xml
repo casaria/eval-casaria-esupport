@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/UpdateClosedDate.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/English.lang.php" afterPath="$PROJECT_DIR$/lang/English.lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/tsearch.php" afterPath="$PROJECT_DIR$/supporter/tsearch.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +78,8 @@
       <file leaf-file-name="tsearch.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supporter/tsearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="551" column="88" lean-forward="false" selection-start-line="551" selection-start-column="64" selection-end-line="551" selection-end-column="88" />
+            <state relative-caret-position="187">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="33" />
               <folding>
                 <marker date="1501034753925" expanded="true" signature="1747:1789" ph="select * fro... ${$mysql_tickets_table}" />
                 <marker date="1501034753925" expanded="true" signature="1840:1985" ph="select t.*, ${$mysql_tickets_table}" />
@@ -179,13 +179,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="English.lang.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UpdateClosedDate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/UpdateClosedDate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding>
+                <marker date="1501036105794" expanded="true" signature="610:624" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1501036105794" expanded="true" signature="610:644" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1501036105794" expanded="true" signature="774:852" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="782:852" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="790:852" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="872:926" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1054:1164" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1073:1126" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1073:1154" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1216:1296" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1385:1762" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1396:1762" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1407:1456" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1407:1762" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1472:1758" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1472:1762" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1485:1736" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1583:1722" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1758:1762" ph="..." />
+                <marker date="1501036105794" expanded="true" signature="1762:1767" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="English.lang.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="473" column="52" lean-forward="false" selection-start-line="473" selection-start-column="52" selection-end-line="473" selection-end-column="52" />
+            <state relative-caret-position="450">
+              <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
               <folding>
-                <marker date="1501034754017" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
+                <marker date="1501035621908" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
               </folding>
             </state>
           </provider>
@@ -1027,6 +1058,7 @@
         <option value="$PROJECT_DIR$/common/common.php" />
         <option value="$PROJECT_DIR$/supporter/tsearch.php" />
         <option value="$PROJECT_DIR$/lang/English.lang.php" />
+        <option value="$PROJECT_DIR$/tools/UpdateClosedDate.php" />
       </list>
     </option>
   </component>
@@ -1094,12 +1126,7 @@
             <path>
               <item name="eSupport@casaria.net" type="b2602c69:ProjectViewProjectNode" />
               <item name="eSupport@casaria.net" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="eSupport@casaria.net" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eSupport@casaria.net" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tools" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -1122,6 +1149,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\horra\PhpstormProjects\eSupport@casaria.net\tools" />
       <recent name="C:\Users\horra\PhpstormProjects\eSupport@casaria.net\common" />
     </key>
   </component>
@@ -1150,14 +1178,7 @@
       <workItem from="1500787404679" duration="11111000" />
       <workItem from="1500835545640" duration="30178000" />
       <workItem from="1501002765367" duration="1002000" />
-      <workItem from="1501003839146" duration="20646000" />
-    </task>
-    <task id="LOCAL-00023" summary="new user privileges added">
-      <created>1500929385532</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1500929385532</updated>
+      <workItem from="1501003839146" duration="21996000" />
     </task>
     <task id="LOCAL-00024" summary="new user privileges added">
       <created>1500930097056</created>
@@ -1495,11 +1516,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501034617825</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="style.php updated">
+      <created>1501034759559</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1501034759559</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62937000" />
+    <option name="totallyTimeSpent" value="64287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1570,14 +1598,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/control.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7718">
@@ -3753,10 +3773,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
+          <folding>
+            <marker date="1501035621908" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/supporter/tsearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="551" column="88" lean-forward="false" selection-start-line="551" selection-start-column="64" selection-end-line="551" selection-end-column="88" />
+        <state relative-caret-position="187">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="33" />
           <folding>
             <marker date="1501034753925" expanded="true" signature="1747:1789" ph="select * fro... ${$mysql_tickets_table}" />
             <marker date="1501034753925" expanded="true" signature="1840:1985" ph="select t.*, ${$mysql_tickets_table}" />
@@ -3855,12 +3885,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+    <entry file="file://$PROJECT_DIR$/tools/UpdateClosedDate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="473" column="52" lean-forward="false" selection-start-line="473" selection-start-column="52" selection-end-line="473" selection-end-column="52" />
+        <state relative-caret-position="318">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <marker date="1501034754017" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
+            <marker date="1501036105794" expanded="true" signature="610:624" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1501036105794" expanded="true" signature="610:644" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1501036105794" expanded="true" signature="774:852" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="782:852" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="790:852" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="872:926" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1054:1164" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1073:1126" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1073:1154" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1216:1296" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1385:1762" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1396:1762" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1407:1456" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1407:1762" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1472:1758" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1472:1762" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1485:1736" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1583:1722" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1758:1762" ph="..." />
+            <marker date="1501036105794" expanded="true" signature="1762:1767" ph="..." />
           </folding>
         </state>
       </provider>
