@@ -39,6 +39,7 @@ require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
 
+
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);
 	exit;
