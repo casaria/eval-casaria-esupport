@@ -1603,8 +1603,13 @@ function displayTicket($result)
     $closed_ts = 0;
 
     while ($row = $db->fetch_array($result)) {
-
+        $row_is_closed = 0;
         $last_update = $row['lastupdate'];  //last update timestamp.
+        $cs = getHighestRank($mysql_status_table);
+        if ( $row['status'] == $cs ){
+            $closed_ts = $row['closed_date'];
+            $row_is_closed = 1;
+        } //closed timestamp
 
         echo "<tr>
 				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
