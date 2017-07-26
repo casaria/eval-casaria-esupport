@@ -1,11 +1,11 @@
 <?php
 
 /***************************************************************************************************
-**	file:	UpdateClosedDate.php
-**
-**		T\
-**\
-****************************************************************************************************/
+ **	file:	UpdateClosedDate.php
+ **
+ **		T\
+ **\
+ ****************************************************************************************************/
 
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
@@ -13,37 +13,37 @@ require_once "../common/common.php";
 $highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
-  if(isset($search)) {
-      //lets get the information ready to be passed to the displayTicket table.
+if(isset($search)) {
+    //lets get the information ready to be passed to the displayTicket table.
 
-      $sql  = 'SELECT *  FROM `tickets` WHERE `status` = \'CLOSED\'';
+    $sql  = 'SELECT *  FROM `tickets` WHERE `status` = \'CLOSED\'';
 
-      $result = $db->query($sql);
+    $result = $db->query($sql);
 
-      echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+    echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<TR>
 			<TD>
 				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
-      echo ' <tr> ';
-      $summary = displayTicket($result);
-      echo "</tr>";
+    echo ' <tr> ';
+    $summary = displayTicket($result);
+    echo "</tr>";
 
-      endTable();
+    endTable();
 
-      echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
-      echo '<tr><td>';
-      echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
-      echo "</td></tr>";
-      echo '<tr><<td class=back width="100%" >';
-					echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
+    echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
+    echo '<tr><td>';
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
+    echo "</td></tr>";
+    echo '<tr><<td class=back width="100%" >';
+    echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
 		</td></tr></TABLE>'     ;
-      endTable();
-  }
+    endTable();
+}  ELSE {
 
-			echo "<form method=post>";
-			createHeader("Update Ticket closed dates bssed on LOG entries");
+echo "<form method=post>";
+createHeader("Update Ticket closed dates bssed on LOG entries");
 
-			echo '
+echo '
 				<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 						<TR>
 						<TD>
@@ -57,7 +57,7 @@ $today = getdate();
 								
 								<TR>';
 
-			echo '
+echo '
 					</table><br>
 					
 					<input type=submit value=\''.$lang_searchforticket.'\' name=search>
@@ -65,7 +65,5 @@ $today = getdate();
 					
 					</form>';
 
-
-
-
+}
 ?>
