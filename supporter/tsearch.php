@@ -450,14 +450,14 @@ if(isset($search) || isset($s)) {
 		}
 
 		endTable();
-        echho " <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>";
+        echo " <TABLE class=border cellSpacing=0 cellPadding=0 width=\"100%\" align=center border=0>";
 		echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
 							<input type=text size=52% name=csvlist value='$summary[tktlist]'>
 		</td></td></tr>";
-        endTable();
-        endTable();
+			endTable();
+			endTable();
 } else {
 
 	echo "<form method=post>";
@@ -558,7 +558,6 @@ if(isset($search) || isset($s)) {
 								if(($today['mon']-2) == $i)
 									echo ' selected';
 							echo ">".$lang_month[$i]."</option>";
-						}
 
 echo '					</select>
 						<select name=sday>
@@ -568,7 +567,7 @@ echo '					</select>
 							if($i == $today['mday'])
 								echo ' selected';
 							echo ">".$i."</option>\n";
-						}
+
 echo'					</select>
 						<select name=syear>
 						<option></option>';
