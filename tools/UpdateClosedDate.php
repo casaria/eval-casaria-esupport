@@ -22,9 +22,8 @@ if(isset($search)) {
 
     echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<TR>
-			<TD>
-				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
-    echo ' <tr> ';
+			<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
+    echo '<tr>';
     $summary = displayTicket($result);
     echo "</tr>";
 
@@ -33,8 +32,7 @@ if(isset($search)) {
     echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
     echo '<tr><td>';
     echo '<tr><<td class=back width="100%" >';
-    echo'<input type=text size=52% name=csvlist value="$summary[tktlist]>"
-		</td></tr>';
+    echo '<input type=text size=52% name="csvlist" value="$summary[tktlist]"></td></tr>';
     endTable();
 }  ELSE {
 
