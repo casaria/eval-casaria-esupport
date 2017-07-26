@@ -157,10 +157,10 @@ border=0>
             										<TR>
             											<TD class=subcat>
             												<LI><A href="index.php?t=t1">    <?php echo $lang_GenerateClosedDate; ?></A></LI>
-            													<LI><A href="index.php?t=tmop"><?php echo $lang_myopen; ?></A></LI>
-            														<LI><A href="index.php?t=tmgo"><?php echo $lang_mygroups; ?></A></LI>
-            														<LI><A href="index.php?t=tmgc"><?php echo $lang_mygroupsclose; ?></A></LI>
-            														<LI><A href="index.php?t=tclo"><?php echo $lang_myclosed; ?></A></LI>
+            													<LI><A href="index.php?t=tmop"><?php echo "T-2"; ?></A></LI>
+            														<LI><A href="index.php?t=tmgo"><?php echo "T-3"; ?></A></LI>
+            														<LI><A href="index.php?t=tmgc"><?php echo "T-4"; ?></A></LI>
+            														<LI><A href="index.php?t=tclo"><?php echo "T-5"; ?></A></LI>
             														<br><form name=formTicketSearch action="index.php" method=get>
             															<input type=hidden name=t value=tinf>
             															<?php echo $lang_ticket; ?> # : <input type=text name=id size=5>
