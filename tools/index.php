@@ -59,6 +59,7 @@ if($reg == 'yes'){
 }
 
 require_once "../common/style.php";
+require_once "../lang/$language.lang.php";
 /*
 RewindSession();
 $language = getLanguage($_SESSION['cookie_name']);
