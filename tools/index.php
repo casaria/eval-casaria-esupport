@@ -58,27 +58,6 @@ if($reg == 'yes'){
 	exit;
 }
 
-RewindSession();
-$language = getLanguage($_SESSION['cookie_name']);
-if($language == '')
-	require_once "../lang/$default_language.lang.php";
-else
-	require_once "../lang/$language.lang.php";
-
-//if(isSupporter($_SESSION['cookie_name']))
-	//nov14 header("Location: $supporter_site_url/index.php");
-
-require_once "../common/style.php";
-
-$time_offset = getTimeOffset($_SESSION['cookie_name']);
-
-
-
-$enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
-
-$last_active = getLastActiveTime($_SESSION['cookie_name']);
-        	
-        	
         	//get the users group (+++ uses only the first group as ticket group.
         	$user_id = getUserID($cookie_name);
         	$groups =  getUsersGroupList($user_id);
