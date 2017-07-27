@@ -1778,7 +1778,10 @@ function displayTicket($result)
        }
        */
 
-    echo "</table></table>";
+
+    endTable();
+    endTable();
+
     $linkString= "<a href=$supporter_site_url/index.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
     echo "<form method=post>";
     startTable("$lang_timetracking", "center");
