@@ -1782,14 +1782,15 @@ function displayTicket($result)
     endTable();
 
     $linkString= "<a href=$supporter_site_url/index.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
-/*    <form name=formTicketSearch action="index.php" method=get>
-            															<input type=hidden name=t value=tinf>
-            															<?php echo $lang_ticket; ?> # : <input type=text name=id size=5>
-	<a href="#" onClick="document.formTicketSearch.submit();"> <?php echo $lang_go; ?>!</a>
+    echo '<form name=formTimeTrack action="$supporter_site_url/index.php" method=post>';
+	echo '<input type=hidden name=tids value=$csv_string>';
+    echo '<input type=hidden value="$lang_printstats" name="hidemenu">';
+    ?>
+	<a href="#" onClick="document.formTimeTrack.submit();"> <?php echo "Time Track"; ?>!</a>
 
 	</form>
-*/
-    echo "<form method=post>";
+	<?php
+/*    echo "<form method=post>";
     startTable("$lang_timetracking", "center");
     echo "<tr><td class=back><br>";
     startTable("$lang_selecttickets", "center", "80%");
@@ -1801,6 +1802,7 @@ function displayTicket($result)
     echo "</td></tr>";
     endTable();
     echo "</form>";
+*/
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $linkString);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  $summary[tktlist]";
     return $summary;
