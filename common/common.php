@@ -1781,7 +1781,7 @@ function displayTicket($result)
     //echo "</table>";
     $linkString= "<a href=http://". $supporter_site_url ."/time.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $linkString);
-    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  $summary[tktlist]";&
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  $summary[tktlist]";
     return $summary;
 
 }
