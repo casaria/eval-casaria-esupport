@@ -54,7 +54,7 @@ startTable("$lang_yourgroupselect", "center");
 	//start the table, use a while loop to cycle through all the tickets.
 
 if($no_groups != 1){
-	echo '<table class=border cellSpacing=0 cellPadding=0 width="80%" align=center border=0>
+	echo '<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<tr> 
 			 <td> 
 				<table cellSpacing=1 cellPadding=5 width="100%" border=0>
