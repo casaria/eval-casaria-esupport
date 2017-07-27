@@ -1780,8 +1780,7 @@ function displayTicket($result)
     endTable();
 
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-    echo "<Tr>$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
-    echo "</tr>";
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
    //< echo "</table>";
     return $summary;
 }
