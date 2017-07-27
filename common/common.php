@@ -1782,6 +1782,7 @@ function displayTicket($result)
     echo "</tr></table>";
     return $summary;
 
+
 }
 /***********************************************************************************************************
 **	function createTicketInfo():
