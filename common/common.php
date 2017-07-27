@@ -1698,8 +1698,8 @@ function displayTicket($result)
            if (isAdministrator($cookie_name)) {
                echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
            } else {
-               echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
-           }
+               echo "               echo "<td class=back2>=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
+
            echo "<td class=\"back\">";
            echo stripslashes($row['equipment']) . "</td>";
 
@@ -1778,8 +1778,9 @@ function displayTicket($result)
        }
        */
 
-   //	 echo "</table>";
-    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
+    echo "</table>";
+    $linkString= "<a href=http://". $admin_site_url ."/control.php?t=users&act=uedit&id=\"$csv_string\">"."link to CSSV list";
+    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $link_string);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<tr> $summary[tktlist]";
 
     return $summary;
