@@ -69,7 +69,7 @@ startTable("$lang_youropen", "center");
 						  <a class=hf href="'.$supporter_site_url.'/index.php?t=tmop&f='.$f.'&s=sup"><b>'.$lang_Supporter.'</b></a></td>';
   					   
   					    echo '<td align=center>
-						  <b>'.$lang_equipment.'</b></a></td>';
+						  <b>'.$lang_equipment.'</b></td>';
 
 
 						if($s == 'ds'){
