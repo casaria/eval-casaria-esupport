@@ -1777,12 +1777,12 @@ function displayTicket($result)
            $csv_string = $csv_string . $row[id] . ",";
        }
        */
+    endTable();
+
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-    echo "col style=\"width:40%\"";
-    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
-    echo "</tr><tr>";
-    echo "$summary[tktlist]";
+    echo "<Tr>$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
     echo "</tr>";
+   //< echo "</table>";
     return $summary;
 }
 /***********************************************************************************************************
