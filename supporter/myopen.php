@@ -67,7 +67,8 @@ startTable("$lang_youropen", "center");
 
   					    echo '<td align=center>
 						  <a class=hf href="'.$supporter_site_url.'/index.php?t=tmop&f='.$f.'&s=sup"><b>'.$lang_Supporter.'</b></a></td>';
-  					   
+
+						//+++
   					    echo '<td align=center>
 						  <b>'.$lang_equipment.'</b></td>';
 
@@ -115,6 +116,10 @@ startTable("$lang_youropen", "center");
 							echo '<td align=center>
 							  <a class=hf href="'.$supporter_site_url.'/index.php?t=tmop&f='.$f.'&s=cr"><b>'.$lang_created.'</b></a></td>';
 						}
+
+						//+++
+						 echo '<td align=center>
+						  <b>'.$lang_last_update.'</b></td>';
 
 						if($s == 'st'){
 							echo '<td align=center>
