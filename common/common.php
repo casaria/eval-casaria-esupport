@@ -1782,7 +1782,13 @@ function displayTicket($result)
     endTable();
 
     $linkString= "<a href=$supporter_site_url/index.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
+/*    <form name=formTicketSearch action="index.php" method=get>
+            															<input type=hidden name=t value=tinf>
+            															<?php echo $lang_ticket; ?> # : <input type=text name=id size=5>
+	<a href="#" onClick="document.formTicketSearch.submit();"> <?php echo $lang_go; ?>!</a>
 
+	</form>
+*/
     echo "<form method=post>";
     startTable("$lang_timetracking", "center");
     echo "<tr><td class=back><br>";
