@@ -37,284 +37,284 @@ $today = getdate();
 
 
 if(isset($search) || isset($s)) {
-	$time = time();
-	//lets get the information ready to be passed to the displayTicket table.
+    $time = time();
+    //lets get the information ready to be passed to the displayTicket table.
 
-	if ($stmt == '') {
-		$sql = "select * from $mysql_tickets_table where (";
+    if ($stmt == '') {
+        $sql = "select * from $mysql_tickets_table where (";
 
-		if ($s == 'tim' || $s == 'mit') {
-			$sql = "select t.*, ($time - t.lastupdate)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and (";
-		}
-	} else {
-		$query = stripslashes($stmt);
+        if ($s == 'tim' || $s == 'mit') {
+            $sql = "select t.*, ($time - t.lastupdate)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and (";
+        }
+    } else {
+        $query = stripslashes($stmt);
 
-		if ($s == 'tim' || $s == 'mit') {
-			$query = preg_replace("/select \* from $mysql_tickets_table where \(/i", "select t.*, ($time - t.lastupdate)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and (", $query);
-		} else {
-			$query = preg_replace("/select t.*, \([0-9]* - t.lastupdate\)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and \(/i", "select * from $mysql_tickets_table where (", $query);
-		}
+        if ($s == 'tim' || $s == 'mit') {
+            $query = preg_replace("/select \* from $mysql_tickets_table where \(/i", "select t.*, ($time - t.lastupdate)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and (", $query);
+        } else {
+            $query = preg_replace("/select t.*, \([0-9]* - t.lastupdate\)/p.response_time as a from $mysql_tickets_table t, $mysql_tpriorities_table p where p.priority=t.priority and \(/i", "select * from $mysql_tickets_table where (", $query);
+        }
 
-	}
-
-
-	//if $sql is set, do not do all of the following checking.  Pass the $sql variable to the displayTicket
-	//function right away.
-	if (!isset($query) || $query == '') {
-
-		if (isset($supp_group) && $supp_group != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " groupid=$supp_group";
-				$flag = 1;
-			} else {
-				$sql .= " $andor groupid=$supp_group";
-				$flag = 1;
-			}
-		}
-
-		if (isset($user_group) && $user_group != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " ugroupid=$user_group";
-				$flag = 1;
-			} else {
-				$sql .= " $andor ugroupid=$user_group";
-				$flag = 1;
-			}
-		}
-
-		if (isset($supporter) && $supporter != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " supporter='$supporter'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor supporter='$supporter'";
-				$flag = 1;
-			}
-		}
-
-		if (isset($priority) && $priority != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " priority='$priority'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor priority='$priority'";
-				$flag = 1;
-			}
-
-			$pset = 1;
-		}
-
-		if (isset($status) && $status != '' && $status != 'notclosed') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " status='$status'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor status='$status'";
-				$flag = 1;
-			}
-			$sset = 1;
-		}
-
-		if (isset($status) && $status != '' && $status == 'notclosed') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " status!='" . getRStatus(getHighestRank($mysql_tstatus_table)) . "'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor status!='CLOSED'";
-				$flag = 1;
-			}
-
-			$sset = 1;
-		}
-
-		if (isset($user) && $user != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " user='$user'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor user='$user'";
-				$flag = 1;
-			}
-		}
-
-		if (isset($office) && $office != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " office='$office'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor office='$office'";
-				$flag = 1;
-			}
-		}
-
-		if (isset($category) && $category != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " category='$category'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor category='$category'";
-				$flag = 1;
-			}
-		}
+    }
 
 
-		if (isset($platform) && $platform != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " platform='$platform'";
-				$flag = 1;
-			} else {
-				$sql .= " $andor platform='$platform'";
-				$flag = 1;
-			}
-		}
+    //if $sql is set, do not do all of the following checking.  Pass the $sql variable to the displayTicket
+    //function right away.
+    if (!isset($query) || $query == '') {
 
-		//lets create the timestamp information first.
+        if (isset($supp_group) && $supp_group != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " groupid=$supp_group";
+                $flag = 1;
+            } else {
+                $sql .= " $andor groupid=$supp_group";
+                $flag = 1;
+            }
+        }
 
-		if (isset($syear) && isset($smonth) && isset($sday)) {
-			$stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear);
-			$etimestamp = mktime(23, 59, 59, $emonth, $eday, $eyear);
+        if (isset($user_group) && $user_group != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " ugroupid=$user_group";
+                $flag = 1;
+            } else {
+                $sql .= " $andor ugroupid=$user_group";
+                $flag = 1;
+            }
+        }
 
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " (create_date > $stimestamp and create_date < $etimestamp)";
-				$flag = 1;
-			} else {
-				$sql .= " $andor (create_date > $stimestamp and create_date < $etimestamp)";
-				$flag = 1;
-			}
-		}
+        if (isset($supporter) && $supporter != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " supporter='$supporter'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor supporter='$supporter'";
+                $flag = 1;
+            }
+        }
 
-		if (isset($keywords) && $keywords != '') {
-			if ($flag != 1 || !isset($flag)) {
-				$sql .= " (short regexp '$keywords' or description regexp '$keywords')";
-				$flag = 1;
-			} else {
-				$sql .= " $andor (short regexp '$keywords' or description regexp '$keywords')";
-				$flag = 1;
-			}
-		}
+        if (isset($priority) && $priority != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " priority='$priority'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor priority='$priority'";
+                $flag = 1;
+            }
 
-	} else {
-		$sql = stripslashes($query);
-	}
+            $pset = 1;
+        }
 
-	if (!isset($query) || $query == '') {
-		$sql .= ")";
-	}
+        if (isset($status) && $status != '' && $status != 'notclosed') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " status='$status'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor status='$status'";
+                $flag = 1;
+            }
+            $sset = 1;
+        }
 
-	if (isset($input) && $input != '') {
-		$sql = "select * from $mysql_tickets_table where " . $input;
-	}
+        if (isset($status) && $status != '' && $status == 'notclosed') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " status!='" . getRStatus(getHighestRank($mysql_tstatus_table)) . "'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor status!='CLOSED'";
+                $flag = 1;
+            }
 
-	switch ($s) {
-		case ("id"):
-			$sql .= " order by id asc";
-			break;
-		case ("di"):
-			$sql .= " order by id desc";
-			break;
-		case ("sup"):
-			$sql .= " order by supporter asc";
-			break;
-		case ("pus"):
-			$sql .= " order by supporter desc";
-			break;
-		case ("equ"):
-			$sql .= " order by equipment asc";
-			break;
-		case ("uqe"):
-			$sql .= " order by equipment desc";
-			break;
+            $sset = 1;
+        }
 
-		case ("sho"):
-			$sql .= " order by short asc";
-			break;
-		case ("ohs"):
-			$sql .= " order by short desc";
-			break;
-		case ("usr"):
-			$sql .= " order by user asc";
-			break;
-		case ("rsu"):
-			$sql .= " order by user desc";
-			break;
-		case ("grp"):
-			$sql .= " order by ugroupid asc, create_date";
-			break;
-		case ("prg"):
-			$sql .= " order by ugroupid desc, create_date";
-			break;
+        if (isset($user) && $user != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " user='$user'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor user='$user'";
+                $flag = 1;
+            }
+        }
+
+        if (isset($office) && $office != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " office='$office'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor office='$office'";
+                $flag = 1;
+            }
+        }
+
+        if (isset($category) && $category != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " category='$category'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor category='$category'";
+                $flag = 1;
+            }
+        }
 
 
-		case ("tim"):
-			$sql .= " order by a asc";
-			break;
-		case ("mit"):
-			$sql .= " order by a desc";
-			break;
-		case ("pri"):
-			if (preg_match("/priority/i", $sql)) {
-				$sql .= " order by priority asc";
-			} else {
+        if (isset($platform) && $platform != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " platform='$platform'";
+                $flag = 1;
+            } else {
+                $sql .= " $andor platform='$platform'";
+                $flag = 1;
+            }
+        }
 
-				//set the different sql statments based on the number of different priorities
-				$num_prios = getNumberPriorities();
-				$prios = sqlByPriority($sql, "asc");
+        //lets create the timestamp information first.
 
-			}
-			break;
+        if (isset($syear) && isset($smonth) && isset($sday)) {
+            $stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear);
+            $etimestamp = mktime(23, 59, 59, $emonth, $eday, $eyear);
 
-		case ("irp"):
-			if (preg_match("/priority/i", $sql)) {
-				$sql .= " order by priority desc";
-			} else {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " (create_date > $stimestamp and create_date < $etimestamp)";
+                $flag = 1;
+            } else {
+                $sql .= " $andor (create_date > $stimestamp and create_date < $etimestamp)";
+                $flag = 1;
+            }
+        }
 
-				//set the different sql statments based on the number of different priorities
-				$num_prios = getNumberPriorities();
-				$prios = sqlByPriority($sql, "desc");
+        if (isset($keywords) && $keywords != '') {
+            if ($flag != 1 || !isset($flag)) {
+                $sql .= " (short regexp '$keywords' or description regexp '$keywords')";
+                $flag = 1;
+            } else {
+                $sql .= " $andor (short regexp '$keywords' or description regexp '$keywords')";
+                $flag = 1;
+            }
+        }
 
-			}
-			break;
+    } else {
+        $sql = stripslashes($query);
+    }
 
-		case ("sta"):
-			if (preg_match("/status/i", $sql)) {
-				$sql .= " order by status asc";
-			} else {
-				$num_status = getNumberStatus();
-				$status = sqlByStatus($sql, "asc");
-			}
-			break;
+    if (!isset($query) || $query == '') {
+        $sql .= ")";
+    }
 
-		case ("ats"):
-			if (preg_match("/status/i", $sql)) {
-				$sql .= " order by status desc";
-			} else {
-				$num_status = getNumberStatus();
-				$status = sqlByStatus($sql, "desc");
-			}
-			break;
+    if (isset($input) && $input != '') {
+        $sql = "select * from $mysql_tickets_table where " . $input;
+    }
 
-		case ("cre"):
-			$sql .= " order by create_date asc";
-			break;
-		case ("erc"):
-			$sql .= " order by create_date desc";
-			break;
-		case ("tim"):
+    switch ($s) {
+        case ("id"):
+            $sql .= " order by id asc";
+            break;
+        case ("di"):
+            $sql .= " order by id desc";
+            break;
+        case ("sup"):
+            $sql .= " order by supporter asc";
+            break;
+        case ("pus"):
+            $sql .= " order by supporter desc";
+            break;
+        case ("equ"):
+            $sql .= " order by equipment asc";
+            break;
+        case ("uqe"):
+            $sql .= " order by equipment desc";
+            break;
 
-		default:
-        	$sql .= " order by create_date desc";
-			break;
-	}
+        case ("sho"):
+            $sql .= " order by short asc";
+            break;
+        case ("ohs"):
+            $sql .= " order by short desc";
+            break;
+        case ("usr"):
+            $sql .= " order by user asc";
+            break;
+        case ("rsu"):
+            $sql .= " order by user desc";
+            break;
+        case ("grp"):
+            $sql .= " order by ugroupid asc, create_date";
+            break;
+        case ("prg"):
+            $sql .= " order by ugroupid desc, create_date";
+            break;
 
-	//set up the sql statement for inclusion in the link for sorting and execute the current
-	//sql statement for displaying the proper tickets.
 
-	$sql2 = preg_replace("/ order(.*)/i", "", $sql);
-	$sql2 = preg_replace("/ /i", "%20", $sql2);
+        case ("tim"):
+            $sql .= " order by a asc";
+            break;
+        case ("mit"):
+            $sql .= " order by a desc";
+            break;
+        case ("pri"):
+            if (preg_match("/priority/i", $sql)) {
+                $sql .= " order by priority asc";
+            } else {
 
-	if ($sql == "select * from $mysql_tickets_table") {
-		printerror("$lang_searchcriteria");
-	} else {
+                //set the different sql statments based on the number of different priorities
+                $num_prios = getNumberPriorities();
+                $prios = sqlByPriority($sql, "asc");
+
+            }
+            break;
+
+        case ("irp"):
+            if (preg_match("/priority/i", $sql)) {
+                $sql .= " order by priority desc";
+            } else {
+
+                //set the different sql statments based on the number of different priorities
+                $num_prios = getNumberPriorities();
+                $prios = sqlByPriority($sql, "desc");
+
+            }
+            break;
+
+        case ("sta"):
+            if (preg_match("/status/i", $sql)) {
+                $sql .= " order by status asc";
+            } else {
+                $num_status = getNumberStatus();
+                $status = sqlByStatus($sql, "asc");
+            }
+            break;
+
+        case ("ats"):
+            if (preg_match("/status/i", $sql)) {
+                $sql .= " order by status desc";
+            } else {
+                $num_status = getNumberStatus();
+                $status = sqlByStatus($sql, "desc");
+            }
+            break;
+
+        case ("cre"):
+            $sql .= " order by create_date asc";
+            break;
+        case ("erc"):
+            $sql .= " order by create_date desc";
+            break;
+        case ("tim"):
+
+        default:
+            $sql .= " order by create_date desc";
+            break;
+    }
+
+    //set up the sql statement for inclusion in the link for sorting and execute the current
+    //sql statement for displaying the proper tickets.
+
+    $sql2 = preg_replace("/ order(.*)/i", "", $sql);
+    $sql2 = preg_replace("/ /i", "%20", $sql2);
+
+    if ($sql == "select * from $mysql_tickets_table") {
+        printerror("$lang_searchcriteria");
+    } else {
         createHeader("$lang_searchresults SQL: " . $sql);
 
         echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
@@ -459,7 +459,7 @@ if(isset($search) || isset($s)) {
         endTable();
         endTable();
     }
-
+} else {
 	echo "<form method=post>";
 	createHeader("$lang_ticketsearch");
 
