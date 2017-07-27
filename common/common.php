@@ -1781,7 +1781,6 @@ function displayTicket($result)
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<tr> $summary[tktlist]";
     echo "</tr></table>";
     return $summary;
-
 }
 /***********************************************************************************************************
 **	function createTicketInfo():
