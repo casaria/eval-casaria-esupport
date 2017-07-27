@@ -1678,7 +1678,7 @@ function displayTicket($result)
                 break;
         }
 
-        echo "</tr>";
+        echo "</tr><tr>";
         $recordcount++;
         $csv_string = $csv_string . $row['id'] . ",";
     }
@@ -1777,11 +1777,11 @@ function displayTicket($result)
            $csv_string = $csv_string . $row[id] . ",";
        }
        */
-    endTable();
+
 
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<BR> $summary[tktlist]";
-   //< echo "</table>";
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<tr> $summary[tktlist]";
+    echo "</tr></table>";
     return $summary;
 }
 /***********************************************************************************************************
