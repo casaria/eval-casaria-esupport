@@ -119,7 +119,7 @@
 
 
 							 echo '<td align=center>
-							  <b>'.$lang_equipment.'</b></td>';
+							  <b>'.$lang_last_update.'</b></td>';
 
 							if($s == 'st'){
 								echo '<td align=center>
