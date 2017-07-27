@@ -139,7 +139,7 @@ startTable("$lang_youropen", "center");
 	$summary = listOpenTickets($supporter_id, $s, $filter);
 
 	endTable();
-endTable();
+	endTable();
 
 
 
