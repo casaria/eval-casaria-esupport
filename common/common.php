@@ -1588,7 +1588,7 @@ function createTimeOffsetMenu($selected)
 }
 function displayTicket($result)
 {
-    global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+            global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
     $second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
@@ -1596,8 +1596,8 @@ function displayTicket($result)
     $csv_string = "";
     $closed_ts = 0;
 
-    while ($row = $db->fetch_array($result)) {
-
+    while ($row = $db->fetch_array($result))
+    {
         $last_update = $row['lastupdate'];  //last update timestamp.
 
         echo "<tr>
@@ -1777,6 +1777,7 @@ function displayTicket($result)
            $csv_string = $csv_string . $row[id] . ",";
        }
        */
+
     $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]<tr> $summary[tktlist]";
     echo "</tr></table>";
@@ -2890,7 +2891,7 @@ function displayUserTicket($result)
 
 
         echo "<td class=\"back2\">";
-        echo "<a href=\"?t=tinf&id=" . $row[id] . "\">";
+        echo "<a href=\"?t=tinf&id=" . $row['id'] . "\">";
         echo stripslashes($row['short']) . "</a></td>
 			
 				<td class=back>" . $row['user'] . "</td>
@@ -2912,10 +2913,10 @@ function displayUserTicket($result)
 				<td class=back> " . date("m/d/y", $row[create_date]) . "</td>
 				<td class=back2>";
         //cookie_name='.$cookie_name.'
-        echo '<a href="supporter/updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+        echo '<a href="supporter/updatelog.php?&id=' . $row['id'] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 
-        echo $row[status] . "</a></td>";
+        echo $row['status'] . "</a></td>";
 
 
         // Calculates total time spent on the ticket in minutes
@@ -2936,7 +2937,7 @@ function displayUserTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
+        $csv_string = $csv_string . $row['id'] . ",";
 
     }
 
