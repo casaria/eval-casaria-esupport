@@ -139,7 +139,6 @@ startTable("$lang_youropen", "center");
 	$summary = listOpenTickets($supporter_id, $s, $filter);
 
 	endTable();
-echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";	
 endTable();
 
 

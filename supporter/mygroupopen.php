@@ -173,7 +173,7 @@ if($no_groups != 1){
 			
 	endTable();
 	}
-echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";	
+
 endTable();
 
 
