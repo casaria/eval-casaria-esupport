@@ -62,7 +62,7 @@ $theme = getThemeVars(getThemeName($cookie_name));
 	<TITLE> <?php echo $helpdesk_name;?></TITLE>
     <?php
     if ($theme['font'] == "Titillium Web") {
-        $lineHeight = 1;
+        $lineHeight = 0.5;
     } else  {
         $lineHeight = 1;
     } ?>
@@ -89,9 +89,9 @@ $theme = getThemeVars(getThemeName($cookie_name));
 		table.border {background: <?php echo $theme['table_border']; ?>; color: black;}
 		td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
 		tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
-		td.back {background: <?php echo $theme['bg1']; ?>;}
-		td.back2 {background: <?php echo $theme['bg2']; ?>;}
-		td.printback {background: <?php echo $theme['print_bg']; ?>;}
+		td.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
+		td.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
+		td.printback {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
 
 		td.date {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
 
