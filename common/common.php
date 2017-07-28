@@ -1594,21 +1594,21 @@ function createTimeOffsetMenu($selected)
  ************************************************************************************************************/
 function displayTicket($result)
 {
-    global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-	$second = getSecondPriority();
-    $sql3 = "select * from $mysql_ugroups_table ";
-    $sqlBS = "select * from $mysql_BillingStatus_table";
-    $recordcount = 0;
-    $csv_string = "";
-    $closed_ts = 0;
+            global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+            $second = getSecondPriority();
+            $sql3 = "select * from $mysql_ugroups_table ";
+            $sqlBS = "select * from $mysql_BillingStatus_table";
+            $recordcount = 0;
+            $csv_string = "";
+            $closed_ts = 0;
 
-    while ($row = $db->fetch_array($result)) {
+            while ($row = $db->fetch_array($result)) {
 
-        $last_update = $row['lastupdate'];  //last update timestamp.
+                $last_update = $row['lastupdate'];  //last update timestamp.
 
-        echo "<tr>
+                echo "<tr>
 				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
-        if (isAdministrator($cookie_name)) {
+                if (isAdministrator($cookie_name)) {
             echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
         } else {
             echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
