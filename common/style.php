@@ -36,6 +36,7 @@
 //if the user is not logged in, set the default style sheet.
 //otherwise, grab the selected theme from the database.
 $theme = getThemeVars(getThemeName($cookie_name));
+$tablePadding = 20;
 
 ?>
 
@@ -62,9 +63,11 @@ $theme = getThemeVars(getThemeName($cookie_name));
 	<TITLE> <?php echo $helpdesk_name;?></TITLE>
     <?php
     if ($theme['font'] == "Titillium Web") {
-        $lineHeight = 0.8;
+        $lineHeight = 1;
+        $tablePadding = 5;
     } else  {
         $lineHeight = 1;
+        $tablePadding = 15;
     } ?>
 
 
@@ -89,15 +92,15 @@ $theme = getThemeVars(getThemeName($cookie_name));
 		table.border {background: <?php echo $theme['table_border']; ?>; color: black;}
 		td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
 		tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
-		td.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
-		td.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
-		td.printback {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
+		td.back {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
+		td.back2 {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
+		td.printback {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
 
-		td.date {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
+		td.date {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
 
-		td.hf {background: <?php echo $theme['header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+		td.hf {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		td.printhf {background: <?php echo $theme['print_header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_header_text']; ?>;}
+		td.printhf {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['print_header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_header_text']; ?>;}
 
 		a.hf:link {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal;  font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
