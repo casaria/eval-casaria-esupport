@@ -35,119 +35,128 @@
 
 //if the user is not logged in, set the default style sheet.
 //otherwise, grab the selected theme from the database.
-$theme = getThemeVars(getThemeName($cookie_name));
+$tablePadding = 15;
 
 ?>
 
 
 <script type="text/javascript">
-	WebFontConfig = {
-		google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:400,600,700:latin'] }
-	};
+    WebFontConfig = {
+        google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:400,600,700:latin'] }
+    };
 
-	(function() {
-		var wf = document.createElement('script');
-		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-		wf.async = 'true';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(wf, s);
-	})();
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
 </script>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
 <HEAD>
-	<TITLE> <?php echo $helpdesk_name;?></TITLE>
+    <TITLE> <?php echo $helpdesk_name;?></TITLE>
+    <?php
+    if ($theme['font'] == "Titillium Web") {
+        $lineHeight = 1;
+        $tablePadding = 5;
+    } else  {
+        $lineHeight = 1;
+        $tablePadding = 15;
+    } ?>
 
 
-	<STYLE type="text/css">
+    <STYLE type="text/css">
 
-		@import url(https://fonts.googleapis.com/css?family=Lato);
-
-
-		BODY {background: <?php echo $theme['bgcolor'];?> ; color: black;}
-
-		a:link {text-decoration: none; color: <?php echo $theme['link']; ?>;}
-		a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
-		a:active {text-decoration: none; color: <?php echo $theme['link']; ?>;}
-		a:hover {text-decoration: underline; color: <?php echo $theme['link']; ?>;}
-
-		a.kbase:link {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
-		a.kbase:visited {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
-		a.kbase:active {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
-		a.kbase:hover {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
+        @import url(https://fonts.googleapis.com/css?family=Lato);
 
 
-		table.border {background: <?php echo $theme['table_border']; ?>; color: black;}
-		td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
-		tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
-		td.back {background: <?php echo $theme['bg1']; ?>;}
-		td.back2 {background: <?php echo $theme['bg2']; ?>;}
-		td.printback {background: <?php echo $theme['print_bg']; ?>;}
+        BODY {background: <?php echo $theme['bgcolor'];?> ; color: black;}
 
-		td.date {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
+        a:link {text-decoration: none; color: <?php echo $theme['link']; ?>;}
+        a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
+        a:active {text-decoration: none; color: <?php echo $theme['link']; ?>;}
+        a:hover {text-decoration: underline; color: <?php echo $theme['link']; ?>;}
 
-		td.hf {background: <?php echo $theme['header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+        a.kbase:link {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
+        a.kbase:visited {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
+        a.kbase:active {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
+        a.kbase:hover {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
 
-		td.printhf {background: <?php echo $theme['print_header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_header_text']; ?>;}
 
-		a.hf:link {text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+        table.border {background: <?php echo $theme['table_border']; ?>; color: black;}
+        td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
+        tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
+        td.back {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
+        td.back2 {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
+        td.printback {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
 
-		a.hf:visited {text-decoration:none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+        td.date {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
 
-		a.hf:active {text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+        td.hf {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		a.hf:hover {text-decoration: underline; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
+        td.printhf {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['print_header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_header_text']; ?>;}
 
-		td.info {background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+1); ?>px; color: <?php echo $theme['header_text']; ?>;}
+        a.hf:link {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal;  font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		td.extra {background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+3); ?>px; color: <?php echo $theme['extra_text']; ?>;}
+        a.hf:visited {line-height: <?php echo $lineHeight; ?>; text-decoration:none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		td.printinfo {background: <?php echo $theme['print_info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_info_text']; ?>;}
+        a.hf:active {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		a.info:link {text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+        a.hf:hover {line-height: <?php echo $lineHeight; ?>; text-decoration: underline; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		a.info:visited {text-decoration:none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+        td.info {background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+1); ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-		a.info:active {text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+        td.extra {background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+3); ?>px; color: <?php echo $theme['extra_text']; ?>;}
 
-		a.info:hover {text-decoration: underline; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+        td.printinfo {background: <?php echo $theme['print_info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_info_text']; ?>;}
 
-		<?php
+        a.info:link {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
 
-        if(eregi("IE", $HTTP_USER_AGENT)){ ?>
-		select, option, textarea, input {border: 1px solid <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;} <?php
-}
-else{ ?>
-		select, option, textarea, input {font-family:"<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
-		<?php
+        a.info:visited {line-height: <?php echo $lineHeight; ?>; text-decoration:none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+
+        a.info:active {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+
+        a.info:hover {line-height: <?php echo $lineHeight; ?>; text-decoration: underline; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['info_text']; ?>;}
+
+        <?php
+
+
+         if(eregi("IE", $HTTP_USER_AGENT)){ ?>
+        select, option, textarea, input {border: 1px solid <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;} <?php
         }
-        ?>
+        else{ ?>
+        select, option, textarea, input {font-family:"<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
+        <?php
+        }
+?>
 
-		td.cat {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['text']; ?>;}
+        td.cat {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['text']; ?>;}
 
-		td.stats {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: 10px; color: <?php echo $theme['text']; ?>;}
+        td.stats {background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: 10px; color: <?php echo $theme['text']; ?>;}
 
-		td.error {background: <?php echo $theme['subcategory']; ?>; color: #ff0000; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px;}
+        td.error {background: <?php echo $theme['subcategory']; ?>; color: #ff0000; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px;}
 
-		td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'].'px;'; ?> font-weight:600}
+        td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'].'px;'; ?> font-weight:600}
 
 
 
-		input.box {border: 0px;}
+        input.box {border: 0px;}
 
-		table.border2 {background: #6974b5;}
-		td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
-		table.install {background: #000099;}
-		td.head	{background:#6974b5; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
-		a.install:link {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
-		a.install:visited {text-decoration:none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
-		a.install:active {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
-		a.install:hover {text-decoration: underline; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
+        table.border2 {background: #6974b5;}
+        td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+        table.install {background: #000099;}
+        td.head	{background:#6974b5; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+        a.install:link {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
+        a.install:visited {text-decoration:none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
+        a.install:active {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
+        a.install:hover {text-decoration: underline; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
 
-	</STYLE>
+    </STYLE>
 </HEAD>
 <?php
 
