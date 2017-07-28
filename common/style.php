@@ -62,7 +62,7 @@ $theme = getThemeVars(getThemeName($cookie_name));
 	<TITLE> <?php echo $helpdesk_name;?></TITLE>
     <?php
     if ($theme['font'] == "Titillium Web") {
-        $lineHeight = 0.6;
+        $lineHeight = 1;
     } else  {
         $lineHeight = 1;
     } ?>
