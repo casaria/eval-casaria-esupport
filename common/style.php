@@ -36,7 +36,7 @@
 //if the user is not logged in, set the default style sheet.
 //otherwise, grab the selected theme from the database.
 $theme = getThemeVars(getThemeName($cookie_name));
-$tablePadding = 20;
+$tablePadding = 15;
 
 ?>
 
