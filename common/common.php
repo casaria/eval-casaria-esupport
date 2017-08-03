@@ -3211,7 +3211,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 						//exclude engineer time from total since this will be listed separately
 						//echo "eng:$items[engineer_rate]";
 						if ($items['engineer_rate'] == '0') {
-							  $supporter_total[$items['user_name']] += $items['sum'];
+							  $supporter_total[($items['user_name'])] += $items['sum'];
 						
     						if($ticket_data['sum'] != 0){
     							$percentage = number_format(($items['sum'] / $total_time) * 100, 2);
