@@ -198,6 +198,7 @@ border=0>
                           echo'
                           </TR>
                           <TR> 
+                                
                             <TD class=subcat>'; 
                               echo '<LI><A href="index.php?t=epro">'; echo $lang_editprofile; echo '</A></LI>';
                               echo '<LI><A href="index.php?t=sgrp">'; echo $lang_viewgroups; echo '</A></LI>';

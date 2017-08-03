@@ -75,7 +75,7 @@ $mysql_kbase_table = "kbase";					//mysql knowledge base table that holds q & a'
 $mysql_attachments_table = "attachments";		//mysql attachments table
 $mysql_templates_table = "templates";			//mysql templates table
 $mysql_kb_queries_table = "kb_queries";			//mysql knowledge base queries table
-
+$mysql_
 /**********************************************************************************************************/
 /**********************************************************************************************************/
 
