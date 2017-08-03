@@ -3195,7 +3195,7 @@ function getTicketTotalTime($id)
 function DrawTableSupporterTotals($array, $id, $title)
 {
 	
-  			$supporters = $array['supporters'];
+  				$supporters = $array['supporters'];
 				$supporters_after_hours = $array['supporters_after_hours'];
 				$supporters_engineer_rate= $array['supporters_engineer_rate'];
 				$total_time = $array['total_time'];
@@ -3211,7 +3211,9 @@ function DrawTableSupporterTotals($array, $id, $title)
 						//exclude engineer time from total since this will be listed separately
 						//echo "eng:$items[engineer_rate]";
 						if ($items['engineer_rate'] == '0') {
-							  $supporter_total[($items[user_name])] += $items[sum];
+                            if (!empty($items['sum'])) {
+                                $supporter_total[($items['user_name'])] += $items['sum'];
+                            }
 						
     						if($ticket_data['sum'] != 0){
     							$percentage = number_format(($items['sum'] / $total_time) * 100, 2);
@@ -3271,7 +3273,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 					}
 				} //end of previous table code
 				
-       endTable();
+				endTable();
 }
 
 function displayTimeHistory()
