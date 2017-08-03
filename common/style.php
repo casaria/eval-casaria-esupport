@@ -67,7 +67,7 @@ $tablePadding = 15;
         $tablePadding = 5;
     } else  {
         $lineHeight = 1;
-        $tablePadding = 15;
+        $tablePadding = 10;
     } ?>
 
 
