@@ -3217,11 +3217,11 @@ function getTicketTotalTime($id)
 function DrawTableSupporterTotals($array, $id, $title)
 {
 	
-  			$supporters = $array['supporters'];
+  			    $supporters = $array['supporters'];
 				$supporters_after_hours = $array['supporters_after_hours'];
 				$supporters_engineer_rate= $array['supporters_engineer_rate'];
 				$total_time = $array['total_time'];
-				$supporter_total = 0;
+				$supporter_total = $array['user_name'];
 			    $supporter_after_hours_total = 0;
     			$supporter_engineer_total = 0;
 				$ticket_data = getTicketTimeInfo($id);
@@ -3293,7 +3293,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 					}
 				} //end of previous table code
 				
-       endTable();
+                endTable();
 }
 
 function displayTimeHistory()
