@@ -461,6 +461,7 @@ if(isset($search) || isset($s)) {
     }
 } else {
 
+
 	echo "<form method=post>";
 	createHeader("$lang_ticketsearch");
 
