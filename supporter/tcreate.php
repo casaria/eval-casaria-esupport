@@ -165,7 +165,7 @@ function createSupporterInfo()
 
 	startTable("$lang_supporterinfo", "left", 100, 4);
 		echo '<tr>
-				<td width=24% class=back2 align=right>* '.$lang_group.':</td>
+				<td width=20% class=back2 align=right>* '.$lang_group.':</td>
 				<td class=back colspan=3 width=22%>';
 				?>
 			    	<select name=usergroup_name onChange="MM_jumpMenu('parent', this, 0)">
@@ -175,7 +175,7 @@ function createSupporterInfo()
 				</td></tr>					
 		
 				<tr>
-				<td width=24% class=back2 align=right>'.$lang_supportergroup.':</td>
+				<td width=20% class=back2 align=right>'.$lang_supportergroup.':</td>
 				<td class=back width=22%>';
 				?>
 				<select name=group onChange="MM_jumpMenu('parent', this, 0)">
@@ -194,7 +194,7 @@ function createSupporterInfo()
 				</td>
 				</tr>
 				<tr>
-				<td width=24% class=back2 align=right>'.$lang_ticket.' '.$lang_priority.':</td>
+				<td width=20% class=back2 align=right>'.$lang_ticket.' '.$lang_priority.':</td>
 				<td class=back>
 				<select name=priority>';
 				
@@ -281,7 +281,7 @@ global $db, $mysql_ugroups_table, $info, $lang_emailgroup, $lang_emailstatuschan
 startTable("$lang_notification ", "left", 100, 4);
 echo '
     <tr>
-     <td class="back2" width="24%">'.$lang_emailgroup.': </td>
+     <td class="back2" width="20%">'.$lang_emailgroup.': </td>
      <td class="back">'.
     "<input class=box type=checkbox";
 		  echo " checked";
@@ -289,7 +289,7 @@ echo '
     '</td>
     </tr>
     <tr>
-     <td class="back2" width="24%">'.$lang_emailstatuschange.': </td>
+     <td class="back2" width="20%">'.$lang_emailstatuschange.': </td>
      <td class="back">'.
     "<input class=box type=checkbox";
 			echo " checked";
@@ -297,7 +297,7 @@ echo '
     '</td>
     </tr>
     <tr>
-     <td class="back2" width="24%">'.$lang_emailcc.': </td>
+     <td class="back2" width="20%">'.$lang_emailcc.': </td>
      <td class="back">
 								<input type=text size=72 name=emailcc value="'.'">
 							</td>
@@ -350,7 +350,7 @@ function createUserInfo()
 				
 				
 				
-				<td width=24% class=back2 align=right>'.$lang_username.':</td>
+				<td width=20% class=back2 align=right>'.$lang_username.':</td>
 				<td class=back >';
 					
 				?>
@@ -373,7 +373,7 @@ function createUserInfo()
 				</td>
 				</tr>
 				<tr>
-				<td width=24% class=back2 align=right>".$lang_office.":</td>
+				<td width=20% class=back2 align=right>".$lang_office.":</td>
 				<td class=back>
 					<input type=text size=24 name=office value=\"$row[office]\">
 				</td>
