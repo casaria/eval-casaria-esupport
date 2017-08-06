@@ -3351,7 +3351,7 @@ function displayTimeHistory()
 	  }
 	}
 	
-	// Calculates total time spent on the ticket in minutes
+	// `Calculates total time spent on the ticket in minutes
 	$sql = "select sum(minutes) from tickets,time_track where (time_track.after_hours = 0 AND tickets.id=time_track.ticket_id AND tickets.id=$id)";
   $sql_after_hours = "select sum(minutes) from tickets,time_track where (time_track.after_hours != 0 AND tickets.id=time_track.ticket_id AND tickets.id=$id)";
 
