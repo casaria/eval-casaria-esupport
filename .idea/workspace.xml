@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/tcreate.php" afterPath="$PROJECT_DIR$/supporter/tcreate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/English.lang.php" afterPath="$PROJECT_DIR$/lang/English.lang.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -861,16 +861,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1376">
-              <caret line="115" column="1" lean-forward="false" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tstatus" pinned="false" current-in-tab="false">
         <entry file="das://table:/8e28a8ad/0fef9fff-b91c-41a0-98a6-099749727d3e/casaria_hdesk1.tstatus">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -945,11 +935,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tcreate.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tcreate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supporter/tcreate.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
-              <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="45" selection-end-line="381" selection-end-column="45" />
+              <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="45" />
               <folding>
                 <marker date="1501986909544" expanded="true" signature="2683:3013" ph="INSERT into ${$mysql_tickets_table}... " />
                 <marker date="1501986909544" expanded="true" signature="3136:3268" ph="SELECT id fr... ${$mysql_tickets_table}" />
@@ -981,12 +971,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="English.lang.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="443" column="36" lean-forward="false" selection-start-line="443" selection-start-column="36" selection-end-line="443" selection-end-column="36" />
+              <folding>
+                <marker date="1501987156332" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>displayticke</find>
-      <find>displayt</find>
       <find>$flag</find>
       <find>close</find>
       <find>billinh</find>
@@ -1015,6 +1015,8 @@
       <find>subcat</find>
       <find>24%</find>
       <find>27%</find>
+      <find>24</find>
+      <find>cc</find>
     </findStrings>
     <replaceStrings>
       <replace>$summary = displayTicket($result);</replace>
@@ -1053,7 +1055,6 @@
         <option value="$PROJECT_DIR$/tcreatenew.php" />
         <option value="$PROJECT_DIR$/common/login.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/lang/English.lang.php" />
         <option value="$PROJECT_DIR$/tools/index.php" />
         <option value="$PROJECT_DIR$/tools/UpdateClosedDate.php" />
         <option value="$PROJECT_DIR$/common/config.php" />
@@ -1064,6 +1065,7 @@
         <option value="$PROJECT_DIR$/common/common.php" />
         <option value="$PROJECT_DIR$/tcreate.php" />
         <option value="$PROJECT_DIR$/supporter/tcreate.php" />
+        <option value="$PROJECT_DIR$/lang/English.lang.php" />
       </list>
     </option>
   </component>
@@ -1217,14 +1219,7 @@
       <workItem from="1501706806653" duration="250000" />
       <workItem from="1501739207185" duration="6185000" />
       <workItem from="1501983797760" duration="23000" />
-      <workItem from="1501983876477" duration="2607000" />
-    </task>
-    <task id="LOCAL-00115" summary="u">
-      <created>1501043291699</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1501043291699</updated>
+      <workItem from="1501983876477" duration="2873000" />
     </task>
     <task id="LOCAL-00116" summary="u">
       <created>1501043700281</created>
@@ -1562,11 +1557,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501986710149</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="24% to 20% for supporter tcreate.php">
+      <created>1501986938683</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1501986938683</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111755000" />
+    <option name="totallyTimeSpent" value="112021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1654,7 +1656,8 @@
     <MESSAGE value="Common .inc  3214 array" />
     <MESSAGE value="27,24% replaced with 20%" />
     <MESSAGE value="27% to 20% for supporter tcreate.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="27% to 20% for supporter tcreate.php" />
+    <MESSAGE value="24% to 20% for supporter tcreate.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="24% to 20% for supporter tcreate.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2575,13 +2578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8568">
-          <caret line="476" column="2" lean-forward="false" selection-start-line="476" selection-start-column="2" selection-end-line="476" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -3563,7 +3559,7 @@
     <entry file="file://$PROJECT_DIR$/supporter/tcreate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
-          <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="45" selection-end-line="381" selection-end-column="45" />
+          <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="45" />
           <folding>
             <marker date="1501986909544" expanded="true" signature="2683:3013" ph="INSERT into ${$mysql_tickets_table}... " />
             <marker date="1501986909544" expanded="true" signature="3136:3268" ph="SELECT id fr... ${$mysql_tickets_table}" />
@@ -3590,6 +3586,16 @@
             <marker date="1501986909544" expanded="true" signature="10773:11098" ph="..." />
             <marker date="1501986909544" expanded="true" signature="10859:10936" ph="..." />
             <marker date="1501986909544" expanded="true" signature="11023:11098" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="443" column="36" lean-forward="false" selection-start-line="443" selection-start-column="36" selection-end-line="443" selection-end-column="36" />
+          <folding>
+            <marker date="1501987156332" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
           </folding>
         </state>
       </provider>
