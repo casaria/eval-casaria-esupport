@@ -241,7 +241,7 @@ global $db, $mysql_ugroups_table, $info, $lang_emailgroup, $lang_emailstatuschan
 startTable("$lang_notification ", "left", 100, 4);
 echo '
     <tr>
-     <td class="back2" width="27%">'.$lang_emailgroup.': </td>
+     <td class="back2" width="20%">'.$lang_emailgroup.': </td>
      <td class="back">'.
     "<input class=box type=checkbox";
 				if($row[email_all] == "On"){
@@ -251,7 +251,7 @@ echo '
     '</td>
     </tr>
     <tr>
-     <td class="back2" width="27%">'.$lang_emailstatuschange.': </td>
+     <td class="back2" width="20%">'.$lang_emailstatuschange.': </td>
      <td class="back">'.
     "<input class=box type=checkbox";
 			echo " checked";
@@ -259,7 +259,7 @@ echo '
     '</td>
     </tr>
     <tr>
-     <td class="back2" width="27%">'.$lang_emailcc.': </td>
+     <td class="back2" width="20%">'.$lang_emailcc.': </td>
      <td class="back">
 								<input type=text size=72 name=emailcc value="'.'">
 							</td>
@@ -291,14 +291,14 @@ function createUserInfo($groupname)
 	startTable("$lang_userinfo  ($groupname)", "left", 100, 4);	
 		if($pubpriv == "Private"){
 			echo "<tr>
-				<td width=27% class=back2 align=right>* $lang_username:</td>
+				<td width=20% class=back2 align=right>* $lang_username:</td>
 				<td class=back width=20%>$cookie_user_name
 					<input type=hidden name=username value=\"$cookie_user_name\">
 				</td>";
 		}
 		else{
 			echo "<tr>
-				<td width=27% class=back2 align=right>* $lang_username:</td>
+				<td width=20% class=back2 align=right>* $lang_username:</td>
 				<td class=back width=20%>
 					<input type=text size=16 name=username value=\"$cookie_user_name\">
 				</td>";
@@ -312,7 +312,7 @@ function createUserInfo($groupname)
 				</td>
 				</tr>
 				<tr>
-				<td width=27% class=back2 align=right>* $lang_office:</td>
+				<td width=20% class=back2 align=right>* $lang_office:</td>
 				<td class=back>
 					<input type=text size=16 name=office value=\"$cookie_office\">
 				</td>
