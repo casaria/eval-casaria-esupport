@@ -1468,12 +1468,12 @@ function createStatusMenu($flag = 0, $new = 0)
 {
 	global $mysql_tstatus_table, $info, $db;
 
-	$sql = 'select "status", "default_create" from $mysql_tstatus_table order by "rank" asc';
-	$result = $db->que\ry($sql, $mysql_tstatus_table);
+	$sql = "select status, default_create from $mysql_tstatus_table order by rank asc";
+	$result = $db->query($sql, $mysql_tstatus_table);
 
-	if($flag == 1)
-		echo "<option></option>";
-
+	if($flag == 1) {
+	    echo "<option></option>";
+	}
 	while($row = $db->fetch_array($result)){
 		echo "<option value=\"$row[status]\" ";
 			if ($new){ 

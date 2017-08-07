@@ -158,7 +158,7 @@ else{
 
 function createSupporterInfo()
 {
-	global $sg, $lang_supporterinfo, $userid, $ug, $lang_priority,$lang_group, $lang_status,$lang_supporter,$lang_supportergroup;
+	global $sg, $lang_supporterinfo, $userid, $ug, $lang_priority,$lang_group, $lang_ticket, $lang_status,$lang_supporter,$lang_supportergroup;
 
 	if($sg == '')
 		$sg = getDefaultSupporterGroupID();
@@ -206,7 +206,7 @@ function createSupporterInfo()
 				<td class=back>
 				<select name=status>';
 				
-				createStatusMenu();  
+				createStatusMenu(0,1);
 							
 		echo '</select>
 				</td>
