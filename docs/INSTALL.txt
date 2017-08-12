@@ -1,0 +1,104 @@
+=======================
+OneOrZero Helpdesk v0.1alpha
+11/22/01
+BY: JD Bottorf
+=======================
+
+Contents:
+----------
+
+1.  Overview
+2.  Installation
+3.  System Requirements
+
+
+
+1.  Overview
+-----------------------------------------------------------------------------
+
+OneOrZero Helpdesk is a web based helpdesk system incorporating PHP and MySQL.  Designed
+to be fully customizable, and easy to use, and free.
+
+
+
+
+
+2.  Installation
+-----------------------------------------------------------------------------
+
+1. Before you can begin installation, you will first need to have PHP installed and
+MySQL up and running.
+
+
+2. Create a database in MySQL and provide proper permissions to a user that will be accessing
+your database.  For first time MySQL users, change the variables (web_user, and password) below
+and simply copy and paste the commands into your MySQL command line.
+
+===============================================================================================
+
+create database helpdesk;
+grant alter, select, insert, update, delete, index, create, drop on helpdesk.* to web_user@yourhost identified by 'password';
+
+===============================================================================================
+
+Refer to the MySQL documentation for more information (http://www.mysql.com/documentation)
+
+
+3. Open up config.php (notepad will work) in the common directory and find the four variables at
+the top ($mysql_host, $mysql_user, $mysql_pwd, and $mysql_db).  Edit these so they match the settings
+for your host.
+
+
+4. Upload everything, retaining the original structure of the files.  EVerything should be in
+ASCII except for the images/ content (binary).
+
+
+5. Go to http://yourdomain.com/helpdesk_directory/admin/install.php
+
+
+6. It will automatically make you an admin.  Once finished, go to your control panel and change stuff.
+
+
+7. Enjoy.
+
+
+
+
+3.  System Requirements
+-----------------------------------------------------------------------------
+
+
+- PHP 4.0 or higher
+- MySQL
+- Web Server (IIS/Apache/other)
+- Optional SMTP Server
+- Optional SSL for secure password transaction
+- Optional Forum Software (recommended:  http://www.xmbforum.com)
+
+
+
+
+4.  Features
+-----------------------------------------------------------------------------
+
+
+- Fully customizable field names
+- Scalable to 1 or 1,000 or more admins/supporters/users
+- Easy to use web interface
+- Simple upgrades
+- Built-in FAQs
+- Fully customizable supporter groups
+- Fully customizable user groups
+- Ticket Reports overall or per user/supporter or per user/supporter group
+- Easy to add new admins/supporters/users
+- Easy to configure
+- and much much more.
+
+
+
+
+
+
+
+
+

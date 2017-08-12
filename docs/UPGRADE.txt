@@ -1,0 +1,132 @@
+Upgrade Instructions:
+
+For each version, copy the SQL queries from this file and paste them into the upgrade
+box in the helpdesk control panel.  After this is all complete, copy the files from the
+latest version over the files of your current version.  It is important that the SQL
+queries be completed first in order to elminate errors.
+
+If you are upgrading from v1.1beta, you will need to copy the SQL queries from v1.1 beta,
+v1.2beta, etc, until the current version.  All updates are needed.
+
+-= 09/12/02 v1.4 beta released
+
+Upgrading to v1.4 is much easier now.  Run the http://yoursite.com/helpdesk/admin/upgrade.php
+and select the version you are upgrading from.  Once finished, be sure to remove the
+upgrade.php and install.php file from the same directory. 
+
+-= 05/22/02 v1.3.1beta released
+Changes since v1.3 beta
+
+/******* MySQL queries necessary for upgrade	*************************************/
+
+-- copy everything in between these lines into helpdesk/control panel/upgrade field --
+--------------------------------------------------------------------------------------
+
+update settings set version='1.3.1 beta';
+
+
+--------------------------------------------------------------------------------------
+
+/************************************************************************************/
+
+
+
+-= 02/08/02 v1.2beta released
+Changes since v1.2 beta
+- fixed user updating in control panel
+- fixed search function with the correct date creation
+- fixed minor typos
+- fixed updating user names within groups when user name is changed.
+
+/******* MySQL queries necessary for upgrade	*************************************/
+
+-- copy everything in between these lines into helpdesk/control panel/upgrade field --
+--------------------------------------------------------------------------------------
+
+alter table themes modify logo_path varchar(255) default 'logo.jpg';
+alter table tickets add lastupdate int(60) not null;
+alter table users add lastactive int(60) not null;
+alter table tpriorities add response_time int(60) default '0' not null;
+update settings set version='1.3 beta';
+update themes set image_dir='images/default/' where name='default';
+update themes set logo_path='logo.jpg' where name='default';
+insert into themes values(NULL,'red','#cccccc','#000000','#ffffff','#cc0033','#bbbbbb',
+'#aaaaaa','#cc0033','#000000','#cc0033','#ffffff','#bbbbbb','#aaaaaa','Arial',12,'80%',
+'logo.gif','images/red/');
+
+
+--------------------------------------------------------------------------------------
+
+/************************************************************************************/
+
+
+
+
+-= 1/14/01 v1.1beta released
+Changes since v1.1 beta
+- minor time tracking bugs fixed (mainly time formatting/displaying)
+
+/******* MySQL queries necessary for upgrade	*************************************/
+
+-- copy everything in between these lines into helpdesk/control panel/upgrade field --
+--------------------------------------------------------------------------------------
+
+alter table settings add kbase varchar(3) default 'on' not null;
+alter table themes add width varchar(15) default '70%' not null after font_size;
+update settings set ratings='off';
+update settings set version='1.3 beta';
+
+create table kcategories(
+	id int(11) not null auto_increment,
+	category varchar(60) not null,
+	primary key(id),
+	unique(category)
+);
+create table kbase(
+	id int(11) not null auto_increment,
+	platform varchar(60) not null,
+	category varchar(60) not null,
+	question varchar(255) not null,
+	answer text,
+	popularity int(11) default 0 not null,
+	primary key(id),
+	key(answer(200))
+);
+
+insert into kcategories values(NULL, 'Email');
+insert into kcategories values(NULL, 'Backups');
+insert into kcategories values(NULL, 'Printing');
+
+--------------------------------------------------------------------------------------
+
+/************************************************************************************/
+
+
+
+Changes since v1.0 beta:
+- changed time tracking table to accommodate open/close timestamps.
+- added time tracking functions
+- added group statistics
+- on ticket create, user info is added to database
+- all image paths come from the database
+- added logo.jpg
+
+
+
+/******* MySQL queries necessary for upgrade	*************************************/
+
+-- copy everything in between these lines into helpdesk/control panel/upgrade field --
+--------------------------------------------------------------------------------------
+
+
+alter table time_track change user_id supporter_id int(60) not null;
+alter table time_track add opened_date int(60);
+alter table time_track add closed_date int(60);
+update settings set version='1.1 beta';
+alter table settings add time_tracking varchar(3) default 'off' not null;
+alter table users add phone varchar(48) not null after office;
+
+
+--------------------------------------------------------------------------------------
+
+/************************************************************************************/
