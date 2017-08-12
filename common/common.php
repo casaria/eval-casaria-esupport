@@ -3223,8 +3223,8 @@ function DrawTableSupporterTotals($array, $id, $title)
 				$total_time = $array['total_time'];
 				$supporter_total = $array['user_name'];
 			    $supporter_after_hours_total = 0;
-    			$supporter_engineer_total = 0;
-				$ticket_data = getTicketTimeInfo($id);
+                $supporter_engineer_total = $array['user_name'];
+                $ticket_data = getTicketTimeInfo($id);
 					
 				startTable($title, "left", 100, 2);
 				if(sizeof($supporters) > 0){
