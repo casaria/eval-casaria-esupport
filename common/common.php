@@ -3216,7 +3216,6 @@ function getTicketTotalTime($id)
 
 function DrawTableSupporterTotals($array, $id, $title)
 {
-	
   			    $supporters = $array['supporters'];
 				$supporters_after_hours = $array['supporters_after_hours'];
 				$supporters_engineer_rate= $array['supporters_engineer_rate'];
