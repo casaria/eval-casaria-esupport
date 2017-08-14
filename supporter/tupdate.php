@@ -747,7 +747,7 @@ function createTimeUpdate()
 
 	echo '<td class=back >';
 	echo 'Work order / reference<BR>';
-	echo '<input type=textarea size=12 name=reference></td>';
+    echo '<textarea size=12 rows=2 cols=22 name=reference></textarea></td>';
   echo '</tr>';
 
 	echo '<tr><td width=27% class=back2 align=right>';
