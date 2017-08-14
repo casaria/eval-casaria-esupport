@@ -99,8 +99,8 @@ if(isset($login))
 				$_SESSION ["enc_pwd"] = $enc_pwd;
 				$referer = $HTTP_REFERER;
 				//nov14 header("Location: $referer");
-				setcookie('supporter_usercookie', $cookie_name,  time()+ 60*60*24*7);
-				setcookie('supporter_pwdcookie', $_POST['password'],  time()+ 60*60*24*7);
+				//setcookie('supporter_usercookie', $cookie_name,  time()+ 60*60*24*7);
+				//setcookie('supporter_pwdcookie', $_POST['password'],  time()+ 60*60*24*7);
 				
 			}
 			else{

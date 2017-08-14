@@ -148,7 +148,7 @@ border=0>
                                  echo '<LI><a href="#" onclick="javascript:document.login_form.submit();">'; echo $lang_lnk_email;
                                  echo '</a></LI>';
 								echo '</form>';
-								echo "<LI><a href='https://odoo.casaria.net/web/login'>$lang_lnk_odoo</a></LI>";
+                                    echo "<LI><a href='https://odoo.casaria.net/web/login'>$lang_lnk_odoo</a></LI>";
                            echo'               
                             </TD>
                           </TR>
