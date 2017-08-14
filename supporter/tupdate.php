@@ -750,20 +750,20 @@ function createTimeUpdate()
     echo '<textarea size=12 rows=2 cols=40 name=reference></textarea></td>';
   echo '</tr>';
 
-	echo '<tr><td width=27% class=back2 align=right>';
+	echo '<tr><td width=20% class=back2 align=right>';
 	echo 'Special rate </td>';
 
-	echo '<td width=15% class=back align=left>';
+	echo '<td width=10% class=back align=left>';
   echo "<input class=box type=checkbox name=after_hours>";
 	echo "after_hrs";
 	echo '</td>';
 
-	echo '<td width=15% class=back align=left>';
+	echo '<td width=10% class=back align=left>';
 	echo "<input class=box type=checkbox name=engineer_rate>";
   echo "engineer rate";  
   echo '</td>';  			
 
-  	echo '<td width=15% class=back align=left colspan=2>';
+  	echo '<td width=10% class=back align=left colspan=2>';
   	echo '</td>';
 	
 	endtable();
