@@ -42,19 +42,8 @@ if($SERVER_PORT == 80 && $enable_ssl == 'On' && (!isset($cookie_name) || $cookie
                   
 require "../common/login.php";
 RewindSession();
-?>
 
-<script type="text/javascript">
-function winPop(url)
-{
-  if (url) {
-    var w=window.open(url,'newWin');
-    w.focus();
- }   
-}
-</script>
-        
-<?php  
+
 $language = getLanguage($cookie_name);
 if($language == '')
 	require_once "../lang/$default_language.lang.php";
