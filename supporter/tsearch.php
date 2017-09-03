@@ -32,6 +32,8 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
+require_once "../common/scripts.php";
+
 $highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
@@ -209,7 +211,7 @@ if(isset($search) || isset($s)) {
         case ("id"):
             $sql .= " order by id asc";
             break;
-        case ("di"):
+        case ("di"):=
             $sql .= " order by id desc";
             break;
         case ("sup"):
@@ -240,6 +242,7 @@ if(isset($search) || isset($s)) {
         case ("grp"):
             $sql .= " order by ugroupid asc, create_date";
             break;
+        case ("prg"):
         case ("prg"):
             $sql .= " order by ugroupid desc, create_date";
             break;
@@ -634,8 +637,22 @@ echo'
 			
 			</form>';
 
-}
+}?>;
 
+<div class="container">
+					<div id="dylay" class="row">
+						<div class="col-sm-12 overhead"  data-foo="5">
+							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="6">
+							<span style="height: 40px;">#4320</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="3">
+							<span style="height: 40px;">#4857</span>
+					</div>
+				</div>
+
+<?php
 
 //returns an array containing the priority names
 function sqlByPriority($query, $order)
@@ -696,6 +713,12 @@ function getNumberStatus()
 	return $total;
 
 }
+
+
+
+
+
+
 
 
 ?>
