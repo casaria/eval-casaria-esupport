@@ -1,4 +1,5 @@
-function($){
+function()
+{
     $(document).ready(function() {
 		
 		var $dylay = jQuery('#dylay');
