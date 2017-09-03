@@ -638,8 +638,10 @@ echo'
 			</form>';
 
 }?>;
-
 <div class="container">
+    <h1>Scheduler</h1>
+    <div id="sandbox">
+        <div class="container">
 					<div id="dylay" class="row">
 						<div class="col-sm-12 overhead"  data-foo="5">
 							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
@@ -649,8 +651,12 @@ echo'
 						</div>
 						<div class="col-sm-12 billable" data-foo="3">
 							<span style="height: 40px;">#4857</span>
-					</div>
-				</div>
+				    	</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
 
 <?php
 
