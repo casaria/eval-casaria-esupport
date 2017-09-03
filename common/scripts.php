@@ -1,10 +1,3 @@
-
-/**
- * Created by PhpStorm.
- * User: horrack
- * Date: 9/3/2017
- * Time: 2:01 AM
- */
 ?>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
