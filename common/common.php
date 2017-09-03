@@ -1751,7 +1751,7 @@ function displayTicket($result)
            echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
            echo "</a></td>";
            echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
-
+=
            $response = setResponse($last_update, $row[priority], $row[id]);
 
            switch ($response) {
