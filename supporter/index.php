@@ -141,7 +141,7 @@ border=0>
                                  <input type=hidden name=md5 value=$user_info[password]>";
                                  echo '<LI><a href="#" onclick="javascript:document.timelink.submit();">CBB Casaria Bulletin Board</a></LI>
                               </form>	
-                               <form novalidate name="login_form" id="login_form" action="http://www.casaria.net:2095/horde/index.php" method="post"  style="visibility:">';
+                               <form novalidate name="login_form" id="login_form" action="http://www.casaria.net:2095" method="post"  style="visibility:">';
                                 //<form name=emaillink method="post" action="http://www.casaria.net:2095/horde/index.php">';
                                  echo "<input type=hidden name=user id=user value=$user_info[email]>
                                  <input type=hidden name=pass id=pass value=$user_info[password]>";
