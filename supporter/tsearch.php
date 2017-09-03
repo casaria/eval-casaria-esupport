@@ -473,7 +473,7 @@ if(isset($search) || isset($s)) {
             echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=tim&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
         }
-        
+
         echo '</tr>';
 
         switch ($s) {
