@@ -75,35 +75,33 @@ if(isset($cookie_name)){
 $last_active = getLastActiveTime($cookie_name);
 $user_info = getCredentialsArray($cookie_name);
 $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
-
 ?>
-
 <BODY class=body>
 <TABLE class=border cellSpacing=0 cellPadding=0 width="<?php echo $theme['width']; ?>" align=center
-border=0>
-  <TBODY> 
-  <TR> 
-    <TD> 
-      <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
-        <TBODY> 
-        <TR> 
-          <TD class=hf align=right>
-			<?php echo "$lang_loggedinas <b>$cookie_name</b> (<A class=hf href=\"../common/logout.php\">$lang_logout</a>)";
-			 echo "$crm_name"; ?>
-		 </TD>
-        </TR>
-        <TR> 
-          <TD class=back align=left> <IMG SRC="../<?php echo $theme['image_dir'].$theme['logo_path']; ?>">
-          
-            <TABLE width="100%">
-              <TBODY> 
-              <TR> 
-                <TD class=back vAlign=top align=right></TD>
-              </TR>
-              </TBODY> 
-            </TABLE>
-            <?php 
-    if (!$hidemenu) 
+       border=0>
+    <TBODY>
+    <TR>
+        <TD>
+            <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+                <TBODY>
+                <TR>
+                    <TD class=hf align=right>
+                        <?php echo "$lang_loggedinas <b>$cookie_name</b> (<A class=hf href=\"../common/logout.php\">$lang_logout</a>)";
+                        echo "$crm_name"; ?>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD class=back align=left> <IMG SRC="../<?php echo $theme['image_dir'].$theme['logo_path']; ?>">
+
+                        <TABLE width="100%">
+                            <TBODY>
+                            <TR>
+                                <TD class=back vAlign=top align=right></TD>
+                            </TR>
+                            </TBODY>
+                        </TABLE>
+                        <?php
+                        if (!$hidemenu)
     {        
             echo '
             <TABLE width="100%" align=center border=0>
