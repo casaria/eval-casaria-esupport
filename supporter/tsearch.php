@@ -309,6 +309,29 @@ if(isset($search) || isset($s)) {
             break;
     }
 
+    ?>
+    <div class="container">
+        <div id="sandbox">
+            <div class="container">
+                <div id="dylay" class="row">
+                    <div class="col-sm-12 overhead"  data-foo="5">
+                        <span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
+                    </div>
+                    <div class="col-sm-12 billable" data-foo="6">
+                        <span style="height: 40px;">#4320</span>
+                    </div>
+                    <div class="col-sm-12 billable" data-foo="3">
+                        <span style="height: 40px;">#4857</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?php
+
+
     //set up the sql statement for inclusion in the link for sorting and execute the current
     //sql statement for displaying the proper tickets.
 
@@ -319,6 +342,8 @@ if(isset($search) || isset($s)) {
         printerror("$lang_searchcriteria");
     } else {
         createHeader("$lang_searchresults SQL: " . $sql);
+
+
 
         echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<TR>
@@ -637,28 +662,7 @@ echo'
 			
 			</form>';
 
-}?>;
-<div class="container">
-    <h1>Scheduler</h1>
-    <div id="sandbox">
-        <div class="container">
-					<div id="dylay" class="row">
-						<div class="col-sm-12 overhead"  data-foo="5">
-							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="6">
-							<span style="height: 40px;">#4320</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="3">
-							<span style="height: 40px;">#4857</span>
-				    	</div>
-                    </div>
-        </div>
-    </div>
-</div>
-
-
-<?php
+}
 
 //returns an array containing the priority names
 function sqlByPriority($query, $order)
