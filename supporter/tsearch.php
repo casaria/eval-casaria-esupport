@@ -304,33 +304,10 @@ if(isset($search) || isset($s)) {
             break;
         case ("tim"):
 
-        default:
+        default :
             $sql .= " order by create_date desc";
             break;
     }
-
-    ?>
-    <div class="container">
-        <div id="sandbox">
-            <div class="container">
-                <div id="dylay" class="row">
-                    <div class="col-sm-12 overhead"  data-foo="5">
-                        <span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
-                    </div>
-                    <div class="col-sm-12 billable" data-foo="6">
-                        <span style="height: 40px;">#4320</span>
-                    </div>
-                    <div class="col-sm-12 billable" data-foo="3">
-                        <span style="height: 40px;">#4857</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <?php
-
 
     //set up the sql statement for inclusion in the link for sorting and execute the current
     //sql statement for displaying the proper tickets.
@@ -345,10 +322,67 @@ if(isset($search) || isset($s)) {
 
 
 
-        echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
-			<TR>
-			<TD>
-				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
+    echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
+    ?>
+    <TR>
+    <div class="container">
+        <h1>Scheduler</h1>
+        <div id="sandbox">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Filters</h2>
+                    <ul id="filters">
+                        <li>
+                            <a href="#" data-filter="*">all</a>
+                        </li>
+                        <li>
+                            <a href="#" data-filter=".overhead">Overhead</a>
+                        </li>
+                        <li>
+                            <a href="#" data-filter=".billable">billable</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Sorts</h2>
+                    <ul id="sorts">
+                        <li>
+                            <a href="#">text</a>
+                        </li>
+                        <li>
+                            <a href="#" data-sort-by="foo">data-foo</a>
+                        </li>
+                        <li>
+                            <a href="#" data-sort-way="desc">text desc</a>
+                        </li>
+                        <li>
+                            <a href="#" data-sort-by="foo" data-sort-way="desc">data-foo desc</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div id="dylay" class="row">
+                    <div class="col-sm-12 overhead"  data-foo="5">
+                        <span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
+                    </div>
+                    <div class="col-sm-12 billable" data-foo="6">
+                        <span style="height: 40px;">#4320</span>
+                    </div>
+                    <div class="col-sm-12 billable" data-foo="3">
+                        <span style="height: 40px;">#4857</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <TD>
+
+
+        <?php
+
+
+
+		echo '<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
         echo ' <tr> ';
 
         if ($s == 'id') {
@@ -439,7 +473,7 @@ if(isset($search) || isset($s)) {
             echo '<td align=center>
 							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=tim&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
         }
-
+        
         echo '</tr>';
 
         switch ($s) {
