@@ -100,8 +100,8 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                             </TR>
                             </TBODY>
                         </TABLE>
-                        <?php
-                        if (!$hidemenu)
+    <?php
+    if (!$hidemenu)
     {        
             echo '
             <TABLE width="100%" align=center border=0>
