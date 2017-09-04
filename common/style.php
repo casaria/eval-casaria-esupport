@@ -63,11 +63,12 @@ $tablePadding = 15;
     <?php
     if ($theme['font'] == "Titillium Web") {
         $lineHeight = 1;
-        $tablePadding = 5;
+        $tablePadding = 5 px;
     } else  {
         $lineHeight = 1;
-        $tablePadding = 15;
-    } ?>
+        $tablePadding = 10 px;
+    }
+    ?>
 
 
     <STYLE type="text/css">
@@ -126,11 +127,12 @@ $tablePadding = 15;
         <?php
 
 
-         if(eregi("IE", $HTTP_USER_AGENT)){ ?>
-        select, option, textarea, input {border: 1px solid <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;} <?php
+        if(eregi("IE", $HTTP_USER_AGENT))?>
+        select, option, textarea, input {border: 1px solid; <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
+        <?php
         }
         else{ ?>
-        select, option, textarea, input {font-family:"<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
+        select, option, textarea, input {font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
         <?php
         }
 ?>

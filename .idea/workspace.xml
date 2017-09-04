@@ -14,7 +14,6 @@
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/style.php" afterPath="$PROJECT_DIR$/common/style.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dylay/assets/css/main.css" afterPath="$PROJECT_DIR$/dylay/assets/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -744,13 +743,13 @@
       <file leaf-file-name="style.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/style.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="431">
+              <caret line="141" column="19" lean-forward="false" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
               <folding>
                 <element signature="e#7#1309#0#PHP" expanded="true" />
-                <marker date="1504518245487" expanded="true" signature="10079:10131" ph="select * fro... ${$mysql_themes_table}" />
-                <marker date="1504518245487" expanded="true" signature="10864:10924" ph="select theme... ${$mysql_users_table}" />
-                <marker date="1504518245487" expanded="true" signature="11132:11158" ph="select defau... ${$mysql_settings_table}" />
+                <marker date="1504518581372" expanded="true" signature="10095:10147" ph="select * fro... ${$mysql_themes_table}" />
+                <marker date="1504518581372" expanded="true" signature="10880:10940" ph="select theme... ${$mysql_users_table}" />
+                <marker date="1504518581372" expanded="true" signature="11148:11174" ph="select defau... ${$mysql_settings_table}" />
               </folding>
             </state>
           </provider>
@@ -1189,14 +1188,7 @@
       <workItem from="1504196452301" duration="1454000" />
       <workItem from="1504345050823" duration="741000" />
       <workItem from="1504428096382" duration="16750000" />
-      <workItem from="1504516431883" duration="1123000" />
-    </task>
-    <task id="LOCAL-00243" summary="&#10;suppporter_site_url">
-      <created>1501191970160</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1501191970160</updated>
+      <workItem from="1504516431883" duration="1463000" />
     </task>
     <task id="LOCAL-00244" summary="&#10;suppporter_site_url">
       <created>1501192211094</created>
@@ -1534,11 +1526,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504439577181</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="scripts.php added">
+      <created>1504518258337</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1504518258341</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274163000" />
+    <option name="totallyTimeSpent" value="274503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1558,6 +1557,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33962265" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260026" sideWeight="0.5026415" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13735849" sideWeight="0.49086162" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3117409" sideWeight="0.48830187" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260026" sideWeight="0.4973585" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20377359" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1570,7 +1570,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32823366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31234258" sideWeight="0.48830187" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988358" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1886,7 +1885,7 @@
         <state relative-caret-position="5104">
           <caret line="347" column="41" lean-forward="false" selection-start-line="347" selection-start-column="41" selection-end-line="347" selection-end-column="41" />
           <folding>
-            <element signature="e#7#1461#0#PHP" expanded="true" />
+            <element signature="e#7#1461#0#PHP" expanded="false" />
             <marker date="1504438513859" expanded="true" signature="2235:2280" ph="SELECT * fro... ${$mysql_users_table}" />
             <marker date="1504438513859" expanded="true" signature="2619:2707" ph="UPDATE ${$my... " />
           </folding>
@@ -2644,13 +2643,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/style.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="431">
+          <caret line="141" column="19" lean-forward="false" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
           <folding>
             <element signature="e#7#1309#0#PHP" expanded="true" />
-            <marker date="1504518245487" expanded="true" signature="10079:10131" ph="select * fro... ${$mysql_themes_table}" />
-            <marker date="1504518245487" expanded="true" signature="10864:10924" ph="select theme... ${$mysql_users_table}" />
-            <marker date="1504518245487" expanded="true" signature="11132:11158" ph="select defau... ${$mysql_settings_table}" />
+            <marker date="1504518581372" expanded="true" signature="10095:10147" ph="select * fro... ${$mysql_themes_table}" />
+            <marker date="1504518581372" expanded="true" signature="10880:10940" ph="select theme... ${$mysql_users_table}" />
+            <marker date="1504518581372" expanded="true" signature="11148:11174" ph="select defau... ${$mysql_settings_table}" />
           </folding>
         </state>
       </provider>
