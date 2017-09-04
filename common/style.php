@@ -40,19 +40,20 @@ $tablePadding = 15;
 
 ?>
 
+
 <script type="text/javascript">
     WebFontConfig = {
         google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:400,600,700:latin'] }
     };
 
-    function() {
+    (function() {
         var wf = document.createElement('script');
         wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
         wf.type = 'text/javascript';
         wf.async = 'true';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
-    }
+    })();
 </script>
 
 
@@ -62,13 +63,12 @@ $tablePadding = 15;
     <TITLE> <?php echo $helpdesk_name;?></TITLE>
     <?php
     if ($theme['font'] == "Titillium Web") {
-        $lineHeight = 1;
-        $tablePadding = 5 px;
+        $lineHeight = 1.1;
+        $tablePadding = 5;
     } else  {
         $lineHeight = 1;
-        $tablePadding = 10 px;
-    }
-    ?>
+        $tablePadding = 10;
+    } ?>
 
 
     <STYLE type="text/css">
@@ -127,12 +127,11 @@ $tablePadding = 15;
         <?php
 
 
-        if(eregi("IE", $HTTP_USER_AGENT))?>
-        select, option, textarea, input {border: 1px solid; <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
-        <?php
+         if(eregi("IE", $HTTP_USER_AGENT)){ ?>
+        select, option, textarea, input {border: 1px solid <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;} <?php
         }
         else{ ?>
-        select, option, textarea, input {font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
+        select, option, textarea, input {font-family:"<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size:	11px; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;}
         <?php
         }
 ?>
@@ -164,19 +163,19 @@ $tablePadding = 15;
 
 function getThemeVars($name)
 {
-	global $mysql_themes_table, $db;
+    global $mysql_themes_table, $db;
 
-	if($name == ''){
-		return 'default';
-	}
-	else{
-		$sql = "select * from $mysql_themes_table where name='$name'";
-		$result = $db->query($sql);
-		//$result = execsql($sql);
-		$row = $db->fetch_array($result);
+    if($name == ''){
+        return 'default';
+    }
+    else{
+        $sql = "select * from $mysql_themes_table where name='$name'";
+        $result = $db->query($sql);
+        //$result = execsql($sql);
+        $row = $db->fetch_array($result);
 
-		return $row;
-	}
+        return $row;
+    }
 
 }
 
@@ -187,25 +186,25 @@ function getThemeVars($name)
  ************************************************************************************************************/
 function getThemeName($name)
 {
-	global $mysql_users_table, $mysql_themes_table, $mysql_settings_table, $default_theme, $db;
+    global $mysql_users_table, $mysql_themes_table, $mysql_settings_table, $default_theme, $db;
 
-	if($name == '' || !isset($name)){
-		return $default_theme;
-	}
-	else{
-		$sql = "select theme from $mysql_users_table where user_name='$name'";
-		$result = $db->query($sql);
-		//$result = execsql($sql);
-		$row = $db->fetch_array($result);
+    if($name == '' || !isset($name)){
+        return $default_theme;
+    }
+    else{
+        $sql = "select theme from $mysql_users_table where user_name='$name'";
+        $result = $db->query($sql);
+        //$result = execsql($sql);
+        $row = $db->fetch_array($result);
 
-		if($row[0] == 'default'){	//if users theme is set to default, get the default theme from the db
-			$sql = "select default_theme from $mysql_settings_table";
-			$result = $db->query($sql);
-			$row = $db->fetch_array($result);
-		}
+        if($row[0] == 'default'){	//if users theme is set to default, get the default theme from the db
+            $sql = "select default_theme from $mysql_settings_table";
+            $result = $db->query($sql);
+            $row = $db->fetch_array($result);
+        }
 
-		return $row[0];
-	}
+        return $row[0];
+    }
 
 }
 
