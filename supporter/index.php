@@ -93,13 +93,6 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                 <TR>
                     <TD class=back align=left> <IMG SRC="../<?php echo $theme['image_dir'].$theme['logo_path']; ?>">
 
-                        <TABLE width="100%">
-                            <TBODY>
-                            <TR>
-                                <TD class=back vAlign=top align=right></TD>
-                            </TR>
-                            </TBODY>
-                        </TABLE>
     <?php
     if (!$hidemenu)
     {        
