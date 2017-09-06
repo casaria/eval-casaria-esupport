@@ -396,11 +396,8 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 				if($enable_ssl == 'On'){
 					echo "?ssl=1";
 				}
-				echo '">'.$lang_logout.'</A> 
-			</div>';
+				echo '">'.$lang_logout.'</A>></div>';
 			?>
-
-
           </TD>
         </TR>
         </TBODY> 
