@@ -195,8 +195,6 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                           echo '
                             </TD>
                           </TR>';
-
-   
    												if($enable_CloudControl == 'On'){
    													echo '<TR>
    													<TD class=cat><B>' . $lang_CloudControl . '</B></TD>
@@ -231,8 +229,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                                      echo "</TR>";
 
                           
-
-														echo '
+                            echo '
                             </TD>
                           </TR>
                          </TBODY> 
@@ -246,7 +243,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
 //if the admin is logged in, display a list of people/users who are awaiting approval.
 if (isAdministrator($cookie_name) && $awaiting_approval){
 
-  	echo '<br><TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
+  	echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
                   align=center border=0>
                     <TBODY> 
                     <TR> 
@@ -254,12 +251,12 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
                         <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
                           <TBODY> 
                           <TR> 
-                            <TD class=info align=center><B>'; echo $lang_awaitingapproval; echo '</B></TD>';
+                            <TD class=info align=center><B>';
+                          echo $lang_awaitingapproval; echo '</B></TD>';
                           echo '  
                           </TR>
                           <TR> 
                             <TD class=back2><B>';
-							
 								for($i=0; $i<sizeof($awaiting_approval); $i++){
 									echo $awaiting_approval[$i] . "<br>";
 								}
@@ -267,16 +264,11 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 						  </tr>
 					  </table>
 					  </td></tr></table>';
-                 }  
-
-
-
+                 }
                 echo '</TD>
                 <TD vAlign=top>';
     } else $getstats=true;
-?>
-<?php
-					switch($t){
+			switch($t){
 						case ("tcre"):
 							require "tcreate.php";
 							break;
@@ -357,17 +349,14 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							require "announce.php";
 							break;
 					}
-		  
-						  
-					?>
+    ?>
 				
               </TR>
               </TBODY> 
             </TABLE>
           </TD>
         </TR>
-		<?php
-		
+    <?php
 		if($enable_whosonline == 'On'){
 			echo "<TR>
 				<TD class=cat>";
