@@ -107,7 +107,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
             <TABLE width="100%" align=center border=0>
               <TBODY> 
               <TR> 
-                <TD vAlign=top width="200"> 
+                <TD vAlign=top width="180"> 
                   <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
                   align=center border=0>
                     <TBODY> 
@@ -364,7 +364,6 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
               </TR>
               </TBODY> 
             </TABLE>
-            <BR>
           </TD>
         </TR>
 		<?php
@@ -386,7 +385,7 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
             <div align="center">
 			<A class=hf href="'.$supporter_site_url.'/index.php">'.$lang_home.'</A> |&nbsp;';
 			if(isAdministrator($cookie_name)){
-				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</a> |&nbsp;';
+				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</A           > |&nbsp;';
 			}
 			if($enable_forum == 'On'){
 				echo '<A class=hf href="'.$forum_site_url.'" target=_blank>'.$lang_forum.'</A> |&nbsp;';
