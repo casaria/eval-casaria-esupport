@@ -70,7 +70,6 @@ $tablePadding = 15;
         $tablePadding = 10;
     } ?>
 
-
     <STYLE type="text/css">
 
         @import url(https://fonts.googleapis.com/css?family=Lato);
