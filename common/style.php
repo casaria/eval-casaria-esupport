@@ -146,7 +146,7 @@ $tablePadding = 15;
 
 
 
-        input.box {border: 0px;}
+            input.box {border: 0px;}
 
         table.border2 {background: #6974b5;}
         td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
