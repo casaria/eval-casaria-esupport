@@ -32,7 +32,7 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
-require_once "../common/scripts.php";
+//require_once "../common/scripts.php";
 
 
 if($SERVER_PORT == 80 && $enable_ssl == 'On' && (!isset($cookie_name) || $cookie_name == '')){
