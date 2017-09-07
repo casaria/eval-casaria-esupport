@@ -73,7 +73,7 @@ $tablePadding = 15;
     <STYLE type="text/css">
 
         @import url(https://fonts.googleapis.com/css?family=Lato);
-
+        table {-webkit-border-horizontal-spacing: 1px; -webkit-border-vertical-spacing: 1px;}
 
         BODY {background: <?php echo $theme['bgcolor'];?> ; color: black;}
 
@@ -144,8 +144,7 @@ $tablePadding = 15;
         td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo '$theme["font_size"] + 4'?>'px';  font-weight:600}
 
 
-
-            input.box {border: 1px;}
+        input.box {border: 1px;}
 
         table.border2 {background: #6974b5;}
         td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
