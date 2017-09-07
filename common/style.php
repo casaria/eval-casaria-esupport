@@ -70,6 +70,7 @@ $tablePadding = 15;
         $tablePadding = 10;
     } ?>
 
+
     <STYLE type="text/css">
 
         @import url(https://fonts.googleapis.com/css?family=Lato);
@@ -88,7 +89,7 @@ $tablePadding = 15;
         a.kbase:hover {text-decoration: underline; font-weight: bold; color: <?php echo $theme['text']; ?>;}
 
 
-        table.border {background: <?php echo $theme['table_border']; ?>; color: black;  border-collapse: initial; border-spacing: 1px;}
+        table.border {background: <?php echo $theme['table_border']; ?>; color: black;}
         td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
         tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
         td.back {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
@@ -145,7 +146,7 @@ $tablePadding = 15;
 
 
 
-            input.box {border: 1px;}
+        input.box {border: 0px;}
 
         table.border2 {background: #6974b5;}
         td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
