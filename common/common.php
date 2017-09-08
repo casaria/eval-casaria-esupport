@@ -1678,8 +1678,7 @@ function displayTicket($result)
                 break;
         }
 
-        echo "</tr><tr>";
-        echo "<td class=back align=center>";
+        echo "</tr>";
         $recordcount++;
         $csv_string = $csv_string . $row['id'] . ",";
     }
@@ -1782,7 +1781,7 @@ function displayTicket($result)
 
  //   endTable();
 
-    echo '</td>';
+    echo '<tr>';
     $linkString= "<a href=$supporter_site_url/index.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
     echo '<form name="formTimeTrack"  action="index.php" method=GET>';
     echo '<input type="hidden" name="t" value="time">';
