@@ -142,9 +142,10 @@
 									<a class=hf href="'.$supporter_site_url.'/index.php?t=tmop&f='.$f.'&s=rt"><b>'.$lang_time.'</b></a></td>';
 							 }
 
-						echo '</tr>';
+						echo '</tr><td align="left">';
 
 		$summary = listOpenTickets($supporter_id, $s, $filter);
+		echo '</td>';
 
 		endTable();
     echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
