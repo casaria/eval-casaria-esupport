@@ -147,7 +147,8 @@
 		$summary = listOpenTickets($supporter_id, $s, $filter);
 
 		endTable();
-		endTable();
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]";
+	endTable();
 
 
 
