@@ -231,6 +231,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                     </TBODY> 
                   </TABLE>';
 
+
 //this is ugly, but it works...i'll clean it up later.
 //if the admin is logged in, display a list of people/users who are awaiting approval.
 if (isAdministrator($cookie_name) && $awaiting_approval){
@@ -342,12 +343,12 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							break;
 					}
     ?>
-				
-              </TR>
-              </TBODY> 
+                </TR>
+                </TBODY>
             </TABLE>
-          </TD>
-        </TR>
+            <BR>
+        </TD>
+    </TR>
     <?php
 		if($enable_whosonline == 'On'){
 			echo "<TR>
@@ -380,12 +381,11 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 			?>
           </TD>
         </TR>
-        </TBODY> 
-      </TABLE>
-  </TR>
-  </TBODY> 
+    </TBODY>
 </TABLE>
-
+</TR>
+</TBODY>
+</TABLE>
 <?php
 
 require "../common/footer.php";
