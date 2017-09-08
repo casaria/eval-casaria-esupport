@@ -367,7 +367,7 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
             <div align="center">
 			<A class=hf href="'.$supporter_site_url.'/index.php">'.$lang_home.'</A> |&nbsp;';
 			if(isAdministrator($cookie_name)){
-				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</A           > |&nbsp;';
+				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</A> |&nbsp;';
 			}
 			if($enable_forum == 'On'){
 				echo '<A class=hf href="'.$forum_site_url.'" target=_blank>'.$lang_forum.'</A> |&nbsp;';
