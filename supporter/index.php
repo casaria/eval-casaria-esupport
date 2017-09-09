@@ -275,7 +275,7 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							require "myrecent.php";
 							break;
 						case ("tsrc"):
-							require "tsearch-2.php.php";
+							require "tsearch-2.php";
 							break;
 						case ("tupd"):
 							require "tupdate.php";
