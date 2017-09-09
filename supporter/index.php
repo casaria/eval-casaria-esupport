@@ -82,7 +82,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
     <TBODY>
     <TR>
         <TD>
-            <TABLE cellSpacing=3 cellPadding=5 width="100%" border=0>
+            <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
                 <TBODY>
                 <TR>
                     <TD class=hf align=right>
