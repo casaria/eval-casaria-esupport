@@ -60,7 +60,7 @@ function listGroupMembers($group)
     echo '<div class="container">';
 
 
-    echo '<div id=\"dylay\" class="row">';
+    echo '<div id="dylay" class="row">';
     while($row = $db->fetch_array($result)){
 
 
