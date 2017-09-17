@@ -112,10 +112,11 @@ function listGroupMembers($group)
     echo '<div id="dylay" class="row">';
     while($row = $db->fetch_array($result)){
 
-
+        echo"<tr>";
         echo "<div class=\"col-sm-4 ".($row[supporter] >= 1 ? "active" : "inactive")."\" username=\"$row[user_name]\">";
 							echo "<span style=height:60px;>";
                             echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
+        echo"</tr>";
 
     }
     echo '</div>';
