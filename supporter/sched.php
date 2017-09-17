@@ -36,7 +36,7 @@ require_once "../common/scripts.php";
 
 startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
-	echo "<tr><td class=back>";
+	echo "<tr><td class=back2>";
 
 	$group_array = getGroupList($cookie_name, 0);
 	if(sizeof($group_array) == 0){
