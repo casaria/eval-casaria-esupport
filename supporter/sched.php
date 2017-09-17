@@ -49,7 +49,7 @@ startTable("$lang_groupslists", "center");
                     <li>
                         <a href="#" data-filter="*">all</a>
                     </li>
-                    <li>/
+                    <li>
                         <a href="#" data-filter=".active">ACTIVE<a>
                     </li>
                     <li>
@@ -64,13 +64,13 @@ startTable("$lang_groupslists", "center");
                         <a href="#">text</a>
                     </li>
                     <li>
-                        <a href="#" data-sort-by="foo">data-foo</a>
+                        <a href="#" data-sort-by="username">user_name</a>
                     </li>
                     <li>
                         <a href="#" data-sort-way="desc">text desc</a>
                     </li>
                     <li>
-                        <a href="#" data-sort-by="foo" data-sort-way="desc">data-foo desc</a>
+                        <a href="#" data-sort-by="username" data-sort-way="desc">user_namse descendign</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +113,7 @@ function listGroupMembers($group)
     while($row = $db->fetch_array($result)){
 
 
-        echo "<div class=\"col-sm-4 ".($row[supporter] >= 1 ? "active" : "inactive")."\" data-foo=$row[user_name]>";
+        echo "<div class=\"col-sm-4 ".($row[supporter] >= 1 ? "active" : "inactive")."\" username=$row[user_name]>";
 							echo "<span style=height:60px;>";
                             echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
 
