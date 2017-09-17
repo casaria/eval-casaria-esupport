@@ -46,6 +46,40 @@ startTable("$lang_groupslists", "center");
 	echo "</td></tr>";
 endTable();
 
+/***********************************************************************************************************
+ **	function getGroupList():
+ **		Takes two arguments.  Queries the supporter group tables and gets a list of all sgroups in an array.
+ **	If the flag is not set, prints out the members of each group if the name given is in that particular
+ **	group.  If the flag is set, group members are not listed.  In both cases, the array of sgroups is
+ **	returned.
+ ************************************************************************************************************/
+function getGroupList($name, $flag=1)
+{
+    global $mysql_sgroups_table, $db;
+
+    $sql = "select id from $mysql_sgroups_table where id != 1";
+    $result = $db->query($sql);
+    $i = 0;
+    while ($row = $db->fetch_row($result)){
+        $group[$i] = "sgroup" . $row[0];
+        $i++;
+
+    }
+    //now list contains a list of all the groups....now we have to cycle through that list
+    //and determine whether the logged in user is in each group.
+
+    if($name != '' && $flag != 1){
+        for($i=0; $i<sizeof($group); $i++){
+            if(inGroup($name, $group[$i])){
+                listGroupMembers($group[$i]);
+            }
+        }
+    }
+
+    return $group;
+
+}
+
 
 function listGroupMembers($group)
 {
