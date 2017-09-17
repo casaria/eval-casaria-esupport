@@ -36,7 +36,7 @@ require_once "../common/scripts.php";
 
 startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
-	echo "<tr><td class=back2>";
+	echo "<tr><td class=dylay>";
 
 ?>
 <div class="container">
