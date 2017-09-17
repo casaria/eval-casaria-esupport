@@ -2,6 +2,7 @@ body {
     color: #000066;
     font-size: 1.6em;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 h1 {
@@ -11,7 +12,7 @@ h1 {
 }
 #dylay li { color: #FFFFFF; }
 
-#dylay div span { border-radius: 5px; margin: 4px; border: 2px solid #000066; font-weight: bold; padding: 3px 3px; z-index: 0; box-shadow: 2px 2px 1px 1px #aa66aa; color: #222222; display: block; }
+#dylay div span { border-radius: 5px; margin: 4px; border: 2px solid #000066; font-weight: normal; padding: 3px 3px; z-index: 0; box-shadow: 2px 2px 1px 1px #aa66aa; color: #222222; display: block; }
 
 
 #dylay div span:hover {
