@@ -60,13 +60,13 @@ function listGroupMembers($group)
     echo '<div class="container">';
 
 
-
+    echo '<div id=\"dylay\" class="row">';
     while($row = $db->fetch_array($result)){
 
-        echo '<div id="dylay" class="row">';
+
         echo "<div class=\"col-sm-12 overhead\"  data-foo=$row[user_name]>";
 							echo "<span style=\"height:60px\";>";
-                            echo "$row[user_name] $row[first_name] $row[last_name]</span></div></div>";
+                            echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
 
     }
     echo '</div>';
