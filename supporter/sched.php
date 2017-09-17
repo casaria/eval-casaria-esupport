@@ -43,11 +43,30 @@ startTable("$lang_groupslists", "center");
 	if(sizeof($group_array) == 0){
 		printerror("$lang_nogroups");
 	}
-
-
 	echo "</td></tr>";
 endTable();
+
+
+function listGroupMembers($group)
+{
+    global $supporter_site_url, $db, $lang_group;
+
+    $group_id = eregi_replace("sgroup", "", $group);
+
+    $sql = "select user_name from $group order by user_name";
+    $result = $db->query($sql);
+    startTable("$lang_group  --  ".getsGroup($group_id), "left");
+    echo "<tr><td class=back2>";
+    while($row = $db->fetch_array($result)){
+        echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
+    }
+    echo "</td></tr>";
+    endTable();
+
+}
 ?>
+
+
 <div class="container">
 			<h1>Scheduler</h1>
 			<div id="sandbox">
@@ -140,22 +159,4 @@ endTable();
 		<script src="src/dylay.js"></script>
 		<script src="assets/js/main.js"></script>
 
-<?php
-function listGroupMembers($group)
-{
-	global $supporter_site_url, $db, $lang_group;
 
-	$group_id = eregi_replace("sgroup", "", $group);
-
-	$sql = "select user_name from $group order by user_name";
-	$result = $db->query($sql);
-	startTable("$lang_group  --  ".getsGroup($group_id), "left");
-	echo "<tr><td class=back2>";
-	while($row = $db->fetch_array($result)){
-		echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
-	}
-	echo "</td></tr>";
-	endTable();
-
-}
-?>

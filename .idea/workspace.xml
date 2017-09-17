@@ -136,8 +136,8 @@
       <file leaf-file-name="sched.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supporter/sched.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="142" column="5" lean-forward="false" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state relative-caret-position="656">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -153,7 +153,7 @@
                 <element signature="n#style#0;n#span#0;n#div#11;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#12;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#13;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1505623252806" expanded="true" signature="4816:4863" ph="select user_... ${$group}" />
+                <marker date="1505624146747" expanded="true" signature="1979:2026" ph="select user_... ${$group}" />
               </folding>
             </state>
           </provider>
@@ -505,12 +505,12 @@
       <find>LISTOP</find>
       <find>&lt;/TABLE&gt;</find>
       <find>LINK</find>
-      <find>LINK</find>
       <find>CS</find>
       <find>DISPLAYUS</find>
       <find>CSV</find>
       <find>td.back</find>
       <find>displayUserTicket</find>
+      <find>listGroupMembers</find>
     </findStrings>
     <replaceStrings>
       <replace>$summary = displayTicket($result);</replace>
@@ -875,14 +875,7 @@
       <workItem from="1504727426268" duration="20502000" />
       <workItem from="1504879707930" duration="11265000" />
       <workItem from="1505244662115" duration="1526000" />
-      <workItem from="1505615451530" duration="1914000" />
-    </task>
-    <task id="LOCAL-00303" summary="removed dylay &lt;div&gt; section">
-      <created>1504735692791</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1504735692791</updated>
+      <workItem from="1505615451530" duration="2807000" />
     </task>
     <task id="LOCAL-00304" summary="removed dylay &lt;div&gt; section">
       <created>1504737592127</created>
@@ -1220,11 +1213,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505623003892</updated>
     </task>
-    <option name="localTasksCounter" value="352" />
+    <task id="LOCAL-00352" summary="dylay">
+      <created>1505623272423</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1505623272423</updated>
+    </task>
+    <option name="localTasksCounter" value="353" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319682000" />
+    <option name="totallyTimeSpent" value="320575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1310,7 +1310,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
-    <MESSAGE value="BUGS" />
     <MESSAGE value="finally" />
     <MESSAGE value="&#10;lik to ticket list" />
     <MESSAGE value="&#10;link to ticket list" />
@@ -1335,7 +1334,8 @@
     <MESSAGE value="Style padding" />
     <MESSAGE value="endtable in displayticket common.php" />
     <MESSAGE value="add scheduler menu link" />
-    <option name="LAST_COMMIT_MESSAGE" value="add scheduler menu link" />
+    <MESSAGE value="dylay" />
+    <option name="LAST_COMMIT_MESSAGE" value="dylay" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1379,7 +1379,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="86" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="index.php">
@@ -2854,8 +2854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supporter/sched.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="142" column="5" lean-forward="false" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state relative-caret-position="656">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -2871,7 +2871,7 @@
             <element signature="n#style#0;n#span#0;n#div#11;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#12;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#13;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1505623252806" expanded="true" signature="4816:4863" ph="select user_... ${$group}" />
+            <marker date="1505624146747" expanded="true" signature="1979:2026" ph="select user_... ${$group}" />
           </folding>
         </state>
       </provider>
