@@ -38,10 +38,7 @@ startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
 	echo "<tr><td class=back2>";
 
-	$group_array = getGroupList($cookie_name, 0);
-	if(sizeof($group_array) == 0){
-		printerror("$lang_nogroups");
-	}
+	listGroupMembers("sgroup2");
 	echo "</td></tr>";
 endTable();
 
@@ -154,19 +151,7 @@ function getGroupList($name, $flag=1)
 						</ul>
 					</div>
 				</div>
-				<div class="container">
-                    <div id="dylay" class="row">
-						<div class="col-sm-12 overhead"  data-foo="5">
-							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
-						</div>
-						<div class="col-sm-12 consonne" data-foo="1">
-							<span style="height: 60px;">#4584</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="17">
-							<span style="height: 40px;">#4000</span>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
