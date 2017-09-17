@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/sched.php" afterPath="$PROJECT_DIR$/supporter/sched.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dylay/assets/css/main.css" afterPath="$PROJECT_DIR$/dylay/assets/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -133,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sched.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sched.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supporter/sched.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -169,6 +169,16 @@
                 <marker date="1505631126000" expanded="true" signature="4919:4980" ph="..." />
                 <marker date="1505631126000" expanded="true" signature="5033:5094" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -976,20 +986,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/style.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding>
-                <marker date="1504917989680" expanded="true" signature="10254:10306" ph="select * fro... ${$mysql_themes_table}" />
-                <marker date="1504917989680" expanded="true" signature="11090:11150" ph="select theme... ${$mysql_users_table}" />
-                <marker date="1504917989680" expanded="true" signature="11391:11417" ph="select defau... ${$mysql_settings_table}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -1077,7 +1073,6 @@
         <option value="$PROJECT_DIR$/common/login.php" />
         <option value="$PROJECT_DIR$/kbase/add.php" />
         <option value="$PROJECT_DIR$/dylay/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/dylay/assets/css/main.css" />
         <option value="$PROJECT_DIR$/supporter/tupdate.php" />
         <option value="$PROJECT_DIR$/common/scripts.php" />
         <option value="$PROJECT_DIR$/supporter/tsearch.php" />
@@ -1090,6 +1085,7 @@
         <option value="$PROJECT_DIR$/lang/English.lang.php" />
         <option value="$PROJECT_DIR$/supporter/index.php" />
         <option value="$PROJECT_DIR$/supporter/sched.php" />
+        <option value="$PROJECT_DIR$/dylay/assets/css/main.css" />
       </list>
     </option>
   </component>
@@ -1209,6 +1205,13 @@
               <item name="NEW eval-casaria-esupport" type="cbb8eebc:String" user="NEW eval-casaria-esupport" />
               <item name="dylay" type="cbb8eebc:String" user="dylay" />
               <item name="assets" type="cbb8eebc:String" user="assets" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="NEW eval-casaria-esupport" type="cbb8eebc:String" user="NEW eval-casaria-esupport" />
+              <item name="dylay" type="cbb8eebc:String" user="dylay" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
+              <item name="css" type="cbb8eebc:String" user="css" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -1395,14 +1398,7 @@
       <workItem from="1505625234428" duration="140000" />
       <workItem from="1505625629551" duration="1215000" />
       <workItem from="1505628276262" duration="115000" />
-      <workItem from="1505628537327" duration="2572000" />
-    </task>
-    <task id="LOCAL-00326" summary="Style padding">
-      <created>1504746239685</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1504746239685</updated>
+      <workItem from="1505628537327" duration="2690000" />
     </task>
     <task id="LOCAL-00327" summary="Style padding">
       <created>1504747328113</created>
@@ -1740,11 +1736,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505631067197</updated>
     </task>
-    <option name="localTasksCounter" value="375" />
+    <task id="LOCAL-00375" summary="dylay">
+      <created>1505631132870</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1505631132871</updated>
+    </task>
+    <option name="localTasksCounter" value="376" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325679000" />
+    <option name="totallyTimeSpent" value="325797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2024,13 +2027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3112,6 +3108,14 @@
             <marker date="1505631126000" expanded="true" signature="4919:4980" ph="..." />
             <marker date="1505631126000" expanded="true" signature="5033:5094" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
