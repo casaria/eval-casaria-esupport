@@ -21,14 +21,14 @@ h1 {
 }
 
 
-#dylay div span.tooltip {
+#dylay div.tooltip {
     position: relative;
     display: inline-block;
 border-bottom: 1px dotted black;
 }
 
 /* Tooltip text */
-#dylay div span.tooltip.tooltiptext {
+#dylay div.tooltip.tooltiptext {
     visibility: visible;
     width: 120px;
     background-color: #555;
@@ -50,7 +50,7 @@ border-bottom: 1px dotted black;
 }
 
 /* Tooltip arrow */
-#dylay div span.tooltip.tooltiptext::after {
+#dylay div.tooltip.tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -62,7 +62,7 @@ border-bottom: 1px dotted black;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-#dylay div span.tooltip:hover.tooltiptext {
+#dylay div.tooltip:hover.tooltiptext {
     visibility: visible;
     opacity: 1;
 }
