@@ -76,14 +76,6 @@ startTable("$lang_groupslists", "center");
             </div>
         </div>
 
-    </div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="assets/vendor/jquery.easing.1.3.js"></script>
-<script src="src/dylay.js"></script>
-<script src="assets/js/main.js"></script>
-
-
 
 <?php
 
@@ -121,6 +113,15 @@ function listGroupMembers($group)
     }
     echo '</div>';
     echo "</td></tr>";
+?>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/vendor/jquery.easing.1.3.js"></script>
+<script src="src/dylay.js"></script>
+<script src="assets/js/main.js"></script>
+
+<?php
 
     endTable();
 
