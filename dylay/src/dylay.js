@@ -120,7 +120,7 @@
 		});
 	};
 	$.fn.dylay.defaults = {
-		speed : 500,
+		speed : 4500,
 		selector : '>li',
 		easing : ''
 	};
