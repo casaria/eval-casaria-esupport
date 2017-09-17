@@ -288,6 +288,9 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 						case ("sgrp"):
 							require "sgroups.php";
 							break;
+                        case ("sched"):
+                            require "sched.php";
+                        break;
 						case ("kbase"):
 							switch($act){
 								case("kedit"):
