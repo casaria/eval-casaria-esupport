@@ -38,6 +38,56 @@ startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
 	echo "<tr><td class=back2>";
 
+?>
+<div class="container">
+    <h1>Scheduler</h1>
+    <div id="sandbox">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Filters</h2>
+                <ul id="filters">
+                    <li>
+                        <a href="#" data-filter="*">all</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".overhead">Overhead</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".billable">billable</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <h2>Sorts</h2>
+                <ul id="sorts">
+                    <li>
+                        <a href="#">text</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-by="foo">data-foo</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-way="desc">text desc</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-by="foo" data-sort-way="desc">data-foo desc</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/vendor/jquery.easing.1.3.js"></script>
+<script src="src/dylay.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+<?php
+
+
 	listGroupMembers("sgroup2");
 	echo "</td></tr>";
 endTable();
@@ -114,49 +164,5 @@ function getGroupList($name, $flag=1)
 */
 ?>
 
-
-<div class="container">
-			<h1>Scheduler</h1>
-			<div id="sandbox">
-				<div class="row">
-					<div class="col-sm-6">
-						<h2>Filters</h2>
-						<ul id="filters">
-							<li>
-								<a href="#" data-filter="*">all</a>
-							</li>
-							<li>
-								<a href="#" data-filter=".overhead">Overhead</a>
-							</li>
-							<li>
-								<a href="#" data-filter=".billable">billable</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-sm-6">
-						<h2>Sorts</h2>
-						<ul id="sorts">
-							<li>
-								<a href="#">text</a>
-							</li>
-							<li>
-								<a href="#" data-sort-by="foo">data-foo</a>
-							</li>
-							<li>
-								<a href="#" data-sort-way="desc">text desc</a>
-							</li>
-							<li>
-								<a href="#" data-sort-by="foo" data-sort-way="desc">data-foo desc</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="assets/vendor/jquery.easing.1.3.js"></script>
-		<script src="src/dylay.js"></script>
-		<script src="assets/js/main.js"></script>
 
 
