@@ -43,7 +43,7 @@ startTable("$lang_groupslists", "center");
 		printerror("$lang_nogroups");
 	}
 	echo "</td></tr>";
-//  endTable();
+endTable();
 
 
 
