@@ -12,7 +12,7 @@
         });
 
         $dylay.dylay({
-            speed: 3800,
+            speed: 100,
             selector : '<div style',
             easing: 'easeOutElastic'
         });
