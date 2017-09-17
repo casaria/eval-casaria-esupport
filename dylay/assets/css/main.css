@@ -90,13 +90,12 @@ border-bottom: 1px dotted black;
     opacity: 1;
 }
 
-.no-gutters {
+.row.no-gutters {
     margin-right: 0;
     margin-left: 0;
-
-> .col,
-> [class*="col-"] {
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
     padding-right: 0;
     padding-left: 0;
-}
 }
