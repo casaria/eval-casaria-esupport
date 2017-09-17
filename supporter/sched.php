@@ -47,7 +47,100 @@ startTable("$lang_groupslists", "center");
 
 	echo "</td></tr>";
 endTable();
+?>
+<div class="container">
+			<h1>Scheduler</h1>
+			<div id="sandbox">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Filters</h2>
+						<ul id="filters">
+							<li>
+								<a href="#" data-filter="*">all</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".overhead">Overhead</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".billable">billable</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<h2>Sorts</h2>
+						<ul id="sorts">
+							<li>
+								<a href="#">text</a>
+							</li>
+							<li>
+								<a href="#" data-sort-by="foo">data-foo</a>
+							</li>
+							<li>
+								<a href="#" data-sort-way="desc">text desc</a>
+							</li>
+							<li>
+								<a href="#" data-sort-by="foo" data-sort-way="desc">data-foo desc</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container">
 
+
+					<div id="dylay" class="row">
+						<div class="col-sm-12 overhead"  data-foo="5">
+							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="6">
+							<span style="height: 40px;">#4320</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="3">
+							<span style="height: 40px;">#4857</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="2">
+							<span style="height: 40px;">#4858</span>
+						</div>
+						<div class="col-sm-12 overhead"  data-foo="4">
+							<span style="height: 60px;">#3567</span>
+						</div>
+						<div class="col-sm-12 consonne" data-foo="1">
+							<span style="height: 60px;">#4584</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="17">
+							<span style="height: 80px;">#4000</span>
+						</div>
+
+						<div class="col-sm-12 overhead"  data-foo="5">
+							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="6">
+							<span style="height: 40px;">#4320</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="3">
+							<span style="height: 40px;">#4857</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="2">
+							<span style="height: 40px;">#4858</span>
+						</div>
+						<div class="col-sm-12 overhead"  data-foo="4">
+							<span style="height: 60px;">#3567</span>
+						</div>
+						<div class="col-sm-12 consonne" data-foo="1">
+							<span style="height: 60px;">#4584</span>
+						</div>
+						<div class="col-sm-12 billable" data-foo="17">
+							<span style="height: 40px;">#4000</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="assets/vendor/jquery.easing.1.3.js"></script>
+		<script src="src/dylay.js"></script>
+		<script src="assets/js/main.js"></script>
+
+<?php
 function listGroupMembers($group)
 {
 	global $supporter_site_url, $db, $lang_group;
