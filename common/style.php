@@ -156,6 +156,9 @@ $tablePadding = 15;
         a.install:hover {text-decoration: underline; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
 
     </STYLE>
+    <?php
+    require_once "../common/scripts.php";
+    ?>
 </HEAD>
 <?php
 
