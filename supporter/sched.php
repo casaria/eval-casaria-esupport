@@ -57,19 +57,19 @@ function listGroupMembers($group)
     startTable("$lang_group  --  ".getsGroup($group_id), "left");
     echo "<tr><td class=back>";
 
-    echo '<div class="container">
-                    <div id="dylay" class="row">';
+    echo '<div class="container">';
 
 
 
     while($row = $db->fetch_array($result)){
 
+        echo '<div id="dylay" class="row">';
         echo "<div class=\"col-sm-12 overhead\"  data-foo=$row[user_name]>";
 							echo "<span style=\"height:60px\";>";
-                            echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
+                            echo "$row[user_name] $row[first_name] $row[last_name]</span></div></div>";
 
     }
-    echo '</div></div>';
+    echo '</div>';
     echo "</td></tr>";
 
     endTable();
