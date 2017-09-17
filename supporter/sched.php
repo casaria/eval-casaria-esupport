@@ -53,7 +53,9 @@ function listGroupMembers($group)
 
     $group_id = eregi_replace("sgroup", "", $group);
 
-    $sql = "select user_name from $group order by user_name";
+    $sql = "SELECT * FROM `users`\n"
+        . "INNER JOIN `sgroup2` ON `sgroup2`.`user_name` = `users`.`user_name` ";
+
     $result = $db->query($sql);
     startTable("$lang_group  --  ".getsGroup($group_id), "left");
     echo "<tr><td class=back>";
