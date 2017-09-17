@@ -36,7 +36,7 @@ require_once "../common/common.php";
 
 startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
-	echo "<tr><td class=dylay>";
+	echo "<tr><td class=back2>";
 
 ?>
 <div class="container">
@@ -50,10 +50,10 @@ startTable("$lang_groupslists", "center");
                         <a href="#" data-filter="*">all</a>
                     </li>
                     <li>
-                        <a href="#" data-filter=".overhead">Overhead</a>
+                        <a href="#" data-filter=".Active">active</a>
                     </li>
                     <li>
-                        <a href="#" data-filter=".billable">billable</a>
+                        <a href="#" data-filter=".Inactive">inactive</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +113,7 @@ function listGroupMembers($group)
     while($row = $db->fetch_array($result)){
 
 
-        echo "<div class=\"col-sm-4 overhead\" data-foo=$row[user_name]>";
+        echo "<div class=\"col-sm-4 ".($row[supporter] >= 1 ? "active" : "inactive")."\" data-foo=$row[user_name]>";
 							echo "<span style=height:60px;>";
                             echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
 
