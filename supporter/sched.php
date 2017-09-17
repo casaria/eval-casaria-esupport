@@ -56,7 +56,7 @@ function listGroupMembers($group)
     $sql = "select user_name from $group order by user_name";
     $result = $db->query($sql);
     startTable("$lang_group  --  ".getsGroup($group_id), "left");
-    echo "<tr><td class=back2>";
+    echo "<tr><td class=back>";
     while($row = $db->fetch_array($result)){
         echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
     }
