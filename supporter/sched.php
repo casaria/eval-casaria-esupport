@@ -41,6 +41,12 @@ startTable("$lang_groupslists", "center");
 ?>
 <div class="container">
     <h1>Scheduler</h1>
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
     <div id="sandbox">
         <div class="row">
             <div class="col-sm-6">
