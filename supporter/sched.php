@@ -118,7 +118,7 @@ function listGroupMembers($group)
 
 
     }
-    echo '</div></div>';
+    echo '</div></div></div>';
     echo "</td></tr>";
 
 

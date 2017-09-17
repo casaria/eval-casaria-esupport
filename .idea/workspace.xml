@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dylay/assets/css/main.css" afterPath="$PROJECT_DIR$/dylay/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/sched.php" afterPath="$PROJECT_DIR$/supporter/sched.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,25 +132,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sched.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sched.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supporter/sched.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
               <folding>
                 <element signature="e#7#1385#0#PHP" expanded="true" />
-                <marker date="1505670662887" expanded="true" signature="2095:2128" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3149:3252" ph="SELECT * FRO... users" />
-                <marker date="1505670662887" expanded="true" signature="3420:3424" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3420:3849" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3462:3849" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3630:3825" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3630:3829" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3659:3670" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3659:3671" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="3671:3823" ph="..." />
-                <marker date="1505670662887" expanded="true" signature="4582:4631" ph="select id fr... ${$mysql_sgroups_table}" />
-                <marker date="1505670662887" expanded="true" signature="4721:4782" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="2095:2128" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3149:3252" ph="SELECT * FRO... users" />
+                <marker date="1505671241570" expanded="true" signature="3420:3424" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3420:3849" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3462:3849" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3630:3825" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3630:3829" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3659:3670" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3659:3671" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="3671:3823" ph="..." />
+                <marker date="1505671241570" expanded="true" signature="4588:4637" ph="select id fr... ${$mysql_sgroups_table}" />
+                <marker date="1505671241570" expanded="true" signature="4727:4788" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,17 +159,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dylay/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            <state relative-caret-position="176">
+              <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="960">
               <caret line="66" column="1" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
               <folding />
             </state>
@@ -916,8 +916,8 @@
         <option value="$PROJECT_DIR$/dylay/assets/js/main.js" />
         <option value="$PROJECT_DIR$/common/style.php" />
         <option value="$PROJECT_DIR$/common/scripts.php" />
-        <option value="$PROJECT_DIR$/supporter/sched.php" />
         <option value="$PROJECT_DIR$/dylay/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/supporter/sched.php" />
       </list>
     </option>
   </component>
@@ -1243,14 +1243,7 @@
       <workItem from="1505625234428" duration="140000" />
       <workItem from="1505625629551" duration="1215000" />
       <workItem from="1505628276262" duration="115000" />
-      <workItem from="1505628537327" duration="19029000" />
-    </task>
-    <task id="LOCAL-00380" summary="dylay">
-      <created>1505633072631</created>
-      <option name="number" value="00380" />
-      <option name="presentableId" value="LOCAL-00380" />
-      <option name="project" value="LOCAL" />
-      <updated>1505633072631</updated>
+      <workItem from="1505628537327" duration="19286000" />
     </task>
     <task id="LOCAL-00381" summary="dylay">
       <created>1505633979731</created>
@@ -1588,11 +1581,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505670826948</updated>
     </task>
-    <option name="localTasksCounter" value="429" />
+    <task id="LOCAL-00429" summary=" 4">
+      <created>1505670990430</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
+      <option name="project" value="LOCAL" />
+      <updated>1505670990430</updated>
+    </task>
+    <option name="localTasksCounter" value="430" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342136000" />
+    <option name="totallyTimeSpent" value="342393000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2954,41 +2954,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="66" column="1" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dylay/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="176">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supporter/sched.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
           <folding>
             <element signature="e#7#1385#0#PHP" expanded="true" />
-            <marker date="1505670662887" expanded="true" signature="2095:2128" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3149:3252" ph="SELECT * FRO... users" />
-            <marker date="1505670662887" expanded="true" signature="3420:3424" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3420:3849" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3462:3849" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3630:3825" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3630:3829" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3659:3670" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3659:3671" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="3671:3823" ph="..." />
-            <marker date="1505670662887" expanded="true" signature="4582:4631" ph="select id fr... ${$mysql_sgroups_table}" />
-            <marker date="1505670662887" expanded="true" signature="4721:4782" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="2095:2128" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3149:3252" ph="SELECT * FRO... users" />
+            <marker date="1505671241570" expanded="true" signature="3420:3424" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3420:3849" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3462:3849" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3630:3825" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3630:3829" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3659:3670" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3659:3671" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="3671:3823" ph="..." />
+            <marker date="1505671241570" expanded="true" signature="4588:4637" ph="select id fr... ${$mysql_sgroups_table}" />
+            <marker date="1505671241570" expanded="true" signature="4727:4788" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dylay/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="66" column="1" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
