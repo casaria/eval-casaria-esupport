@@ -34,8 +34,7 @@ require_once "../common/$database.class.php";
 require_once "../common/common.php";
 require_once "../common/scripts.php";
 
-
-//startTable("$lang_groupslists", "center");
+startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
 	echo "<tr><td class=back>";
 
@@ -44,7 +43,7 @@ require_once "../common/scripts.php";
 		printerror("$lang_nogroups");
 	}
 	echo "</td></tr>";
-//endTable();
+//  endTable();
 
 
 
@@ -142,45 +141,9 @@ function getGroupList($name, $flag=1)
 					</div>
 				</div>
 				<div class="container">
-
-
-					<div id="dylay" class="row">
+                    <div id="dylay" class="row">
 						<div class="col-sm-12 overhead"  data-foo="5">
 							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="6">
-							<span style="height: 40px;">#4320</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="3">
-							<span style="height: 40px;">#4857</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="2">
-							<span style="height: 40px;">#4858</span>
-						</div>
-						<div class="col-sm-12 overhead"  data-foo="4">
-							<span style="height: 60px;">#3567</span>
-						</div>
-						<div class="col-sm-12 consonne" data-foo="1">
-							<span style="height: 60px;">#4584</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="17">
-							<span style="height: 80px;">#4000</span>
-						</div>
-
-						<div class="col-sm-12 overhead"  data-foo="5">
-							<span style="height: 200px;">#4530<br>Short dedcription<br>line 2</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="6">
-							<span style="height: 40px;">#4320</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="3">
-							<span style="height: 40px;">#4857</span>
-						</div>
-						<div class="col-sm-12 billable" data-foo="2">
-							<span style="height: 40px;">#4858</span>
-						</div>
-						<div class="col-sm-12 overhead"  data-foo="4">
-							<span style="height: 60px;">#3567</span>
 						</div>
 						<div class="col-sm-12 consonne" data-foo="1">
 							<span style="height: 60px;">#4584</span>
