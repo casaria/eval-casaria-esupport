@@ -113,7 +113,7 @@ function listGroupMembers($group)
     while($row = $db->fetch_array($result)){
 
 
-        echo "<div class=\"col-sm-6 ".($row[supporter] >= 1 ? "active" : "inactive")."\" username=\"$row[user_name]\">";
+        echo "<div class=\"col-sm-6 col-md-3 ".($row[supporter] >= 1 ? "active" : "inactive")."\" username=\"$row[user_name]\">";
 							echo "<span style=height:60px;>";
                             echo "$row[first_name] $row[last_name] <b>($row[user_name])</b><br>$row[email] ".date("m/d/Y", $row[lastactive])."</span></div>";
 
