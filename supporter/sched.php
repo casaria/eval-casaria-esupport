@@ -49,11 +49,11 @@ startTable("$lang_groupslists", "center");
                     <li>
                         <a href="#" data-filter="*">all</a>
                     </li>
-                    <li>
-                        <a href="#" data-filter=".Active">active</a>
+                    <li>/
+                        <a href="#" data-filter=".active">ACTIVE<a>
                     </li>
                     <li>
-                        <a href="#" data-filter=".Inactive">inactive</a>
+                        <a href="#" data-filter=".inactive">INACTIVE</a>
                     </li>
                 </ul>
             </div>
