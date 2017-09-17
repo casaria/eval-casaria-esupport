@@ -46,6 +46,27 @@ startTable("$lang_groupslists", "center");
 	echo "</td></tr>";
 endTable();
 
+
+
+function listGroupMembers($group)
+{
+    global $supporter_site_url, $db, $lang_group;
+
+    $group_id = eregi_replace("sgroup", "", $group);
+
+    $sql = "select user_name from $group order by user_name";
+    $result = $db->query($sql);
+    startTable("$lang_group  --  ".getsGroup($group_id), "left");
+    echo "<tr><td class=back2>";
+    while($row = $db->fetch_array($result)){
+        echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
+    }
+    echo "</td></tr>";
+    endTable();
+
+}
+
+
 /***********************************************************************************************************
  **	function getGroupList():
  **		Takes two arguments.  Queries the supporter group tables and gets a list of all sgroups in an array.
@@ -80,24 +101,6 @@ function getGroupList($name, $flag=1)
 
 }
 
-
-function listGroupMembers($group)
-{
-    global $supporter_site_url, $db, $lang_group;
-
-    $group_id = eregi_replace("sgroup", "", $group);
-
-    $sql = "select user_name from $group order by user_name";
-    $result = $db->query($sql);
-    startTable("$lang_group  --  ".getsGroup($group_id), "left");
-    echo "<tr><td class=back2>";
-    while($row = $db->fetch_array($result)){
-        echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
-    }
-    echo "</td></tr>";
-    endTable();
-
-}
 ?>
 
 
