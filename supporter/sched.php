@@ -61,6 +61,7 @@ function listGroupMembers($group)
         echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
     }
     echo "</td></tr>";
+
     endTable();
 
 }
