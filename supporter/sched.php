@@ -70,7 +70,7 @@ startTable("$lang_groupslists", "center");
                         <a href="#" data-sort-way="desc">text desc</a>
                     </li>
                     <li>
-                        <a href="#" data-sort-by="username" data-sort-way="desc">user_namse descendign</a>
+                        <a href="#" data-sort-by="username" data-sort-way="desc">user_name descending</a>
                     </li>
                 </ul>
             </div>
