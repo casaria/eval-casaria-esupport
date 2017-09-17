@@ -74,6 +74,7 @@ function listGroupMembers($group)
  **	group.  If the flag is set, group members are not listed.  In both cases, the array of sgroups is
  **	returned.
  ************************************************************************************************************/
+/*
 function getGroupList($name, $flag=1)
 {
     global $mysql_sgroups_table, $db;
@@ -100,7 +101,7 @@ function getGroupList($name, $flag=1)
     return $group;
 
 }
-
+*/
 ?>
 
 
