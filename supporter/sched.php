@@ -35,7 +35,7 @@ require_once "../common/common.php";
 require_once "../common/scripts.php";
 
 
-startTable("$lang_groupslists", "center");
+//startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
 	echo "<tr><td class=back>";
 
@@ -44,7 +44,7 @@ startTable("$lang_groupslists", "center");
 		printerror("$lang_nogroups");
 	}
 	echo "</td></tr>";
-endTable();
+//endTable();
 
 
 
