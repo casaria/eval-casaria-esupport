@@ -69,7 +69,7 @@ function listGroupMembers($group)
 
         echo "<div class=\"col-sm-12 overhead\"  data-foo=$row[user_name]>";
 							echo "<span style=\"height:80px\";>";
-                            echo "$row[user_name]</span></div>";
+                            echo "$row[user_name] $row[first_name] $row[last_name]</span></div>";
 
     }
     echo '</div></div>';
