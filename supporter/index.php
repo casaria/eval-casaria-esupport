@@ -184,7 +184,9 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                             <TD class=subcat>'; 
                               echo '<LI><A href="index.php?t=epro">'; echo $lang_editprofile; echo '</A></LI>';
                               echo '<LI><A href="index.php?t=sgrp">'; echo $lang_viewgroups; echo '</A></LI>';
-                          echo '
+                              echo '<LI><A href="index.php?t=sched">'; echo $lang_schedule; echo '</A></LI>';
+
+                            echo '
                             </TD>
                           </TR>';
    												if($enable_CloudControl == 'On'){
