@@ -2239,7 +2239,7 @@ function validEmail($address)
 **		Takes two arguments.  Starts the html table with a header included and the alignment of that
 **	header.
 ************************************************************************************************************/
-function startTable($msg, $align, $width=100, $colspan=1, $class=info)
+function    startTable($msg, $align, $width=100, $colspan=1, $class=info)
 {
 	if($width == '')
 		$width = '100';
