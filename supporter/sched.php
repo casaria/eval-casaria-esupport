@@ -67,7 +67,7 @@ function listGroupMembers($group)
 
     while($row = $db->fetch_array($result)){
 
-        echo '<div class="col-sm-12 overhead"  data-foo="5">';
+        echo "<div class=\"col-sm-12 overhead\"  data-foo=$row[user_name]>";
 							echo "<span style=\"height:80px\";>";
                             echo "$row[user_name]</span></div>";
 
