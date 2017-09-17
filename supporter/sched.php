@@ -57,9 +57,19 @@ function listGroupMembers($group)
     $result = $db->query($sql);
     startTable("$lang_group  --  ".getsGroup($group_id), "left");
     echo "<tr><td class=back>";
+
+    echo '<div class="container">
+                    <div id="dylay" class="row">';
+
+
+
     while($row = $db->fetch_array($result)){
-        echo "<li><a href=\"".$supporter_site_url."/index.php?t=memb&mem=".$row['user_name']."\">" . $row['user_name'] . "</a></li>";
+
+        echo '<div class="col-sm-12 overhead"  data-foo="5">';
+							echo '<span style="height: 200px;">$row[\'user_name\']</span></div>';
+
     }
+    echo '</div></div>';
     echo "</td></tr>";
 
     endTable();
