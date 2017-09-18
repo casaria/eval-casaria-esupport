@@ -229,7 +229,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                          <TR>
    						<TD class=subcat>
    						<div class="col-xs-12">
-                            <h3>Filters</h3>
+                            <h4>Filters</h4>
                             <ul id="filters">
                                 
                                 <li>
@@ -244,7 +244,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                             </ul>
                         </div>
                         <div class="col-xs-12">
-                            <h2>Sorts</h2>
+                            <h4>Sorts</h4>
                             <ul id="sorts">
                                 <li>
                                     <a href="#">text</a>
