@@ -32,6 +32,44 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
+?>
+<h1>Scheduler</h1>
+
+    <div id="sandbox">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h2>Filters</h2>
+                <ul id="filters">
+                    <li>
+                        <a href="#" data-filter="*">all</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".active">ACTIVE<a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".inactive">INACTIVE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <h2>Sorts</h2>
+                <ul id="sorts">
+                    <li>
+                        <a href="#">text</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-by="username">user_name</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-way="desc">text desc</a>
+                    </li>
+                    <li>
+                        <a href="#" data-sort-by="username" data-sort-way="desc">user_name descending</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<?php
 
 
 startTable("$lang_groupslists", "center");
