@@ -229,7 +229,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                                      <TR>
                                      
                                     <TD class=subcat>
-                                    <div class="container display:none"> 
+                                    <div class="container hidden"> 
                                     
                                         <div class="col-xs-12">
                                             <h4>Filters</h4>
