@@ -235,7 +235,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                                 <li>
                                     <a href="#" data-filter="*">all</a>
                                 </li>
-                                <li>
+                                <li>    
                                     <a href="#" data-filter=".active">ACTIVE<a>
                                 </li>
                                 <li>
