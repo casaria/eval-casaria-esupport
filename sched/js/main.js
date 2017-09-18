@@ -254,7 +254,7 @@ jQuery(document).ready(function($){
 
 		//browser do not support transitions -> no need to wait for the end of it
 		if( !transitionsSupported ) self.modal.add(self.modalHeaderBg).trigger(transitionEnd);
-	}
+	};
 
 	SchedulePlan.prototype.mq = function(){
 		//get MQ value ('desktop' or 'mobile') 
