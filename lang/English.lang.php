@@ -441,7 +441,7 @@ $lang_equipment = "Equipment";
 $lang_mygroupsclose = "My Group's CLOSED Tickets";
 $lang_yourgroupsclose = "Your Group's CLOSED Tickets";
 $lang_notification = "Update Notification options";
-$lang_emailcc = "Email CC (separate with \" , \" )";
+$lang_emailcc = "Email CC (use \" , \" to separate)";
 $lang_emailgroup= "Email ALL Users in Group";
 $lang_pagesupporter = "MMS to Supporter (one time)";
 $lang_emailstatuschange = "Email TICKET status update";
@@ -473,5 +473,6 @@ $lang_billingStatus = "Billing status";
 $lang_bs_initial = "Initial";
 $lang_betweenCreateDates ="Between dates (created)";
 $lang_GenerateClosedDate = "Generate closed date from log";
+$lang_schedule = "Scheduler-test";
 
 ?>

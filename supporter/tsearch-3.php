@@ -1,39 +1,37 @@
 <?php
 
 /***************************************************************************************************
-**	file:	tsearch.php
-**
-**		This file takes care of the ticket search front end.
-**
-****************************************************************************************************
-	**
-	**	author:	JD Bottorf
-	**	date:	
-	***********************************************************************************************
-			**
-			**	Copyright (C) 2001  <JD Bottorf>
-			**
-			**		This program is free software; you can redistribute it and/or
-			**		modify it under the terms of the GNU General Public
-			**		License as published by the Free Software Foundation; either
-			**		version 2.1 of the License, or (at your option) any later version.
-			**
-			**		This program is distributed in the hope that it will be useful,
-			**		but WITHOUT ANY WARRANTY; without even the implied warranty of
-			**		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-			**		General Public License for more details.
-			**
-			**		You should have received a copy of the GNU General Public
-			**		License along with This program; if not, write to the Free Software
-			**		Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-			**
-			***************************************************************************************/
+ **	file:	tsearch.php
+ **
+ **		This file takes care of the ticket search front end.
+ **
+ ****************************************************************************************************
+ **
+ **	author:	JD Bottorf
+ **	date:
+ ***********************************************************************************************
+ **
+ **	Copyright (C) 2001  <JD Bottorf>
+ **
+ **		This program is free software; you can redistribute it and/or
+ **		modify it under the terms of the GNU General Public
+ **		License as published by the Free Software Foundation; either
+ **		version 2.1 of the License, or (at your option) any later version.
+ **
+ **		This program is distributed in the hope that it will be useful,
+ **		but WITHOUT ANY WARRANTY; without even the implied warranty of
+ **		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ **		General Public License for more details.
+ **
+ **		You should have received a copy of the GNU General Public
+ **		License along with This program; if not, write to the Free Software
+ **		Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ **
+ ***************************************************************************************/
 
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
-require_once "../common/scripts.php";
-
 $highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
@@ -211,7 +209,7 @@ if(isset($search) || isset($s)) {
         case ("id"):
             $sql .= " order by id asc";
             break;
-        case ("di"):=
+        case ("di"):
             $sql .= " order by id desc";
             break;
         case ("sup"):
@@ -242,7 +240,6 @@ if(isset($search) || isset($s)) {
         case ("grp"):
             $sql .= " order by ugroupid asc, create_date";
             break;
-        case ("prg"):
         case ("prg"):
             $sql .= " order by ugroupid desc, create_date";
             break;
@@ -304,7 +301,7 @@ if(isset($search) || isset($s)) {
             break;
         case ("tim"):
 
-        default :
+        default:
             $sql .= " order by create_date desc";
             break;
     }
@@ -320,18 +317,10 @@ if(isset($search) || isset($s)) {
     } else {
         createHeader("$lang_searchresults SQL: " . $sql);
 
-
-
-    echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
-    ?>
-
-
-
-        <?php
-
-
-
-		echo '<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
+        echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+			<TR>
+			<TD>
+				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
         echo ' <tr> ';
 
         if ($s == 'id') {
@@ -471,10 +460,12 @@ if(isset($search) || isset($s)) {
         endTable();
     }
 } else {
-	echo "<form method=post>";
-	createHeader("$lang_ticketsearch");
 
-	echo '
+
+    echo "<form method=post>";
+    createHeader("$lang_ticketsearch");
+
+    echo '
 		<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<TR>
 				<TD>
@@ -489,8 +480,8 @@ if(isset($search) || isset($s)) {
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_supportergroup.' </td>
 						<td class=back><select name=supp_group>';
-						createGroupMenu(2);
-	echo '
+    createGroupMenu(2);
+    echo '
 						</select>
 						</td>
 						</tr>
@@ -498,8 +489,8 @@ if(isset($search) || isset($s)) {
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_usergroups.': </td>
 						<td class=back><select name=user_group>';
-						createUserGroupMenu(2);
-	echo '
+    createUserGroupMenu(2);
+    echo '
 						</select>
 						</td>
 						</tr>
@@ -513,15 +504,15 @@ if(isset($search) || isset($s)) {
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_priority.': </td>
 						<td class=back><select name=priority>';
-							createPriorityMenu(2);
-	echo '
+    createPriorityMenu(2);
+    echo '
 						</select>
 						</td>
 						</tr>
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_status.': </td>
 						<td class=back><select name=status>';
-							createStatusMenu(1);
+    createStatusMenu(1);
     echo '				<option value=notclosed>'.$lang_notclosed.'</option>
 						</select>
 						</td>
@@ -529,23 +520,23 @@ if(isset($search) || isset($s)) {
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
 						<td class=back><select name=billingstatus>';
-							createStatusMenu(1);
-	echo '				
+    createStatusMenu(1);
+    echo '				
 						</select>
 						</td>
 						</tr>
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_category.': </td>
 						<td class=back><select name=category>';
-							createCategoryMenu(1);
-	echo '				</select>
+    createCategoryMenu(1);
+    echo '				</select>
 						</td>
 						</tr>
 						<TR>
 						<TD class=back2 align=right width=27%>'.$lang_platform.': </td>
 						<td class=back><select name=platform>';
-							createPlatformMenu(1);
-	echo '				</select>
+    createPlatformMenu(1);
+    echo '				</select>
 						</td>
 						</tr>
 						<TR>
@@ -564,59 +555,59 @@ if(isset($search) || isset($s)) {
 						<TD class=back2 align=right width=27%>'.$lang_betweenCreateDates.': </td>
 						<td class=back>
 						<select name=smonth>';
-						for($i=1; $i<13; $i++){
-							echo "<option value=$i";
-								if(($today['mon']-2) == $i)
-									echo ' selected';
-							echo ">".$lang_month[$i]."</option>";
-						}
+    for($i=1; $i<13; $i++){
+        echo "<option value=$i";
+        if(($today['mon']-2) == $i)
+            echo ' selected';
+        echo ">".$lang_month[$i]."</option>";
+    }
 
-echo '					</select>
+    echo '					</select>
 						<select name=sday>
 						<option></option>';
-						for($i=1; $i<32; $i++){
-							echo "<option value=$i";
-							if($i == $today['mday'])
-								echo ' selected';
-							echo ">".$i."</option>\n";
-						}
-echo'					</select>
+    for($i=1; $i<32; $i++){
+        echo "<option value=$i";
+        if($i == $today['mday'])
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo'					</select>
 						<select name=syear>
 						<option></option>';
-						for($i=2001; $i<= $today['year']; $i++){
-								echo "<option value=$i";
-								if($today['year'] == $i)
-									echo ' selected';
-								echo ">".$i."</option>\n";
-						}
-						
-echo '					</select>	
+    for($i=2001; $i<= $today['year']; $i++){
+        echo "<option value=$i";
+        if($today['year'] == $i)
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+
+    echo '					</select>	
 						<select name=emonth>';
-						for($i=1; $i<13; $i++){
-							echo "<option value=$i";
-								if($today['mon'] == $i)
-									echo ' selected';
-							echo ">".$lang_month[$i]."</option>";
-						}
-echo '					</select>
+    for($i=1; $i<13; $i++){
+        echo "<option value=$i";
+        if($today['mon'] == $i)
+            echo ' selected';
+        echo ">".$lang_month[$i]."</option>";
+    }
+    echo '					</select>
 							<select name=eday> <option></option>';
-						for($i=1; $i<32; $i++){
-							echo "<option value=$i";
-								if($i == $today['mday'])
-									echo ' selected';
-							echo ">".$i."</option>\n";
-						}
-echo '
+    for($i=1; $i<32; $i++){
+        echo "<option value=$i";
+        if($i == $today['mday'])
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo '
 						</select>
 						<select name=eyear>
 						<option></option>';
-						for($i=2001; $i<= $today['year']; $i++){
-								echo "<option value=$i";
-								if($today['year'] == $i)
-									echo ' selected';
-								echo ">".$i."</option>\n";
-							}
-echo'				
+    for($i=2001; $i<= $today['year']; $i++){
+        echo "<option value=$i";
+        if($today['year'] == $i)
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo'				
 						</select>
 						</td>
 						</tr>
@@ -647,71 +638,66 @@ echo'
 
 }
 
+
 //returns an array containing the priority names
 function sqlByPriority($query, $order)
 {
-	global $mysql_tpriorities_table, $mysql_tickets_table, $db;
+    global $mysql_tpriorities_table, $mysql_tickets_table, $db;
 
-	$sql = "select priority from $mysql_tpriorities_table order by rank $order";
-	$result = $db->query($sql);
+    $sql = "select priority from $mysql_tpriorities_table order by rank $order";
+    $result = $db->query($sql);
 
-	$i = 0;
-	while($row = $db->fetch_row($result)){
-		$array[$i] = $row[0];
-		$i++;
-	}
+    $i = 0;
+    while($row = $db->fetch_row($result)){
+        $array[$i] = $row[0];
+        $i++;
+    }
 
-	return $array;
+    return $array;
 
 }
 
 function getNumberPriorities()
 {
-	global $mysql_tpriorities_table, $db;
+    global $mysql_tpriorities_table, $db;
 
-	$sql = "select id from $mysql_tpriorities_table";
-	$result = $db->query($sql);
-	$total = $db->num_rows($result);
+    $sql = "select id from $mysql_tpriorities_table";
+    $result = $db->query($sql);
+    $total = $db->num_rows($result);
 
-	return $total;
+    return $total;
 
 }
 
 //returns an array containing the status names
 function sqlByStatus($query, $order)
 {
-	global $mysql_tstatus_table, $mysql_tickets_table, $db;
+    global $mysql_tstatus_table, $mysql_tickets_table, $db;
 
-	$sql = "select status from $mysql_tstatus_table order by rank $order";
-	$result = $db->query($sql);
+    $sql = "select status from $mysql_tstatus_table order by rank $order";
+    $result = $db->query($sql);
 
-	$i = 0;
-	while($row = $db->fetch_row($result)){
-		$array[$i] = $row[0];
-		$i++;
-	}
+    $i = 0;
+    while($row = $db->fetch_row($result)){
+        $array[$i] = $row[0];
+        $i++;
+    }
 
-	return $array;
+    return $array;
 
 }
 
 function getNumberStatus()
 {
-	global $mysql_tstatus_table, $db;
+    global $mysql_tstatus_table, $db;
 
-	$sql = "select id from $mysql_tstatus_table";
-	$result = $db->query($sql);
-	$total = $db->num_rows($result);
+    $sql = "select id from $mysql_tstatus_table";
+    $result = $db->query($sql);
+    $total = $db->num_rows($result);
 
-	return $total;
+    return $total;
 
 }
-
-
-
-
-
-
 
 
 ?>

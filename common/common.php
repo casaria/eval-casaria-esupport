@@ -641,16 +641,16 @@ function getUserList($order, $offset, $group)
 						</tr>		
 					
 						<tr>
-							<td width=27% class=back2 align=right>'.$lang_username.':</td><td class=back>'. $user_name .'</td>
+							<td width=20% class=back2 align=right>'.$lang_username.':</td><td class=back>'. $user_name .'</td>
 						</tr>
 						<tr>
-							<td width=27% class=back2 align=right>'.$lang_realname.':</td><td class=back>'. $first .' '. $last .'</td>
+							<td width=20% class=back2 align=right>'.$lang_realname.':</td><td class=back>'. $first .' '. $last .'</td>
 						</tr>
 						<tr>
-							<td width=27% class=back2 align=right>'.$lang_email.'</td><td class=back><a href=mailto:'. $email .'>'.$email.'</td>
+							<td width=20% class=back2 align=right>'.$lang_email.'</td><td class=back><a href=mailto:'. $email .'>'.$email.'</td>
 						</tr>
 						<tr>
-							<td width=27% class=back2 align=right>'.$lang_office.':</td><td class=back>'. $office .'</td>
+							<td width=20% class=back2 align=right>'.$lang_office.':</td><td class=back>'. $office .'</td>
 						</tr>
 					</table>
 				</td>
@@ -1155,11 +1155,11 @@ function getHoldRank($table)
 	
 }
 
-/***********************************************************************************************************
+/**********************************************************************************************************
 **	function getSecondStatus():
 **		Takes no arguments.  Selects the second item in the table that has the lowest rank and returns the
 **	status.
-************************************************************************************************************/
+*********************************************************************************************************** */
 function getSecondStatus()
 {
 	global $mysql_tstatus_table, $db;
@@ -1471,9 +1471,9 @@ function createStatusMenu($flag = 0, $new = 0)
 	$sql = "select status, default_create from $mysql_tstatus_table order by rank asc";
 	$result = $db->query($sql, $mysql_tstatus_table);
 
-	if($flag == 1)
-		echo "<option></option>";
-
+	if($flag == 1) {
+	    echo "<option></option>";
+	}
 	while($row = $db->fetch_array($result)){
 		echo "<option value=\"$row[status]\" ";
 			if ($new){ 
@@ -1586,30 +1586,19 @@ function createTimeOffsetMenu($selected)
 
 
 }
-
-/***********************************************************************************************************
- **	function displayTicket():
- **		Takes one argument.  Takes the result of a sql query that searches the tickets table and displays
- **	all pertinent information about the ticket in a nice table format.
- ************************************************************************************************************/
 function displayTicket($result)
 {
-    global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
-	$second = getSecondPriority();
+	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+    $second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
 
-    while ($row = $db->fetch_array($result)) {
-        $row_is_closed = 0;
+    while ($row = $db->fetch_array($result))
+    {
         $last_update = $row['lastupdate'];  //last update timestamp.
-        //$cs = getHighestRank($mysql_status_table);
-        if ( $row['status'] == $cs ){
-            $closed_ts = $row['closed_date'];
-            $row_is_closed = 1;
-        } //closed timestamp
 
         echo "<tr>
 				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
@@ -1691,106 +1680,136 @@ function displayTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
+        $csv_string = $csv_string . $row['id'] . ",";
     }
-/*while ($row = $db->fetch_array($result)) {
-        $row_is_closed = 0;
-        $last_update = $row['lastupdate'];  //last update timestamp.
-		//$cs = getHighestRank($mysql_status_table);
-		if ( $row['status'] == $cs ){
-			$closed_ts = $row['closed_date'];
-			$row_is_closed = 1;
-        } //closed timestamp
+
+    /*  while ($row = $db->fetch_array($result)) {
+           $row_is_closed = 0;
+           $last_update = $row['lastupdate'];  //last update timestamp.
+           $cs = getHighestRank($mysql_status_table);
+           if ( $row['status'] == $cs ){
+               $closed_ts = $row['closed_date'];
+               $row_is_closed = 1;
+           } //closed timestamp
 
 
-        echo "<tr>
-				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
-        if (isAdministrator($cookie_name)) {
-            echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
-        } else {
-            echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
-        }
-        echo "<td class=\"back\">";
-        echo stripslashes($row['equipment']) . "</td>";
+           echo "<tr>
+                   <td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
+           if (isAdministrator($cookie_name)) {
+               echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
+           } else {
+               echo "               echo "<td class=back2>=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
+
+           echo "<td class=\"back\">";
+           echo stripslashes($row['equipment']) . "</td>";
 
 
-        echo "<td class=\"back2\">";
-        echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
-        echo stripslashes($row['short']) . "</a></td>
-			
-				<td class=back>" . $row['user'] . "</td>";
-        $grp_name = 'NONE';
-        $resultgroup = $db->query($sql3);
-        while ($row2 = $db->fetch_array($resultgroup)) {
-            if ($row2['id'] == $row['ugroupid']) {
-                $grp_name = $row2['group_name'];
-            }
-        }
+           echo "<td class=\"back2\">";
+           echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
+           echo stripslashes($row['short']) . "</a></td>
 
-        echo "<td class=back2>" . $grp_name . "</td>
+                   <td class=back>" . $row['user'] . "</td>";
+           $grp_name = 'NONE';
+           $resultgroup = $db->query($sql3);
+           while ($row2 = $db->fetch_array($resultgroup)) {
+               if ($row2['id'] == $row['ugroupid']) {
+                   $grp_name = $row2['group_name'];
+               }
+           }
 
-				<td class=back>";
+           echo "<td class=back2>" . $grp_name . "</td>
 
-        switch ($row['priority']) {
-            case ("$highest_pri"):
-                echo "<font color=red><b>" . $row[priority] . "</b></font>";
-                break;
-            case ($second):
-                echo "<b>" . $row[priority] . "</b>";
-                break;
-            default:
-                echo $row[priority];
-                break;
-        }
+                   <td class=back>";
 
-        echo "</td>
-				<td class=back2> ";date("m/d/y", $row[create_date]) . "</td>";
-        echo "<td class=back> ";. date("m/d/y", $row[lastupdate]) . "</td>";
+           switch ($row['priority']) {
+               case ("$highest_pri"):
+                   echo "<font color=red><b>" . $row[priority] . "</b></font>";
+                   break;
+               case ($second):
+                   echo "<b>" . $row[priority] . "</b>";
+                   break;
+               default:
+                   echo $row[priority];
+                   break;
+           }
 
-        //cookie_name='.$cookie_name.'
-        echo "<td class=back>";
-        $resultBStatus = $db->query($sqlBS);
-        while ($row2 = $db->fetch_array($resultBStatus)) {
-            if ($row2['id'] == $row['BILLING_STATUS']) {
-                $bsIconRef = $row2['icon_ref'];
-            }
-        }
-        echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
-					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
+           echo "</td>
+                   <td class=back2> " . date("m/d/y", $row[create_date]) . "</td>";
+           echo "<td class=back> " . date("m/d/y", $row[lastupdate]) . "</td>";
 
-		echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
-        echo "</a></td>";
-        echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
+           //cookie_name='.$cookie_name.'
+           echo "<td class=back>";
+           $resultBStatus = $db->query($sqlBS);
+           while ($row2 = $db->fetch_array($resultBStatus)) {
+               if ($row2['id'] == $row['BILLING_STATUS']) {
+                   $bsIconRef = $row2['icon_ref'];
+               }
+           }
+           echo '<a href="updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+                       \'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 
-        $response = setResponse($last_update, $row[priority], $row[id]);
+           echo ($row_is_closed) ? $row[status] : date("m/d/y", $closed_ts) ;
+           echo "</a></td>";
+           echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
+=
+           $response = setResponse($last_update, $row[priority], $row[id]);
 
-        switch ($response) {
-            case('1'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-                break;
-            case('2'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
-                break;
-            case('3'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
-                break;
-            case('4'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
-                break;
-            default:
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
-                break;
-        }
+           switch ($response) {
+               case('1'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                   break;
+               case('2'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
+                   break;
+               case('3'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
+                   break;
+               case('4'):
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
+                   break;
+               default:
+                   echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                   break;
+           }
 
-        echo "</tr>";
-        $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
-    } */
+           echo "</tr>";
+           $recordcount++;
+           $csv_string = $csv_string . $row[id] . ",";
+       }
+       */
 
-    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $csv_string);
-	return $summary;
+
+ //   endTable();
+
+    echo '<tr>';
+    $linkString= "<a href=$supporter_site_url/index.php?t=time&tids=\"$csv_string\">"."\"link to CSV list\"";
+    echo '<form name="formTimeTrack"  action="index.php" method=GET>';
+    echo '<input type="hidden" name="t" value="time">';
+	echo "<input type=\"hidden\" name=\"tids\" value=\"".$csv_string."\">"	;
+    echo '<input type="hidden" value="$lang_printstats" name="hidemenu">';
+    ?>
+	<a href="#" onClick="document.formTimeTrack.submit();"> <?php echo "Time Track"; ?>!</a>
+    </tr>
+	</form>
+	<?php
+/*    echo "<form method=post>";
+    startTable("$lang_timetracking", "center");
+    echo "<tr><td class=back><br>";
+    startTable("$lang_selecttickets", "center", "80%");
+    echo "<tr><td class=cat>$lang_selectticketsexp</td></tr>";
+    echo "<tr><td class=back2><br>$lang_ticket $lang_ids: <input type=text name=tids size=60% value=$csv_string><br><br></td></tr>";
+    endTable();
+    echo "<center><input type=submit value=\"$lang_getstats\" name=\"getstats\"> ";
+    echo "<input type=submit value=\"$lang_printstats\" name=\"hidemenu\"></center><br>";
+    echo "</td></tr>";
+    endTable();
+    echo "</form>";
+*/
+    $summary = array("recordcount" => $recordcount, "remarks" => "list (CSV):", "tktlist" => $linkString);
+    echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  $summary[tktlist]";
+    return $summary;
+
 }
-
 /***********************************************************************************************************
 **	function createTicketInfo():
 **		Takes 2 arguments (attachement , equipmentgroupid).
@@ -1808,20 +1827,20 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 							<td class=info align=left colspan=4 align=center><b>'.$lang_ticketinfo.'</b></td>
 						</tr>		
 						<tr>
-							<td class=back2 width=27% align=right>* '.$lang_platform.':</td>
+							<td class=back2 width=20% align=right>* '.$lang_platform.':</td>
 							<td width=20% class=back><select name=platform>'; createPlatformMenu(0);
 							echo '	</select></td><td class=back2 width=100 align=right>* '.$lang_category.':</td>
 							<td class=back><select name=category>';  createCategoryMenu(0);
 							echo '	</select></td>
 						</tr>
 						<tr>
-							<td width=27% class=back2 align=right>* '.$lang_equipment.':</td>
+							<td width=20% class=back2 align=right>* '.$lang_equipment.':</td>
 							<td class=back colspan=3><select name=equipment>';  createEquipmentMenu(0,$equipmentgroupid);
 							echo '	</select></td>
 						
 						</tr>
 						<tr>
-							<td width=27% class=back2 align=right>* '.$lang_shortdesc.':</td>
+							<td width=20% class=back2 align=right>* '.$lang_shortdesc.':</td>
 							<td class=back colspan=3>
 						
 							<input type=text size=60 name=short value="'.stripslashes($info['short']).'">
@@ -1830,7 +1849,7 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 						</tr>
 						<tr>
 
-							<td class=back2 align=right valign=top width=27%>* '.$lang_desc.': </td>
+							<td class=back2 align=right valign=top width=20%>* '.$lang_desc.': </td>
 							<td class=back colspan=3><textarea name=description rows=5 cols=60>'.stripslashes($info['description']).'</textarea></td>
 
 
@@ -1841,14 +1860,14 @@ if(isset($info)){
 		echo '
 
 			<tr>
-				<td class=back2 align=right valign=top width=27%> '.$lang_email.' '. $lang_user.': </td>
+				<td class=back2 align=right valign=top width=20%> '.$lang_email.' '. $lang_user.': </td>
 				<td class=back colspan=3 valign=bottom> <textarea name=email_msg rows=5 cols=60></textarea> </td>
 			</tr>';
 	}
 	echo '
 		<tr>
 
-			<td class=back2 align=right valign=top width=27%> '.$lang_update.': </td>
+			<td class=back2 align=right valign=top width=20%> '.$lang_update.': </td>
 			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>
 
 				<a href="updatelog.php?cookie_name='.$cookie_name.'&id='.$info['id'].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
@@ -1860,7 +1879,7 @@ if(isset($info)){
 }
 		if($enable_tattachments == 'On' && $flag == 'allow'){
 			echo '<tr>
-				<td class=back2 align=right valign=top width=27%>'.$lang_attachment.': </td>';
+				<td class=back2 align=right valign=top width=20%>'.$lang_attachment.': </td>';
 			
 			echo "<td class=back colspan=3 valign=bottom>";
 			//echo "<input type=hidden name=\"MAX_FILE_SIZE\" value=\"1000000\">";
@@ -2220,7 +2239,7 @@ function validEmail($address)
 **		Takes two arguments.  Starts the html table with a header included and the alignment of that
 **	header.
 ************************************************************************************************************/
-function startTable($msg, $align, $width=100, $colspan=1, $class=info)
+function    startTable($msg, $align, $width=100, $colspan=1, $class=info)
 {
 	if($width == '')
 		$width = '100';
@@ -2246,7 +2265,7 @@ function endTable()
 		</table>
 			</td>
 			</tr>
-		</table><br>';
+		</table>';
 }
 
 /***********************************************************************************************************
@@ -2898,7 +2917,7 @@ function displayUserTicket($result)
 
 
         echo "<td class=\"back2\">";
-        echo "<a href=\"?t=tinf&id=" . $row[id] . "\">";
+        echo "<a href=\"?t=tinf&id=" . $row['id'] . "\">";
         echo stripslashes($row['short']) . "</a></td>
 			
 				<td class=back>" . $row['user'] . "</td>
@@ -2920,10 +2939,10 @@ function displayUserTicket($result)
 				<td class=back> " . date("m/d/y", $row[create_date]) . "</td>
 				<td class=back2>";
         //cookie_name='.$cookie_name.'
-        echo '<a href="supporter/updatelog.php?&id=' . $row[id] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+        echo '<a href="supporter/updatelog.php?&id=' . $row['id'] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">';
 
-        echo $row[status] . "</a></td>";
+        echo $row['status'] . "</a></td>";
 
 
         // Calculates total time spent on the ticket in minutes
@@ -2944,7 +2963,7 @@ function displayUserTicket($result)
 
         echo "</tr>";
         $recordcount++;
-        $csv_string = $csv_string . $row[id] . ",";
+        $csv_string = $csv_string . $row['id'] . ",";
 
     }
 
@@ -3198,21 +3217,20 @@ function getTicketTotalTime($id)
 
 function DrawTableSupporterTotals($array, $id, $title)
 {
-	
-  			$supporters = $array['supporters'];
+  			    $supporters = $array['supporters'];
 				$supporters_after_hours = $array['supporters_after_hours'];
 				$supporters_engineer_rate= $array['supporters_engineer_rate'];
 				$total_time = $array['total_time'];
-				$supporter_total = 0;
+				$supporter_total = $array['user_name'];
 			    $supporter_after_hours_total = 0;
-    			$supporter_engineer_total = 0;
-				$ticket_data = getTicketTimeInfo($id);
+                $supporter_engineer_total = $array['user_name'];
+                $ticket_data = getTicketTimeInfo($id);
 					
 				startTable($title, "left", 100, 2);
 				if(sizeof($supporters) > 0){
 					foreach($supporters as $items){
-						echo "<tr><td class=subcat width=27%>" . $items['user_name'] . ": </td><td class=back>"; showFormattedTime($items['sum'] * 60);
-						//exclude engineer time from total since this will be listed separately
+						echo "<tr><td class=subcat width=20%>" . $items['user_name'] . ": </td><td class=back>"; showFormattedTime($items['sum'] * 60);
+			    			//exclude engineer time from total since this will be listed separately
 						//echo "eng:$items[engineer_rate]";
 						if ($items['engineer_rate'] == '0') {
 							  $supporter_total[$items['user_name']] += $items['sum'];
@@ -3230,7 +3248,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 				} //end of previous table code
 				if(sizeof($supporters_after_hours) > 0){
 					foreach($supporters_after_hours as $items){
-						echo "<tr><td class=subcat width=27%>" . $items['user_name']." (after hours):"." </td><td class=back>"; 
+						echo "<tr><td class=subcat width=20%>" . $items['user_name']." (after hours):"." </td><td class=back>";
 					  showFormattedTime($items['sum'] * 60 ); echo "  (after hours  x 1.5)->       ";	showFormattedTime($items['sum'] * 60 * 1.5);
 						//exclude engineer time from toatl since this will be listed separately
 						if ($items['engineer_rate'] == '0') {
@@ -3257,7 +3275,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 							$mult = 1;
 							$suffix = " (engineer):";							
 						}						
-						echo "<tr><td class=subcat width=27%>" . $items['user_name'].$suffix." </td><td class=back>"; 
+						echo "<tr><td class=subcat width=20%>" . $items['user_name'].$suffix." </td><td class=back>";
 					  $time_engineer = $items['sum'] ;
 						showFormattedTime( $time_engineer * 60 );
 						if ($items['after_hours'] == 1) {
@@ -3275,7 +3293,7 @@ function DrawTableSupporterTotals($array, $id, $title)
 					}
 				} //end of previous table code
 				
-       endTable();
+                endTable();
 }
 
 function displayTimeHistory()
@@ -3293,7 +3311,7 @@ function displayTimeHistory()
   while($row = $db->fetch_array($resultsupporters)){
     if ($row[minutes] != 0) {	
     	echo '<tr>
-    		<td width=27% class=back2 align=right>';
+    		<td width=20% class=back2 align=right>';
     		if ($row['work_date'])
     		    echo date("F j, Y", $row[work_date]);
     		  else
@@ -3333,11 +3351,11 @@ function displayTimeHistory()
 	  }
 	}
 	
-	// Calculates total time spent on the ticket in minutes
+	// `Calculates total time spent on the ticket in minutes
 	$sql = "select sum(minutes) from tickets,time_track where (time_track.after_hours = 0 AND tickets.id=time_track.ticket_id AND tickets.id=$id)";
   $sql_after_hours = "select sum(minutes) from tickets,time_track where (time_track.after_hours != 0 AND tickets.id=time_track.ticket_id AND tickets.id=$id)";
 
-  echo '<tr><td width=24% class=back2 align=right>'; 
+  echo '<tr><td width=20% class=back2 align=right>';
   echo '</td> <td class=back >';
   echo '</td> <td class=back colspan=2>';
   echo "After Hours (multiplied):";
@@ -3346,7 +3364,7 @@ function displayTimeHistory()
   echo '</td> <td class=back2  colspan=1>';
   echo '<B>Grand Total:</B>';
     
-  echo '<tr><td width=24% class=back2 align=right><B>Total Time:</B>';
+  echo '<tr><td width=20% class=back2 align=right><B>Total Time:</B>';
 	echo '</td> <td class=back >';
 	echo '</td> <td class=back colspan=2>';
 	$result = $db->query($sql);

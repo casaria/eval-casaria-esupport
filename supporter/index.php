@@ -32,27 +32,18 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
+//require_once "../common/scripts.php";
+
 
 if($SERVER_PORT == 80 && $enable_ssl == 'On' && (!isset($cookie_name) || $cookie_name == '')){
 	$site = eregi_replace("http", "https", $supporter_site_url);
 	header("Location: $site");
 }
-                  
-require "../common/login.php";
-RewindSession();
-?>
 
-<script type="text/javascript">
-function winPop(url)
-{
-  if (url) {
-    var w=window.open(url,'newWin');
-    w.focus();
- }   
-}
-</script>
-        
-<?php  
+require "../common/login.php";
+//RewindSession();
+
+
 $language = getLanguage($cookie_name);
 if($language == '')
 	require_once "../lang/$default_language.lang.php";
@@ -84,46 +75,37 @@ if(isset($cookie_name)){
 $last_active = getLastActiveTime($cookie_name);
 $user_info = getCredentialsArray($cookie_name);
 $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
-
 ?>
 <BODY class=body>
-<TABLE class=border cellSpacing=0 cellPadding=0 width="<?php echo $theme['width']; ?>" align=center 
-border=0>
-  <TBODY> 
-  <TR> 
-    <TD> 
-      <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
-        <TBODY> 
-        <TR> 
-          <TD class=hf align=right>
-			<?php echo "$lang_loggedinas <b>$cookie_name</b> (<A class=hf href=\"../common/logout.php\">$lang_logout</a>)";
-			 echo "$crm_name"; ?>
-		 </TD>
-        </TR>
-        <TR> 
-          <TD class=back align=left> <IMG SRC="../<?php echo $theme['image_dir'].$theme['logo_path']; ?>">
-          
-            <TABLE width="100%">
-              <TBODY> 
-              <TR> 
-                <TD class=back vAlign=top align=right></TD>
-              </TR>
-              </TBODY> 
-            </TABLE>
-            <?php 
-    if (!$hidemenu) 
+<TABLE class=border cellSpacing=0 cellPadding=0 width="<?php echo $theme['width']; ?>" align=center
+       border=0>
+    <TBODY>
+    <TR>
+        <TD>
+            <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+                <TBODY>
+                <TR>
+                    <TD class=hf align=right>
+                        <?php echo "$lang_loggedinas <b>$cookie_name</b> (<A class=hf href=\"../common/logout.php\">$lang_logout</a>)";
+                        echo "$crm_name"; ?>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD class=back align=left> <IMG SRC="../<?php echo $theme['image_dir'].$theme['logo_path']; ?>">
+
+    <?php
+    if (!$hidemenu)
     {        
             echo '
             <TABLE width="100%" align=center border=0>
               <TBODY> 
               <TR> 
-                <TD vAlign=top width="200"> 
-                  <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
-                  align=center border=0>
+                <TD vAlign=top width="190"> 
+                  <TABLE class=border cellSpacing=0 cellPadding=0 width="100%" border-spacing="1px" align=center border=0>
                     <TBODY> 
                     <TR> 
                       <TD> 
-                        <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+                          <TABLE cellSpacing=2 cellPadding=5 width="100%"  border-spacing=1px" border=0>
                           <TBODY> 
                           <TR> 
                             <TD class=info align=center><B>';
@@ -141,14 +123,14 @@ border=0>
                                  <input type=hidden name=md5 value=$user_info[password]>";
                                  echo '<LI><a href="#" onclick="javascript:document.timelink.submit();">CBB Casaria Bulletin Board</a></LI>
                               </form>	
-                               <form novalidate name="login_form" id="login_form" action="http://www.casaria.net:2095/horde/index.php" method="post"  style="visibility:">';
+                               <form novalidate name="login_form" id="login_form" action="http://www.casaria.net:2095" method="post"  style="visibility:">';
                                 //<form name=emaillink method="post" action="http://www.casaria.net:2095/horde/index.php">';
                                  echo "<input type=hidden name=user id=user value=$user_info[email]>
                                  <input type=hidden name=pass id=pass value=$user_info[password]>";
                                  echo '<LI><a href="#" onclick="javascript:document.login_form.submit();">'; echo $lang_lnk_email;
                                  echo '</a></LI>';
 								echo '</form>';
-								echo "<LI><a href='https://odoo.casaria.net/web/login'>$lang_lnk_odoo</a></LI>";
+                                    echo "<LI><a href='https://odoo.casaria.net/web/login'>$lang_lnk_odoo</a></LI>";
                            echo'               
                             </TD>
                           </TR>
@@ -198,14 +180,15 @@ border=0>
                           echo'
                           </TR>
                           <TR> 
+                                
                             <TD class=subcat>'; 
                               echo '<LI><A href="index.php?t=epro">'; echo $lang_editprofile; echo '</A></LI>';
                               echo '<LI><A href="index.php?t=sgrp">'; echo $lang_viewgroups; echo '</A></LI>';
-                          echo '
+                              echo '<LI><A href="index.php?t=sched">'; echo $lang_schedule; echo '</A></LI>';
+
+                            echo '
                             </TD>
                           </TR>';
-
-   
    												if($enable_CloudControl == 'On'){
    													echo '<TR>
    													<TD class=cat><B>' . $lang_CloudControl . '</B></TD>
@@ -240,22 +223,60 @@ border=0>
                                      echo "</TR>";
 
                           
-
-														echo '
+                            echo '
                             </TD>
-                          </TR>
-                         </TBODY> 
+                                      </TR>
+                                     <TR>
+                                     
+                                    <TD class=subcat>
+                                    <div class="container hidden"> 
+                                    
+                                        <div class="col-xs-12">
+                                            <h4>Filters</h4>
+                                            <ul id="filters">
+                                                
+                                                <li>
+                                                    <a href="#" data-filter="*">all</a>
+                                                </li>
+                                                <li>    
+                                                    <a href="#" data-filter=".active">ACTIVE<a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-filter=".inactive">INACTIVE</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <h4>Sorts</h4>
+                                            <ul id="sorts">
+                                                <li>
+                                                    <a href="#">text</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-by="username">user_name</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-way="desc">text desc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-by="username" data-sort-way="desc">user_name descending</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </TBODY> 
                         </TABLE>
                       </TD>
                     </TR>
                     </TBODY> 
                   </TABLE>';
 
+
 //this is ugly, but it works...i'll clean it up later.
 //if the admin is logged in, display a list of people/users who are awaiting approval.
 if (isAdministrator($cookie_name) && $awaiting_approval){
 
-  	echo '<br><TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
+  	echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" 
                   align=center border=0>
                     <TBODY> 
                     <TR> 
@@ -263,12 +284,12 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
                         <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
                           <TBODY> 
                           <TR> 
-                            <TD class=info align=center><B>'; echo $lang_awaitingapproval; echo '</B></TD>';
+                            <TD class=info align=center><B>';
+                          echo $lang_awaitingapproval; echo '</B></TD>';
                           echo '  
                           </TR>
                           <TR> 
                             <TD class=back2><B>';
-							
 								for($i=0; $i<sizeof($awaiting_approval); $i++){
 									echo $awaiting_approval[$i] . "<br>";
 								}
@@ -276,16 +297,11 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 						  </tr>
 					  </table>
 					  </td></tr></table>';
-                 }  
-
-
-
+                 }
                 echo '</TD>
                 <TD vAlign=top>';
     } else $getstats=true;
-?>
-<?php
-					switch($t){
+			switch($t){
 						case ("tcre"):
 							require "tcreate.php";
 							break;
@@ -299,7 +315,7 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							require "myrecent.php";
 							break;
 						case ("tsrc"):
-							require "tsearch.php";
+							require "tsearch-2.php";
 							break;
 						case ("tupd"):
 							require "tupdate.php";
@@ -310,6 +326,9 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 						case ("sgrp"):
 							require "sgroups.php";
 							break;
+                        case ("sched"):
+                            require "sched.php";
+                        break;
 						case ("kbase"):
 							switch($act){
 								case("kedit"):
@@ -366,18 +385,14 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							require "announce.php";
 							break;
 					}
-		  
-						  
-					?>
-				
-              </TR>
-              </TBODY> 
+    ?>
+                </TR>
+                </TBODY>
             </TABLE>
             <BR>
-          </TD>
-        </TR>
-		<?php
-		
+        </TD>
+    </TR>
+    <?php
 		if($enable_whosonline == 'On'){
 			echo "<TR>
 				<TD class=cat>";
@@ -395,7 +410,7 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
             <div align="center">
 			<A class=hf href="'.$supporter_site_url.'/index.php">'.$lang_home.'</A> |&nbsp;';
 			if(isAdministrator($cookie_name)){
-				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</a> |&nbsp;';
+				echo '<A class=hf href="'.$admin_site_url.'/control.php">'.$lang_cp.'</A> |&nbsp;';
 			}
 			if($enable_forum == 'On'){
 				echo '<A class=hf href="'.$forum_site_url.'" target=_blank>'.$lang_forum.'</A> |&nbsp;';
@@ -405,19 +420,15 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 				if($enable_ssl == 'On'){
 					echo "?ssl=1";
 				}
-				echo '">'.$lang_logout.'</A> 
-			</div>';
+				echo '">'.$lang_logout.'</A>></div>';
 			?>
-
-
           </TD>
         </TR>
-        </TBODY> 
-      </TABLE>
-  </TR>
-  </TBODY> 
+    </TBODY>
 </TABLE>
-
+</TR>
+</TBODY>
+</TABLE>
 <?php
 
 require "../common/footer.php";

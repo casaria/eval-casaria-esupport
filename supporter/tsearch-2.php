@@ -32,8 +32,6 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
-require_once "../common/scripts.php";
-
 $highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
@@ -211,7 +209,7 @@ if(isset($search) || isset($s)) {
         case ("id"):
             $sql .= " order by id asc";
             break;
-        case ("di"):=
+        case ("di"):
             $sql .= " order by id desc";
             break;
         case ("sup"):
@@ -242,7 +240,6 @@ if(isset($search) || isset($s)) {
         case ("grp"):
             $sql .= " order by ugroupid asc, create_date";
             break;
-        case ("prg"):
         case ("prg"):
             $sql .= " order by ugroupid desc, create_date";
             break;
@@ -304,7 +301,7 @@ if(isset($search) || isset($s)) {
             break;
         case ("tim"):
 
-        default :
+        default:
             $sql .= " order by create_date desc";
             break;
     }
@@ -320,18 +317,10 @@ if(isset($search) || isset($s)) {
     } else {
         createHeader("$lang_searchresults SQL: " . $sql);
 
-
-
-    echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>';
-    ?>
-
-
-
-        <?php
-
-
-
-		echo '<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
+        echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+			<TR>
+			<TD>
+				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
         echo ' <tr> ';
 
         if ($s == 'id') {
@@ -647,6 +636,7 @@ echo'
 
 }
 
+
 //returns an array containing the priority names
 function sqlByPriority($query, $order)
 {
@@ -706,12 +696,6 @@ function getNumberStatus()
 	return $total;
 
 }
-
-
-
-
-
-
 
 
 ?>
