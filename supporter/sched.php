@@ -44,7 +44,7 @@ startTable("$lang_groupslists", "center");
 
     <div id="sandbox">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-xs-12">
                 <h2>Filters</h2>
                 <ul id="filters">
                     <li>
@@ -58,7 +58,7 @@ startTable("$lang_groupslists", "center");
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-xs-12">
                 <h2>Sorts</h2>
                 <ul id="sorts">
                     <li>
