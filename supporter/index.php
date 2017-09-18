@@ -225,47 +225,46 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                           
                             echo '
                             </TD>
-                          </TR>
-                         <TR>
-   						<TD class=subcat>
-   						<div class="col-xs-12">
-                            <h4>Filters</h4>
-                            <ul id="filters">
-                                
-                                <li>
-                                    <a href="#" data-filter="*">all</a>
-                                </li>
-                                <li>    
-                                    <a href="#" data-filter=".active">ACTIVE<a>
-                                </li>
-                                <li>
-                                    <a href="#" data-filter=".inactive">INACTIVE</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12">
-                            <h4>Sorts</h4>
-                            <ul id="sorts">
-                                <li>
-                                    <a href="#">text</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-sort-by="username">user_name</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-sort-way="desc">text desc</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-sort-by="username" data-sort-way="desc">user_name descending</a>
-                                </li>
-                            </ul>
-                        </div>
-                              
-                              
-                              
-                              
-                              
-                         </TBODY> 
+                                      </TR>
+                                     <TR>
+                                     
+                                    <TD class=subcat>
+                                    <div class="container display:none"> 
+                                    
+                                        <div class="col-xs-12">
+                                            <h4>Filters</h4>
+                                            <ul id="filters">
+                                                
+                                                <li>
+                                                    <a href="#" data-filter="*">all</a>
+                                                </li>
+                                                <li>    
+                                                    <a href="#" data-filter=".active">ACTIVE<a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-filter=".inactive">INACTIVE</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <h4>Sorts</h4>
+                                            <ul id="sorts">
+                                                <li>
+                                                    <a href="#">text</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-by="username">user_name</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-way="desc">text desc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-sort-by="username" data-sort-way="desc">user_name descending</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </TBODY> 
                         </TABLE>
                       </TD>
                     </TR>
