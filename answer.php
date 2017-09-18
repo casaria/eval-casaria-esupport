@@ -35,9 +35,6 @@ require_once "common/common.php";
 
 if($action == 'download'){
 	
-	require_once "common/config.php";
-	require_once "common/$database.class.php";
-	require_once "common/common.php";
 	$language = getLanguage($cookie_name);
 	if($language == '')
 		require_once "lang/$default_language.lang.php";
