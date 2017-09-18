@@ -1,0 +1,106 @@
+body {
+    color: #000066;
+    font-size: 1.6em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+    color: #222222;
+
+}
+#dylay li { color: #FFFFFF; }
+
+#dylay div span { border-radius: 5px; margin: 4px; border: 2px solid #000066; font-weight: normal; padding: 3px 3px; z-index: 0; box-shadow: 2px 2px 1px 1px #aa66aa; color: #222222; display: block; }
+
+
+#dylay div span:hover {
+
+    border-radius: 1px; margin: 4px; border: 3px dashed #000066;
+    box-shadow: 1px 1px 1px 1px #aa66aa;
+    opacity: 0.6;
+}
+
+
+#dylay div span.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dylay div span.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+#dylay div span.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#dylay div.tooltip {
+    position: relative;
+    display: inline-block;
+border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+#dylay div.tooltip.tooltiptext {
+    visibility: visible;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+#dylay div.tooltip.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+#dylay div.tooltip:hover.tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.hidden
+{
+    display: none;
+}
