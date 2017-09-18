@@ -45,7 +45,8 @@ startTable("$lang_groupslists", "center");
     </div>
 </div>
 
-
+<?php echo "<tr><td class=back>";
+?>
 <div class="container">
     <h1>Scheduler</h1>
 
