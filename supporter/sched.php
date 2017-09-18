@@ -38,7 +38,14 @@ startTable("$lang_groupslists", "center");
 	echo "<tr><td class=cat> $lang_groupslists2 </td></tr>";
 	//echo "<tr><td class=back2>";
 
+
+
+	listGroupMembers("sgroup2");
 ?>
+    </div>
+</div>
+
+
 <div class="container">
     <h1>Scheduler</h1>
 
@@ -76,15 +83,6 @@ startTable("$lang_groupslists", "center");
                 </ul>
             </div>
         </div>
-
-
-<?php
-
-
-	listGroupMembers("sgroup2");
-?>
-    </div>
-</div>
 
 <?php
 
