@@ -19,5 +19,19 @@
         <use-password>true</use-password>
       </ssh-properties>
     </data-source>
+    <data-source name="casaria5@odoo.casaria.net" uuid="f2a9dadb-f91a-45a1-b38e-43ce7b00e939">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>phorrack</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>odoo.casaria.net</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>root</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>
