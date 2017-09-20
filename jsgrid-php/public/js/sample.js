@@ -2,7 +2,7 @@ $(function() {
 
     $.ajax({
         type: "GET",
-        url: "/suppprt/jsgrid-php/countries/"
+        url: "/support/jsgrid-php/countries/"
     }).done(function(countries) {
 
         countries.unshift({ id: "0", name: "" });
