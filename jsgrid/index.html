@@ -12,14 +12,14 @@
 			$(function() {
 				
 				
-				var $grid = $(".users").grid({
-					title : "users",
+				var $grid = $(".tickets").grid({
+					title : "tickets",
 					page : 1,
 					showPager : true,
 					editing : true,
 					deleting : false,
 					nRowsShowing : 10,
-					width: 800,
+					width: 400,
 					rowNumbers: true,
 					checkboxes: true,
 					cellTypes : {
@@ -48,15 +48,15 @@
 	</head>
 	<body>
 		<h2>Users</h2>
-		<table class="grid users" action="ajax.php">
-			<tr>	
-				<th col="thumb" width="50" type="image" href="http://google.com?q={{columns.Title}}"></th>
-				<th col="Title"	width="200" href="http://google.com?q={{value}}">Title</th>
-				<th col="Price" type="money">Price</th>
-				<th col="TutorialID"  type="hashBang">TutorialID</th>
-				<th col="DateCreated" type="date">Last Login</th>
-				<th col="CategoryID" type="select">CategoryID</th>
-				<th col="active" type="select">Active</th>
+		<table class="grid tickets" action="ajax.php">
+			<tr>
+				<th col="equipment"  type="text">TutorialID</th>
+				<th col="catergory" type="text">Last Login</th>
+				<th col="platform" type="text">Price</th>
+				<th col="short"  type="text">TutorialID</th>
+				<th col="description" type="text">Last Login</th>
+				<th col="phone" type="text">CategoryID</th>
+				<th col="status" type="text">status</th>
 			</tr>
 		</table>
 		

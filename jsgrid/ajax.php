@@ -1,21 +1,18 @@
 <?php
 	// connect to db
-	mysql_connect("localhost","root","root");
-	mysql_select_db("test");
+	@mysql_connect("localhost","casaria_hdesk1","5XwoR]B");
+	@mysql_select_db("casaria_hdesk1");
 	
 	// require our class
 	require_once("grid.php");
 	
 	// load our grid with a table
-	$grid = new Grid("tutorials", array(
+        $grid = new Grid("tickets", array(
 		"save"=>true,
 		"delete"=>true,
-		"where"=>"ThumbnailLocation != ''",
+		"where"=>"priority != '",
 		"joins"=>array(
-			"LEFT JOIN categories ON categories.CategoryID = tutorials.CategoryID"
-		),
-		"fields"=>array(
-			"thumb" => "CONCAT('http://cmivfx.com/images/thumbs/',ThumbnailLocation)"
+			"LEFT JOIN id ON tickets.id = time_track.ticket_id"
 		),
 		"select" => 'selectFunction'
 	));
@@ -27,11 +24,11 @@
 		$selects = array();
 	
 		// category select
-		$grid->table = "categories";
-		$selects["CategoryID"] = $grid->makeSelect("CategoryID","Name");
+		$grid->table = "tickets";
+		$selects["id"] = $grid->makeSelect("id","supporter");
 		
 		// active select
-		$selects["active"] = array("1"=>"true","0"=>"false");
+		$selects["supporter"] = array("1"=>"true","0"=>"false");
 		
 		// render data			
 		$grid->render($selects);

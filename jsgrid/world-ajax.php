@@ -1,8 +1,8 @@
 <?php
 	
 	// connect to db
-	mysql_connect("localhost","root","root");
-	mysql_select_db("demo_world");
+	@mysql_connect("localhost","root","root");
+	@mysql_select_db("demo_world");
 	
 	// require our class
 	require_once("grid.php");

@@ -86,8 +86,8 @@ Class Grid {
 				if(!is_array($this->security) || in_array($key,$this->security)) {
 					// dont save fields that weren't saveable. i.e. joined fields
 					if(in_array($key,$_POST['saveable'])) {
-						$key =  mysql_real_escape_string($key);
-						$value =  mysql_real_escape_string($value);
+						$key =  @mysql_real_escape_string($key);
+						$value =  @mysql_real_escape_string($value);
 						$setArray[] = "`$key`='$value'";
 					}
 				}	
@@ -95,7 +95,7 @@ Class Grid {
 			
 			$sql = "UPDATE {$this->table} SET ".implode(",",$setArray)." WHERE `$primaryKey` = '$rowId'";
 			
-			$res = mysql_query($sql);
+			$res = @mysql_query($sql);
 
 			// die with messages if fail
 			$this->dieOnError($sql);
@@ -113,11 +113,11 @@ Class Grid {
 		
 		// if didn't pass a set param, just add a new row
 		if(empty($this->set)) {
-			mysql_query("INSERT INTO {$this->table} VALUES ()");
+			@mysql_query("INSERT INTO {$this->table} VALUES ()");
 		
 		// if you passed a set param then use that in the insert
 		} else {
-			mysql_query("INSERT INTO {$this->table} SET {$this->set}");
+			@mysql_query("INSERT INTO {$this->table} SET {$this->set}");
 		}
 		
 		// we return the primary key so that we can order by it in the jS
@@ -127,7 +127,7 @@ Class Grid {
 	function delete() {
 		$post = $this->_safeMysql();
 		$primaryKey = $this->getPrimaryKey();
-		return mysql_query("DELETE FROM {$this->table} WHERE `$primaryKey` = '$post[id]'");
+		return @mysql_query("DELETE FROM {$this->table} WHERE `$primaryKey` = '$post[id]'");
 	}
 	
 	function select($selects) {
@@ -360,8 +360,8 @@ Class Grid {
 					$col = str_replace("`","",$col);
 					list($aTable,$field) = explode(".",$col);
 					if(!$aTable) $aTable = $this->table;
-					$colDataSql = mysql_query("SHOW columns FROM $aTable WHERE Field = '$field'");
-					while($row = mysql_fetch_assoc($colDataSql)) {
+					$colDataSql = @mysql_query("SHOW columns FROM $aTable WHERE Field = '$field'");
+					while($row = @mysql_fetch_assoc($colDataSql)) {
 						$type = $row['Type'];
 					}
 					preg_match('/\(([^\)]+)/',$type,$matches);
@@ -475,8 +475,8 @@ Class Grid {
 				$sql2 = preg_replace('/LIMIT[\s\d,]+$/','',$sql);
 			
 				// find the total results to send back
-				$res = mysql_query($sql2);
-				$data['nRows'] = mysql_num_rows($res);
+				$res = @mysql_query($sql2);
+				$data['nRows'] = @mysql_num_rows($res);
 			} else {
 				$data['nRows'] = $this->limit;
 			}
@@ -517,14 +517,14 @@ Class Grid {
 	// does not work for combined primary keys
 	function getPrimaryKey($table=NULL) {
 		if(!$table) $table = $this->table;
-		$primaryKey = mysql_query("SHOW KEYS FROM `$table` WHERE Key_name = 'PRIMARY'");
-		$primaryKey = mysql_fetch_assoc($primaryKey);
+		$primaryKey = @mysql_query("SHOW KEYS FROM `$table` WHERE Key_name = 'PRIMARY'");
+		$primaryKey = @mysql_fetch_assoc($primaryKey);
 		return $primaryKey['Column_name'];
 	}
 	
 	// if there is a mysql error it will die with that error
 	function dieOnError($sql) {
-		if($e=mysql_error()) {
+		if($e=@mysql_error()) {
 			//var_dump($sql);
 			die($e);
 		}
@@ -533,17 +533,17 @@ Class Grid {
 	// runs a query, always returns a multi dimensional array of results
 	function _queryMulti($sql) {
 		$array = array();
-		$res = mysql_query($sql);
+		$res = @mysql_query($sql);
 		if((bool)$res) {
 			// if there is only 1 field, just return and array with that field as each value
-			if(mysql_num_fields($res) > 1) {
-				while($row = mysql_fetch_assoc($res)) $array[] = $row;
-			} else if(mysql_num_fields($res) == 1) {
-				while($row = mysql_fetch_assoc($res)) {
+			if(@mysql_num_fields($res) > 1) {
+				while($row = @mysql_fetch_assoc($res)) $array[] = $row;
+			} else if(@mysql_num_fields($res) == 1) {
+				while($row = @mysql_fetch_assoc($res)) {
 					foreach($row as $item) $array[] = $item;
 				}	
 			}	
-			$error = mysql_error();
+			$error = @mysql_error();
 			if($error) echo $error;
 		}
 		return $array;
@@ -555,7 +555,7 @@ Class Grid {
 		$postReturn = array();
 		foreach($post as $key=>$value) {
 			if(!is_array($value)) {
-				$postReturn[$key] = mysql_real_escape_string(urldecode($value)); 
+				$postReturn[$key] = @mysql_real_escape_string(urldecode($value));
 			} else if(is_array($value)) {
 				$postReturn[$key] = $value;
 			}	
