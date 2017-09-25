@@ -134,7 +134,7 @@ if(isset($search) || isset($s)) {
                 $flag = 1;
             }
             $pset = 1;
-        }
+
 
 
         if (isset($billingstatus) && $billingstatus != '' && $billingstatus == 'notbilled' ) {
@@ -475,7 +475,7 @@ if(isset($search) || isset($s)) {
         echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
-                                <input type=text size=52% name=csvlist value='$summary[tktlist]'>
+                                <input type=text size=52% name=csvlist value=$summary[tktlist]>
             </td></td></tr>";
         endTable();
         endTable();
