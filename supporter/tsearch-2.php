@@ -126,12 +126,11 @@ if(isset($search) || isset($s)) {
 
             $sset = 1;
         }
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled ' ) {\
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled ' ) {
                 $sql .= " BILLING_STATUS='$billingstatus'";
                 $flag = 1;
             } else {
                 $sql .= " $andor BILLING_STATUS='$billingstatus'";
-
                 $flag = 1;
             }
             $pset = 1;
@@ -140,14 +139,12 @@ if(isset($search) || isset($s)) {
 
         if (isset($billingstatus) && $billingstatus != '' && $billingstatus == 'notbilled' ) {
             if ($flag != 1 || !isset($flag)) {
-                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";;
+                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
                 $flag = 1;
             } else {
                 $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
                 $flag = 1;
             }
-
-
             $pset = 1;
         }
 
@@ -349,91 +346,91 @@ if(isset($search) || isset($s)) {
 
         if ($s == 'id') {
             echo '<td align=center>
-						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=di&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
+                            <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=di&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
         } else {
             echo '<td align=center>
-						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=id&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
+                            <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=id&stmt=' . htmlentities($sql2) . '><b>' . $lang_id . '</b></a></td>';
         }
 
         if ($s == 'sup') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pus&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . ' </b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pus&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . ' </b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sup&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sup&stmt=' . htmlentities($sql2) . '><b>' . $lang_Supporter . '</b></a></td>';
         }
 
         if ($s == 'equ') {
             echo '<td align=center>
-						  <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=uqe&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
+                              <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=uqe&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
         } else {
             echo '<td align=center>
-						  <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=equ&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
+                              <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=equ&stmt=' . htmlentities($sql2) . '><b>' . $lang_equipment . ' </b></a></td>';
         }
 
 
         if ($s == 'sho') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ohs&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . ' </b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ohs&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . ' </b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sho&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sho&stmt=' . htmlentities($sql2) . '><b>' . $lang_shortdesc . '</b></a></td>';
         }
 
 
         if ($s == 'usr') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=rsu&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . ' </b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=rsu&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . ' </b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=usr&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=usr&stmt=' . htmlentities($sql2) . '><b>' . $lang_user . '</b></a></td>';
         }
 
         if ($s == 'grp') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=prg&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . ' </b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=prg&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . ' </b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=grp&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=grp&stmt=' . htmlentities($sql2) . '><b>' . $lang_group . '</b></a></td>';
         }
 
         if ($s == 'pri' && $pset != 1) {
             echo '<td align=center>
-						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=irp&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
+                            <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=irp&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
         } elseif ($pset != 1) {
             echo '<td align=center>
-						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pri&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
+                            <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=pri&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
         } else {
             echo '<td align=center>
-						<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
+                            <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_priority . '</b></a></td>';
         }
 
         if ($s == 'cre') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=erc&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=erc&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=cre&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=cre&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
         }
 
 
         if ($s == 'sta' && $sset != 1) {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ats&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ats&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
         } elseif ($sset != 1) {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sta&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=sta&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
         }
 
         if ($s == 'tim') {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=mit&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=mit&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
         } else {
             echo '<td align=center>
-							<a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=tim&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=tim&stmt=' . htmlentities($sql2) . '><b>' . $lang_time . '</b></a></td>';
         }
 
         echo '</tr>';
@@ -478,8 +475,8 @@ if(isset($search) || isset($s)) {
         echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
-							<input type=text size=52% name=csvlist value='$summary[tktlist]'>
-		</td></td></tr>";
+                                <input type=text size=52% name=csvlist value='$summary[tktlist]'>
+            </td></td></tr>";
         endTable();
         endTable();
     }
