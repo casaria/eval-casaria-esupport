@@ -56,6 +56,7 @@ $mysql_announcement_table = "announcements";	//mysql announcement table name
 $mysql_tcategories_table = "tcategories";		//mysql ticket categories table
 $mysql_tpriorities_table = "tpriorities";		//mysql ticket priority table
 $mysql_tstatus_table = "tstatus";				//mysql ticket status table
+$mysql_tBillingStatus_table = "tBillingStatus";
 $mysql_tratings_table = "tratings";				//mysql ticket rating table
 $mysql_users_table = "users";					//mysql users table
 $mysql_sgroups_table = "sgroups";				//mysql supporter group table

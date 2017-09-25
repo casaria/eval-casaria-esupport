@@ -1092,19 +1092,17 @@ function getRStatus($rank)
 ************************************************************************************************************/
 function getHighestRank($table)
 {
-	global $mysql_tstatus_table, $db;
+    global  $db;
 
-	if($table == $mysql_tstatus_table) {
-        $sql = "select id from $table order by rank desc";
-    }else{
-		$sql = "select id from $table order by rank asc";
-	}
-	
-	$result = $db->query($sql);
-	$row = $db->fetch_row($result);
-	return $row[0];
+    $sql = "select id from $table order by rank desc";
+
+
+    $result = $db->query($sql);
+    $row = $db->fetch_row($result);
+    return $row[0];
 
 }
+
 
 
 /***********************************************************************************************************
