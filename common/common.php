@@ -1436,7 +1436,7 @@ function createPriorityMenu($flag=0, $all=true)
  ************************************************************************************************************/
 function createBillingStatusMenu($flag = 0, $new = 0)
 {
-    global $mysql_tBillingStatus_table, $info, $db;
+    global $mysql_BillingStatus_table, $info, $db;
 
     $sql = "select id, status, default_create from $mysql_BillingStatus_table order by rank asc";
     $result = $db->query($sql, $mysql_tBillingStatus_table);
