@@ -135,7 +135,7 @@ $EP = new SendPreferences();
   $EP->CopyAllOnUserUpdate= false;
   $EP->BlockCloseUpdates = false;      
 
-
+``
 
 
 /***********************************************************************************************************
@@ -1438,8 +1438,8 @@ function createBillingStatusMenu($flag = 0, $new = 0)
 {
     global $mysql_BillingStatus_table, $info, $db;
 
-    $sql = "select id, status, default_create from $mysql_BillingStatus_table order by rank asc";
-    $result = $db->query($sql, $mysql_BillingStatus_table);
+    $sql = "select id, status, default_create from $mysql_tBillingStatus_table order by rank asc";
+    $result = $db->query($sql, $mysql_tBillingStatus_table);
 
     if($flag == 1)
         echo "<option></option>";
