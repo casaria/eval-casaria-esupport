@@ -51,7 +51,6 @@ $MailQueuePath = "/home/casaria/public_html/support/DelayedMail/";
 $mysql_crmsettings_table = "crmsettings";
 $mysql_tequipment_table = "tequipment";
 $mysql_BillingStatus_table = "tBillingStatus";
-
 $mysql_announcement_table = "announcements";	//mysql announcement table name
 $mysql_tcategories_table = "tcategories";		//mysql ticket categories table
 $mysql_tpriorities_table = "tpriorities";		//mysql ticket priority table
