@@ -1090,11 +1090,11 @@ function getRStatus($rank)
 **		Takes one argument.  If the table is the ticket status table, the ranking is reversed so there is a
 **	different sql statement.  Selects the item in the table that has the highest rank and returns the id.
 ************************************************************************************************************/
-function getHighestRank($table)
+function getHighestRank($SRCtable)
 {
     global  $db;
 
-    $sql = "select id from $table order by rank desc";
+    $sql = "select id from $SRCtable order by rank desc";
 
 
     $result = $db->query($sql);

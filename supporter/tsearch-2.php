@@ -126,7 +126,7 @@ if(isset($search) || isset($s)) {
 
             $sset = 1;
         }
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != '9999' ) {
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled' ) {
             if ($flag != 1 || !isset($flag)) {
                 $sql .= " BILLING_STATUS='$billingstatus'";
                 $flag = 1;
@@ -139,7 +139,7 @@ if(isset($search) || isset($s)) {
         }
 
 
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus == '9999' ) {
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus == 'notbilled' ) {
             if ($flag != 1 || !isset($flag)) {
                 $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";;
                 $flag = 1;
