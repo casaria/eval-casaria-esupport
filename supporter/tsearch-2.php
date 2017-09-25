@@ -131,6 +131,7 @@ if(isset($search) || isset($s)) {
                 $flag = 1;
             } else {
                 $sql .= " $andor BILLING_STATUS='$billingstatus'";
+
                 $flag = 1;
             }
             $pset = 1;
