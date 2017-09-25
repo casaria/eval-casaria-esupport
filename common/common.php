@@ -1084,7 +1084,6 @@ function getRStatus($rank)
 
 }
 
-
 /***********************************************************************************************************
 **	function getHighestRank():
 **		Takes one argument.  If the table is the ticket status table, the ranking is reversed so there is a
