@@ -12,10 +12,10 @@
     <bookmark url="file://$PROJECT_DIR$/supporter/index.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
+    <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="jsgrid-php path update">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config.php" afterPath="$PROJECT_DIR$/common/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/tsearch-2.php" afterPath="$PROJECT_DIR$/supporter/tsearch-2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/English.lang.php" afterPath="$PROJECT_DIR$/lang/English.lang.php" />
     </list>
     <ignored mask="workspace.xml" />
     <ignored mask="error_log" />
@@ -119,7 +119,7 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="-1823">
               <caret line="1099" column="0" lean-forward="false" selection-start-line="1099" selection-start-column="0" selection-end-line="1099" selection-end-column="0" />
               <folding>
                 <element signature="e#6#1399#0#PHP" expanded="true" />
@@ -398,11 +398,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tsearch-2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tsearch-2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supporter/tsearch-2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2445">
-              <caret line="145" column="89" lean-forward="false" selection-start-line="145" selection-start-column="89" selection-end-line="145" selection-end-column="89" />
+            <state relative-caret-position="211">
+              <caret line="545" column="65" lean-forward="false" selection-start-line="545" selection-start-column="50" selection-end-line="545" selection-end-column="65" />
               <folding>
                 <marker date="1506377904275" expanded="true" signature="1762:1804" ph="select * fro... ${$mysql_tickets_table}" />
                 <marker date="1506377904275" expanded="true" signature="1870:2015" ph="select t.*, ${$mysql_tickets_table}" />
@@ -479,6 +479,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="English.lang.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="477" column="33" lean-forward="false" selection-start-line="477" selection-start-column="33" selection-end-line="477" selection-end-column="33" />
+              <folding>
+                <marker date="1506378921174" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supporter/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -549,18 +561,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tickets.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsgrid-php/models/Tickets.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="256">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -669,7 +671,6 @@
         <option value="$PROJECT_DIR$/kbase/edit.php" />
         <option value="$PROJECT_DIR$/supporter/myopen.php" />
         <option value="$PROJECT_DIR$/supporter/tsearch-3.php" />
-        <option value="$PROJECT_DIR$/lang/English.lang.php" />
         <option value="$PROJECT_DIR$/dylay/src/dylay.js" />
         <option value="$PROJECT_DIR$/common/style.php" />
         <option value="$PROJECT_DIR$/common/scripts.php" />
@@ -688,6 +689,7 @@
         <option value="$PROJECT_DIR$/supporter/index.php" />
         <option value="$PROJECT_DIR$/common/config.php" />
         <option value="$PROJECT_DIR$/supporter/tsearch-2.php" />
+        <option value="$PROJECT_DIR$/lang/English.lang.php" />
       </list>
     </option>
   </component>
@@ -704,7 +706,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpDebugGeneral" xdebug_show_addresses="true" break_at_first_line="true" hide_empty_superglobals="false" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
+  <component name="PhpDebugGeneral" xdebug_show_addresses="true" hide_empty_superglobals="false" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
   <component name="PhpServers">
     <servers>
       <server host="eval.casaria.net" id="4681ece0-4643-4c8b-88de-f818313ab65c" name="eval.casaria.net  (SSH tunnel)" port="9000" use_path_mappings="true">
@@ -994,14 +996,7 @@
       <workItem from="1505628537327" duration="30072000" />
       <workItem from="1505936190232" duration="15355000" />
       <workItem from="1506304726279" duration="52000" />
-      <workItem from="1506374218786" duration="3664000" />
-    </task>
-    <task id="LOCAL-00429" summary=" 4">
-      <created>1505670990430</created>
-      <option name="number" value="00429" />
-      <option name="presentableId" value="LOCAL-00429" />
-      <option name="project" value="LOCAL" />
-      <updated>1505670990430</updated>
+      <workItem from="1506374218786" duration="4674000" />
     </task>
     <task id="LOCAL-00430" summary=" 4">
       <created>1505671248257</created>
@@ -1339,11 +1334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506377705684</updated>
     </task>
-    <option name="localTasksCounter" value="478" />
+    <task id="LOCAL-00478" summary="jsgrid-php path update">
+      <created>1506377912475</created>
+      <option name="number" value="00478" />
+      <option name="presentableId" value="LOCAL-00478" />
+      <option name="project" value="LOCAL" />
+      <updated>1506377912475</updated>
+    </task>
+    <option name="localTasksCounter" value="479" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="374934000" />
+    <option name="totallyTimeSpent" value="375944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1359,17 +1361,17 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33900928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25188917" sideWeight="0.5207547" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43324938" sideWeight="0.5169811" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25188917" sideWeight="0.47924528" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.49339622" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11396226" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28150943" sideWeight="0.49086162" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28150943" sideWeight="0.49086162" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23677582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20226415" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43324938" sideWeight="0.4856397" order="3" side_tool="false" content_ui="tabs" x="41" y="96" width="1325" height="317" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43324938" sideWeight="0.48301888" order="3" side_tool="false" content_ui="tabs" x="41" y="96" width="1325" height="317" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13660377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29219145" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1397,14 +1399,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962447" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3207547" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11396226" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988358" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28150943" sideWeight="0.49086162" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28150943" sideWeight="0.49086162" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23677582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20226415" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43401015" sideWeight="0.4856397" order="3" side_tool="false" content_ui="tabs" x="41" y="96" width="1325" height="317" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43324938" sideWeight="0.4856397" order="3" side_tool="false" content_ui="tabs" x="41" y="96" width="1325" height="317" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13660377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1689,13 +1691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6288">
           <caret line="421" column="32" lean-forward="false" selection-start-line="421" selection-start-column="32" selection-end-line="421" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7600">
-          <caret line="475" column="32" lean-forward="false" selection-start-line="475" selection-start-column="32" selection-end-line="475" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1985,17 +1980,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config.php">
+    <entry file="file://$PROJECT_DIR$/supporter/tsearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="160">
+          <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="561" selection-end-column="29" />
+          <folding>
+            <marker date="1506376926380" expanded="true" signature="1801:1843" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="1909:2054" ph="select t.*, ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="2247:2392" ph="select t.*, ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="2612:2654" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="8052:8093" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="11247:11261" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506376926380" expanded="true" signature="11679:11828" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="11883:12032" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="12108:12267" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="12322:12480" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="12556:12716" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="12771:12931" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="13008:13167" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="13222:13380" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="13457:13611" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="13666:13819" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="13895:14050" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="14105:14259" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="14349:14505" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="14575:14731" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="14786:14936" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="15012:15168" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="15223:15379" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="15470:15625" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="15695:15850" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="15905:16054" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="16130:16283" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="16338:16491" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18169:18279" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18188:18269" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18496:18968" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18505:18968" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18514:18968" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18577:18968" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18588:18829" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18682:18817" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="18847:18968" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19062:19180" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19278:19435" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19371:19423" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19446:19577" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19668:19795" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19943:19989" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19943:20005" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19943:20006" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="19943:20225" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20057:20213" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20084:20128" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20084:20201" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20236:20367" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20455:20569" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20657:20808" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20749:20796" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20819:20970" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20909:20958" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="20981:21110" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="21083:21110" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="21337:21361" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="21571:21595" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="22292:22316" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="22563:22727" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="22655:22715" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="22738:22958" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="22829:22946" ph="..." />
+            <marker date="1506376926380" expanded="true" signature="23340:23400" ph="select prior... ${$mysql_tpriorities_table}" />
+            <marker date="1506376926380" expanded="true" signature="23626:23641" ph="select id fr... ${$mysql_tpriorities_table}" />
+            <marker date="1506376926380" expanded="true" signature="23905:23959" ph="select statu... ${$mysql_tstatus_table}" />
+            <marker date="1506376926380" expanded="true" signature="24177:24192" ph="select id fr... ${$mysql_tstatus_table}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="-1823">
           <caret line="1099" column="0" lean-forward="false" selection-start-line="1099" selection-start-column="0" selection-end-line="1099" selection-end-column="0" />
           <folding>
             <element signature="e#6#1399#0#PHP" expanded="true" />
@@ -2184,87 +2248,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supporter/tsearch.php">
+    <entry file="file://$PROJECT_DIR$/common/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="561" selection-end-column="29" />
-          <folding>
-            <marker date="1506376926380" expanded="true" signature="1801:1843" ph="select * fro... ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="1909:2054" ph="select t.*, ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="2247:2392" ph="select t.*, ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="2612:2654" ph="select * fro... ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="8052:8093" ph="select * fro... ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="11247:11261" ph="select * fro... ${$mysql_tickets_table}" />
-            <marker date="1506376926380" expanded="true" signature="11679:11828" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="11883:12032" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="12108:12267" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="12322:12480" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="12556:12716" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="12771:12931" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="13008:13167" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="13222:13380" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="13457:13611" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="13666:13819" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="13895:14050" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="14105:14259" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="14349:14505" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="14575:14731" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="14786:14936" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="15012:15168" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="15223:15379" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="15470:15625" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="15695:15850" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="15905:16054" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="16130:16283" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="16338:16491" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18169:18279" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18188:18269" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18496:18968" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18505:18968" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18514:18968" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18577:18968" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18588:18829" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18682:18817" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="18847:18968" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19062:19180" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19278:19435" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19371:19423" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19446:19577" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19668:19795" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19943:19989" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19943:20005" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19943:20006" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="19943:20225" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20057:20213" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20084:20128" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20084:20201" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20236:20367" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20455:20569" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20657:20808" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20749:20796" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20819:20970" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20909:20958" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="20981:21110" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="21083:21110" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="21337:21361" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="21571:21595" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="22292:22316" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="22563:22727" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="22655:22715" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="22738:22958" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="22829:22946" ph="..." />
-            <marker date="1506376926380" expanded="true" signature="23340:23400" ph="select prior... ${$mysql_tpriorities_table}" />
-            <marker date="1506376926380" expanded="true" signature="23626:23641" ph="select id fr... ${$mysql_tpriorities_table}" />
-            <marker date="1506376926380" expanded="true" signature="23905:23959" ph="select statu... ${$mysql_tstatus_table}" />
-            <marker date="1506376926380" expanded="true" signature="24177:24192" ph="select id fr... ${$mysql_tstatus_table}" />
-          </folding>
+        <state relative-caret-position="256">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supporter/tsearch-2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2445">
-          <caret line="145" column="89" lean-forward="false" selection-start-line="145" selection-start-column="89" selection-end-line="145" selection-end-column="89" />
+        <state relative-caret-position="211">
+          <caret line="545" column="65" lean-forward="false" selection-start-line="545" selection-start-column="50" selection-end-line="545" selection-end-column="65" />
           <folding>
             <marker date="1506377904275" expanded="true" signature="1762:1804" ph="select * fro... ${$mysql_tickets_table}" />
             <marker date="1506377904275" expanded="true" signature="1870:2015" ph="select t.*, ${$mysql_tickets_table}" />
@@ -2336,6 +2331,16 @@
             <marker date="1506377904275" expanded="true" signature="23556:23571" ph="select id fr... ${$mysql_tpriorities_table}" />
             <marker date="1506377904275" expanded="true" signature="23835:23889" ph="select statu... ${$mysql_tstatus_table}" />
             <marker date="1506377904275" expanded="true" signature="24107:24122" ph="select id fr... ${$mysql_tstatus_table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/English.lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="477" column="33" lean-forward="false" selection-start-line="477" selection-start-column="33" selection-end-line="477" selection-end-column="33" />
+          <folding>
+            <marker date="1506378921174" expanded="true" signature="5107:5120" ph="SELECT * fro... " />
           </folding>
         </state>
       </provider>
