@@ -126,7 +126,7 @@ if(isset($search) || isset($s)) {
 
             $sset = 1;
         }
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled' ) {
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled ' ) {
             if ($flag != 1 || !isset($flag)) {
                 $sql .= " BILLING_STATUS='$billingstatus'";
                 $flag = 1;
@@ -134,7 +134,6 @@ if(isset($search) || isset($s)) {
                 $sql .= " $andor BILLING_STATUS='$billingstatus'";
                 $flag = 1;
             }
-
             $pset = 1;
         }
 
