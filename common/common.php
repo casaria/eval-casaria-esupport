@@ -1438,7 +1438,7 @@ function createBillingStatusMenu($flag = 0, $new = 0)
 {
     global $mysql_tBillingStatus_table, $info, $db;
 
-    $sql = "select id, status, default_create from $mysql_tBillingStatus_table order by rank asc";
+    $sql = "select id, status, default_create from $mysql_BillingStatus_table order by rank asc";
     $result = $db->query($sql, $mysql_tBillingStatus_table);
 
     if($flag == 1)
