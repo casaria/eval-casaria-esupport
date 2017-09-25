@@ -152,9 +152,9 @@ if(isset($search) || isset($s)) {
                 $flag = 1;
             }
 
+
             $pset = 1;
         }
-
         if (isset($user) && $user != '') {
             if ($flag != 1 || !isset($flag)) {
                 $sql .= " user='$user'";
