@@ -1439,12 +1439,12 @@ function createBillingStatusMenu($flag = 0, $new = 0)
     global $mysql_BillingStatus_table, $info, $db;
 
     $sql = "select id, status, default_create from $mysql_BillingStatus_table order by rank asc";
-    $result = $db->query($sql, $mysql_tBillingStatus_table);
+    $result = $db->query($sql, $mysql_BillingStatus_table);
 
     if($flag == 1)
         echo "<option></option>";
-
     while($row = $db->fetch_array($result)){
+
         echo "<option value=\"$row[id]\" ";
         if ($new){
             if($row['default_create']) echo "selected";
