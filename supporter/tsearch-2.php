@@ -126,27 +126,31 @@ if(isset($search) || isset($s)) {
 
             $sset = 1;
         }
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != 'notbilled ' ) {
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus != '9999' ) {
+            if ($flag != 1 || !isset($flag)) {
                 $sql .= " BILLING_STATUS='$billingstatus'";
                 $flag = 1;
             } else {
                 $sql .= " $andor BILLING_STATUS='$billingstatus'";
                 $flag = 1;
             }
+
             $pset = 1;
+        }
 
 
-
-        if (isset($billingstatus) && $billingstatus != '' && $billingstatus == 'notbilled' ) {
+        if (isset($billingstatus) && $billingstatus != '' && $billingstatus == '9999' ) {
             if ($flag != 1 || !isset($flag)) {
-                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
+                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";;
                 $flag = 1;
             } else {
                 $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
                 $flag = 1;
             }
+
             $pset = 1;
         }
+
 
         if (isset($user) && $user != '') {
             if ($flag != 1 || !isset($flag)) {
