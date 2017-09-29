@@ -145,10 +145,10 @@
 
             if (isset($billingstatus) && $billingstatus != '' && $billingstatus == '9999' ) {
                 if ($flag != 1 || !isset($flag)) {
-                    $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";;
+                    $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBStatus_table)) . "'";;
                     $flag = 1;
                 } else {
-                    $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
+                    $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBStatus_table)) . "'";
                     $flag = 1;
                 }
 

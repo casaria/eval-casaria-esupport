@@ -30,7 +30,7 @@
 			**		Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 			**
 			***************************************************************************************/
-
+require_once "config.php";
 //create the connection to the database.
 $pconnect = 0;
 $db = new $database();
@@ -1585,7 +1585,8 @@ function createTimeOffsetMenu($selected)
 function displayTicket($result)
 {
 	global $cookie_name, $mysql_ugroups_table, $mysql_tBStatus_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url;
-    $sql3 = "select * from \"$mysql_ugroups_table\"";
+    $second = getSecondPriority();
+	$sql3 = "select * from \"$mysql_ugroups_table\"";
     $sqlBS = "select * from \"$mysql_tBStatus_table\"";
     $recordcount = 0;
     $csv_string = "";
