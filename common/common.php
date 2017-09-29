@@ -1584,7 +1584,7 @@ function createTimeOffsetMenu($selected)
 }
 function displayTicket($result)
 {
-	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url, $mysql_tBStatus_table;
+	global $cookie_name, $mysql_ugroups_table, $mysql_tBStatus_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url;
     $sql3 = "select * from \"$mysql_ugroups_table\"";
     $sqlBS = "select * from \"$mysql_tBStatus_table\"";
     $recordcount = 0;
