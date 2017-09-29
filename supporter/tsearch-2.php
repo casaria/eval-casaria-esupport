@@ -32,6 +32,7 @@
 require_once "../common/config.php";
 require_once "../common/$database.class.php";
 require_once "../common/common.php";
+require_once "../common/scripts.php";
 $highest_pri = getRPriority(getHighestRank($mysql_tpriorities_table));	//set the highest priority rating
 $today = getdate();
 
@@ -141,10 +142,10 @@ if(isset($search) || isset($s)) {
 
         if (isset($billingstatus) && $billingstatus != '' && $billingstatus == '9999' ) {
             if ($flag != 1 || !isset($flag)) {
-                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";;
+                $sql .= " BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBStatus_table)) . "'";;
                 $flag = 1;
             } else {
-                $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBillingStatus_table)) . "'";
+                $sql .= " $andor BILLING_STATUS !='" . getRStatus(getHighestRank( $mysql_tBStatus_table)) . "'";
                 $flag = 1;
             }
 
