@@ -1435,10 +1435,10 @@ function createPriorityMenu($flag=0, $all=true)
  ************************************************************************************************************/
 function createBillingStatusMenu($flag = 0, $new = 0)
 {
-    global $mysql_tBillingStatus_table, $info, $db;
+    global $mysql_tBStatus_table, $info, $db;
 
-    $sql = "select id, status, default_create from $mysql_tBillingStatus_table order by rank asc";
-    $result = $db->query($sql, $mysql_tBillingStatus_table);
+    $sql = "select id, status, default_create from $mysql_tBStatus_table order by rank asc";
+    $result = $db->query($sql, $mysql_tBStatus_table);
 
     if($flag == 1)
         echo "<option></option>";
@@ -1584,10 +1584,9 @@ function createTimeOffsetMenu($selected)
 }
 function displayTicket($result)
 {
-	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url, $mysql_tBillingStatus_table;
-    $second = getSecondPriority();
+	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url, $mysql_tBStatus_table;
     $sql3 = "select * from \"$mysql_ugroups_table\"";
-    $sqlBS = "select * from \"$mysql_tBillingStatus_table\"";
+    $sqlBS = "select * from \"$mysql_tBStatus_table\"";
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
