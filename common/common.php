@@ -1641,7 +1641,7 @@ function displayTicket($result)
 
         //cookie_name='.$cookie_name.'
         echo "<td class=back>";
-        $resultBStatus = $db->query($sqlBS);
+        $resultBStatus = $db->query($sql);
         while ($row2 = $db->fetch_array($resultBStatus)) {
             if ($row2['id'] == $row['BILLING_STATUS']) {
                 $bsIconRef = $row2['icon_ref'];
