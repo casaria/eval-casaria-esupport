@@ -604,7 +604,6 @@ echo'					</select>
 									echo ' selected';
 								echo ">".$i."</option>\n";
 						}
-						
 echo '					</select>	
 						<select name=emonth>';
 						for($i=1; $i<13; $i++){
