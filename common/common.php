@@ -30,7 +30,7 @@
 			**		Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 			**
 			***************************************************************************************/
-require_once "config.php";
+
 //create the connection to the database.
 $pconnect = 0;
 $db = new $database();
@@ -45,6 +45,8 @@ $crm_name = $var['name'];
 //+++
 $logfile = "logfile.txt";
 
+require_once "config.php";
+$mysql_tBStatus_table = "tBillingStatus";
 /****************************	Other Variables	***********************************************************/
 //set the variables from the database if not running the install
 $var = getVariables();
@@ -2838,7 +2840,7 @@ function ProcessExtendedNotifications($cc_template_name, $mms_template_name, $st
           		// build tolist +++
           		$to_list = "horrack@hotmail.com";
           
-          		$sql = "SELECT template from $mysql_templates_table where name='$cc_template_name'";
+          		$sql = "SELECT    template from $mysql_templates_table where name='$cc_template_name'";
           		$result = $db->query($sql);
           		$template = $db->fetch_array($result);
           		$template=str_replace("\\'","'",$template[0]);
