@@ -46,7 +46,7 @@ $crm_name = $var['name'];
 $logfile = "logfile.txt";
 
 require_once "config.php";
-$mysql_tBStatus_table = "tBillingStatus";
+
 /****************************	Other Variables	***********************************************************/
 //set the variables from the database if not running the install
 $var = getVariables();
