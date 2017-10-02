@@ -1608,11 +1608,11 @@ function displayTicket($result)
         echo "<td>";
         echo stripslashes($row['equipment']) . "</td>";
 
-        echo "<td class=\"back2\">";
+        echo "<td>";
         echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
         echo stripslashes($row['short']) . "</a></td>
 			
-				<td class=back>" . $row['user'] . "</td>";
+				<td></td>" . $row['user'] . "</td>";
         $grp_name = 'NONE';
         $resultgroup = $db->query($sql3);
         while ($row2 = $db->fetch_array($resultgroup)) {
@@ -1621,9 +1621,9 @@ function displayTicket($result)
             }
         }
 
-        echo "<td class=back2>" . $grp_name . "</td>
+        echo "<td></td>" . $grp_name . "</td>
 
-				<td class=back>";
+				<td></td>";
 
         switch ($row['priority']) {
             case ("$highest_pri"):
@@ -1638,11 +1638,11 @@ function displayTicket($result)
         }
 
         echo "</td>
-				<td class=back2> " . date("m/d/y", $row[create_date]) . "</td>";
-        echo "<td class=back> " . date("m/d/y", $row[lastupdate]) . "</td>";
+				<td> " . date("m/d/y", $row[create_date]) . "</td>";
+        echo "<td> " . date("m/d/y", $row[lastupdate]) . "</td>";
 
         //cookie_name='.$cookie_name.'
-        echo "<td class=back>";
+        echo "<td>";
         $resultBStatus = $db->query($sqlBS);
         while ($row2 = $db->fetch_array($resultBStatus)) {
             if ($row2['id'] == $row['BILLING_STATUS']) {
