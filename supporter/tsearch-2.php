@@ -650,7 +650,7 @@ echo'
 				</tr>
 
 			</table><br>
-			         \ <input type=submit value=\''.$lang_searchforticket.'\' name=search>
+			          <input type=submit value=\''.$lang_searchforticket.'\' name=search>
                       <input type=hidden value='.$query.' name=query>
                      
         	</form>';
