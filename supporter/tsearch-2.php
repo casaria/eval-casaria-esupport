@@ -648,12 +648,11 @@ echo'
 					</table>
 				</td>
 				</tr>
-				
-                      <input type=submit value=\''.$lang_searchforticket.'\' name=search>
-                      <input type=hidden value='.$query.' name=query>
-                     
 
 			</table><br>
+			         \ <input type=submit value=\''.$lang_searchforticket.'\' name=search>
+                      <input type=hidden value='.$query.' name=query>
+                     
         	</form>';
 
 }
