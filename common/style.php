@@ -95,9 +95,9 @@ $tablePadding = 10;
 
         /* tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}  */
         /* tr.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}  */
-        /*table tr:nth-child(odd) td{background: <?php echo $theme['bg1']; ?>;}
+        table tr:nth-child(odd) td{background: <?php echo $theme['bg1']; ?>;}
         table tr:nth-child(even) td{background: <?php echo $theme['bg2']; ?>;}
-        */
+
         td.back {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
         td.back2 {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
         td.printback {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
