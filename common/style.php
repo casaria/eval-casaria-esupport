@@ -100,6 +100,8 @@ $tablePadding = 10;
 
         tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
         tr.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
+
+        .back3 {line-height: <?php echo $lineHeight; ?>; background: #feaa37;}
         /*table tr:nth-child(odd) tr{background: <?php echo $theme['bg1']; ?>;}
         table tr:nth-child(even) tr{background: <?php echo $theme['bg2']; ?>;}
         */
