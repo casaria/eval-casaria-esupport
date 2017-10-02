@@ -173,7 +173,7 @@ echo
 				  <TR>
 					<TD class=back vAlign=top><BR>
 	
-					<TABLE class=login cellSpacing=5 cellPadding=3 width="30%" align=center border=5>
+					<TABLE class=login cellSpacing=5 cellPadding=3 width="30%" align=center border=8>
 					  <TR>
 						<TD>
 						  <TABLE cellSpacing=10 cellPadding=5 width="100%" border=0>
@@ -185,7 +185,7 @@ echo
 							</TR>
 							<TR>
 							  <TD class=back2>
-								<table width=100% border=0 cellspacing=0 cellpadding=6>
+								<table width=100% border=0 cellspacing=5 cellpadding=6>
 									<tr>
 									 <td class=back2 align=right>' . $lang_username . ':</td><td>
 										<input type=text name=user size=12 value=' . "$cookieuser" . '></td>
