@@ -73,13 +73,13 @@
       <file leaf-file-name="style.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/style.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="45" column="127" lean-forward="true" selection-start-line="45" selection-start-column="127" selection-end-line="45" selection-end-column="127" />
+            <state relative-caret-position="159">
+              <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding>
                 <element signature="e#7#1309#0#PHP" expanded="true" />
-                <marker date="1506964440552" expanded="true" signature="10967:11019" ph="select * fro... ${$mysql_themes_table}" />
-                <marker date="1506964440552" expanded="true" signature="11803:11863" ph="select theme... ${$mysql_users_table}" />
-                <marker date="1506964440552" expanded="true" signature="12104:12130" ph="select defau... ${$mysql_settings_table}" />
+                <marker date="1506965273154" expanded="true" signature="10967:11019" ph="select * fro... ${$mysql_themes_table}" />
+                <marker date="1506965273154" expanded="true" signature="11803:11863" ph="select theme... ${$mysql_users_table}" />
+                <marker date="1506965273154" expanded="true" signature="12104:12130" ph="select defau... ${$mysql_settings_table}" />
               </folding>
             </state>
           </provider>
@@ -241,7 +241,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DISPLAYUS</find>
       <find>CSV</find>
       <find>td.back</find>
       <find>displayUserTicket</find>
@@ -271,6 +270,7 @@
       <find>DISK</find>
       <find>bg</find>
       <find>td.inf</find>
+      <find>subcat</find>
     </findStrings>
     <replaceStrings>
       <replace>$summary = displayTicket($result);</replace>
@@ -669,14 +669,7 @@
       <workItem from="1506304726279" duration="52000" />
       <workItem from="1506374218786" duration="13014000" />
       <workItem from="1506657683851" duration="23039000" />
-      <workItem from="1506894092514" duration="21951000" />
-    </task>
-    <task id="LOCAL-00498" summary="jsgrid-php path update">
-      <created>1506663001624</created>
-      <option name="number" value="00498" />
-      <option name="presentableId" value="LOCAL-00498" />
-      <option name="project" value="LOCAL" />
-      <updated>1506663001624</updated>
+      <workItem from="1506894092514" duration="22754000" />
     </task>
     <task id="LOCAL-00499" summary="jsgrid-php path update">
       <created>1506846296547</created>
@@ -1014,11 +1007,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506962755347</updated>
     </task>
-    <option name="localTasksCounter" value="547" />
+    <task id="LOCAL-00547" summary="Theme vars added">
+      <created>1506964447857</created>
+      <option name="number" value="00547" />
+      <option name="presentableId" value="LOCAL-00547" />
+      <option name="project" value="LOCAL" />
+      <updated>1506964447857</updated>
+    </task>
+    <option name="localTasksCounter" value="548" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429274000" />
+    <option name="totallyTimeSpent" value="430077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1204,11 +1204,6 @@
           <url>file://$PROJECT_DIR$/common/common.php</url>
           <line>1600</line>
           <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/common/style.php</url>
-          <line>94</line>
-          <option name="timeStamp" value="124" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -2080,13 +2075,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/style.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="45" column="127" lean-forward="true" selection-start-line="45" selection-start-column="127" selection-end-line="45" selection-end-column="127" />
+        <state relative-caret-position="159">
+          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
             <element signature="e#7#1309#0#PHP" expanded="true" />
-            <marker date="1506964440552" expanded="true" signature="10967:11019" ph="select * fro... ${$mysql_themes_table}" />
-            <marker date="1506964440552" expanded="true" signature="11803:11863" ph="select theme... ${$mysql_users_table}" />
-            <marker date="1506964440552" expanded="true" signature="12104:12130" ph="select defau... ${$mysql_settings_table}" />
+            <marker date="1506965273154" expanded="true" signature="10967:11019" ph="select * fro... ${$mysql_themes_table}" />
+            <marker date="1506965273154" expanded="true" signature="11803:11863" ph="select theme... ${$mysql_users_table}" />
+            <marker date="1506965273154" expanded="true" signature="12104:12130" ph="select defau... ${$mysql_settings_table}" />
           </folding>
         </state>
       </provider>
