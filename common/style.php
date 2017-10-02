@@ -116,7 +116,7 @@ $tablePadding = 10;
 
         a.hf:hover {line-height: <?php echo $lineHeight; ?>; text-decoration: underline; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
-        td.info {text-align: left; background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+1); ?>px; color: <?php echo $theme['header_text']; ?>;}
+        td.info {text-align: left; background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size'])+1; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
         td.extra {background: <?php echo $theme['info_bg']; ?>; font-family:"<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo ($theme['font_size']+3); ?>px; color: <?php echo $theme['extra_text']; ?>;}
 
