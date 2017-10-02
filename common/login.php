@@ -162,7 +162,7 @@ echo
 </head>
 <body bgcolor=' . $theme['bgcolor'] . ' onload="setfocus()">
 <form name=login method=post>
-	<TABLE class=border cellSpacing=0 cellPadding=0 width=' . $theme['width'] . ' align=center border=2>
+	<TABLE class=border cellSpacing=0 cellPadding=0 width=' . $theme['width'] . ' align=center border=0>
 	  <TR>
 		<TD>
 		  <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
