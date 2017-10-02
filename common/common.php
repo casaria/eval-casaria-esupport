@@ -1655,25 +1655,25 @@ function displayTicket($result)
 
         echo $row[status];
         echo "</a></td>";
-        echo "<td class=back align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
+        echo "<td align=center><img height=28 src=\"../$theme[image_dir]$bsIconRef\"></td>";
 
         $response = setResponse($last_update, $row[priority], $row[id]);
 
         switch ($response) {
             case('1'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                echo "<td align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
                 break;
             case('2'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
+                echo "<td align=center><img height=20 src=\"../$theme[image_dir]hourglass2.gif\"></td>";
                 break;
             case('3'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
+                echo "<td align=center><img height=20 src=\"../$theme[image_dir]hourglass3.gif\"></td>";
                 break;
             case('4'):
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
+                echo "<td align=center><img height=20 src=\"../$theme[image_dir]hourglass4.gif\"></td>";
                 break;
             default:
-                echo "<td class=back align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
+                echo "<td align=center><img height=20 src=\"../$theme[image_dir]hourglass1.gif\"></td>";
                 break;
         }
 
