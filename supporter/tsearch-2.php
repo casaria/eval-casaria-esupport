@@ -344,8 +344,6 @@ if(isset($search) || isset($s)) {
         createHeader("$lang_searchresults SQL: " . $sql);
 
         echo '<TABLE class=border cellSpacing=1 cellPadding=2 width="100%" align=center border=0>
-			<TR>
-			<TD>
 				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>';
         echo ' <tr> ';
 
@@ -481,7 +479,7 @@ if(isset($search) || isset($s)) {
 
         echo "<tr><td><td class=back>
                                 <input type=text size=52% name=csvlist value=$summary[tktlist]>
-            </td></td></tr>";
+            </td>";
         endTable();
         endTable();
     }
