@@ -1611,8 +1611,7 @@ function displayTicket($result)
         echo "<td>";
         echo "<a href=\"?t=tupd&id=" . $row['id'] . "\">";
         echo stripslashes($row['short']) . "</a></td>
-			
-				<td></td>" . $row['user'] . "</td>";
+				<td>" . $row['user'] . "</td>";
         $grp_name = 'NONE';
         $resultgroup = $db->query($sql3);
         while ($row2 = $db->fetch_array($resultgroup)) {
@@ -1621,9 +1620,9 @@ function displayTicket($result)
             }
         }
 
-        echo "<td></td>" . $grp_name . "</td>
+        echo "<td>" . $grp_name . "</td>
 
-				<td></td>";
+				<td>";
 
         switch ($row['priority']) {
             case ("$highest_pri"):
