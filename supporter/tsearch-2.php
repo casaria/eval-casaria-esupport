@@ -644,16 +644,14 @@ echo'
 							<input type=text name=input size=47%>
 						</td>
 						</tr>
-
-						
 						</tr>		
 					</table>
 				</td>
 				</tr>
 				
-                      <TD><input type=submit value=\''.$lang_searchforticket.'\' name=search>
+                      <input type=submit value=\''.$lang_searchforticket.'\' name=search>
                       <input type=hidden value='.$query.' name=query>
-                      </TD>
+                     
 
 			</table><br>
         	</form>';
