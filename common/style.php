@@ -36,7 +36,7 @@
 //if the user is not logged in, set the default style sheet.
 //otherwise, grab the selected theme from the database.
 $theme = getThemeVars(getThemeName($cookie_name));
-$tablePadding = 15;
+$tablePadding = 10;
 
 ?>
 
@@ -156,7 +156,7 @@ $tablePadding = 15;
         table.border2 {background: #6974b5;}
         td.install {background:#dddddd; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
         table.install {background: #000099;}
-        td.head	{background:#6974b5; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;}
+        td.head	{text-align: left; background:#6974b5; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px;}
         a.install:link {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
         a.install:visited {text-decoration:none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6974b5;}
         a.install:active {text-decoration: none; font-weight: normal; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000099;}
