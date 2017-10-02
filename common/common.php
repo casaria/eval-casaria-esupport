@@ -1593,12 +1593,14 @@ function displayTicket($result)
     $recordcount = 0;
     $csv_string = "";
     $closed_ts = 0;
-
+    $odd = 0;
+    $cssclass = 'back';
     while ($row = $db->fetch_array($result))
     {
         $last_update = $row['lastupdate'];  //last update timestamp.
-
-        echo "<tr>
+        $odd ? $cssclass = 'back' : $cssclass = 'back2';
+        $odd = !$odd;
+        echo "<tr class='$cssclass'>
 				<td>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
         if (isAdministrator($cookie_name)) {
             echo "<td><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
