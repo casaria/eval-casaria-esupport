@@ -166,9 +166,7 @@ echo
 	  <TR>
 		<TD>
 		  <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
-			<TR>
-			  <TD class=hf align=left>&nbsp;</TD>
-			</TR>
+
 			<TR>
 			  <TD class=back>
 				<TABLE border=0 width="100%">
