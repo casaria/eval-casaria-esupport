@@ -1599,13 +1599,13 @@ function displayTicket($result)
         $last_update = $row['lastupdate'];  //last update timestamp.
 
         echo "<tr>
-				<td class=back>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
+				<td>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
         if (isAdministrator($cookie_name)) {
-            echo "<td class=back2><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
+            echo "<td><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
         } else {
-            echo "<td class=back2><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
+            echo "<td><a href=\"index.php?t=memb&mem=" . $row['supporter'] . "\">" . $row['supporter'] . "</td>";
         }
-        echo "<td class=\"back\">";
+        echo "<td>";
         echo stripslashes($row['equipment']) . "</td>";
 
         echo "<td class=\"back2\">";
