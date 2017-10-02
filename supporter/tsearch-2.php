@@ -493,14 +493,14 @@ if(isset($search) || isset($s)) {
 				<TD>
 					<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_searchtype.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_searchtype.': </td>
 						<td class=back>
 							<select name=andor><option value=and selected>'.$lang_and.'</option><option value=or>'.$lang_or.'</option></select>
 						</td>
 						</tr>
 						
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_supportergroup.' </td>
+						<TD class=back3 align=right width=27%>'.$lang_supportergroup.' </td>
 						<td class=back><select name=supp_group>';
 						createGroupMenu(2);
 	echo '
@@ -509,7 +509,7 @@ if(isset($search) || isset($s)) {
 						</tr>
 						
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_usergroups.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_usergroups.': </td>
 						<td class=back><select name=user_group>';
 					    	createUserGroupMenu(2);
 	echo '
@@ -518,13 +518,13 @@ if(isset($search) || isset($s)) {
 						</tr>
 						
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_Supporter.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_Supporter.': </td>
 						<td class=back>
 							<input type=text name=supporter>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_priority.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_ticket.' '.$lang_priority.': </td>
 						<td class=back><select name=priority>';
 							createPriorityMenu(2);
 	echo '
@@ -532,7 +532,7 @@ if(isset($search) || isset($s)) {
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_status.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_ticket.' '.$lang_status.': </td>
 						<td class=back><select name=status>';
 							createStatusMenu(1);
     echo '				<option value=notclosed>'.$lang_notclosed.'</option>
@@ -540,7 +540,7 @@ if(isset($search) || isset($s)) {
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_ticket.' '.$lang_billingStatus.': </td>
 						<td class=back><select name=billingstatus>';
 							createBillingStatusMenu(1);
 	echo '				<option value=notbilled>'.$lang_notbilled.'</option>
@@ -548,33 +548,33 @@ if(isset($search) || isset($s)) {
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_category.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_ticket.' '.$lang_category.': </td>
 						<td class=back><select name=category>';
 							createCategoryMenu(1);
 	echo '				</select>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_platform.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_platform.': </td>
 						<td class=back><select name=platform>';
 							createPlatformMenu(1);
 	echo '				</select>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_username.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_username.': </td>
 						<td class=back>
 							<input type=text name=user>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_office.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_office.': </td>
 						<td class=back>
 							<input type=text name=office>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_betweenCreateDates.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_betweenCreateDates.': </td>
 						<td class=back>
 						<select name=smonth>';
 						for($i=1; $i<13; $i++){
@@ -633,13 +633,13 @@ echo'
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_keywords.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_keywords.': </td>
 						<td class=back>
 							<input type=text size=52% name=keywords>
 						</td>
 						</tr>
 						<TR>
-						<TD class=back2 align=right width=27%>'.$lang_sqlstmt.': </td>
+						<TD class=back3 align=right width=27%>'.$lang_sqlstmt.': </td>
 						<td class=back>'.$lang_sqlstmt2 . $mysql_tickets_table . $lang_sqlstmt3 . '
 							<input type=text name=input size=47%>
 						</td>
