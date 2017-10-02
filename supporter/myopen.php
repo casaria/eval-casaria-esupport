@@ -49,7 +49,7 @@
 
 
 
-		echo '<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+		echo '<table class=alternate cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<tr> 
 				<td> 
 					<table cellSpacing=1 cellPadding=5 width="100%" border=1>
