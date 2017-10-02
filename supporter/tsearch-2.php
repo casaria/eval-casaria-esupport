@@ -474,7 +474,7 @@ if(isset($search) || isset($s)) {
         }
 
         endTable();
-        echo " <TABLE class=border cellSpacing=0 cellPadding=0 width=\"100%\" align=center border=0>";
+        echo " <TABLE class=border cellSpacing=0 cellPadding=0 width=\"100%\" align=left border=0>";
         echo "$lang_summary: $lang_recordcount $summary[recordcount] $summary[remarks]  <BR>";
 
         echo "<tr><td><td class=back>
@@ -488,7 +488,7 @@ if(isset($search) || isset($s)) {
 	createHeader("$lang_ticketsearch");
 
 	echo '
-		<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+		<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=left border=0>
 				<TR>
 				<TD>
 					<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
