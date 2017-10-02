@@ -158,63 +158,61 @@ echo
 		document.login.user.focus();
 	} </script>';
 
-echo'
+    echo '
 </head>
-<body bgcolor='.$theme['bgcolor'].' onload="setfocus()">
+<body bgcolor=' . $theme['bgcolor'] . ' onload="setfocus()">
 <form name=login method=post>
-<TABLE class=border cellSpacing=0 cellPadding=0 width='.$theme['width'].' align=center border=2>
-  <TR>
-    <TD>
-      <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
-        <TR>
-          <TD class=hf align=left>&nbsp;</TD>
-        </TR>
-        <TR>
-          <TD class=back>
-			<TABLE border=0 width="100%">
-              <TR>
-                <TD class=back vAlign=top><BR>
+	<TABLE class=border cellSpacing=0 cellPadding=0 width=' . $theme['width'] . ' align=center border=2>
+	  <TR>
+		<TD>
+		  <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+			<TR>
+			  <TD class=hf align=left>&nbsp;</TD>
+			</TR>
+			<TR>
+			  <TD class=back>
+				<TABLE border=0 width="100%">
+				  <TR>
+					<TD class=back vAlign=top><BR>
+	
+					<TABLE class=border cellSpacing=0 cellPadding=0 width="30%" align=center border=1>
+					  <TR>
+						<TD>
+						  <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+							<TR>
+							  <TD class=info align=left><b>' . $helpdesk_name . ' ' . $lang_login . '</b></TD>
+							</TR>
+							  <TD class=back Align=center> <IMG SRC=' . "$login_logo" . ' ALT="">
+							<TR>
+							</TR>
+							<TR>
+							  <TD class=back2>
+								<table width=100% border=0 cellspacing=0 cellpadding=6>
+									<tr>
+									 <td class=back2 align=right>' . $lang_username . ':</td><td>
+										<input type=text name=user size=12 value=' . "$cookieuser" . '></td>
+									</tr>
+									<tr>
+									 <td class=back2 align=right>' . $lang_password . ':</td><td>
+										<input type=password name=password size=12 value=' . "$cookiepwd" . '></td>
+									</tr>
+									<tr>
+									 <td class=back2></td><td class=back2 align=center>
+										<input type=submit name=login value="' . $lang_submit . '"></td>
+									</tr>
+								</table>	
+					  		  </TD>
+							</TR>
+				 		  </TABLE>
+					 	</TD>
+					  </TR>
+				</TABLE>';
 
-<TABLE class=border cellSpacing=0 cellPadding=0 width="30%" align=center border=1>
-  <TR>
-    <TD>
-      <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
-        <TR>
-          <TD class=info align=left><b>'.$helpdesk_name.' '.$lang_login.'</b></TD>
-        </TR>
-          <TD class=back Align=center> <IMG SRC='."$login_logo".' ALT="">
-        <TR>
-        </TR>
-        <TR>
-          <TD class=back2>
-			<table width=100% border=0 cellspacing=0 cellpadding=6>
-				<tr>
-				 <td class=back2 align=right>'.$lang_username.':</td><td>
-					<input type=text name=user size=12 value='."$cookieuser".'></td>
-				</tr>
-				<tr>
-				 <td class=back2 align=right>'.$lang_password.':</td><td>
-					<input type=password name=password size=12 value='."$cookiepwd".'></td>
-				</tr>
-				<tr>
-				 <td class=back2></td><td class=back2 align=center>
-					<input type=submit name=login value="'.$lang_submit.'"></td>
-				</tr>
-			</table>
-
-
-		  </TD>
-		</TR>
-	  </TABLE>
-	 </TD>
-	</TR>
-</TABLE>';
-
-if($pubpriv == 'Private'){
-	echo '<br><div align=center>[ <a href="'.$site_url.'/index.php?reg=yes">'.$lang_registerforaccount.'</a> ]</div>';
-}
-echo '
-<BR>
+						if ($pubpriv == 'Private') {
+							echo '<br><div align=center>[ <a href="' . $site_url . '/index.php?reg=yes">' . 							$lang_registerforaccount . '</a> ]</div>';
+						}
+						echo '
+					<BR>
 				
 				</TD>
               </TR>
@@ -234,9 +232,7 @@ echo '
 </TD>
 </TR>
 </TABLE>
-</form>
-
-';
+</form>';
 
         if(eregi("supporter", $PHP_SELF) || eregi("admin", $PHP_SELF))
                 require "../common/footer.php";
