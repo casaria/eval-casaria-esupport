@@ -89,6 +89,8 @@ $tablePadding = 10;
 
 
         table.border {background: <?php echo $theme['table_border']; ?>; color: black;  border-collapse: initial; border-spacing: 0;}
+        table.login {background: <?php echo $theme['table_border']; ?>; color: black;  border-collapse: initial; border-spacing: 0; border-radius: 10px}
+
         td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
         tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
 
