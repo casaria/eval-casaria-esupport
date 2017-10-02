@@ -489,10 +489,11 @@ if(isset($search) || isset($s)) {
 
 	echo '
 		<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=left border=0>
-                    <tr><td></td>
+				<TR>
+				<TD>
 					<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
 						<TR>
-						<TD class=back3 align=right width=27%>'.$lang_searchtype.': </td>
+						<TD class=back2 align=right width=27%>'.$lang_searchtype.': </td>
 						<td class=back>
 							<select name=andor><option value=and selected>'.$lang_and.'</option><option value=or>'.$lang_or.'</option></select>
 						</td>
@@ -508,7 +509,7 @@ if(isset($search) || isset($s)) {
 						</tr>
 						
 						<TR>
-						<TD class=back3 align=right width=27%>'.$lang_usergroups.': </td>
+						<TD class=back2 align=right width=27%>'.$lang_usergroups.': </td>
 						<td class=back><select name=user_group>';
 					    	createUserGroupMenu(2);
 	echo '
@@ -523,7 +524,7 @@ if(isset($search) || isset($s)) {
 						</td>
 						</tr>
 						<TR>
-						<TD class=back3 align=right width=27%>'.$lang_ticket.' '.$lang_priority.': </td>
+						<TD class=back2 align=right width=27%>'.$lang_ticket.' '.$lang_priority.': </td>
 						<td class=back><select name=priority>';
 							createPriorityMenu(2);
 	echo '
@@ -647,8 +648,8 @@ echo'
 						
 						</tr>		
 					</table>
-					</td></tr>
-
+				</td>
+				</tr>
 			</table><br>
 			
 			<input type=submit value=\''.$lang_searchforticket.'\' name=search>
