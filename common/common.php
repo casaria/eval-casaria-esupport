@@ -1598,9 +1598,9 @@ function displayTicket($result)
     while ($row = $db->fetch_array($result))
     {
         $last_update = $row['lastupdate'];  //last update timestamp.
-        $odd ? $cssclass = 'back' : $cssclass = 'back2';
-        $odd = !$odd;
-        echo "<tr class=\"$cssclass\">
+       // $odd ? $cssclass = 'back' : $cssclass = 'back2';
+       // $odd = !$odd;
+        echo "<tr>
 				<td>" . str_pad($row['id'], 5, "0", STR_PAD_LEFT) . "</td>";
         if (isAdministrator($cookie_name)) {
             echo "<td><a href=\"" . $admin_site_url . "/control.php?t=users&act=uedit&id=" . getUserID($row['supporter']) . "\">" . $row['supporter'] . "</td>";
