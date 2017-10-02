@@ -93,8 +93,8 @@ $tablePadding = 10;
         tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
 
 
-        /* tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}  */
-        /* tr.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}  */
+        tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
+        tr.back2 {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
         /*table tr:nth-child(odd) tr{background: <?php echo $theme['bg1']; ?>;}
         table tr:nth-child(even) tr{background: <?php echo $theme['bg2']; ?>;}
         */
