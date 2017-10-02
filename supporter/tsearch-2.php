@@ -489,8 +489,7 @@ if(isset($search) || isset($s)) {
 
 	echo '
 		<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=left border=0>
-				<TR>
-				<TD>
+
 					<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
 						<TR>
 						<TD class=back3 align=right width=27%>'.$lang_searchtype.': </td>
@@ -648,8 +647,7 @@ echo'
 						
 						</tr>		
 					</table>
-				</td>
-				</tr>
+
 			</table><br>
 			
 			<input type=submit value=\''.$lang_searchforticket.'\' name=search>
