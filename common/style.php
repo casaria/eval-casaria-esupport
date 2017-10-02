@@ -92,7 +92,7 @@ $tablePadding = 10;
         td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
         tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
 
-        .alternate tr:nth-child(2n) {background-color: silver;}
+        .alternate tr:nth-child(2n) {background-color: <?php echo $theme['bg1']; ?>;}
         .alternate tr:nth-child(2n):hover, .alternate tr:hover {background-color: grey;}
         .alternate tr {background-color: white;  }
 
