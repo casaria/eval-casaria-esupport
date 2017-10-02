@@ -86,7 +86,7 @@ $enable_CloudControl = getCloudControlUserSetting($_SESSION['cookie_name']);
                 <TR>
                     <TD class=hf align=right>
                         <?php echo "$lang_loggedinas <b>$cookie_name</b> (<A class=hf href=\"../common/logout.php\">$lang_logout</a>)";
-                        echo "$crm_name"; ?>
+                        echo " $crm_name"; ?>
                     </TD>
                 </TR>
                 <TR>
