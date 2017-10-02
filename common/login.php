@@ -173,7 +173,7 @@ echo
 				  <TR>
 					<TD class=back vAlign=top><BR>
 	
-					<TABLE class=border cellSpacing=0 cellPadding=0 width="30%" align=center border=1>
+					<TABLE class=border cellSpacing=0 cellPadding=0 width="30%" align=center border=1 box-shadow: 0 0 10px #777777;>
 					  <TR>
 						<TD>
 						  <TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
