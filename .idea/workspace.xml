@@ -15,15 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/0fef9fff-b91c-41a0-98a6-099749727d3e/_src_/schema/casaria_hdesk1.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0fef9fff-b91c-41a0-98a6-099749727d3e/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/0fef9fff-b91c-41a0-98a6-099749727d3e/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0fef9fff-b91c-41a0-98a6-099749727d3e.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0fef9fff-b91c-41a0-98a6-099749727d3e.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes.php" afterPath="$PROJECT_DIR$/admin/themes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/style.php" afterPath="$PROJECT_DIR$/common/style.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/English.lang.php" afterPath="$PROJECT_DIR$/lang/English.lang.php" />
     </list>
     <ignored mask="workspace.xml" />
     <ignored mask="error_log" />
@@ -81,12 +74,12 @@
         <entry file="file://$PROJECT_DIR$/common/style.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="95" column="105" lean-forward="false" selection-start-line="95" selection-start-column="105" selection-end-line="95" selection-end-column="105" />
+              <caret line="95" column="37" lean-forward="false" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
               <folding>
                 <element signature="e#7#1309#0#PHP" expanded="true" />
-                <marker date="1506962311095" expanded="true" signature="10988:11040" ph="select * fro... ${$mysql_themes_table}" />
-                <marker date="1506962311095" expanded="true" signature="11824:11884" ph="select theme... ${$mysql_users_table}" />
-                <marker date="1506962311095" expanded="true" signature="12125:12151" ph="select defau... ${$mysql_settings_table}" />
+                <marker date="1506932932489" expanded="true" signature="10985:11037" ph="select * fro... ${$mysql_themes_table}" />
+                <marker date="1506932932489" expanded="true" signature="11821:11881" ph="select theme... ${$mysql_users_table}" />
+                <marker date="1506932932489" expanded="true" signature="12122:12148" ph="select defau... ${$mysql_settings_table}" />
               </folding>
             </state>
           </provider>
@@ -667,14 +660,7 @@
       <workItem from="1506304726279" duration="52000" />
       <workItem from="1506374218786" duration="13014000" />
       <workItem from="1506657683851" duration="23039000" />
-      <workItem from="1506894092514" duration="20192000" />
-    </task>
-    <task id="LOCAL-00493" summary="jsgrid-php path update">
-      <created>1506660482751</created>
-      <option name="number" value="00493" />
-      <option name="presentableId" value="LOCAL-00493" />
-      <option name="project" value="LOCAL" />
-      <updated>1506660482755</updated>
+      <workItem from="1506894092514" duration="20350000" />
     </task>
     <task id="LOCAL-00494" summary="jsgrid-php path update">
       <created>1506661138106</created>
@@ -1012,11 +998,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506934216412</updated>
     </task>
-    <option name="localTasksCounter" value="542" />
+    <task id="LOCAL-00542" summary="Theme vars added">
+      <created>1506962337195</created>
+      <option name="number" value="00542" />
+      <option name="presentableId" value="LOCAL-00542" />
+      <option name="project" value="LOCAL" />
+      <updated>1506962337196</updated>
+    </task>
+    <option name="localTasksCounter" value="543" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427515000" />
+    <option name="totallyTimeSpent" value="427673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1128,7 +1121,6 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="24 , 27% Changed to 20%" />
     <MESSAGE value="createstatusmenu fixed" />
     <MESSAGE value="TIME TOTALS FOR ENGINEER FIXED" />
     <MESSAGE value="Corrections to SQL query" />
@@ -1153,7 +1145,8 @@
     <MESSAGE value="fixed Tsearch-2, modified styles" />
     <MESSAGE value="modified styles" />
     <MESSAGE value="&#10;bORDER" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;bORDER" />
+    <MESSAGE value="Theme vars added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Theme vars added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2073,12 +2066,12 @@
     <entry file="file://$PROJECT_DIR$/common/style.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="95" column="105" lean-forward="false" selection-start-line="95" selection-start-column="105" selection-end-line="95" selection-end-column="105" />
+          <caret line="95" column="37" lean-forward="false" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
           <folding>
             <element signature="e#7#1309#0#PHP" expanded="true" />
-            <marker date="1506962311095" expanded="true" signature="10988:11040" ph="select * fro... ${$mysql_themes_table}" />
-            <marker date="1506962311095" expanded="true" signature="11824:11884" ph="select theme... ${$mysql_users_table}" />
-            <marker date="1506962311095" expanded="true" signature="12125:12151" ph="select defau... ${$mysql_settings_table}" />
+            <marker date="1506932932489" expanded="true" signature="10985:11037" ph="select * fro... ${$mysql_themes_table}" />
+            <marker date="1506932932489" expanded="true" signature="11821:11881" ph="select theme... ${$mysql_users_table}" />
+            <marker date="1506932932489" expanded="true" signature="12122:12148" ph="select defau... ${$mysql_settings_table}" />
           </folding>
         </state>
       </provider>
