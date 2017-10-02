@@ -650,12 +650,13 @@ echo'
 					</table>
 				</td>
 				</tr>
+				
+                      <TD><input type=submit value=\''.$lang_searchforticket.'\' name=search>
+                      <input type=hidden value='.$query.' name=query>
+                      </TD>
+
 			</table><br>
-			<div>
-			<input type=submit value=\''.$lang_searchforticket.'\' name=search>
-			<input type=hidden value='.$query.' name=query>
-			</div>
-			</form>';
+        	</form>';
 
 }
 
