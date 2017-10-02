@@ -43,7 +43,7 @@ $tablePadding = 10;
 
 <script type="text/javascript">
     WebFontConfig = {
-        google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:450,550,800:latin'] }
+        google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:500,600,800:latin'] }
     };
 
     (function() {
