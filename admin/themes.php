@@ -42,6 +42,7 @@ echo "<form method=\"post\" action=\"control.php?modify=yes&t=theme&tid=$tid\">"
 				if($width== '') $width = '80%';
 				if($logo_path == '') $logo_path = 'logo.jpg';
 				if($image_dir == '') $image_dir = 'images/default/';
+                if($slct1 == '') $slct1 = '#00FFFF';
 				//update the database.
 				$sql = "INSERT into $mysql_themes_table values(NULL,'$name','$bgcolor','$text','$link','$border','$bg1','$bg2','$header_bg','$header_text','$info_bg','$info_text','$cat','$subcat','$font','$size', '$width', '$logo_path','$image_dir')";
 				$db->query($sql);
@@ -70,7 +71,13 @@ echo "<form method=\"post\" action=\"control.php?modify=yes&t=theme&tid=$tid\">"
 					echo "<tr><td class=subcat>$lang_bg $lang_color 2:</td><td class=back2><input type=text name=bg2></td>";
 					echo "<td bgcolor=".$row['bg2'].">&nbsp;</td></tr>";
 
-					echo "<tr><td class=subcat>$lang_header $lang_bg $lang_color:</td><td class=back2><input type=text name=header_bg></td>";
+                    echo "<tr><td class=subcat>$lang_slct1 $lang_color 1:</td><td class=back2><input type=text name=slct1></td>";
+                    echo "<td bgcolor=".$row['slct1'].">&nbsp;</td></tr>";
+
+                    echo "<tr><td class=subcat>$lang_hvr1 $lang_color 1:</td><td class=back2><input type=text name=hvr1></td>";
+                    echo "<td bgcolor=".$row['hvr1'].">&nbsp;</td></tr>";
+
+                    echo "<tr><td class=subcat>$lang_header $lang_bg $lang_color:</td><td class=back2><input type=text name=header_bg></td>";
 					echo "<td bgcolor=".$row['header_bg'].">&nbsp;</td></tr>";
 
 					echo "<tr><td class=subcat>$lang_header $lang_text $lang_color:</td><td class=back2><input type=text name=header_text ></td>";
