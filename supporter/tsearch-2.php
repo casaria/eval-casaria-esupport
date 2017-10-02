@@ -651,10 +651,10 @@ echo'
 				</td>
 				</tr>
 			</table><br>
-			
+			<div>
 			<input type=submit value=\''.$lang_searchforticket.'\' name=search>
 			<input type=hidden value='.$query.' name=query>
-			
+			</div>
 			</form>';
 
 }
