@@ -173,10 +173,10 @@ echo
 				  <TR>
 					<TD class=back vAlign=top><BR>
 	
-					<TABLE class=login cellSpacing=5 cellPadding=3 width="30%" align=center border=2>
+					<TABLE class=login cellSpacing=5 cellPadding=3 width="30%" align=center border=0>
 					  <TR>
 						<TD>
-						  <TABLE cellSpacing=10 cellPadding=5 width="100%" border=0>
+						  <TABLE cellSpacing=20 cellPadding=5 width="100%" border=0>
 							<TR>
 							  <TD class=info align=left><b>' . $helpdesk_name . ' ' . $lang_login . '</b></TD>
 							</TR>
