@@ -43,7 +43,7 @@ $tablePadding = 10;
 
 <script type="text/javascript">
     WebFontConfig = {
-        google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:500,600,800:latin'] }
+        google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:500,600,700:latin'] }
     };
 
     (function() {
@@ -89,8 +89,8 @@ $tablePadding = 10;
 
 
         table.border {background: <?php echo $theme['table_border']; ?>; color: black;  border-collapse: initial; border-spacing: 0;}
-        td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
-        tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
+        td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:600;}
+        tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:600;}
 
         .alternate tr:nth-child(2n) {background-color: <?php echo $theme['bg1']; ?>;}
         .alternate tr:nth-child(2n):hover, .alternate tr:hover {background-color: <?php echo $theme['hvr1']; ?>;}
@@ -151,7 +151,7 @@ $tablePadding = 10;
 
         td.error {background: <?php echo $theme['subcategory']; ?>; color: #ff0000; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px;}
 
-        td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo '$theme["font_size"] + 4'?>'px';  font-weight:600}
+        td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo '$theme["font_size"] + 4'?>'px';  font-weight:600;}
 
 
         input.box {border: 1px;}
