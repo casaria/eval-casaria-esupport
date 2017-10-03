@@ -94,8 +94,8 @@ $tablePadding = 10;
         td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
         tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
 
-        .alternate tr:nth-child(2n+1) {background-color: <?php echo $theme['bg1']; ?>;}
-        .alternate tr:nth-child(2n+1):hover, .alternate tr:hover {background-color: #E7FF00; }
+        .alternate tr:nth-child(2n+0) {background-color: <?php echo $theme['bg1']; ?>;}
+        .alternate tr:nth-child(2n+0):hover, .alternate tr:hover {background-color: #E7FF00; }
         .alternate tr:nth-child(2n+2) {background-color: <?php echo $theme['bg2']; ?>;}
         .alternate tr:nth-of-type(1){background-color: #EAEAEA;}
 
