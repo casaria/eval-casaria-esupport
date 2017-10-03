@@ -16,6 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supporter/mygroupopen.php" afterPath="$PROJECT_DIR$/supporter/mygroupopen.php" />
     </list>
     <ignored mask="workspace.xml" />
     <ignored mask="error_log" />
@@ -69,7 +70,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/style.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="511">
@@ -79,6 +80,57 @@
                 <marker date="1506998799444" expanded="true" signature="11443:11495" ph="select * fro... ${$mysql_themes_table}" />
                 <marker date="1506998799444" expanded="true" signature="12279:12339" ph="select theme... ${$mysql_users_table}" />
                 <marker date="1506998799444" expanded="true" signature="12580:12606" ph="select defau... ${$mysql_settings_table}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mygroupopen.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supporter/mygroupopen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="46" selection-end-line="169" selection-end-column="46" />
+              <folding>
+                <marker date="1506999219905" expanded="true" signature="2236:2327" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2244:2327" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2254:2327" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2317:2327" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2382:2468" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2520:2606" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2677:2771" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2824:2918" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="2989:3083" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3136:3230" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3294:3388" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3441:3535" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3600:3689" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3742:3831" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="3896:3986" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4039:4129" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4194:4287" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4340:4433" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4498:4590" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4643:4735" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4801:4898" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="4951:5048" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5112:5203" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5256:5347" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5412:5504" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5557:5649" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5717:5830" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="5885:5998" ph="..." />
+                <marker date="1506999219905" expanded="true" signature="7451:7524" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="7578:7799" ph="SELECT t.*, ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="7827:7899" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="8018:8238" ph="SELECT t.*, ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="11325:11340" ph="select id fr... ${$mysql_sgroups_table}" />
+                <marker date="1506999219905" expanded="true" signature="11379:11428" ph="select id fr... ${$mysql_sgroups_table}" />
+                <marker date="1506999219905" expanded="true" signature="11597:11648" ph="select id fr... sgroup" />
+                <marker date="1506999219905" expanded="true" signature="11982:12042" ph="select prior... ${$mysql_tpriorities_table}" />
+                <marker date="1506999219905" expanded="true" signature="12479:12519" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="12921:12975" ph="select statu... ${$mysql_tstatus_table}" />
+                <marker date="1506999219905" expanded="true" signature="13410:13450" ph="select * fro... ${$mysql_tickets_table}" />
+                <marker date="1506999219905" expanded="true" signature="13813:13828" ph="select id fr... ${$mysql_sgroups_table}" />
               </folding>
             </state>
           </provider>
@@ -186,16 +238,6 @@
                 <marker date="1506961587427" expanded="true" signature="11918:12018" ph="..." />
                 <marker date="1506961587427" expanded="true" signature="12038:12059" ph="select id, n... ${$mysql_themes_table}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0fef9fff-b91c-41a0-98a6-099749727d3e/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -544,7 +586,6 @@
         <option value="$PROJECT_DIR$/tcreate.php" />
         <option value="$PROJECT_DIR$/tools/index.php" />
         <option value="$PROJECT_DIR$/tools/UpdateClosedDate.php" />
-        <option value="$PROJECT_DIR$/supporter/mygroupopen.php" />
         <option value="$PROJECT_DIR$/../eval.casaria.net/supporter/tsearch.php" />
         <option value="$PROJECT_DIR$/admin/timedetailed.php" />
         <option value="$PROJECT_DIR$/supporter/tcreate.php" />
@@ -581,6 +622,7 @@
         <option value="$PROJECT_DIR$/supporter/myopen.php" />
         <option value="$PROJECT_DIR$/supporter/tsearch-2.php" />
         <option value="$PROJECT_DIR$/common/style.php" />
+        <option value="$PROJECT_DIR$/supporter/mygroupopen.php" />
       </list>
     </option>
   </component>
@@ -870,14 +912,7 @@
       <workItem from="1506304726279" duration="52000" />
       <workItem from="1506374218786" duration="13014000" />
       <workItem from="1506657683851" duration="23039000" />
-      <workItem from="1506894092514" duration="36005000" />
-    </task>
-    <task id="LOCAL-00552" summary="login cosmetic">
-      <created>1506978203339</created>
-      <option name="number" value="00552" />
-      <option name="presentableId" value="LOCAL-00552" />
-      <option name="project" value="LOCAL" />
-      <updated>1506978203339</updated>
+      <workItem from="1506894092514" duration="36418000" />
     </task>
     <task id="LOCAL-00553" summary="login cosmetic">
       <created>1506978884197</created>
@@ -1215,11 +1250,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506998802448</updated>
     </task>
-    <option name="localTasksCounter" value="601" />
+    <task id="LOCAL-00601" summary="Alternate Tsearch displayticket">
+      <created>1506998821183</created>
+      <option name="number" value="00601" />
+      <option name="presentableId" value="LOCAL-00601" />
+      <option name="project" value="LOCAL" />
+      <updated>1506998821183</updated>
+    </task>
+    <option name="localTasksCounter" value="602" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443328000" />
+    <option name="totallyTimeSpent" value="443741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1403,13 +1445,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../eSupport@casaria.net/common/style.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/legacy.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -2362,6 +2397,55 @@
             <marker date="1506998799444" expanded="true" signature="11443:11495" ph="select * fro... ${$mysql_themes_table}" />
             <marker date="1506998799444" expanded="true" signature="12279:12339" ph="select theme... ${$mysql_users_table}" />
             <marker date="1506998799444" expanded="true" signature="12580:12606" ph="select defau... ${$mysql_settings_table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supporter/mygroupopen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="46" selection-end-line="169" selection-end-column="46" />
+          <folding>
+            <marker date="1506999219905" expanded="true" signature="2236:2327" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2244:2327" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2254:2327" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2317:2327" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2382:2468" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2520:2606" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2677:2771" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2824:2918" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="2989:3083" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3136:3230" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3294:3388" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3441:3535" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3600:3689" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3742:3831" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="3896:3986" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4039:4129" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4194:4287" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4340:4433" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4498:4590" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4643:4735" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4801:4898" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="4951:5048" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5112:5203" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5256:5347" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5412:5504" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5557:5649" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5717:5830" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="5885:5998" ph="..." />
+            <marker date="1506999219905" expanded="true" signature="7451:7524" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="7578:7799" ph="SELECT t.*, ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="7827:7899" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="8018:8238" ph="SELECT t.*, ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="11325:11340" ph="select id fr... ${$mysql_sgroups_table}" />
+            <marker date="1506999219905" expanded="true" signature="11379:11428" ph="select id fr... ${$mysql_sgroups_table}" />
+            <marker date="1506999219905" expanded="true" signature="11597:11648" ph="select id fr... sgroup" />
+            <marker date="1506999219905" expanded="true" signature="11982:12042" ph="select prior... ${$mysql_tpriorities_table}" />
+            <marker date="1506999219905" expanded="true" signature="12479:12519" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="12921:12975" ph="select statu... ${$mysql_tstatus_table}" />
+            <marker date="1506999219905" expanded="true" signature="13410:13450" ph="select * fro... ${$mysql_tickets_table}" />
+            <marker date="1506999219905" expanded="true" signature="13813:13828" ph="select id fr... ${$mysql_sgroups_table}" />
           </folding>
         </state>
       </provider>

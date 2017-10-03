@@ -57,7 +57,7 @@ if($no_groups != 1){
 	echo '<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 			<tr> 
 			 <td> 
-				<table cellSpacing=1 cellPadding=5 width="100%" border=0>
+				<table cellspacing=1 cellPadding=5 width="100%" border=0>
 					<tr>';
 						if($s == 'id'){
 							echo '<td align=center>
@@ -167,7 +167,7 @@ if($no_groups != 1){
 							echo '<td align=center>
 								<a class=hf href="'.$supporter_site_url.'/index.php?t=tmgo&f='.$f.'&s=rt"><b>'.$lang_time.'</b></a></td>';
 						 }
-					echo '</tr>';
+					echo '</tr class=alternate>';
 
 			$summary = listOpenTickets($supporter_id, $s, $groups, $filter);
 			
