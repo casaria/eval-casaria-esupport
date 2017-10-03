@@ -97,7 +97,7 @@ $tablePadding = 10;
         .alternate tr:nth-child(2n+1) {background-color: <?php echo $theme['bg1']; ?>;}
         .alternate tr:nth-child(2n+1):hover, .alternate tr:hover {background-color: #E7FF00; }
         .alternate tr:nth-child(2n+2) {background-color: <?php echo $theme['bg2']; ?>;}
-        .alternate tr:nth-child(0) {background-color: #EAEAEA;}
+        .alternate tr:nth-child(0n) {background-color: #EAEAEA;}
 
 
         tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
