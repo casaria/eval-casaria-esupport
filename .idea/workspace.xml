@@ -16,6 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce5a29d-03e1-4d66-b900-6e10479f00cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/style.php" afterPath="$PROJECT_DIR$/common/style.php" />
     </list>
     <ignored mask="workspace.xml" />
     <ignored mask="error_log" />
@@ -72,13 +73,13 @@
       <file leaf-file-name="style.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/style.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="99" column="62" lean-forward="false" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
               <folding>
                 <element signature="e#7#1309#0#PHP" expanded="true" />
-                <marker date="1507005535195" expanded="true" signature="11550:11602" ph="select * fro... ${$mysql_themes_table}" />
-                <marker date="1507005535195" expanded="true" signature="12386:12446" ph="select theme... ${$mysql_users_table}" />
-                <marker date="1507005535195" expanded="true" signature="12687:12713" ph="select defau... ${$mysql_settings_table}" />
+                <marker date="1507005613269" expanded="true" signature="11550:11602" ph="select * fro... ${$mysql_themes_table}" />
+                <marker date="1507005613269" expanded="true" signature="12386:12446" ph="select theme... ${$mysql_users_table}" />
+                <marker date="1507005613269" expanded="true" signature="12687:12713" ph="select defau... ${$mysql_settings_table}" />
               </folding>
             </state>
           </provider>
@@ -1133,14 +1134,7 @@
       <workItem from="1506304726279" duration="52000" />
       <workItem from="1506374218786" duration="13014000" />
       <workItem from="1506657683851" duration="23039000" />
-      <workItem from="1506894092514" duration="42489000" />
-    </task>
-    <task id="LOCAL-00571" summary="login cosmetic">
-      <created>1506983216664</created>
-      <option name="number" value="00571" />
-      <option name="presentableId" value="LOCAL-00571" />
-      <option name="project" value="LOCAL" />
-      <updated>1506983216664</updated>
+      <workItem from="1506894092514" duration="42537000" />
     </task>
     <task id="LOCAL-00572" summary="login cosmetic">
       <created>1506983279239</created>
@@ -1478,11 +1472,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507005538872</updated>
     </task>
-    <option name="localTasksCounter" value="620" />
+    <task id="LOCAL-00620" summary="showFormattedTime  $IncludeDays=0">
+      <created>1507005569008</created>
+      <option name="number" value="00620" />
+      <option name="presentableId" value="LOCAL-00620" />
+      <option name="project" value="LOCAL" />
+      <updated>1507005569008</updated>
+    </task>
+    <option name="localTasksCounter" value="621" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449812000" />
+    <option name="totallyTimeSpent" value="449860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2730,13 +2731,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/style.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="99" column="62" lean-forward="false" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
           <folding>
             <element signature="e#7#1309#0#PHP" expanded="true" />
-            <marker date="1507005535195" expanded="true" signature="11550:11602" ph="select * fro... ${$mysql_themes_table}" />
-            <marker date="1507005535195" expanded="true" signature="12386:12446" ph="select theme... ${$mysql_users_table}" />
-            <marker date="1507005535195" expanded="true" signature="12687:12713" ph="select defau... ${$mysql_settings_table}" />
+            <marker date="1507005613269" expanded="true" signature="11550:11602" ph="select * fro... ${$mysql_themes_table}" />
+            <marker date="1507005613269" expanded="true" signature="12386:12446" ph="select theme... ${$mysql_users_table}" />
+            <marker date="1507005613269" expanded="true" signature="12687:12713" ph="select defau... ${$mysql_settings_table}" />
           </folding>
         </state>
       </provider>
