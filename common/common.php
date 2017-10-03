@@ -2343,17 +2343,18 @@ function getEmailAddress($name)
 
 
 //this function takes an integer value (the number of seconds) and prints out the days, hours, minutes, and seconds.
-function showFormattedTime($seconds, $flag=0)
+function showFormattedTime($seconds, $flag=0, $IncludeDays=0)
 {
 	global $lang_na, $lang_day, $lang_days, $lang_hour, $lang_hours, $lang_minute, $lang_minutes, $lang_second, $lang_seconds;
 
 	if($seconds <= 0){
 		echo "<b>$lang_na</b>";
 	}
-	else{
-		$days = (int) ($seconds / (24*60*60));
-		$remainder = $seconds % (24*60*60);
-
+	else {
+        if ($IncludeDays) {
+            $days = (int)($seconds / (24 * 60 * 60));
+            $remainder = $seconds % (24 * 60 * 60);
+        }
 		$hours = (int) ($remainder / (60*60));
 		$remainder = $remainder % (60*60);
 
