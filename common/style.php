@@ -97,7 +97,7 @@ $tablePadding = 10;
         .alternate tr:nth-child(2n+0) {background-color: <?php echo $theme['bg1']; ?>;}
         .alternate tr:nth-child(2n+0):hover, .alternate tr:hover {background-color: #E7FF00; }
         .alternate tr:nth-child(2n+2) {background-color: <?php echo $theme['bg2']; ?>;}
-        .alternate tr:nth-of-type(1){background-color: #00B7FF; font-size: <?php echo ($theme['font_size']);?>px;}
+        .alternate tr:nth-of-type(1) {background-color: #00B7FF; line-height: 2; font-size: <?php echo ($theme['font_size']);?>px;}
 
 
         tr.back {line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
@@ -109,7 +109,7 @@ $tablePadding = 10;
         */
         td.back {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg1']; ?>;}
         td.back2 {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['bg2']; ?>;}
-        td.printback {padding: <?php echo $tablePadding; ?>px; line-height: 2; background: <?php echo $theme['print_bg']; ?>;}
+        td.printback {padding: <?php echo $tablePadding; ?>px; line-height: <?php echo $lineHeight; ?>; background: <?php echo $theme['print_bg']; ?>;}
 
         td.date {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['category']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size'];?>px; color: <?php echo $theme['text']; ?>;}
 
