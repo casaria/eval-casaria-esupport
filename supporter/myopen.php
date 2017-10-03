@@ -52,7 +52,7 @@
 		echo '<table class=alternate cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<tr> 
 				<td> 
-					<table class=back3 cellSpacing=1 cellPadding=5 width="100%" border=0>
+					<table class=back3 cellSpacing=1 cellPadding=3 width="100%" border=0>
 						<tr>';
 
 							if($s == 'id'){
