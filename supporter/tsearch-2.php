@@ -417,6 +417,23 @@ if(isset($search) || isset($s)) {
         }
 
 
+        if ($s == 'cre') {
+            echo '<td align=center>
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=erc&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+        } else {
+            echo '<td align=center>
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=cre&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+        }
+
+
+        if ($s == 'cre') {
+            echo '<td align=center>
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=erc&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+        } else {
+            echo '<td align=center>
+                                <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=cre&stmt=' . htmlentities($sql2) . '><b>' . $lang_created . '</b></a></td>';
+        }
+
         if ($s == 'sta' && $sset != 1) {
             echo '<td align=center>
                                 <a class=hf href=index.php?t=tsrc&pset=' . $pset . '&sset=' . $sset . '&s=ats&stmt=' . htmlentities($sql2) . '><b>' . $lang_status . '</b></a></td>';
