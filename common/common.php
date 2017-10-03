@@ -1592,9 +1592,6 @@ function displayTicket($result)
     $sqlBS = "select * from $mysql_tBStatus_table";
     $recordcount = 0;
     $csv_string = "";
-    $closed_ts = 0;
-    $odd = 0;
-    $cssclass = 'back';
     while ($row = $db->fetch_array($result))
     {
         $last_update = $row['lastupdate'];  //last update timestamp.
