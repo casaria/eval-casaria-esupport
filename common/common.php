@@ -1592,6 +1592,9 @@ function displayTicket($result)
     $sqlBS = "select * from $mysql_tBStatus_table";
     $recordcount = 0;
     $csv_string = "";
+    $closed_ts = 0;
+    $odd = 0;
+    $cssclass = 'back';
     while ($row = $db->fetch_array($result))
     {
         $last_update = $row['lastupdate'];  //last update timestamp.
@@ -2343,21 +2346,17 @@ function getEmailAddress($name)
 
 
 //this function takes an integer value (the number of seconds) and prints out the days, hours, minutes, and seconds.
-function showFormattedTime($seconds, $flag=0, $IncludeDays=0)
+function showFormattedTime($seconds, $flag=0)
 {
 	global $lang_na, $lang_day, $lang_days, $lang_hour, $lang_hours, $lang_minute, $lang_minutes, $lang_second, $lang_seconds;
-    $days  = 0;
-    $hours = 0;
-    $minutes = 0;
-    $remainder = $seconds;
+
 	if($seconds <= 0){
 		echo "<b>$lang_na</b>";
 	}
-	else {
-        if ($IncludeDays) {
-            $days = (int)($seconds / (24 * 60 * 60));
-            $remainder = $seconds % (24 * 60 * 60);
-        }
+	else{
+		$days = (int) ($seconds / (24*60*60));
+		$remainder = $seconds % (24*60*60);
+
 		$hours = (int) ($remainder / (60*60));
 		$remainder = $remainder % (60*60);
 
