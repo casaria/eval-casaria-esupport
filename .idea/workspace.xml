@@ -139,8 +139,8 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="2351" column="26" lean-forward="false" selection-start-line="2351" selection-start-column="26" selection-end-line="2351" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="2358" column="4" lean-forward="true" selection-start-line="2358" selection-start-column="4" selection-end-line="2358" selection-end-column="4" />
               <folding>
                 <marker date="1507001548454" expanded="true" signature="7776:7918" ph="INSERT into ${$mysql_attachments_table}... " />
                 <marker date="1507001548454" expanded="true" signature="8660:8719" ph="update ${$my... " />
@@ -1141,14 +1141,7 @@
       <workItem from="1506304726279" duration="52000" />
       <workItem from="1506374218786" duration="13014000" />
       <workItem from="1506657683851" duration="23039000" />
-      <workItem from="1506894092514" duration="38665000" />
-    </task>
-    <task id="LOCAL-00557" summary="login cosmetic">
-      <created>1506979483077</created>
-      <option name="number" value="00557" />
-      <option name="presentableId" value="LOCAL-00557" />
-      <option name="project" value="LOCAL" />
-      <updated>1506979483077</updated>
+      <workItem from="1506894092514" duration="39010000" />
     </task>
     <task id="LOCAL-00558" summary="login cosmetic">
       <created>1506980502912</created>
@@ -1486,11 +1479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507001228210</updated>
     </task>
-    <option name="localTasksCounter" value="606" />
+    <task id="LOCAL-00606" summary="showFormattedTime  $IncludeDays=0">
+      <created>1507001553824</created>
+      <option name="number" value="00606" />
+      <option name="presentableId" value="LOCAL-00606" />
+      <option name="project" value="LOCAL" />
+      <updated>1507001553826</updated>
+    </task>
+    <option name="localTasksCounter" value="607" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445988000" />
+    <option name="totallyTimeSpent" value="446333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1658,11 +1658,16 @@
           <line>2356</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/common/common.php</url>
+          <line>2351</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="129" />
+      <option name="time" value="130" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="index.php">
@@ -2552,8 +2557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="2351" column="26" lean-forward="false" selection-start-line="2351" selection-start-column="26" selection-end-line="2351" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="2358" column="4" lean-forward="true" selection-start-line="2358" selection-start-column="4" selection-end-line="2358" selection-end-column="4" />
           <folding>
             <marker date="1507001548454" expanded="true" signature="7776:7918" ph="INSERT into ${$mysql_attachments_table}... " />
             <marker date="1507001548454" expanded="true" signature="8660:8719" ph="update ${$my... " />
