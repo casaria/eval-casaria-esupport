@@ -343,8 +343,8 @@ if(isset($search) || isset($s)) {
     } else {
         createHeader("$lang_searchresults SQL: " . $sql);
 
-        echo '<TABLE class=border cellSpacing=1 cellPadding=2 width="100%" align=center border=0>
-				<TABLE class=alternate cellSpacing=1 cellPadding=5 width="100%" border=0>';
+        echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+				<TABLE class=alternate cellSpacing=1 cellPadding=3 width="100%" border=0>';
         echo ' <tr> ';
 
         if ($s == 'id') {
