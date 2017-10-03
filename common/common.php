@@ -2346,7 +2346,10 @@ function getEmailAddress($name)
 function showFormattedTime($seconds, $flag=0, $IncludeDays=0)
 {
 	global $lang_na, $lang_day, $lang_days, $lang_hour, $lang_hours, $lang_minute, $lang_minutes, $lang_second, $lang_seconds;
-
+    $days  = 0;
+    $hours = 0;
+    $minutes = 0;
+    $remainder = $seconds;
 	if($seconds <= 0){
 		echo "<b>$lang_na</b>";
 	}
