@@ -117,7 +117,7 @@ $tablePadding = 10;
 
         td.printhf {padding: <?php echo $tablePadding; ?>px;  background: <?php echo $theme['print_header_bg']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['print_header_text']; ?>;}
 
-        a.hf:link {line-height: <?php echo $lineHeight; ?>; text-decoration: none; font-weight: normal;  font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: #f4a62b;}
+        a.hf:link {line-height: <?php echo $lineHeight; ?>; background-color: #3e3e3e;  btext-decoration: none; font-weight: normal;  font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: #f4a62b;}
 
         a.hf:visited {line-height: <?php echo $lineHeight; ?>; text-decoration:none; font-weight: normal; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px; color: <?php echo $theme['header_text']; ?>;}
 
