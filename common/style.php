@@ -63,7 +63,7 @@ $tablePadding = 10;
     <TITLE> <?php echo $helpdesk_name;?></TITLE>
     <?php
     if ($theme['font'] == "Titillium Web") {
-        $lineHeight = 1.1;
+        $lineHeight = 1.0;
         $tablePadding = 8;
     } else  {
         $lineHeight = 1;
@@ -73,9 +73,9 @@ $tablePadding = 10;
     <STYLE type="text/css">
 
         @import url(https://fonts.googleapis.com/css?family=Lato);
-        table {-webkit-border-horizontal-spacing: 1px; -webkit-border-vertical-spacing: 1px;}
+        table {-webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 1px;}
 
-        BODY {background: <?php echo $theme['bgcolor'];?> ; color: black;}
+        BODY {background: <?php echo $theme['bgcolor'];?> ; color: black; font-weight:500;}
 
         a:link {text-decoration: none; color: <?php echo $theme['link']; ?>;}
         a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
