@@ -91,8 +91,8 @@ $tablePadding = 10;
         table.border {background: <?php echo $theme['table_border']; ?>; color: black;  border-collapse: initial; border-spacing: 0;}
         table.login {background: <?php echo $theme['table_border']; ?>; color: #444444;  border-collapse: initial; border-spacing: 0; border-radius: 3px}
 
-        td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
-        tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px; font-weight:500;}
+        td {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
+        tr {color: #000000; font-family: "<?php echo $theme['font']; ?>", Helvetica, sans-serif; font-size: <?php echo $theme['font_size']; ?>px;}
 
         .alternate tr:nth-child(2n+0) {background-color: <?php echo $theme['bg1']; ?>;}
         .alternate tr:nth-child(2n+0):hover, .alternate     tr:hover {background-color: #E7FF00; }
