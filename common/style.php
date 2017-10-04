@@ -75,9 +75,9 @@ $tablePadding = 10;
         @import url(https://fonts.googleapis.com/css?family=Lato);
         table {-webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 1px;}
 
-        BODY {background: <?php echo $theme['bgcolor'];?> ; color: black; font-weight:500;}
+        BODY {background: <?php echo $theme['bgcolor'];?> ; color: black; font-weight:600;}
 
-        a:link {text-decoration: none; color: <?php echo $theme['link']; ?>; font-weight:500;}
+        a:link {text-decoration: none; color: <?php echo $theme['link']; ?>; font-weight:600;}
         a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
         a:active {text-decoration: none; color: <?php echo $theme['link']; ?>;}
         a:hover {text-decoration: underline; color: <?php echo $theme['link']; ?>;}
