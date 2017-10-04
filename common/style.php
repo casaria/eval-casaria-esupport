@@ -77,7 +77,7 @@ $tablePadding = 10;
 
         BODY {background: <?php echo $theme['bgcolor'];?> ; color: black; font-weight:500;}
 
-        a:link {text-decoration: none; color: <?php echo $theme['link']; ?>;}
+        a:link {text-decoration: none; color: <?php echo $theme['link']; ?>; font-weight:500;}
         a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
         a:active {text-decoration: none; color: <?php echo $theme['link']; ?>;}
         a:hover {text-decoration: underline; color: <?php echo $theme['link']; ?>;}
