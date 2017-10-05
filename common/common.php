@@ -1866,7 +1866,6 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
         }
         echo '
 		<tr>
-
 			<td class=back2 align=right valign=top width=20%> '.$lang_update.'</td>
 			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>';
 
@@ -1889,10 +1888,7 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
         echo '</td></tr>';
     }
 
-    echo '</table>
-		</td>
-	  </tr> 		
-	</table>';
+    echo '</table></td></tr></table>';
 }
 
 /***********************************************************************************************************
