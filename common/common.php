@@ -1847,7 +1847,6 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 						
 						</tr>
 						<tr>
-
 							<td class=back2 align=right valign=top width=100>* '.$lang_desc.': </td>
 							<td class=back colspan=3><textarea name=description rows=5 cols=60>'.stripslashes($info['description']).'</textarea></td>
 
