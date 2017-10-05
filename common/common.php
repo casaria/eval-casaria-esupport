@@ -1858,21 +1858,19 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 
         if($enable_smtp == "win" || $enable_smtp == "lin"){
             echo '
-
 			<tr>
 				<td class=back2 align=right valign=top width=20%> '.$lang_email.' '. $lang_user.': </td>
 				<td class=back colspan=3 valign=bottom> <textarea name=email_msg rows=5 cols=60></textarea> </td>
 			</tr>';
         }
         echo '
-		<tr>
+		    <tr>
 			<td class=back2 align=right valign=top width=20%> '.$lang_update.'</td>
 			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>';
 
 			echo	'<a href="updatelog.php?cookie_name='.$cookie_name.'&id='.$info['id'].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">
 					<img border=0 src="../'.$theme['image_dir'].'log_button.jpg"></a>
-
 			</td>
 		</tr>';
     }
