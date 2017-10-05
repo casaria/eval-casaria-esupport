@@ -73,7 +73,7 @@ $tablePadding = 10;
     <STYLE type="text/css">
 
         @import url(https://fonts.googleapis.com/css?family=Lato);
-        table {-webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 1px;}
+        table {-webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 1px; font-weight:600;}
 
         BODY {background: <?php echo $theme['bgcolor'];?> ; color: black; font-weight:600;}
 

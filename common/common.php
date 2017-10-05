@@ -1809,6 +1809,7 @@ function displayTicket($result)
     return $summary;
 
 }
+
 /***********************************************************************************************************
 **	function createTicketInfo():
 **		Takes 2 arguments (attachement , equipmentgroupid).
@@ -1818,7 +1819,7 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 {
 	global $info, $enable_smtp, $cookie_name, $theme, $db, $lang_equipment, $lang_ticketinfo, $lang_platform, $lang_shortdesc, $lang_category, $lang_desc, $lang_email, $lang_user, $lang_update, $lang_attachment, $enable_tattachments;
 
-		echo '	<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+    echo '	<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<tr> 
 				<td> 
 					<table cellSpacing=1 cellPadding=5 width="100%" border=0>
@@ -1828,14 +1829,14 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 						<tr>
 							<td class=back2 width=20% align=right>* '.$lang_platform.':</td>
 							<td width=20% class=back><select name=platform>'; createPlatformMenu(0);
-							echo '	</select></td><td class=back2 width=100 align=right>* '.$lang_category.':</td>
+    echo '	</select></td><td class=back2 width=100 align=right>* '.$lang_category.':</td>
 							<td class=back><select name=category>';  createCategoryMenu(0);
-							echo '	</select></td>
+    echo '	</select></td>
 						</tr>
 						<tr>
 							<td width=20% class=back2 align=right>* '.$lang_equipment.':</td>
 							<td class=back colspan=3><select name=equipment>';  createEquipmentMenu(0,$equipmentgroupid);
-							echo '	</select></td>
+    echo '	</select></td>
 						
 						</tr>
 						<tr>
@@ -1853,51 +1854,47 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 
 
 						</tr>';
-if(isset($info)){
-	
-	if($enable_smtp == "win" || $enable_smtp == "lin"){
-		echo '
+    if(isset($info)){
+
+        if($enable_smtp == "win" || $enable_smtp == "lin"){
+            echo '
 
 			<tr>
 				<td class=back2 align=right valign=top width=20%> '.$lang_email.' '. $lang_user.': </td>
 				<td class=back colspan=3 valign=bottom> <textarea name=email_msg rows=5 cols=60></textarea> </td>
 			</tr>';
-	}
-	echo '
+        }
+        echo '
 		<tr>
 
-			<td class=back2 align=right valign=top width=20%> '.$lang_update.': </td>
-			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>
+			<td class=back2 align=right valign=top width=20%> '.$lang_update.'</td>
+			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>';
 
-				<a href="updatelog.php?cookie_name='.$cookie_name.'&id='.$info['id'].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+			echo	'<a href="updatelog.php?cookie_name='.$cookie_name.'&id='.$info['id'].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">
 					<img border=0 src="../'.$theme['image_dir'].'log_button.jpg"></a>
 
 			</td>
 		</tr>';
-}
-		if($enable_tattachments == 'On' && $flag == 'allow'){
-			echo '<tr>
+    }
+
+    if($enable_tattachments == 'On' && $flag == 'allow'){
+        echo '<tr>
 				<td class=back2 align=right valign=top width=20%>'.$lang_attachment.': </td>';
-			
-			echo "<td class=back colspan=3 valign=bottom>";
-			//echo "<input type=hidden name=\"MAX_FILE_SIZE\" value=\"1000000\">";
-			echo "<input type=\"file\" name=\"the_file\" size=60>";
 
-			echo '</td></tr>';
-		}
+        echo "<td class=back colspan=3 valign=bottom>";
+        //echo "<input type=hidden name=\"MAX_FILE_SIZE\" value=\"1000000\">";
+        echo "<input type=\"file\" name=\"the_file\" size=60>";
 
+        echo '</td></tr>';
+    }
 
-echo '
-					</table>
-				</td>
-				</tr>
-			</table>
-		<br>';
-
+    echo '</table>
+		</td>
+	  </tr> 		
+	</table>';
 }
-?>
-<?php
+
 /***********************************************************************************************************
 **	function createUGroupsMenu():
 **		Takes no arguments.  Creates the drop down menu 
