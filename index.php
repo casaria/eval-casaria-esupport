@@ -63,7 +63,7 @@ else
 //if(isSupporter($_SESSION['cookie_name']))
 	//nov14 header("Location: $supporter_site_url/index.php");
 
-require_once "common/style.php";
+require_once $includePath."style.php";
 
 $time_offset = getTimeOffset($_SESSION['cookie_name']);
 

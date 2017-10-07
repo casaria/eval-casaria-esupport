@@ -36,6 +36,7 @@ $pconnect = 0;
 $db = new $database();
 $db->connect($db_host, $db_user, $db_pwd, $db_name, $pconnect);
 
+
 /**********************************************************************************************************/
 /****************************	Other Variables	***********************************************************/
 //set the variables from the database if not running the install
@@ -48,6 +49,7 @@ $logfile = "logfile.txt";
 /****************************	Other Variables	***********************************************************/
 //set the variables from the database if not running the install
 $var = getVariables();
+
 
 $announcements_limit = $var['announcements_per'];		//number of announcements to display on the main page.
 $users_limit = $var['users_per'];				//number of users to list in a user/supporter list
@@ -356,8 +358,8 @@ function checkUser($name, $pwd)
 	}
 	
 	if($row[user] == 0 && $name != ''){
-		require_once "../common/style.php";
-		printerror("Your account is not active.");
+        require_once $includePath."style.php";
+		printerror("Your account is not active. Please contact your supervisor.");
 		exit;
 	}
 
@@ -946,7 +948,6 @@ function getuGroup($id)
 	$sql = "select group_name from $mysql_ugroups_table where id=$id";
 	$result = $db->query($sql);
 	$row = $db->fetch_row($result);
-
 	return $row[0];
 
 }
@@ -1099,7 +1100,7 @@ function getHighestRank($table)
     }else{
 		$sql = "select id from $table order by rank asc";
 	}
-	
+
 	$result = $db->query($sql);
 	$row = $db->fetch_row($result);
 	return $row[0];
@@ -1123,11 +1124,11 @@ function getLowestRank($table)
 	else{
 		$sql = "select id, default_create from $table order by rank desc";
 	}
-	
+
 	$result = $db->query($sql);
-	
+
 	while($row = $db->fetch_array($result)){
-	     
+
 	     if ($row["default_create"]) return $row[0];
 	}
 }
@@ -1147,12 +1148,12 @@ function getHoldRank($table)
 	else{
 		$sql = "select id, default_create from $table order by rank desc";
 	}
-	
+
 	$result = $db->query($sql);
-	
+
 	$row = $db->fetch_array($result);
         return $row[0];
-	
+
 }
 
 /***********************************************************************************************************
@@ -1441,14 +1442,14 @@ function createBillingStatusMenu($flag = 0, $new = 0)
 {
     global $mysql_tBillingStatus_table, $info, $db;
 
-    $sql = "select status, default_create, icon_ref from $mysql_tBillingStatus_table order by rank asc";
+    $sql = "select id,status, default_create from $mysql_tBillingStatus_table order by rank asc";
     $result = $db->query($sql, $mysql_tBillingStatus_table);
 
     if($flag == 1)
         echo "<option></option>";
 
     while($row = $db->fetch_array($result)){
-        echo "<option value=\"$row[status]\" ";
+        echo "<option value=\"$row[id]\" ";
         if ($new){
             if($row['default_create']) echo "selected";
         }
@@ -1594,10 +1595,10 @@ function createTimeOffsetMenu($selected)
  ************************************************************************************************************/
 function displayTicket($result)
 {
-            global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+            global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_tBillingStatus_table;
             $second = getSecondPriority();
             $sql3 = "select * from $mysql_ugroups_table ";
-            $sqlBS = "select * from $mysql_BillingStatus_table";
+            $sqlBS = "select * from $mysql_tBillingStatus_table";
             $recordcount = 0;
             $csv_string = "";
             $closed_ts = 0;
@@ -1794,9 +1795,9 @@ function displayTicket($result)
 ************************************************************************************************************/
 function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 {
-	global $info, $enable_smtp, $cookie_name, $theme, $db, $lang_equipment, $lang_ticketinfo, $lang_platform, $lang_shortdesc, $lang_category, $lang_desc, $lang_email, $lang_user, $lang_update, $lang_attachment, $enable_tattachments;
+    global $info, $enable_smtp, $cookie_name, $theme, $db, $lang_createdate, $lang_equipment, $lang_ticketinfo, $lang_platform, $lang_shortdesc, $lang_category, $lang_desc, $lang_email, $lang_user, $lang_update, $lang_attachment, $enable_tattachments;
 
-		echo '	<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+    echo '	<table class=border cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
 				<tr> 
 				<td> 
 					<table cellSpacing=1 cellPadding=5 width="100%" border=0>
@@ -1804,20 +1805,29 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 							<td class=info align=left colspan=4 align=center><b>'.$lang_ticketinfo.'</b></td>
 						</tr>		
 						<tr>
-							<td class=back2 width=20% align=right>* '.$lang_platform.':</td>
-							<td width=20% class=back><select name=platform>'; createPlatformMenu(0);
-							echo '	</select></td><td class=back2 width=100 align=right>* '.$lang_category.':</td>
-							<td class=back><select name=category>';  createCategoryMenu(0);
-							echo '	</select></td>
+							<td class=back2 width=100 align=right>* '.$lang_platform.':</td>
+							<td width=200    class=back><select name=platform>'; createPlatformMenu(0);
+    echo '	</select></td><td class=back2 width=100 align=right>* '.$lang_category.':</td>
+							<td class=back width=200><select name=category>';  createCategoryMenu(0);
+    echo '	</select></td>
 						</tr>
 						<tr>
-							<td width=20% class=back2 align=right>* '.$lang_equipment.':</td>
-							<td class=back colspan=3><select name=equipment>';  createEquipmentMenu(0,$equipmentgroupid);
-							echo '	</select></td>
-						
+							<td width=100 class=back2 align=right>* '.$lang_equipment.':</td>
+							<td class=back width=200><select name=equipment>';  createEquipmentMenu(0,$equipmentgroupid);
+    echo '	</select></td>';
+    if (isAdministrator($cookie_name)) {
+        echo '<td class=back2 width=100 align=right>'.'*'.$lang_createdate.':';
+        echo '</td><td class=back>';
+        createDateMenu();
+        echo '</td>';
+    } else {
+        echo '<td class=back2 width=100 align=right></td>';
+        echo '<td class=back></td>';
+    }
+	echo'								
 						</tr>
 						<tr>
-							<td width=20% class=back2 align=right>* '.$lang_shortdesc.':</td>
+							<td width=100 class=back2 align=right>* '.$lang_shortdesc.':</td>
 							<td class=back colspan=3>
 						
 							<input type=text size=60 name=short value="'.stripslashes($info['short']).'">
@@ -1826,46 +1836,46 @@ function createTicketInfo($flag='allow', $equipmentgroupid = 0)
 						</tr>
 						<tr>
 
-							<td class=back2 align=right valign=top width=20%>* '.$lang_desc.': </td>
+							<td class=back2 align=right valign=top width=100>* '.$lang_desc.': </td>
 							<td class=back colspan=3><textarea name=description rows=5 cols=60>'.stripslashes($info['description']).'</textarea></td>
 
 
 						</tr>';
-if(isset($info)){
-	
-	if($enable_smtp == "win" || $enable_smtp == "lin"){
-		echo '
+	if(isset($info)) {
+
+        if ($enable_smtp == "win" || $enable_smtp == "lin") {
+            echo '
 
 			<tr>
-				<td class=back2 align=right valign=top width=20%> '.$lang_email.' '. $lang_user.': </td>
-				<td class=back colspan=3 valign=bottom> <textarea name=email_msg rows=5 cols=60></textarea> </td>
+				<td class=back2 align=right valign=top width=100> ' . $lang_email . ' ' . $lang_user . '</td>
+				<td class=back colspan=3 valign=bottom> <textarea name=email_msg rows=5 cols=60></textarea></td>
 			</tr>';
-	}
-	echo '
-		<tr>
+        }
+        echo '
+			<tr>
 
-			<td class=back2 align=right valign=top width=20%> '.$lang_update.': </td>
+			<td class=back2 align=right valign=top width=100> ' . $lang_update . ': </td>
 			<td class=back colspan=3 valign=bottom> <textarea name=update_log rows=5 cols=60></textarea>
 
-				<a href="updatelog.php?cookie_name='.$cookie_name.'&id='.$info['id'].'" target="myWindow" onClick="window.open(\'\', \'myWindow\',
+				<a href="updatelog.php?cookie_name=' . $cookie_name . '&id=' . $info['id'] . '" target="myWindow" onClick="window.open(\'\', \'myWindow\',
 					\'location=no, status=yes, scrollbars=yes, height=500, width=600, menubar=no, toolbar=no, resizable=yes\')">
-					<img border=0 src="../'.$theme['image_dir'].'log_button.jpg"></a>
+					<img border=0 src="../' . $theme['image_dir'] . 'log_button.jpg"></a>
 
 			</td>
-		</tr>';
-}
-		if($enable_tattachments == 'On' && $flag == 'allow'){
-			echo '<tr>
-				<td class=back2 align=right valign=top width=20%>'.$lang_attachment.': </td>';
+			</tr>';
+    }
+    if($enable_tattachments == 'On' && $flag == 'allow'){
+        echo '<tr>
+				<td class=back2 align=right valign=top width=100>'.$lang_attachment.': </td>';
 
-			echo "<td class=back colspan=3 valign=bottom>";
-			//echo "<input type=hidden name=\"MAX_FILE_SIZE\" value=\"1000000\">";
-			echo "<input type=\"file\" name=\"the_file\" size=60>";
+        echo "<td class=back colspan=3 valign=bottom>";
+        //echo "<input type=hidden name=\"MAX_FILE_SIZE\" value=\"1000000\">";
+        echo "<input type=\"file\" name=\"the_file\" size=60>";
 
-			echo '</td></tr>';
-		}
+        echo '</td></tr>';
+    }
 
-echo '
+    echo '
 					</table>
 				</td>
 				</tr>
@@ -1873,8 +1883,7 @@ echo '
 		<br>';
 
 }
-?>
-<?php
+
 /***********************************************************************************************************
 **	function createUGroupsMenu():
 **		Takes no arguments.  Creates the drop down menu 
@@ -1903,6 +1912,65 @@ function createUGroupsMenu($flag)
 		}
 	return $ug;
 }
+
+/***********************************************************************************************************
+ **	function createEquipmentMenu():
+ **		Argument : $equipmentgroupid, if 0 all equipment will be listed.
+ **      Creates the drop down menu for the list of Equipment by current facility.
+ ************************************************************************************************************/
+function createDateMenu($flag = 1)
+{
+ 	global $lang_month;
+    $today = getdate();
+    $timenow = localtime(time(),TRUE);
+    echo '<select name=cmonth>';
+    for($i=1; $i<13; $i++){
+        echo "<option value=$i";
+        if($today['mon'] == $i)
+            echo ' selected';
+        echo ">".$lang_month[$i]."</option>";
+    }
+    echo '</select>'.'-'.'
+	<select name=cday>';
+    for($i=1; $i<32; $i++){
+        echo "<option value=$i";
+        if($i == $today['mday'])
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo '</select>'.'-'.'
+	<select name=cyear>';
+    for($i=($today['year']-2); $i<= $today['year']; $i++){
+        echo "<option value=$i";
+        if($today['year'] == $i)
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo'</select>';
+	echo' @  Time: ';
+	echo '<select name=chour>';
+    for($i=0; $i<=23; $i++){
+        echo "<option value=$i";
+        if($timenow['tm_hour'] == $i)
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo'</select> : ';
+    echo '<select name=cminute>';
+    for($i=0; $i<=59; $i++){
+        echo "<option value=$i";
+        if($timenow['tm_min'] == $i)
+            echo ' selected';
+        echo ">".$i."</option>\n";
+    }
+    echo'</select>';
+	echo ' '.$timenow["tm_hour"].':'.$timenow["tm_min"];
+
+
+}
+
+
+
 /***********************************************************************************************************
 **	function createEquipmentMenu():
 **		Argument : $equipmentgroupid, if 0 all equipment will be listed. 
@@ -2047,12 +2115,12 @@ function updateLog($ticket_id, $msg)
 	$log = addslashes($log);
 
 	//add italics for the transferred/status change/priority change message.
-	if(ereg("^\$lang_transferred", $msg) || ereg("^\$lang_statuschange", $msg) || ereg("^\$lang_prioritychange", $msg)){
+	if(preg_match("/^\$lang_transferred/", $msg) || preg_match("/^\$lang_statuschange/", $msg) || preg_match("/^\$lang_prioritychange/", $msg)){
 		$msg = "<i>" . $msg . "</i>";
 	}
 
 	if($msg != ''){	//only if the message actually contains text do we want to add it to the update log.
-		if(eregi($lang_createdbyweb, $msg))
+		if(preg_match("/$lang_createdbyweb/i",  $msg))
 			$log .= $time . "$delimiter" . addslashes($msg) . "$delimiter";
 		else
 			$log .= "$time \$lang_by $cookie_name $delimiter" . addslashes($msg) . "$delimiter";
@@ -2220,16 +2288,18 @@ function startTable($msg, $align, $width=100, $colspan=1, $class=info)
 	if($width == '')
 		$width = '100';
 
-	echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="'.$width.'%" align=center border=0>
+	echo '<TABLE class=border cellSpacing=0 cellPadding=0 width="'.$width.'%" align=$align border=0>
 			<TR> 
 			<TD> 
-				<TABLE cellSpacing=1 cellPadding=5 width="100%" border=0>
+				<TABLE cellSpacing=1 cellPadding=3 width="100%" border=0>
 					<TR> 
 					<TD class='.$class.' colspan='.$colspan.' align='.$align.'><B>';
 						echo $msg;
 						echo '</B></td>
 						</TR>	';	
 }
+
+
 
 /***********************************************************************************************************
 **	function endTable():
@@ -2241,7 +2311,7 @@ function endTable()
 		</table>
 			</td>
 			</tr>
-		</table><br>';
+		</table>';
 }
 
 /***********************************************************************************************************
@@ -3372,7 +3442,7 @@ function createTicketHeader($msg)
 {
 	global $info;
 
-	startTable($msg, "center");	
+	startTable($msg, "left");
 	endTable();
 
 }

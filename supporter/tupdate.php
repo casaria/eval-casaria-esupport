@@ -592,7 +592,8 @@ endTable();
 function createUserInfo()
 {
 	global $info, $lang_userinfo, $lang_office, $lang_email, $lang_username, $lang_phoneext, $lang_office;
-// Get User group name and id associate with user 
+// Get User group name and id associate with user
+    $groupname = '';
 $ugroups = getUGroupList(); $user = $info['user']; $n=0;
 if($user!= '' ){
 	for($i=0; $i<sizeof($ugroups); $i++){
@@ -637,15 +638,15 @@ endTable();
 //Thanks to SteveW for providing this great function
 function createTicketDetails()
 {
-	global $info, $db, $mysql_attachments_table, $id, $lang_ticket, $lang_opened, $lang_attachments, $lang_lastupdate;
+	global $info, $db, $mysql_attachments_table,$lang_never, $id, $lang_ticket, $lang_opened, $lang_attachments, $lang_lastupdate;
 
 	$padded_id = str_pad($id, 5, '0', STR_PAD_LEFT);
 	$info[create_date] = date("F j, Y, g:i a", $info[create_date]);
 	if($info[lastupdate] != 0)
         	$info[lastupdate] = date("F j, Y, g:i a", $info[lastupdate]);
 	else
-        	$info[lastupdate] = $lang_never;
-
+           $info[lastupdate] = $lang_never;
+    $attachments = '';
 	//if there attachments, get them and setup the links to them.
 	$sql = "SELECT * from $mysql_attachments_table where tid=$id";
 	$result = $db->query($sql);
@@ -746,7 +747,7 @@ function createTimeUpdate()
 
 	echo '<td class=back >';
 	echo 'Work order / reference<BR>';
-	echo '<input type=text size=12 name=reference></td>';
+	echo '<textarea size=12 rows=2 cols=40 name=reference ></textarea></td>';
   echo '</tr>';
 
 	echo '<tr><td width=27% class=back2 align=right>';

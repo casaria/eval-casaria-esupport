@@ -48,7 +48,9 @@ if($add == $lang_addtokb)
 		if($db->query($sql)){				//if the query goes ok, print out the success message.
 			if($enable_kattachments == 'On'){
 				$kid = $db->insert_id();			//get the id of the inserted question/answer
-					if($the_file != "none" && $the_file != ""){		//we have a file so we need to do something with it
+					if(isset($the_file) && ($the_file != "none") && ($the_file != ""))
+					{		//we have a file so we need to do something with it
+
                                                 $attachment = addslashes(fread(fopen($the_file, "rb"), filesize($the_file)));
 						if($the_file_type=="application/x-gzip-compressed"){
 							$attachment = base64_decode($attachment);
@@ -69,7 +71,8 @@ if($add == $lang_addtokb)
 			
 }
 else{
-	echo "<form method=\"post\" name=\"input\" action=\"$PHP_SELF\" enctype=\"multipart/form-data\">";
+	echo "<form method=\"post\" name=\"input\" action=\""
+	echo htmlentities($_SERVER[$PHP_SELF]).	" enctype=\"multipart/form-data\">";
 	startTable("$lang_addtokb", "center", 100, 4);
 		echo '<tr><td class=back2 align=right width=27%>'.$lang_platform.':</td> <td class=back>';
 		echo '<select name=platform>';

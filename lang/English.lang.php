@@ -470,6 +470,7 @@ $lang_noaccessgroup = "We are sorry, this item is managed/was created by a diffe
 $lang_groupticketsclosedrecent ="RECENTLY Closed tickets";
 $lang_CloudControl = "Casaria Cloud Control";
 $lang_billingStatus = "Billing status";
+$lang_notbilled = "*Not billed*";
 $lang_bs_initial = "Initial";
 $lang_betweenCreateDates ="Between dates (created)";
 $lang_GenerateClosedDate = "Generate closed date from log";

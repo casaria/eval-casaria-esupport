@@ -40,7 +40,8 @@ $db_user = 'casaria_hdesk1';
 $db_pwd = '5XwoR]B';
 $db_name = 'casaria_hdesk1';
 $uploaddir = '/home/casaria/public_html/support/uploads/';
-$session_time = 7200;
+$session_time = 72000;
+$includePath = '/home/casaria/public_html/support/common/';
 $session_name = 'CasariaIncSupport';
 $MailQueuePath = "/home/casaria/public_html/support/DelayedMail/";
 
@@ -50,12 +51,11 @@ $MailQueuePath = "/home/casaria/public_html/support/DelayedMail/";
 
 $mysql_crmsettings_table = "crmsettings";
 $mysql_tequipment_table = "tequipment";
-$mysql_BillingStatus_table = "tBillingStatus";
-
 $mysql_announcement_table = "announcements";	//mysql announcement table name
 $mysql_tcategories_table = "tcategories";		//mysql ticket categories table
 $mysql_tpriorities_table = "tpriorities";		//mysql ticket priority table
 $mysql_tstatus_table = "tstatus";				//mysql ticket status table
+$mysql_tBillingStatus_table = "tBillingStatus";
 $mysql_tratings_table = "tratings";				//mysql ticket rating table
 $mysql_users_table = "users";					//mysql users table
 $mysql_sgroups_table = "sgroups";				//mysql supporter group table

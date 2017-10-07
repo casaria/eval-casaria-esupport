@@ -3,7 +3,7 @@
 <!--
 
 function printWindow(){
-browserVersion = parseInt(navigator.appVersion)
+browserVersion = parseInt(navigator.appVersion);
 if (browserVersion >= 4) window.print()
 }
 
