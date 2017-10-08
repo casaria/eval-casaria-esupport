@@ -59,7 +59,7 @@ if($language == '')
 else
 	require_once "../lang/$language.lang.php";
 
-require_once "../common/style.php";
+require_once $includePath."style.php";
 
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);

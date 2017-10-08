@@ -41,10 +41,10 @@ $db_pwd = '5XwoR]B';
 $db_name = 'casaria_hdesk1';
 $uploaddir = '/home/casaria/public_html/support/uploads/';
 $includeDir = '/home/casaria/public_html/support/common/';
-$session_time = 14400;
+$session_time = 7200;
 $session_name = 'CasariaIncSupport';
 $MailQueuePath = "/home/casaria/public_html/support/DelayedMail/";
-$includePath = "/home/casaria/public_html/support/common/";
+$includePath = "/var/www/casaria/support/common/";
 
 /*********	You shouldn't need to change anything below here.	***********************************/
 /**********************************************************************************************************/

@@ -32,6 +32,8 @@
 			***************************************************************************************/
 
 //create the connection to the database.
+
+require_once 'config.php';
 $pconnect = 0;
 $db = new $database();
 $db->connect($db_host, $db_user, $db_pwd, $db_name, $pconnect);
@@ -358,7 +360,7 @@ function checkUser($name, $pwd)
 	}
 	
 	if($row[user] == 0 && $name != ''){
-        require_once $includePath."style.php";
+        require_once $includeFir."tyle.php";
 		printerror("Your account is not active. Please contact your supervisor.");
 		exit;
 	}
@@ -1440,10 +1442,10 @@ function createPriorityMenu($flag=0, $all=true)
  ************************************************************************************************************/
 function createBillingStatusMenu($flag = 0, $new = 0)
 {
-    global $mysql_tBillingStatus_table, $info, $db;
+    global $mysql_tBillimgStatus, $info, $db;
 
-    $sql = "select id,status, default_create from $mysql_tBillingStatus_table order by rank asc";
-    $result = $db->query($sql, $mysql_tBillingStatus_table);
+    $sql = "select id,status, default_create from $mysql_tBillimgStatus order by rank asc";
+    $result = $db->query($sql, $mysql_tBillimgStatus);
 
     if($flag == 1)
         echo "<option></option>";
@@ -1595,10 +1597,10 @@ function createTimeOffsetMenu($selected)
  ************************************************************************************************************/
 function displayTicket($result)
 {
-            global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_tBillingStatus_table;
+            global $cookie_name, $mysql_ugroups_table, $mysql_status_table,  $highest_pri, $theme, $db, $admin_site_url, $mysql_tBillimgStatus;
             $second = getSecondPriority();
             $sql3 = "select * from $mysql_ugroups_table ";
-            $sqlBS = "select * from $mysql_tBillingStatus_table";
+            $sqlBS = "select * from $mysql_tBillimgStatus";
             $recordcount = 0;
             $csv_string = "";
             $closed_ts = 0;
