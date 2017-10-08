@@ -38,7 +38,7 @@ if($SERVER_PORT == 80 && $enable_ssl == 'On' && (!isset($cookie_name) || $cookie
 	header("Location: $site");
 }
                   
-require "../common/login.php";
+require_once $includePath."login.php";
 RewindSession();
 ?>
 
@@ -59,7 +59,7 @@ if($language == '')
 else
 	require_once "../lang/$language.lang.php";
 
-require_once "../common/style.php";
+require_once $includePath."style.php";
 
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);

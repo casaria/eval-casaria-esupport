@@ -43,7 +43,7 @@ $tablePadding = 15;
 
 <script type="text/javascript">
 	WebFontConfig = {
-		google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:400,600,700:latin'] }
+		google: { families: [ 'Roboto::latin', 'Lato::latin', 'Roboto+Condensed::latin', 'Ropa+Sans:latin', 'Titillium+Web:400,500,600:latin'] }
 	};
 
 	(function() {
@@ -76,7 +76,7 @@ $tablePadding = 15;
 		@import url(https://fonts.googleapis.com/css?family=Lato);
 
 
-		BODY {background: <?php echo $theme['bgcolor'];?> ; color: black;}
+		body {background: <?php echo $theme['bgcolor'];?>; color:black;}
 
 		a:link {text-decoration: none; color: <?php echo $theme['link']; ?>;}
 		a:visited {text-decoration: none; color: <?php echo $theme['link']; ?>;}
@@ -127,7 +127,8 @@ $tablePadding = 15;
 		<?php
 
 
-         if(eregi("IE", $HTTP_USER_AGENT)){ ?>
+         if(preg_match("/IE/i", $HTTP_USER_AGENT)){ ?>
+
                 select, option, textarea, input {border: 1px solid <?php echo $theme['table_border']; ?>; font-family: "<?php echo $theme['font']; ?>", arial, helvetica, sans-serif; font-size: 	11px; font-weight: bold; background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>;} <?php
         }
         else{ ?>
@@ -142,7 +143,7 @@ $tablePadding = 15;
 
 		td.error {background: <?php echo $theme['subcategory']; ?>; color: #ff0000; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo $theme['font_size']; ?>px;}
 
-            td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo '$theme["font_size"] + 4'?>'px';  font-weight:600}
+        td.subcat {background: <?php echo $theme['subcategory']; ?>; color: <?php echo $theme['text']; ?>; font-family: "<?php echo $theme['font']; ?>"; font-size: <?php echo '$theme["font_size"] + 4'?>'px';  font-weight:600}
 
 
 

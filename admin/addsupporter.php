@@ -77,24 +77,22 @@ if(isset($adduser)){
                     break;
 
 				case ("admin"):
-                                        $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,0,0'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
+					$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,1,1,1,0,0'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
 					break;
 				case ("supporter"):
-										$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,0,0,0,'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
+					$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,0,1,0,0,0,'$default_theme',null,null,null,0,'$default_language','$timeoffset','$CloudControl')";
 					break;
-                case (PriviledgedUser):
-                    $sql = "insert into $mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,1,0,0,0,0'$default_theme',null,null,null,0, '$default_language', '$timeoffset', '$CloudControl')";
+                case ("supervisor"):
+					$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',0,1,0,0,0,0,'$default_theme',null,null,null,0, '$default_language', '$timeoffset', '$CloudControl')";
 
                     break;
 
 				case ("user"):
-                                        $sql = "insert into $mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,0,0,0,0,0,'$default_theme',null,null,null,0, '$default_language', '$timeoffset', '$CloudControl')";
-
+					$sql = $sql_head .  "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,0,0,0,0,0,'$default_theme',null,null,null,0, '$default_language', '$timeoffset', '$CloudControl')";
                                       // $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,0,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset')";
-																			// echo "$sql";
-						break;
+					break;
 				default:
-                                        $sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,0,0,0,0,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
+					$sql = $sql_head . "$mysql_users_table values(NULL,'$_POST[first_name]','$_POST[last_name]','$_POST[user_name]','$_POST[email]','$_POST[pager]','$pwd','$_POST[office]','$_POST[phone]',1,0,0,0,0,0,'$default_theme',null,null,null,0,'$default_language', '$timeoffset', '$CloudControl')";
 					break;
 			}
 
@@ -234,9 +232,11 @@ echo '
 				<td class=back><select name=level>				
 								<option value=inactive selected>$lang_inactive</option>
 								<option value=user>$lang_user</option>
-								<option value=supporter>$lang_Supporter</option>
+								<option value=supervisor>$lang_supervisor</option>
+								<option value=supporter>$lang_supporter</option>
 								<option value=admin>$lang_admin</option>
-								
+								<option value=accountant>$lang_accountant</option>
+								<option value=superadmin>$lang_superadmin</option>								
 							   </select>
 				</td></tr>
 				</td></tr>
