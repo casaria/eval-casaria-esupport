@@ -38,11 +38,11 @@ $server_gmt_offset = -5; //Timezone GMT -5
 $db_host='localhost';
 $db_user = 'casaria_hdesk1';
 $db_pwd = '5XwoR]B';
-$db_name = 'casaria_hdesk1';
-$uploaddir = '/home/casaria/public_html/support/uploads/';
-$session_time = 7200;
+$db_name = 'casaria_hdesk2';
+$uploaddir = '/var/www/casaria/support/uploads/';
+$session_time = 72000;
 $session_name = 'CasariaIncSupport';
-$MailQueuePath = "/home/casaria/public_html/support/DelayedMail/";
+$MailQueuePath = "/var/www/casaria/support/DelayedMail/";
 
 /*********	You shouldn't need to change anything below here.	***********************************/
 /**********************************************************************************************************/

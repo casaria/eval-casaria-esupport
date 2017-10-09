@@ -644,7 +644,7 @@ function getUserList($order, $offset, $group)
 							<td width=20% class=back2 align=right>'.$lang_username.':</td><td class=back>'. $user_name .'</td>
 						</tr>
 						<tr>
-							<td width=20% class=back2 align=right>'.$lang_realname.':</td><td class=back>'. $first .' '. $last .'</td>
+							<td width=27% class=back2 align=right>'.$lang_realname.':</td><td class=back>'. $first .' '. $last .'</td>
 						</tr>
 						<tr>
 							<td width=20% class=back2 align=right>'.$lang_email.'</td><td class=back><a href=mailto:'. $email .'>'.$email.'</td>
@@ -1579,7 +1579,7 @@ function createTimeOffsetMenu($selected)
 		echo "<option value=\"$i\" ";
 		if($time_offset == $i)
 			echo "selected";
-		echo ">".$$zone."</option>";
+		echo ">".$zone."</option>";
 		$j++;
 	}
 
