@@ -1588,7 +1588,8 @@ function createTimeOffsetMenu($selected)
 }
 function displayTicket($result)
 {
-	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url, $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
+	global $cookie_name, $mysql_ugroups_table, $lang_summary, $lang_recordcount, $supporter_site_url,
+           $highest_pri, $theme, $db, $admin_site_url, $mysql_BillingStatus_table;
     $second = getSecondPriority();
     $sql3 = "select * from $mysql_ugroups_table ";
     $sqlBS = "select * from $mysql_BillingStatus_table";
@@ -1904,7 +1905,7 @@ echo '
 ************************************************************************************************************/
 function createUGroupsMenu($flag)
 {
-	global $mysql_ugroups_table, $sg, $ug, $info, $id, $db;
+	global $mysql_ugroups_table, $sg, $ug, $db;
 
 	$sql = "select id, group_name from $mysql_ugroups_table order by rank asc";
 	$result = $db->query($sql);
@@ -1912,7 +1913,6 @@ function createUGroupsMenu($flag)
 	
 	if($flag == 1)
 		echo "<option></option>\n";
-
 
 		while($row = $db->fetch_array($result)){
 			if($num_rows == 1 || $row[id] != 0){
