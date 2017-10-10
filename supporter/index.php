@@ -189,6 +189,7 @@ border=0>
                                                <LI><A href="index.php?t=kbase&supkb=yes">'.$lang_Supporter . ' ' . $lang_kbase.'</A></LI>
                                                <LI><A href="index.php?t=kbase&act=kadd">'.$lang_addtokb.'</A></LI>
                                                <LI><A href="index.php?t=kbase&act=ksta">'.$lang_kbstats.'</A></LI>
+                                               <LI><A href="index.php?t=execute&act=fixit">'.'FixIt'.'</A></LI>
                                            </TD>
                                         </TR>';
                               }
@@ -333,6 +334,9 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 						case("terr"):
 							printError("$lang_missing_info");
 							break;
+                        case("execute"):
+                            fixticketSeptember30(4999, 4999);
+                            break;
 						case ("memb"):
 							require "member.php";
 							break;
