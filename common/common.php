@@ -3429,10 +3429,10 @@ function fixticketSeptember30($id_from, $id_to){
     $sql2 = "update $mysql_tickets_table set update_log=";
     $result = $db->query($sql);
 
-    for ($i=$id_from; $i>=$id_to; $i++) {
+    for ($i=$id_from; $i<=$id_to; $i++) {
         $row = $db->fetch_row($result);
-        $supporter = $row[supporter];
-        $createDate = $row[create_date];
+        $supporter = $row['supporter'];
+        $createDate = $row['create_date'];
         $update = "$createDate \$lang_by --//--<i>\$lang_ticketcreatedby $supporter --//--";
         $sql2 = $sql2 . $update;
         echo "<br>$result><br>";
