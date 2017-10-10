@@ -146,6 +146,9 @@ $lang_notes = "Notes";
 $lang_fullname = "Full Name";
 $lang_realname = "Real Name";
 $lang_admin = "Administrator";
+$lang_supervisor = "Supervisor User";
+$lang_accountant = "Accountant";
+$lang_superadmin = "Super Administrator";
 $lang_yahoo = "Yahoo";
 $lang_msn = "MSN";
 $lang_icq = "ICQ";
@@ -443,7 +446,11 @@ $lang_equipment = "Equipment";
 $lang_mygroupsclose = "My Group's CLOSED Tickets";
 $lang_yourgroupsclose = "Your Group's CLOSED Tickets";
 $lang_notification = "Update Notification options";
+<<<<<<< HEAD
 $lang_emailcc = "Email CC (use \" , \" to separate)";
+=======
+$lang_emailcc = "Email CC(\",\" to separate)";
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 $lang_emailgroup= "Email ALL Users in Group";
 $lang_pagesupporter = "MMS to Supporter (one time)";
 $lang_emailstatuschange = "Email TICKET status update";
@@ -472,6 +479,7 @@ $lang_noaccessgroup = "We are sorry, this item is managed/was created by a diffe
 $lang_groupticketsclosedrecent ="RECENTLY Closed tickets";
 $lang_CloudControl = "Casaria Cloud Control";
 $lang_billingStatus = "Billing status";
+$lang_notbilled = "*Not billed*";
 $lang_bs_initial = "Initial";
 $lang_betweenCreateDates ="Between dates (created)";
 $lang_GenerateClosedDate = "Generate closed date from log";

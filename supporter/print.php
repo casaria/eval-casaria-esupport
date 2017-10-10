@@ -69,7 +69,7 @@ $ticket[description] = nl2br($ticket[description]);
 $update_log = nl2br(stripslashes($update_log));
 eval("\$update_log = \"$update_log\";");
 
-$create_date = date("F d Y, h:i a", $ticket[create_date]);
+$create_date = date("F d Y,		 h:i a", $ticket[create_date]);
 
 $template=str_replace("\\'","'",$template[0]);
 eval("\$template = \"$template\";");

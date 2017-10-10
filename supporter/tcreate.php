@@ -165,7 +165,11 @@ function createSupporterInfo()
 
 	startTable("$lang_supporterinfo", "left", 100, 4);
 		echo '<tr>
+<<<<<<< HEAD
 				<td width=20% class=back2 align=right>* '.$lang_group.':</td>
+=======
+				<td width=20%% class=back2 align=right>* '.$lang_group.':</td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 				<td class=back colspan=3 width=22%>';
 				?>
 			    	<select name=usergroup_name onChange="MM_jumpMenu('parent', this, 0)">
@@ -175,7 +179,11 @@ function createSupporterInfo()
 				</td></tr>					
 		
 				<tr>
+<<<<<<< HEAD
 				<td width=20% class=back2 align=right>'.$lang_supportergroup.':</td>
+=======
+				<td width=20%% class=back2 align=right>'.$lang_supportergroup.':</td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 				<td class=back width=22%>';
 				?>
 				<select name=group onChange="MM_jumpMenu('parent', this, 0)">
@@ -194,7 +202,11 @@ function createSupporterInfo()
 				</td>
 				</tr>
 				<tr>
+<<<<<<< HEAD
 				<td width=20% class=back2 align=right>'.$lang_ticket.' '.$lang_priority.':</td>
+=======
+				<td width=20%% class=back2 align=right>'.$lang_ticket.' '.$lang_priority.':</td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 				<td class=back>
 				<select name=priority>';
 				
@@ -281,7 +293,11 @@ global $db, $mysql_ugroups_table, $info, $lang_emailgroup, $lang_emailstatuschan
 startTable("$lang_notification ", "left", 100, 4);
 echo '
     <tr>
+<<<<<<< HEAD
      <td class="back2" width="20%">'.$lang_emailgroup.': </td>
+=======
+     <td class="back2" width="20%%">'.$lang_emailgroup.': </td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
      <td class="back">'.
     "<input class=box type=checkbox";
 		  echo " checked";
@@ -289,7 +305,11 @@ echo '
     '</td>
     </tr>
     <tr>
+<<<<<<< HEAD
      <td class="back2" width="20%">'.$lang_emailstatuschange.': </td>
+=======
+     <td class="back2" width="20%%">'.$lang_emailstatuschange.': </td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
      <td class="back">'.
     "<input class=box type=checkbox";
 			echo " checked";
@@ -297,7 +317,11 @@ echo '
     '</td>
     </tr>
     <tr>
+<<<<<<< HEAD
      <td class="back2" width="20%">'.$lang_emailcc.': </td>
+=======
+     <td class="back2" width="20%%">'.$lang_emailcc.': </td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
      <td class="back">
 								<input type=text size=72 name=emailcc value="'.'">
 							</td>
@@ -350,7 +374,11 @@ function createUserInfo()
 				
 				
 				
+<<<<<<< HEAD
 				<td width=20% class=back2 align=right>'.$lang_username.':</td>
+=======
+				<td width=20%% class=back2 align=right>'.$lang_username.':</td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 				<td class=back >';
 					
 				?>
@@ -369,17 +397,21 @@ function createUserInfo()
 				echo "</td>
 				<td class=back2 align=right width=100>".$lang_email.": </td>
 				<td class=back align=left>
-					<input type=text size=24 name=email value=\"$row[email]\">
+					<input type=text size=20% name=email value=\"$row[email]\">
 				</td>
 				</tr>
 				<tr>
+<<<<<<< HEAD
 				<td width=20% class=back2 align=right>".$lang_office.":</td>
+=======
+				<td width=20%% class=back2 align=right>".$lang_office.":</td>
+>>>>>>> b129e7674d828b6b58bff77548cf0f987ef0cab0
 				<td class=back>
-					<input type=text size=24 name=office value=\"$row[office]\">
+					<input type=text size=20% name=office value=\"$row[office]\">
 				</td>
 				<td class=back2 align=right width=100>".$lang_phoneext.":</td>
 				<td class=back>
-					<input type=text size=24 name=phone value=\"$row[phone]\">
+					<input type=text size=20% name=phone value=\"$row[phone]\">
 				</td>";
 
 	endTable();

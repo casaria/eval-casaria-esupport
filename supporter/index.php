@@ -43,13 +43,18 @@ require "../common/login.php";
 //RewindSession();
 
 
+                  
+require_once $includePath."login.php";
+RewindSession();
+?>		
+
 $language = getLanguage($cookie_name);
 if($language == '')
 	require_once "../lang/$default_language.lang.php";
 else
 	require_once "../lang/$language.lang.php";
 
-require_once "../common/style.php";
+require_once $includePath."style.php";
 
 if($enable_helpdesk == 'Off'){
 	printerror($on_off_reason);

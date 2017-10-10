@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8480c2f5-8507-4803-ada1-4a1a2ce8cc64" name="casaria.net" url="http://www.casaria.net">
+        <fileTransfer host="www.casaria.net" port="22" rootFolder="/home/casaria" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

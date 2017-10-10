@@ -664,6 +664,8 @@
                 </form>';
 
     }
+} else {
+
 
     //returns an array containing the priority names
     function sqlByPriority($query, $order)
