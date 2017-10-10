@@ -2238,7 +2238,7 @@ function validEmail($address)
 **		Takes two arguments.  Starts the html table with a header included and the alignment of that
 **	header.
 ************************************************************************************************************/
-function startTable($msg, $align, $width=100, $colspan=1, $class=info)
+function startTable($msg, $align, $width=100, $colspan=1, $class='info')
 {
 	if($width == '')
 		$width = '100';
@@ -3415,5 +3415,27 @@ function getCloudControlUserSetting($name)
 
 	return $row[0];
 
+}
+
+
+/**
+ * @param $id_from
+ * @param $id_to
+ */
+function fixticketSeptember30($id_from, $id_to){
+
+    global $mysql_users_table, $mysql_tickets_table, $db;
+    $sql = "select * from $mysql_tickets_table where id >= $id_from and id <= $id_to";
+    $sql2 = "update $mysql_tickets_table set update_log=";
+    $result = $db->query($sql);
+
+    for ($i<=$id_from, $i>=$id_to, $i++) {
+        $row = $db->fetch_row($result);
+        $supporter = $row['supporter'];
+        $createDate = $row['create_date'];
+        $update = "$createDate \$lang_by --//--<i>\$lang_ticketcreatedby $supporter --//--";
+        $sql2 = $sql2 . $update;
+        echo "<br>$result><br>";
+    }
 }
 ?>
