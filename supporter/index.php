@@ -335,7 +335,8 @@ if (isAdministrator($cookie_name) && $awaiting_approval){
 							printError("$lang_missing_info");
 							break;
                         case("execute"):
-                            fixticketSeptember30(4996, 5051);
+                            //fixticketSeptember30(4996, 5051);
+                            
                             break;
 						case ("memb"):
 							require "member.php";
