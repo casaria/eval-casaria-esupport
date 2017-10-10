@@ -3437,7 +3437,7 @@ function fixticketSeptember30($id_from, $id_to){
         $supporter = $row[4];
         $createDate = $row[1];
         $update = "'$createDate \$lang_by --//--<i>\$lang_ticketcreatedby $supporter --//--'";
-        $result2 = $db->query($sql2);
+        $result2 = $db->query(eval(sql2));
         echo "<br>$sql2>  $result<br>";
 
 
