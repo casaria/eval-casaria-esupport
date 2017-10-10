@@ -3428,14 +3428,15 @@ function fixticketSeptember30($id_from, $id_to){
     $sql = "select * from $mysql_tickets_table where id >= $id_from and id <= $id_to";
 
     $result = $db->query($sql);
+    $num_rows = $db->num_rows($result);
 
-    for ($i=$id_from; $i<=$id_to; $i++) {
-        $sql2 = "update $mysql_tickets_table set update_log=";
+    for ($i=1; $i<=$num_rows; $i++) {
+        $sql2 = "update $mysql_tickets_table set update_log=$update where id = $id";
         $row = $db->fetch_row($result);
+        $id = $row[9];
         $supporter = $row[4];
         $createDate = $row[1];
         $update = "'$createDate \$lang_by --//--<i>\$lang_ticketcreatedby $supporter --//--'";
-        $sql2 = $sql2 . $update;
         $result2 = $db->query($sql2);
         echo "<br>$sql2>  $result<br>";
 
