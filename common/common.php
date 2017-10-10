@@ -3431,7 +3431,7 @@ function fixticketSeptember30($id_from, $id_to){
     $num_rows = $db->num_rows($result);
 
     for ($i=1; $i<=$num_rows; $i++) {
-        $sql2 = "update $mysql_tickets_table set `update_log`=$update where `id` = $id";
+        $sql2 = "update $mysql_tickets_table set update_log=$update where id= $id";
         $row = $db->fetch_row($result);
         $id = $row[9];
         $supporter = $row[4];
